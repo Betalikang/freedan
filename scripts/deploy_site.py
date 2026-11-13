@@ -24,22 +24,40 @@ for _s in (sys.stdout, sys.stderr):
 
 ROOT = Path(__file__).resolve().parent.parent
 
-# 本机 ~/.gitconfig 里的 http.proxy/https.proxy 指向 127.0.0.1:7890，
-# 但那个端口没人监听，直连 github.com 反而是通的。所以每条 git 网络命令
-# 都显式把代理清空，不改全局配置。
-NO_PROXY = ["-c", "http.proxy=", "-c", "https.proxy="]
+# 本机访问 github.com 必须走 127.0.0.1:7897 这个本地代理：直连会被重置或超时，
+# 而 ~/.gitconfig 里配的 7890 根本没人在听。所以显式指定，不改全局配置。
+PROXY = ["-c", "http.proxy=http://127.0.0.1:7897",
+         "-c", "https.proxy=http://127.0.0.1:7897"]
+
+# 只有这些网络层错误才值得换一条路重试；认证失败、冲突之类重试没意义
+NET_ERRS = ("unable to access", "connection was reset", "timed out",
+            "could not resolve host", "failed to connect",
+            "connection refused", "recv failure", "send failure",
+            "couldn't connect", "network is unreachable")
+
+
+def git(*args):
+    """跑 git：先走上面的代理，网络层失败才退回直连重试一次。
+
+    顺序不能颠倒——直连是默认不通的那条，代理没开的某一天靠它兜底。
+    """
+    last = (1, "")
+    for extra in (PROXY, []):
+        r = subprocess.run(["git", *extra, *args], cwd=str(ROOT),
+                           capture_output=True, text=True,
+                           encoding="utf-8", errors="replace")
+        out = (r.stdout or "") + (r.stderr or "")
+        last = (r.returncode, out)
+        if r.returncode == 0:
+            return last
+        low = out.lower()
+        if not any(e in low for e in NET_ERRS):
+            return last
+    return last
+
 
 TRACK = ["data", "site", "scripts", "README.md",
          "config.json", ".gitignore"]
-
-
-def git(*args, check=False):
-    r = subprocess.run(["git", *NO_PROXY, *args], cwd=str(ROOT),
-                       capture_output=True, text=True,
-                       encoding="utf-8", errors="replace")
-    if check and r.returncode != 0:
-        print((r.stdout or "") + (r.stderr or ""))
-    return r.returncode, (r.stdout or "") + (r.stderr or "")
 
 
 def main():
