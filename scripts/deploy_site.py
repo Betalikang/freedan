@@ -4,7 +4,7 @@
 deploy_site.py · 重建站点并推送到 GitHub
 
 顺序：07_site.py 重建 data/ + site/ → git add → commit → push。
-推上去之后 Netlify 会自动部署（在 Netlify 后台把仓库连上即可，见 README）。
+推上去之后 Cloudflare Pages 会自动部署（在 CF 后台把仓库连上即可，见 README）。
 
 用法：
     python scripts/deploy_site.py            # 重建并推送
@@ -29,7 +29,7 @@ ROOT = Path(__file__).resolve().parent.parent
 # 都显式把代理清空，不改全局配置。
 NO_PROXY = ["-c", "http.proxy=", "-c", "https.proxy="]
 
-TRACK = ["data", "site", "scripts", "netlify.toml", "README.md",
+TRACK = ["data", "site", "scripts", "README.md",
          "config.json", ".gitignore"]
 
 
@@ -85,7 +85,7 @@ def main():
         print("（首次推送建议先跑 git push -u origin master 看看 GCM 的浏览器授权）")
         return 1
 
-    print("✓ 已推送，Netlify 随后会自动部署")
+    print("✓ 已推送，Cloudflare Pages 随后会自动部署")
     return 0
 
 

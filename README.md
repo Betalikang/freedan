@@ -139,7 +139,7 @@ python scripts/run_daily.py 2026-11-13
 
 ## 聚合网站
 
-除了视频，同一批数据还会渲染成一个纯静态聚合站，推到 GitHub 后由 Netlify 发布。
+除了视频，同一批数据还会渲染成一个纯静态聚合站，推到 GitHub 后由 Cloudflare Pages 发布。
 
 ```bash
 python scripts/07_site.py               # 只重建站点，不动 git
@@ -157,12 +157,15 @@ python scripts/deploy_site.py --dry-run # 只重建
 | `feed.xml` | RSS，可直接订阅 |
 | `data/freebies.json` | 机器可读全量数据，已开 CORS |
 | `assets/style.css` | 样式，配色取自 `redesign` 的封面模板 |
+| `_headers` | Cloudflare Pages 响应头（安全头 + 分级缓存），由脚本生成 |
 
 站点读的是 `data/<日期>/`（`07_site.py` 从 `runs/<日期>/` 同步过来的小 JSON）；
 `runs/` 整个目录被 `.gitignore` 忽略，视频和音频不进仓库。
 
-`07_site.py` 只用标准库、无第三方依赖、无构建步骤，Netlify 直接 serve `site/`，
-所以 `netlify.toml` 里 build command 是空的 —— 不依赖 Netlify 的 Python 环境。
+`07_site.py` 只用标准库、无第三方依赖、无构建步骤，Cloudflare Pages 直接 serve `site/`，
+所以部署侧的 **build command 是空的** —— 不依赖 Cloudflare 的 Python 环境，
+也就不存在"构建挂了站点悄悄停更"。响应头走 `site/_headers`（Cloudflare 原生格式），
+同样由脚本生成，部署侧不用配。
 
 **绑定域名后**，把 `scripts/07_site.py` 顶部的 `SITE_URL` 改成 `https://你的域名`，
 RSS 的绝对链接才会指向正式地址。留空则站内链接走相对路径，本地双击打开也能正常跳转。
@@ -178,17 +181,21 @@ RSS 的绝对链接才会指向正式地址。留空则站内链接走相对路�
 
    首次 push 会弹 Git Credential Manager 的浏览器授权，通过一次就长期生效。
 
-2. **连 Netlify** —— Netlify → Add new site → Import an existing project → 授权 GitHub 后选这个仓库。
-   Build command 留空，Publish directory 填 `site`（`netlify.toml` 已写好，一般会自动认）。
-   之后每次 push 自动部署。
+2. **连 Cloudflare Pages** —— Cloudflare  Dashboard → Workers & Pages → Create → Pages →
+   Connect to Git → 授权 GitHub 后选这个仓库。**Build command 留空**，
+   Build output directory 填 `site`，Root directory 留空。之后每次 push 自动部署。
 
-3. **绑域名** —— Netlify → Domain management → Add a domain，按提示改 DNS：
-   根域名加 A 记录指向控制台当前给出的地址（**以控制台显示的为准**，别用网上抄的旧 IP），
-   `www` 加 CNAME 指向 `<站点名>.netlify.app`。证书由 Netlify 自动签。
+3. **绑域名** —— 项目 → Custom domains → Set up a domain：
+   - **根域名**（`example.com`）：必须把域名的 NS 改到 Cloudflare（Full setup），
+     然后在 DNS 里加一条 `example.com` → `<项目名>.pages.dev` 的 CNAME（Cloudflare 会
+     自动 flatten，不需要 A 记录）。
+   - **子域名**（`www.example.com`）：CNAME 指向 `<项目名>.pages.dev` 即可，
+     用不上改 NS 的 Partial（CNAME setup）也行。
+   - 证书由 Cloudflare 自动签，等几分钟转 Active。
 
-> 注意：Netlify 的 CDN 在中国大陆访问不稳定。如果观众主要在国内，可以考虑换
-> Cloudflare Pages / Vercel —— `site/` 是纯静态的，换平台只改「上线三步」这三步，
-> 生成器和数据都不用动。
+> 国内访问比 Netlify 稳，但不保证全程畅通。Cloudflare 的 Anycast 在大陆偶尔会被绕到
+> 丢包节点，这是免费方案的固有现象；真要稳得上企业版或换国内 CDN。
+> 换到 Netlify / Vercel 也行 —— `site/` 是纯静态的，只改这三步，生成器和数据不用动。
 
 ## 已知边界
 

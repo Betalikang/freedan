@@ -102,7 +102,7 @@ def main():
     idx = ROOT / "site" / "index.html"
     if idx.exists():
         print(f"  {'site/index.html':18} {idx}")
-    print("  站点已重建；推送到 GitHub/Netlify 请跑 python scripts/deploy_site.py")
+    print("  站点已重建；推送到 GitHub/Cloudflare Pages 请跑 python scripts/deploy_site.py")
     print("=" * 60)
     return 0
 

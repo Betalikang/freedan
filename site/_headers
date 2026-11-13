@@ -1,0 +1,23 @@
+# AI 羊毛日报 · 由 scripts/07_site.py 生成，手改会在下次重建时被覆盖
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+# HTML 短缓存：改了要立刻可见
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# 样式文件名不带 hash，不能长缓存 immutable，否则换设计后读者拿到旧 CSS
+/assets/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# 机器可读数据：放开跨域，方便别人二次聚合
+/data/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=300
+
+/feed.xml
+  Cache-Control: public, max-age=300

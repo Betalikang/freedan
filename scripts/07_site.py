@@ -6,7 +6,9 @@
 把 runs/<日期>/ 的每日产物同步成轻量数据集 data/<日期>/（只留小 JSON，
 视频/wav/截图留在 runs/ 里不进 git），再渲染成一个纯静态站点到 site/。
 
-只用标准库，无第三方依赖、无构建步骤 —— Netlify 直接 serve site/ 即可。
+只用标准库，无第三方依赖、无构建步骤 —— Cloudflare Pages / Netlify 都能直接 serve。
+站点根下的 `_headers`（Cloudflare Pages 响应头格式）也由本脚本生成，
+所以部署侧不需要配任何 build command。
 
 用法：
     python scripts/07_site.py             # 同步 data/ 并重建 site/
@@ -188,6 +190,35 @@ footer code{font-family:var(--mono); font-size:12px; color:var(--mut)}
   .arow .n{white-space:normal}
   .nav{gap:14px; font-size:13px}
 }
+"""
+
+
+# Cloudflare Pages 的 _headers（纯文本，不是 TOML）。
+# 生成在 site/ 根下，Cloudflare 会把它应用到所有响应上。
+HEADERS = """\
+# AI 羊毛日报 · 由 scripts/07_site.py 生成，手改会在下次重建时被覆盖
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+# HTML 短缓存：改了要立刻可见
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# 样式文件名不带 hash，不能长缓存 immutable，否则换设计后读者拿到旧 CSS
+/assets/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# 机器可读数据：放开跨域，方便别人二次聚合
+/data/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=300
+
+/feed.xml
+  Cache-Control: public, max-age=300
 """
 
 
@@ -534,6 +565,7 @@ def main():
     SITE.mkdir(parents=True, exist_ok=True)
     (SITE / "assets").mkdir(exist_ok=True)
     (SITE / "assets" / "style.css").write_text(CSS, encoding="utf-8")
+    (SITE / "_headers").write_text(HEADERS, encoding="utf-8")
     (SITE / "index.html").write_text(render_index(days), encoding="utf-8")
     (SITE / "all.html").write_text(render_all(days), encoding="utf-8")
     (SITE / "feed.xml").write_text(render_feed(days), encoding="utf-8")
@@ -550,7 +582,7 @@ def main():
 
     total = sum(len(d["freebies"]) for d in days)
     print(f"✓ 站点已生成：{SITE}")
-    for f in ("index.html", "all.html", "feed.xml"):
+    for f in ("index.html", "all.html", "feed.xml", "_headers"):
         print(f"  {f:16}{(SITE / f).stat().st_size/1024:.1f} KB")
     print(f"  day/*.html     {len(days)} 页")
     print(f"  共 {total} 条福利")
