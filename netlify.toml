@@ -1,0 +1,27 @@
+# Netlify 配置 —— 站点是「预构建好的纯静态文件」，不需要 build 步骤。
+# data/ 与 site/ 都由 scripts/deploy_site.py 在本地生成后一起提交，
+# Netlify 只负责把 site/ 原样发布出去，不依赖它的 Python 环境。
+[build]
+  publish = "site"
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-XSS-Protection = "0"
+
+# 机器可读数据放开跨域，方便别人拿去做二次聚合
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "public, max-age=300"
+
+# HTML 短缓存，改动后秒级可见
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

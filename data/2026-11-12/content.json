@@ -1,0 +1,287 @@
+{
+ "meta": {
+  "brand": "每日人工智能精选内参",
+  "brand_en": "DISPATCH · 2026",
+  "volume": "2026 · 11月12日",
+  "badge": "6 条可用福利 · 今日核验",
+  "date": "2026.11.12",
+  "title": "羊毛速递",
+  "title_en": "AI DEALS DROP",
+  "edition": "11月12日 速递",
+  "domestic": 6,
+  "foreign": null,
+  "total": 6
+ },
+ "timeline": {
+  "total_duration": 60.78,
+  "cover": {
+   "start": 0.0,
+   "end": 1.0
+  },
+  "overview": {
+   "start": 1.0,
+   "end": 4.0
+  },
+  "detail": {
+   "start": 4.0,
+   "end": 55.783
+  },
+  "list_start": 55.783,
+  "list_page_dur": 5.0,
+  "audio_offset": 0.5,
+  "speech": {
+   "start": 0.098,
+   "end": 54.583
+  }
+ },
+ "cover": {
+  "eyebrow": "今日羊毛",
+  "picks": [
+   {
+    "tag": "本期重点",
+    "name": "Higgsfield AI",
+    "note": "3天免费用全部顶级模型",
+    "accent": "gold"
+   },
+   {
+    "tag": "本期重点",
+    "name": "Cursor（Gemini 4 Ca",
+    "note": "五折跑 Gemini 4 Carbon",
+    "accent": "blue"
+   }
+  ]
+ },
+ "overview": {
+  "title_prefix": "今天值得拿的",
+  "count": 3,
+  "title_suffix": "条",
+  "big_stat": {
+   "label": "顶级视频模型免费三天不限量"
+  },
+  "count_line": {
+   "label": "本期清单",
+   "value": 6,
+   "note": "条 · 本期6条，重点讲3条"
+  },
+  "verified": "数据核验 2026-11-12",
+  "right_list": [
+   {
+    "idx": "01",
+    "name": "Higgsfield AI",
+    "sub": "3天免费用全部顶级模型",
+    "note": "3天免费用全部顶级模型"
+   },
+   {
+    "idx": "02",
+    "name": "Cursor（Gemini 4 Ca",
+    "sub": "五折跑 Gemini 4 Carbo",
+    "note": "五折跑 Gemini 4 C"
+   },
+   {
+    "idx": "03",
+    "name": "豆包工作",
+    "sub": "新用户领 30 天订阅",
+    "note": "新用户领 30 天订阅"
+   }
+  ]
+ },
+ "detail": {
+  "section": {
+   "prefix": "今天值得拿的",
+   "count": 3,
+   "suffix": "条",
+   "en": "TODAY'S FINDS"
+  },
+  "cards": [
+   {
+    "idx": "01",
+    "accent": "gold",
+    "title": "Higgsfield AI",
+    "body": "**3天免费用全部顶级模型**，新用户可 3 天免费不限量使用全部顶级视频和图像模型。年付 Ultra 或 Plus 含 14 天无限量 Seedance 2.5，最高 1080p、30 秒；图像模型最长 60 天无限量。高级套餐最高 6 折，截止时间未说明。",
+    "tags": [
+     {
+      "text": "3天不限量",
+      "style": "on"
+     },
+     {
+      "text": "最高6折",
+      "style": ""
+     },
+     {
+      "text": "视频+图像",
+      "style": ""
+     }
+    ],
+    "side": {
+     "label": "免费不限量",
+     "num": "3天",
+     "unit": "",
+     "note": "3天免费用全部顶级模型",
+     "num_style": ""
+    }
+   },
+   {
+    "idx": "02",
+    "accent": "blue",
+    "title": "Cursor（Gemini 4 Carbon）",
+    "body": "**五折跑 Gemini 4 Carbon**，Cursor 里的 Gemini 4 Carbon 现在五折：输入每百万 tokens 2 美元、输出 10 美元。11 月 30 日截止，12 月 1 日起恢复 4 美元和 20 美元，价格直接翻倍，想多用就趁这两天。",
+    "tags": [
+     {
+      "text": "5折",
+      "style": "on"
+     },
+     {
+      "text": "11月30日截止",
+      "style": ""
+     },
+     {
+      "text": "按token计",
+      "style": ""
+     }
+    ],
+    "side": {
+     "label": "月底恢复原价",
+     "num": "5折",
+     "unit": "",
+     "note": "五折跑 Gemini 4 Carbon",
+     "num_style": "blue"
+    }
+   },
+   {
+    "idx": "03",
+    "accent": "gold",
+    "title": "豆包工作",
+    "body": "**新用户领 30 天订阅**，豆包工作给新用户免费送 30 天订阅权益，条件是登录电脑版。没写截止时间，也没提要不要绑卡，直接上手白试一个月最省事。",
+    "tags": [
+     {
+      "text": "30天",
+      "style": "on"
+     },
+     {
+      "text": "新用户",
+      "style": ""
+     },
+     {
+      "text": "电脑版登录",
+      "style": ""
+     }
+    ],
+    "side": {
+     "label": "免费订阅权益",
+     "num": "30天",
+     "unit": "",
+     "note": "新用户领 30 天订阅",
+     "num_style": ""
+    }
+   }
+  ],
+  "cues": [
+   {
+    "start": 0.5,
+    "end": 2.762,
+    "text": "五折模型价，过期就翻倍。"
+   },
+   {
+    "start": 3.295,
+    "end": 6.866,
+    "text": "先说最狠的 Higgsfield，三天免费不限量"
+   },
+   {
+    "start": 7.116,
+    "end": 9.914,
+    "text": "全部顶级视频和图像模型随便跑。"
+   },
+   {
+    "start": 10.45,
+    "end": 14.212,
+    "text": "年付 Ultra 或 Plus 还多送 14 天无限量"
+   },
+   {
+    "start": 14.295,
+    "end": 17.116,
+    "text": "Seedance 2.5，最高 1080p"
+   },
+   {
+    "start": 17.319,
+    "end": 17.962,
+    "text": "30 秒。"
+   },
+   {
+    "start": 18.509,
+    "end": 23.414,
+    "text": "图像模型最长能白用 60 天，高级套餐最高打到 6 折。"
+   },
+   {
+    "start": 23.95,
+    "end": 26.14,
+    "text": "Cursor 这边，Gemini 4 Carbon"
+   },
+   {
+    "start": 26.152,
+    "end": 27.878,
+    "text": "五折到 11 月 30 日。"
+   },
+   {
+    "start": 28.426,
+    "end": 31.771,
+    "text": "输入 2 美元、输出 10 美元一百万 tokens"
+   },
+   {
+    "start": 32.092,
+    "end": 34.664,
+    "text": "12 月 1 日就恢复成 4 和 20。"
+   },
+   {
+    "start": 35.212,
+    "end": 39.378,
+    "text": "豆包工作，新用户登录电脑版直接领 30 天订阅。"
+   },
+   {
+    "start": 39.926,
+    "end": 43.128,
+    "text": "CluedIn 前 15000 条记录免费还带 AI"
+   },
+   {
+    "start": 43.14,
+    "end": 45.128,
+    "text": "credits，绑不绑卡没写。"
+   },
+   {
+    "start": 45.664,
+    "end": 49.712,
+    "text": "阿里 Qwen4-Max 限时一折，这条置信度中等"
+   },
+   {
+    "start": 49.926,
+    "end": 50.807,
+    "text": "自己核一下。"
+   },
+   {
+    "start": 51.342,
+    "end": 54.985,
+    "text": "额度都在这，手慢只能看原价，先领再说。"
+   }
+  ]
+ },
+ "lists": [
+  {
+   "section": "还能领的",
+   "total": 3,
+   "page": "1/1",
+   "items": [
+    {
+     "name": "豆包工作",
+     "desc": "新用户免费领取 30 天订阅权益"
+    },
+    {
+     "name": "阿里 Qwen4-Max",
+     "desc": "Qwen4-Max token 定价限时 90% 折扣（相当于 1 折）"
+    },
+    {
+     "name": "Voloshow",
+     "desc": "800 free credits"
+    }
+   ]
+  }
+ ]
+}

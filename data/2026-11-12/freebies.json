@@ -1,0 +1,65 @@
+[
+ {
+  "name": "CluedIn",
+  "benefit": "前 15,000 条记录免费，含 AI credits",
+  "condition": "公共 SaaS 新用户；是否需绑卡未说明",
+  "deadline": null,
+  "heat": 4,
+  "confidence": "high",
+  "source_url": "https://www.cluedin.com/home"
+ },
+ {
+  "name": "Cursor（Gemini 4 Carbon）",
+  "benefit": "11 月 30 日前五折，输入 $2/M tokens、输出 $10/M tokens；12 月 1 日起恢复为 $4/M 和 $20/M",
+  "condition": "未说明",
+  "deadline": "11 月 30 日",
+  "heat": 4,
+  "confidence": "high",
+  "source_url": "https://aihot.news/items/a68dj8807rccfbxww9z1yol5o"
+ },
+ {
+  "name": "Higgsfield AI（Claude Fable 5.2 试用）",
+  "benefit": "3 天免费不限量使用全部顶级视频和图像模型",
+  "condition": "未说明",
+  "deadline": null,
+  "heat": 4,
+  "confidence": "high",
+  "source_url": "https://aihot.news/items/ugn21ui1m8kftffpe2c95qlkx"
+ },
+ {
+  "name": "豆包工作",
+  "benefit": "新用户免费领取 30 天订阅权益",
+  "condition": "新用户登录电脑版",
+  "deadline": null,
+  "heat": 4,
+  "confidence": "high",
+  "source_url": "https://aihot.news/items/a5v0ikr6ow2l9rpcvbi77jqi5"
+ },
+ {
+  "name": "阿里 Qwen4-Max",
+  "benefit": "Qwen4-Max token 定价限时 90% 折扣（相当于 1 折）",
+  "condition": "未说明",
+  "deadline": null,
+  "heat": 4,
+  "confidence": "medium",
+  "source_url": "https://aihot.news/items/bqxrrd9esj59au6k554hho17x"
+ },
+ {
+  "name": "Higgsfield AI（套餐折扣）",
+  "benefit": "高级套餐最高 60% 折扣，年度 Ultra/Plus 含 14 天无限量 Seedance 2.5（最高 1080p/720p，30 秒），图像模型最长 60 天无限量",
+  "condition": "购买 Plus/Ultra 套餐",
+  "deadline": null,
+  "heat": 3,
+  "confidence": "high",
+  "source_url": "https://aihot.news/items/u7j0saxevn5dxfbke582fza9s"
+ },
+ {
+  "name": "Voloshow",
+  "benefit": "800 free credits",
+  "condition": "未说明",
+  "deadline": null,
+  "heat": 3,
+  "confidence": "medium",
+  "source_url": "https://news.ycombinator.com/item?id=48472902"
+ }
+]

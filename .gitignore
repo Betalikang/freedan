@@ -1,0 +1,22 @@
+# 本地存档：含 video.mp4 / wav / 截图 / 渲染中间帧，体积大且与站点无关。
+# 站点只读 data/ 里的小 JSON，所以这里整目录忽略即可（不会删除本地文件）。
+runs/
+
+# BGM 由 05_render.ensure_bgm() 从 config.json 的 video.bgm.source_video 重抽，
+# 是机器本地资产且可从源视频再生，不进仓库（缺失时渲染会自动降级为纯人声）。
+assets/bgm.wav
+
+# 本地核对渲染效果时留下的截图，不属于站点产物
+site/shot_*.png
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# 系统垃圾
+Thumbs.db
+desktop.ini
+.DS_Store

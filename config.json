@@ -1,0 +1,55 @@
+{
+  "brand": {
+    "name": "每日人工智能精选内参",
+    "en": "DISPATCH · 2026"
+  },
+  "aihot": {
+    "base": "https://aihot.news",
+    "ua": "aihot-skill/2.0.0 (+https://aihot.news/aihot-skill/) aihot-actor/d83e0553-2b0e-4193-9c9e-f7632156bb69"
+  },
+  "sources": {
+    "aihot_latest": true,
+    "aihot_search": true,
+    "github": true,
+    "hackernews": true
+  },
+  "search_queries": ["免费", "免费额度", "限时免费", "优惠", "赠送", "试用", "开源"],
+  "thresholds": {
+    "min_items_for_video": 2,
+    "max_detail_cards": 3,
+    "min_heat": 2
+  },
+  "publish": {
+    "hashtags": ["AI工具", "人工智能", "白嫖", "羊毛", "AI教程", "效率工具",
+                 "程序员", "视频生成", "每日AI资讯", "干货分享"],
+    "cta": "领取链接和步骤我放在评论区置顶，看不懂的评论问我，看到会回。"
+  },
+  "video": {
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "+5%",
+    "pitch": "+0Hz",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "bgm": {
+      "file": "assets/bgm.wav",
+      "source_video": "D:/浏览器下载位置/dl.mp4",
+      "source_start": 101.4,
+      "source_end": 146.0,
+      "volume_db": -6,
+      "fade_in": 0.8,
+      "fade_out": 2.5,
+      "crossfade": 2.0,
+      "duck": {
+        "threshold": 0.03,
+        "ratio": 10,
+        "attack": 25,
+        "release": 400
+      }
+    }
+  },
+  "paths": {
+    "redesign": "E:/saibodan/redesign",
+    "skill_scripts": "C:/Users/浮舟/.agents/skills/video-style-analysis/scripts"
+  }
+}

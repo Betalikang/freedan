@@ -1,0 +1,286 @@
+{
+ "meta": {
+  "brand": "每日人工智能精选内参",
+  "brand_en": "DISPATCH · 2026",
+  "volume": "2026 · 11月13日",
+  "badge": "7 条可用福利 · 今日核验",
+  "date": "2026.11.13",
+  "title": "羊毛速递",
+  "title_en": "FREE AI DROP",
+  "edition": "11月13日 速递",
+  "domestic": 7,
+  "foreign": null,
+  "total": 7
+ },
+ "timeline": {
+  "total_duration": 55.91,
+  "cover": {
+   "start": 0.0,
+   "end": 1.0
+  },
+  "overview": {
+   "start": 1.0,
+   "end": 4.0
+  },
+  "detail": {
+   "start": 4.0,
+   "end": 50.914
+  },
+  "list_start": 50.914,
+  "list_page_dur": 5.0,
+  "audio_offset": 0.5,
+  "speech": {
+   "start": 0.098,
+   "end": 49.714
+  }
+ },
+ "cover": {
+  "eyebrow": "今日羊毛",
+  "picks": [
+   {
+    "tag": "本期重点",
+    "name": "Krea Bots",
+    "note": "加入测试版，白送 $1,000 额度",
+    "accent": "gold"
+   },
+   {
+    "tag": "本期重点",
+    "name": "Higgsfield Claude ",
+    "note": "3 天免费不限量，顶级模型随便用",
+    "accent": "blue"
+   }
+  ]
+ },
+ "overview": {
+  "title_prefix": "今天值得拿的",
+  "count": 3,
+  "title_suffix": "条",
+  "big_stat": {
+   "label": "三天不限量，全部顶级模型免费跑"
+  },
+  "count_line": {
+   "label": "本期清单",
+   "value": 7,
+   "note": "条 · 今天 7 条，精选 3 条最值得抢"
+  },
+  "verified": "数据核验 2026-11-13",
+  "right_list": [
+   {
+    "idx": "01",
+    "name": "Krea Bots",
+    "sub": "加入测试版，白送 $1,000 额度",
+    "note": "加入测试版，白送 $1,00"
+   },
+   {
+    "idx": "02",
+    "name": "Higgsfield Claude ",
+    "sub": "3 天免费不限量，顶级模型随便用",
+    "note": "3 天免费不限量，顶级模型随"
+   },
+   {
+    "idx": "03",
+    "name": "豆包工作",
+    "sub": "新用户免费领 30 天订阅权益",
+    "note": "新用户免费领 30 天订阅权"
+   }
+  ]
+ },
+ "detail": {
+  "section": {
+   "prefix": "今天值得拿的",
+   "count": 3,
+   "suffix": "条",
+   "en": "TODAY'S FINDS"
+  },
+  "cards": [
+   {
+    "idx": "01",
+    "accent": "gold",
+    "title": "Krea Bots",
+    "body": "**加入测试版，白送 $1,000 额度**，Krea Bots 正在招募测试版团队，加入就直接送 1000 美元额度，够你跑很久的生成任务。条件只有一条：加入测试版团队。素材没写截止时间，但测试名额通常收得快，想拿的尽早申请，入口放在简介。",
+    "tags": [
+     {
+      "text": "$1000额度",
+      "style": "on"
+     },
+     {
+      "text": "测试版",
+      "style": ""
+     },
+     {
+      "text": "手慢无",
+      "style": ""
+     }
+    ],
+    "side": {
+     "label": "额度直接送",
+     "num": "$1000",
+     "unit": "",
+     "note": "加入测试版，白送 $1,000 额度",
+     "num_style": ""
+    }
+   },
+   {
+    "idx": "02",
+    "accent": "blue",
+    "title": "Higgsfield Claude Fable 5.2",
+    "body": "**3 天免费不限量，顶级模型随便用**，Higgsfield 的 Claude Fable 5.2 活动，3 天内免费不限量使用全部顶级视频和图像模型，不限额、不按次扣费。素材没写附加条件，也没写截止时间，但 3 天从你开通那刻开始算，先开先用，别攒着。",
+    "tags": [
+     {
+      "text": "3天免费",
+      "style": "on"
+     },
+     {
+      "text": "视频+图像",
+      "style": ""
+     },
+     {
+      "text": "不限量",
+      "style": ""
+     }
+    ],
+    "side": {
+     "label": "免费不限量",
+     "num": "3天",
+     "unit": "",
+     "note": "3 天免费不限量，顶级模型随便用",
+     "num_style": "blue"
+    }
+   },
+   {
+    "idx": "03",
+    "accent": "gold",
+    "title": "豆包工作",
+    "body": "**新用户免费领 30 天订阅权益**，豆包工作对新用户开放，登录电脑版就能免费领 30 天订阅权益，一分钱不花。条件是必须新用户、必须走电脑版登录，手机端不算。素材没给截止时间，权益到手先用起来。",
+    "tags": [
+     {
+      "text": "30天",
+      "style": "on"
+     },
+     {
+      "text": "新用户",
+      "style": ""
+     },
+     {
+      "text": "电脑版",
+      "style": ""
+     }
+    ],
+    "side": {
+     "label": "订阅免费领",
+     "num": "30天",
+     "unit": "",
+     "note": "新用户免费领 30 天订阅权益",
+     "num_style": ""
+    }
+   }
+  ],
+  "cues": [
+   {
+    "start": 0.5,
+    "end": 2.892,
+    "text": "1000 美元额度，不领就归别人。"
+   },
+   {
+    "start": 3.438,
+    "end": 7.045,
+    "text": "Krea Bots 加入测试版团队，直接送 1000"
+   },
+   {
+    "start": 7.045,
+    "end": 8.64,
+    "text": "美元额度，够你跑很久。"
+   },
+   {
+    "start": 9.176,
+    "end": 12.092,
+    "text": "Higgsfield 更狠，3 天免费不限量"
+   },
+   {
+    "start": 12.342,
+    "end": 15.14,
+    "text": "全部顶级视频和图像模型随便用。"
+   },
+   {
+    "start": 15.676,
+    "end": 19.331,
+    "text": "不按次扣费、不限额，素材没写附加条件"
+   },
+   {
+    "start": 19.557,
+    "end": 20.39,
+    "text": "先开先用。"
+   },
+   {
+    "start": 20.926,
+    "end": 25.521,
+    "text": "豆包工作给新用户送 30 天订阅，登录电脑版就能领。"
+   },
+   {
+    "start": 26.057,
+    "end": 29.688,
+    "text": "手机端不算，必须是新用户，这点别搞错。"
+   },
+   {
+    "start": 30.223,
+    "end": 32.997,
+    "text": "剩下还有 Seedance 2.5 的 14"
+   },
+   {
+    "start": 32.997,
+    "end": 34.997,
+    "text": "天无限使用和最高 6 折。"
+   },
+   {
+    "start": 35.533,
+    "end": 36.259,
+    "text": "千问Go!"
+   },
+   {
+    "start": 36.795,
+    "end": 40.89,
+    "text": "会员最低 9.9 元，11 月 13 日 24 点截止。"
+   },
+   {
+    "start": 41.438,
+    "end": 43.711,
+    "text": "Luma Plus 用码 CHROMA-LUMA 五折"
+   },
+   {
+    "start": 43.926,
+    "end": 45.676,
+    "text": "Voloshow 送 800 credits。"
+   },
+   {
+    "start": 46.223,
+    "end": 50.116,
+    "text": "链接都在简介，先抢限时的那几个，别等过期。"
+   }
+  ]
+ },
+ "lists": [
+  {
+   "section": "还能领的",
+   "total": 4,
+   "page": "1/1",
+   "items": [
+    {
+     "name": "豆包工作",
+     "desc": "新用户免费领取 30 天订阅权益"
+    },
+    {
+     "name": "Chroma Awards × Luma Plus",
+     "desc": "Luma Plus 一个月订阅 5 折"
+    },
+    {
+     "name": "Voloshow",
+     "desc": "赠送 800 credits"
+    },
+    {
+     "name": "千问Go!",
+     "desc": "会员限时优惠最低 9.9 元"
+    }
+   ]
+  }
+ ]
+}
