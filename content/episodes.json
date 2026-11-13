@@ -1,10 +1,23 @@
 {
  "source": "https://saibodan.com",
- "imported_at": "2026-11-13 11:28:01",
+ "imported_at": "2026-11-13 11:57:47",
  "count": 40,
  "episodes": [
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "Perplexity Decider v1.3 / Decider Flash v1.3 在 OpenRouter 免费一周",
+     "url": "/deals/perplexity-decider-v13-openrouter-free"
+    },
+    {
+     "name": "Inference.net 开源项目算力资助：最高 1 万美元免费算力",
+     "url": "/deals/inference-net-open-source-grants"
+    },
+    {
+     "name": "Devin for Startups：获批送 1.5 万美元额度，充值再 1:1 配捐最高 5 万美元",
+     "url": "/deals/devin-startups-65k-credits"
+    }
+   ],
    "deals": [
     {
      "name": "1. Perplexity Decider v1.3 / Decider Flash v1.3 在 OpenRouter 免费一周",
@@ -43,7 +56,12 @@
    "url": "https://saibodan.com/episodes/deals-2026-11-13"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "Novita Sandbox 免费档：新账号 5 个并发沙箱 + 完成设置问卷领 100 美元体验金",
+     "url": "/deals/novita-sandbox-free-credits"
+    }
+   ],
    "deals": [
     {
      "name": "1. Novita Sandbox 免费档：新账号 5 个并发沙箱 + 完成设置问卷领 100 美元体验金",
@@ -62,7 +80,16 @@
    "url": "https://saibodan.com/episodes/deals-2026-11-12"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "Google 开发者计划标准会员（免费）：每月 35 个 Google Skills 赠金 + 文档内 Gemini",
+     "url": "/deals/google-dev-program-standard-benefits"
+    },
+    {
+     "name": "扣子双十一订阅积分加赠：个人版四档每月多拿 300～15,040 积分",
+     "url": "/deals/coze-double11-credits-bonus"
+    }
+   ],
    "deals": [
     {
      "name": "1. Google 开发者计划标准会员（免费）：每月 35 个 Google Skills 赠金 + 文档内 Gemini",
@@ -91,7 +118,16 @@
    "url": "https://saibodan.com/episodes/deals-2026-11-11"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "学生 12 个月 Google AI Plus 试用 + AI Pro 学生折扣",
+     "url": "/deals/google-student-ai-pro"
+    },
+    {
+     "name": "阿里云开发者专属 Token Plan（低至 5 折，首月 19.5 元）",
+     "url": "/deals/aliyun-token-plan"
+    }
+   ],
    "deals": [
     {
      "name": "1. 学生 12 个月 Google AI Plus 试用 + AI Pro 学生折扣",
@@ -120,7 +156,16 @@
    "url": "https://saibodan.com/episodes/deals-2026-11-10"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "Simular Box 免费云电脑给 AI 用",
+     "url": "/deals/simular-box"
+    },
+    {
+     "name": "Pika H3 Flex 订阅用户每天 15 次免费生成（至 11-15）",
+     "url": "/deals/pika-h3-flex-creator-daily-free"
+    }
+   ],
    "deals": [
     {
      "name": "1. Simular Box 免费云电脑给 AI 用",
@@ -149,7 +194,20 @@
    "url": "https://saibodan.com/episodes/deals-2026-11-09"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "百度秒哒免费版：每日登录送 100 秒点（每月最多 700）",
+     "url": "/deals/miaoda-free-daily-credits"
+    },
+    {
+     "name": "TRAE 新用户注册送 2,500 积分，每月再送 500 积分",
+     "url": "/deals/trae-cn-new-user-credits"
+    },
+    {
+     "name": "JetBrains Student Pack 学生免费",
+     "url": "/deals/jetbrains-student-pack"
+    }
+   ],
    "deals": [
     {
      "name": "1. 秒哒免费版：每日登录送 100 秒点（每月最多 700）",
@@ -188,7 +246,20 @@
    "url": "https://saibodan.com/episodes/deals-2026-11-08"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "fal FLUX 3 Max 限时 5 折（至 11-21）",
+     "url": "/deals/fal-flux-3-max-free-weekend"
+    },
+    {
+     "name": "AWS 新账号 Free 计划：最高 $200 credits，6 个月",
+     "url": "/deals/aws-free-plan-200-credits"
+    },
+    {
+     "name": "商汤日日新 Token Plan 公测期免费（¥0/月，最多 20 个 API Key）",
+     "url": "/deals/sensetime-sensenova-token-plan-free-beta"
+    }
+   ],
    "deals": [
     {
      "name": "1. FLUX 3 Max 免费生成周末：每天 3-5 条 15 秒 720p 视频（至 11-9）",
@@ -227,7 +298,20 @@
    "url": "https://saibodan.com/episodes/deals-2026-11-07"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "星火 X2.6 新用户 10 亿 Tokens 体验额度",
+     "url": "/deals/xfyun-free-quota"
+    },
+    {
+     "name": "扣子 Coze 个人免费版每日登录领 1,500 积分",
+     "url": "/deals/coze-free-daily-credits"
+    },
+    {
+     "name": "VideoGen Model 1 免费额度计划：100 万美元 credits 池（申请制，2026 年底前发放）",
+     "url": "/deals/videogen-model-1-free-credits"
+    }
+   ],
    "deals": [
     {
      "name": "1. 星火 X2.6 新用户 10 亿 Tokens 体验额度",
@@ -266,7 +350,20 @@
    "url": "https://saibodan.com/episodes/deals-2026-11-06"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "Deepgram Free 档 $200 免费额度，用完后按量付费",
+     "url": "/deals/deepgram-200-free-credit"
+    },
+    {
+     "name": "WorkBuddy 上线 Hy4：免费试用（用量限制）",
+     "url": "/deals/workbuddy-hy4-free-trial"
+    },
+    {
+     "name": "Gemini Decision 判定模型：输入 0.10 美元/百万 token、零输出 token，免费层可用",
+     "url": "/deals/gemini-decision-api-price"
+    }
+   ],
    "deals": [
     {
      "name": "1. Deepgram Free 档 $200 免费额度，用完后按量付费",
@@ -305,7 +402,16 @@
    "url": "https://saibodan.com/episodes/deals-2026-11-05"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "OpenRouter：HeyGen Voice Turbo 限时免费（至 11-30）",
+     "url": "/deals/openrouter-heygen-voice-turbo-free"
+    },
+    {
+     "name": "Yotta Shakti Studio 新用户 ₹10,000 免费额度（30 天）",
+     "url": "/deals/yotta-shakti-studio-free-credits"
+    }
+   ],
    "deals": [
     {
      "name": "1. HeyGen Voice Turbo 限时免费（至 11-30）",
@@ -334,7 +440,16 @@
    "url": "https://saibodan.com/episodes/deals-2026-11-04"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "华为云码道邀请有礼：邀请人与新人各得积分（至 11-15）",
+     "url": "/deals/huawei-codearts-invite-points"
+    },
+    {
+     "name": "阿里云开发者专属 Token Plan（低至 5 折，首月 19.5 元）",
+     "url": "/deals/aliyun-token-plan"
+    }
+   ],
    "deals": [
     {
      "name": "1. 华为云码道邀请有礼：邀请人与新人各得积分（至 11-15）",
@@ -363,7 +478,20 @@
    "url": "https://saibodan.com/episodes/deals-2026-11-03"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "摩尔线程 AI Coding Plan 限时 30 天免费体验（每日限量 100 名）",
+     "url": "/deals/mthreads-coding-plan-free-trial"
+    },
+    {
+     "name": "商汤小浣熊 免费版每日 300 积分（¥0 永久）",
+     "url": "/deals/sensetime-xiaohuanxiong-free-plan"
+    },
+    {
+     "name": "智谱 ZCode 邀请好友得 Token Boost（10-12 至 11-13）",
+     "url": "/deals/zcode-referral-token-boost"
+    }
+   ],
    "deals": [
     {
      "name": "1. AI Coding Plan 限时 30 天免费体验（每日限量 100 名）",
@@ -402,7 +530,16 @@
    "url": "https://saibodan.com/episodes/deals-2026-11-02"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "阶跃星辰 音频与音乐生成模型限时免费",
+     "url": "/deals/stepfun-free-models"
+    },
+    {
+     "name": "LibTV 双11返场：Seedance 2.5 每秒低至 ¥0.16",
+     "url": "/deals/libtv-double11-zero-credit"
+    }
+   ],
    "deals": [
     {
      "name": "1. 音频与音乐生成模型限时免费",
@@ -431,7 +568,16 @@
    "url": "https://saibodan.com/episodes/deals-2026-11-01"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "ChatGPT Pro/Business 每月附赠 API 额度（最高 $500）",
+     "url": "/deals/openai-api-credits-benefit"
+    },
+    {
+     "name": "Command Code GOAT 套餐（$10/月含 $100 额度）",
+     "url": "/deals/commandcode-goat-plan"
+    }
+   ],
    "deals": [
     {
      "name": "1. ChatGPT Pro/Business 每月附赠 API 额度（最高 $500）",
@@ -460,7 +606,20 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-31"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "ChatGPT Plus 军人/退伍军人免费一年（美国，ID.me 验证）",
+     "url": "/deals/openai-plus-military-free-year"
+    },
+    {
+     "name": "ChatGPT for Teachers 教师版免费（美国 K–12，至 2028 年 6 月）",
+     "url": "/deals/openai-chatgpt-for-teachers"
+    },
+    {
+     "name": "微信小程序成长计划 AI 资源包",
+     "url": "/deals/cloudbase-miniapp-ai-plan"
+    }
+   ],
    "deals": [
     {
      "name": "1. ChatGPT Plus 军人/退伍军人免费一年（美国，ID.me 验证）",
@@ -499,7 +658,12 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-30"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "OpenCode Go 低价订阅",
+     "url": "/deals/opencode-go"
+    }
+   ],
    "deals": [
     {
      "name": "1. Go 低价订阅",
@@ -518,7 +682,16 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-29"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "Command Code GOAT 套餐（$10/月含 $100 额度）",
+     "url": "/deals/commandcode-goat-plan"
+    },
+    {
+     "name": "Base44 for Startups 创始人免费年度许可（Pro / Builder 二选一）",
+     "url": "/deals/base44-startups-free-license"
+    }
+   ],
    "deals": [
     {
      "name": "1. Command Code GOAT 套餐（$10/月含 $100 额度）",
@@ -547,7 +720,20 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-28"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "Databricks Free Edition 永久免费版",
+     "url": "/deals/databricks-free-edition"
+    },
+    {
+     "name": "智谱 AutoClaw 升级 2.2.0 领 5000 积分",
+     "url": "/deals/zhipu-autoclaw"
+    },
+    {
+     "name": "Powerdrill Bloom 限时 8 折（至 11-07）",
+     "url": "/deals/powerdrill-super-sale-20off"
+    }
+   ],
    "deals": [
     {
      "name": "1. Databricks Free Edition 永久免费版",
@@ -586,7 +772,16 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-27"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "Google Antigravity 最高档免费 6 个月（1 万名科学家）",
+     "url": "/deals/antigravity-scientists-free-6mo"
+    },
+    {
+     "name": "AMD Token Factory 共享模型 API 免费（不消耗 credits）",
+     "url": "/deals/amd-radeon-token-factory-free-models"
+    }
+   ],
    "deals": [
     {
      "name": "1. Antigravity 最高档免费 6 个月（1 万名科学家）",
@@ -615,7 +810,12 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-26"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "OpenCode Go 低价订阅",
+     "url": "/deals/opencode-go"
+    }
+   ],
    "deals": [
     {
      "name": "1. 智谱 AutoClaw — AutoClaw 登录领 1 亿 Tokens（10-26 起，至 11-01）",
@@ -648,7 +848,20 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-25"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "七牛云 Conatus Free：每日 1 亿 Token 免费模型（10-24 至 11-30）",
+     "url": "/deals/qiniu-conatus-free"
+    },
+    {
+     "name": "星火 X2.6-4B 端侧模型限时免费",
+     "url": "/deals/xfyun-spark-x26-4b-free"
+    },
+    {
+     "name": "AWS 新账号 Free 计划：最高 $200 credits，6 个月",
+     "url": "/deals/aws-free-plan-200-credits"
+    }
+   ],
    "deals": [
     {
      "name": "1. 七牛云 — 七牛云 Conatus Free：每日 1 亿 Token 免费模型（10-24 至 11-30）",
@@ -693,7 +906,16 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-24"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "ElevenLabs Creator 首月 5 折（$11/月）",
+     "url": "/deals/elevenlabs"
+    },
+    {
+     "name": "Vercel AI Gateway：限时免费模型合集",
+     "url": "/deals/vercel-ai-gateway"
+    }
+   ],
    "deals": [
     {
      "name": "1. ElevenLabs — ElevenLabs Starter 首月 1 美元（至 11-01）",
@@ -726,7 +948,20 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-23"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "Recursive Flint 40B：OpenRouter 与 OpenCode 限时免费",
+     "url": "/deals/flint-40b-free-openrouter-opencode"
+    },
+    {
+     "name": "Fireworks：Muse Glimmer 30B 的 SFT 训练免费至 11-30",
+     "url": "/deals/fireworks-muse-glimmer-sft-free"
+    },
+    {
+     "name": "Runway：Kling 4.0 生成 25% 折扣（至 11-30）",
+     "url": "/deals/runway-kling4-25off"
+    }
+   ],
    "deals": [
     {
      "name": "1. OpenRouter / OpenCode — Recursive Flint 40B：OpenRouter 与 OpenCode 限时免费",
@@ -771,7 +1006,12 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-22"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "火山引擎方舟 Coding Plan 限时低价",
+     "url": "/deals/ark-coding-plan"
+    }
+   ],
    "deals": [
     {
      "name": "1. 智谱 AutoClaw — AutoClaw 登录领 2 亿 Tokens 与每日积分",
@@ -816,7 +1056,20 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-21"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "超算互联网 SCNet：新用户免费 1000 万 Tokens 及 0.1 元首单模型包",
+     "url": "/deals/scnet-maas-new-user-token-offer"
+    },
+    {
+     "name": "OpenRouter 免费模型与免费档限速",
+     "url": "/deals/openrouter-free"
+    },
+    {
+     "name": "fal FLUX 3 Max 限时 5 折（至 11-21）",
+     "url": "/deals/fal-flux-3-max-free-weekend"
+    }
+   ],
    "deals": [
     {
      "name": "1. 超算互联网 SCNet MaaS — 新用户免费1000万Tokens及0.1元首单模型包",
@@ -861,7 +1114,16 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-20"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "TinyFish Search / Fetch 免费额度（每小时 500 次、每天 1,000 URL）",
+     "url": "/deals/tinyfish-free-search-fetch"
+    },
+    {
+     "name": "Qoder：匿名模型 Qoduck 限免 + 每日 100 Credits + 新用户 300 积分",
+     "url": "/deals/qoder"
+    }
+   ],
    "deals": [
     {
      "name": "1. TinyFish — TinyFish Search / Fetch 免费额度（每小时 500 次、每天 1,000 URL）",
@@ -894,7 +1156,20 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-19"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "Builders Week 免费周末：GLM 5.3 Flash 全账号免费",
+     "url": "/deals/bolt-builders-week"
+    },
+    {
+     "name": "AMD Token Factory 共享模型 API 免费（不消耗 credits）",
+     "url": "/deals/amd-radeon-token-factory-free-models"
+    },
+    {
+     "name": "Kiro 学生计划：每月 1,000 credits 免费一年",
+     "url": "/deals/kiro-student-plan"
+    }
+   ],
    "deals": [
     {
      "name": "1. Bolt — Builders Week 免费周末：GLM 5.3 Flash 全账号免费",
@@ -939,7 +1214,12 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-18"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "ElevenLabs Creator 首月 5 折（$11/月）",
+     "url": "/deals/elevenlabs"
+    }
+   ],
    "deals": [
     {
      "name": "1. ElevenLabs — ElevenLabs Starter 首月 1 美元（至 10-18）",
@@ -960,7 +1240,20 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-17"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "OpenCode Console 按量付费与限时免费模型",
+     "url": "/deals/opencode-zen"
+    },
+    {
+     "name": "Mistral 学生价 Education Plan（$5.99/月，含每月 $15 额度）",
+     "url": "/deals/mistral-student"
+    },
+    {
+     "name": "ElevenLabs Creator 首月 5 折（$11/月）",
+     "url": "/deals/elevenlabs"
+    }
+   ],
    "deals": [
     {
      "name": "1. OpenCode — Zen 按量付费与限时免费模型",
@@ -1005,7 +1298,20 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-16"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "Command Code GOAT 套餐（$10/月含 $100 额度）",
+     "url": "/deals/commandcode-goat-plan"
+    },
+    {
+     "name": "TokenHub 新用户免费 100 万 tokens",
+     "url": "/deals/tencent-tokenhub-free-tokens"
+    },
+    {
+     "name": "AWS 新账号 Free 计划：最高 $200 credits，6 个月",
+     "url": "/deals/aws-free-plan-200-credits"
+    }
+   ],
    "deals": [
     {
      "name": "1. Command Code — Command Code GOAT 套餐（$10/月含 $80 额度）",
@@ -1050,7 +1356,20 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-15"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "智谱 Flash 系列免费模型与 Batch 折扣",
+     "url": "/deals/zhipu-free-models"
+    },
+    {
+     "name": "Qoder：匿名模型 Qoduck 限免 + 每日 100 Credits + 新用户 300 积分",
+     "url": "/deals/qoder"
+    },
+    {
+     "name": "腾讯混元生文首次开通免费 100 万 tokens（1 年有效）",
+     "url": "/deals/tencent-hunyuan-free-tokens"
+    }
+   ],
    "deals": [
     {
      "name": "1. 智谱 BigModel — Flash 系列免费模型与 Batch 折扣",
@@ -1095,7 +1414,16 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-14"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "超算互联网 SCNet：新用户免费 1000 万 Tokens 及 0.1 元首单模型包",
+     "url": "/deals/scnet-maas-new-user-token-offer"
+    },
+    {
+     "name": "Affinity 免费专业设计工具",
+     "url": "/deals/affinity-free-design"
+    }
+   ],
    "deals": [
     {
      "name": "1. 超算互联网 SCNet MaaS — 新用户免费1000万Tokens及0.1元首单模型包",
@@ -1128,7 +1456,20 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-13"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "Runway 免费档一次性 125 credits，不过期",
+     "url": "/deals/runway-free-125-credits"
+    },
+    {
+     "name": "Zed 个人版长期免费",
+     "url": "/deals/zed-free-plan"
+    },
+    {
+     "name": "Cohere 免费 evaluation/trial API key",
+     "url": "/deals/cohere-trial-key"
+    }
+   ],
    "deals": [
     {
      "name": "1. Runway — Runway 免费档一次性 125 credits，不过期",
@@ -1173,7 +1514,16 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-12"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "Supermaven Free Tier 永久免费代码补全",
+     "url": "/deals/supermaven-free-tier"
+    },
+    {
+     "name": "Tavily AI Researcher 免费计划每月 1,000 API Credits",
+     "url": "/deals/tavily-researcher-free"
+    }
+   ],
    "deals": [
     {
      "name": "1. Supermaven — Supermaven Free Tier 永久免费代码补全",
@@ -1218,7 +1568,20 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-11"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "OpenRouter 免费模型与免费档限速",
+     "url": "/deals/openrouter-free"
+    },
+    {
+     "name": "Azure for Students 额度",
+     "url": "/deals/azure-for-students"
+    },
+    {
+     "name": "阿里云云工开物 高校学生 300 元专属优惠券",
+     "url": "/deals/aliyun-university-student-coupon"
+    }
+   ],
    "deals": [
     {
      "name": "1. OpenRouter — 免费模型与免费档限速",
@@ -1263,7 +1626,20 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-10"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "OpenCode Go 低价订阅",
+     "url": "/deals/opencode-go"
+    },
+    {
+     "name": "GitHub Copilot 免费档",
+     "url": "/deals/github-copilot-free"
+    },
+    {
+     "name": "Comfy Cloud 免费层 5 次真实 GPU 运行",
+     "url": "/deals/comfy-cloud-free-runs"
+    }
+   ],
    "deals": [
     {
      "name": "1. OpenCode — Go 低价订阅",
@@ -1308,7 +1684,20 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-09"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "硅基流动 免费模型与分时段价格",
+     "url": "/deals/siliconflow-free-models"
+    },
+    {
+     "name": "Cloudflare Workers AI 每日免费额度",
+     "url": "/deals/cloudflare-workers-ai"
+    },
+    {
+     "name": "Cursor 免费档",
+     "url": "/deals/cursor-hobby-free"
+    }
+   ],
    "deals": [
     {
      "name": "1. 硅基流动 — 免费模型与分时段价格",
@@ -1353,7 +1742,20 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-08"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "智谱 Flash 系列免费模型与 Batch 折扣",
+     "url": "/deals/zhipu-free-models"
+    },
+    {
+     "name": "ElevenLabs Creator 首月 5 折（$11/月）",
+     "url": "/deals/elevenlabs"
+    },
+    {
+     "name": "OpenCode Go 低价订阅",
+     "url": "/deals/opencode-go"
+    }
+   ],
    "deals": [
     {
      "name": "1. 智谱 BigModel — Flash 系列免费模型与 Batch 折扣",
@@ -1398,7 +1800,16 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-07"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "阶跃星辰 音频与音乐生成模型限时免费",
+     "url": "/deals/stepfun-free-models"
+    },
+    {
+     "name": "GitHub Student Developer Pack",
+     "url": "/deals/github-student-pack"
+    }
+   ],
    "deals": [
     {
      "name": "1. 智谱 BigModel — GLM Coding Plan",
@@ -1443,7 +1854,16 @@
    "url": "https://saibodan.com/episodes/deals-2026-10-06"
   },
   {
-   "picks": [],
+   "picks": [
+    {
+     "name": "智谱 Flash 系列免费模型与 Batch 折扣",
+     "url": "/deals/zhipu-free-models"
+    },
+    {
+     "name": "GitHub Copilot 免费档",
+     "url": "/deals/github-copilot-free"
+    }
+   ],
    "deals": [
     {
      "name": "1. DeepSeek — 低峰时段五折",

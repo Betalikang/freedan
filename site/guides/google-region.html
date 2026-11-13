@@ -11,28 +11,22 @@
 </head>
 <body>
 <div class="wrap">
-<header class="top">
-  <div class="brand"><span class="dot"></span>羊毛日报
-    <small>free ai drop</small></div>
-  <nav class="nav">
-    <a href="../index.html">今日</a>
-    <a href="../deals/index.html">福利库</a>
-    <a href="../guides/index.html">攻略</a>
-    <a href="../paid/index.html">低价</a>
-    <a href="../episodes/index.html">往期</a>
-    <a href="../feed.xml">RSS</a>
-  </nav>
+<header class="mast">
+  <div class="brand"><span class="mark"></span>
+    <div><div class="nm">羊毛日报</div><div class="en">free ai drop</div></div></div>
+  <div class="rt"><b>赛博鸡蛋</b>2026.11.13 刊</div>
 </header>
+<nav class="nav"><a href="../index.html">今日</a><a href="../deals/index.html">福利库</a><a href="../guides/index.html" class="on">攻略</a><a href="../paid/index.html">低价</a><a href="../episodes/index.html">往期</a><a href="../all.html">全库</a><a href="../feed.xml">RSS</a></nav>
 <a class="back" href="../guides/index.html">← 攻略</a>
-<section class="hero" style="padding:28px 0 20px">
-  <p class="eyebrow">账号备忘</p>
+<section class="hero" style="padding:30px 0 22px">
+  <p class="kick">账号备忘</p>
   <h1>Google 账号改区</h1>
   <p class="sub">解决地区不受支持，没卡不用设付款信息</p>
 </section>
 <div class="article"><p>主站 / Google 账号改区与定位修改备忘</p><ul><li>核心认知：为什么会弹“地区不受支持”？</li><li>一、第一步：先查网络节点（80% 的人其实只卡在这）</li><li>二、第二步：检查或清理 Google 付款资料（按下面 3 种情况对号入座）</li><li>三、第三步：核对账号地区关联与安卓 Play 商店（按需查看）</li><li>四、改完后的自检标准（两步确认）</li></ul><p>🐧 QQ 交流群：249729644（交流 AI 工具与最新算力福利） ｜ 🐟 鱼塘群：1077397553（AI 大肥鱼放养，日常摸鱼闲聊接梗）</p><p>💡先说最重要的一条：手里没有海外银行卡的朋友，根本不需要去设置付款资料！很多朋友打开 Gemini 或使用海外 Google 服务时，弹出“您所在的地区不受支持”，去网上搜教程又全在教怎么绑卡填美国地址，没卡的人当场就卡住了。其实只要你没绑过中国/香港的付款资料（或者把旧资料关掉清空），再避开香港节点，哪怕付款中心空空如也，也完全不影响正常使用 Gemini，更不影响办理包绑卡自动订阅。下面按顺序花 2 分钟对号入座就行。</p><h2>核心认知：为什么会弹“地区不受支持”？</h2><p>Google 判断你能不能用 Gemini 等服务，主要看三件事：</p><ul><li>当前网络节点是不是落在了受限区（最常见！很多人挂着香港 HK 节点去登，Google 对香港同样锁区）；</li><li>Google 付款中心里有没有残留“中国（CN）/ 香港（HK）”的旧付款资料（如果以前绑过卡或建过国内资料，会被死死拽回受限区；但如果从来没绑过卡、里面本来就是空的，反而是最干净的，不用去新建！）；</li><li>Google 账号底层的关联国家/地区。</li></ul><h2>一、第一步：先查网络节点（80% 的人其实只卡在这）</h2><p>在动账号设置之前，先确认你的网络工具没选错地方：</p><ul><li>严禁使用香港（HK）、澳门、俄罗斯等节点：这些地区都在 Google 的服务限制名单里，挂香港节点必弹“地区不受支持”；</li><li>切换到合规地区节点：优先选 美国（US）、新加坡（SG） 或 日本（JP）；</li><li>遇到分流不生效就开全局：有时候节点虽然选了美国，但分流规则把部分 Google 域名漏回了国内或香港。如果切换节点后还报错，把网络工具切到 「全局模式（Global）」 或开启 「TUN / 虚拟网卡模式」，然后开一个浏览器无痕窗口 重新登录 gemini.google.com 试试。</li></ul><h2>二、第二步：检查或清理 Google 付款资料（按下面 3 种情况对号入座）</h2><p>开启美/日/新节点后，在电脑浏览器打开 Google 付款中心：👉 payments.google.com ，登录你的账号，看页面长什么样：</p><h3>情况 A：从来没绑过卡，页面顶部压根没有「设置」菜单（最省心）</h3><p>如果你点进去之后，页面中间只有一个 「添加付款方式」 的按钮，顶部菜单栏里找不到「设置（Settings）」：</p><ul><li>说明你的账号本来就没有任何付款资料，处于干净空白状态；</li><li>什么都不用填、什么都不用点，直接关掉页面即可！</li><li>提示：千万别点那个“添加付款方式”，因为没有海外银行卡是保存不了地址的，空着才是最好的状态。如果你后续要办咱们站内的「包绑卡自动订阅」，代充后台会自动帮你挂海外卡并建好美区资料。</li></ul><h3>情况 B：顶部有「设置」菜单，点进去看到国家是「中国 (CN)」或「香港 (HK)」</h3><p>如果顶部能看到 「设置（Settings）」，点进去看一眼“国家/地区”：</p><ul><li>如果已经是 美国（US）/ 新加坡 / 日本，直接跳过不用管；</li><li>如果显示的是 中国（CN） 或 香港（HK），说明这笔旧资料把你的号锁在了受限区，直接把它关掉清空： 在 「设置（Settings）」 页面一路滑到最底部；</li><li>找到并点击 「关闭付款资料（Close payments profile）」；</li><li>按提示输入密码，关闭原因随便选一个（比如选“其他”），点击继续完成注销。</li><li>关完就停手，不需要再新建！ 注销后你的账号就回到了上面“情况 A”的干净空白状态。</li></ul><p>⚠️ 关闭前小提示：如果账号里以前充过还没花完的 Google Play 礼品卡余额，关闭付款资料会让旧余额作废；普通账号直接放心关闭即可，Gmail 邮件、云端硬盘等账号数据完全不受影响。</p><h3>情况 C：手里有海外卡/虚拟卡，确实需要自己绑卡付款</h3><p>只有当你手里已经有海外信用卡或虚拟卡（比如要自己绑卡过 0 元试用验证，或者要把安卓 Play 商店切到美区买软件）时，才需要在 payments.google.com 点击 「添加付款方式」：</p><ul><li>国家/地区：选择 United States（美国）；</li><li>卡号信息：填入你自己的海外卡/虚拟卡卡号、有效期与安全码；</li><li>账单地址：建议填美国免税州（如俄勒冈州 Oregon），以后消费或扣款不会额外收消费税，可以直接抄下面这套： 常用免税州参考地址（俄勒冈州 Oregon）：· 街道（Address Line 1）：100 SW 3rd Ave· 城市（City）：Portland· 州（State）：OR 或 Oregon· 邮编（ZIP Code）：97204</li></ul><h2>三、第三步：核对账号地区关联与安卓 Play 商店（按需查看）</h2><h3>1. 查看账号底层的国家/地区关联（网页端）</h3><p>如果你节点已经是美国、付款资料也是空的，但还是提示地区受限，可以打开 Google 官方的地区关联查询页看一眼：</p><ul><li>打开：👉 policies.google.com/country-association-form</li><li>页面会直接显示：“您的账号关联的国家/地区：xxx”。</li><li>如果这里显示的是“中国大陆”或“香港”，可以保持每天挂稳定的美国/新加坡节点正常使用，或在页面内提交申请改为目标地区。</li></ul><h3>2. 安卓手机 Google Play 商店改区（仅限有卡且需要在手机下海外 App 的朋友）</h3><p>如果你平时只用网页版 Gemini，这一步完全不用管。只有当你常在安卓手机 Play 商店下载海外专属 App、且手里已经绑了海外卡时，才需要切 Play 商店区域：</p><ul><li>手机开启目标国家节点（例如美国），打开 Google Play 商店 App；</li><li>点击右上角头像 → 「设置」 → 「常规」 → 「账号和设备偏好设置」；</li><li>在“国家/地区和个人资料”下方，点击切换并关联海外付款方式即可（注：Play 商店官方限制每年只能切一次国家）。</li></ul><h2>四、改完后的自检标准（两步确认）</h2><p>怎么判断自己的号已经没问题、可以正常用或去升级 Pro 了？只要满足下面两条就行：</p><ul><li>付款中心无国内残留：打开 payments.google.com ，要么顶部根本没有「设置」菜单（空白干净态），要么「设置」里的国家已经是美/日/新，没有中国（CN）或香港（HK）资料；</li><li>Gemini 网页能正常回话：挂着美国、新加坡或日本节点打开 gemini.google.com ，随便发一句话提问，能正常收到回复、不弹“地区不受支持”。只要能聊，就说明彻底打通了！</li></ul><p>🏠 点击返回【赛博鸡蛋 · 资料库主目录】 ➜</p></div>
 <footer>
-  <span>数据由每日流水线自动采集、筛选、生成。</span>
-  <span>生成于 2026-11-13 11:37</span>
+  <span>数据由每日流水线自动采集、筛选、生成；存量内容来自 saibodan.com。</span>
+  <span>生成于 2026-11-13 11:59</span>
 </footer>
 </div>
 </body>

@@ -325,8 +325,12 @@ def parse_episode(page):
     m = re.search(r'<p class="meta">(.*?)</p>', body, re.S)
     if m:
         out["summary"] = clean(m.group(1))
-    m = re.search(r"今日精选(.*?)</ul>", body, re.S)
-    if m:
+    # 顶部小结块（「今日精选」→「本期重点在福利库」，标签改过好几次版）。
+    # 所以不认标签名：取第一个 <section class="deal"> 之前、
+    # 里面带 /deals/ 链接的那个 <ul>，结构比文案稳定得多。
+    head = re.split(r'<section class="deal">', body)[0]
+    m = re.search(r"<ul[^>]*>(.*?)</ul>", head, re.S)
+    if m and "/deals/" in m.group(1):
         for href, txt in re.findall(r'<a href="([^"]+)"[^>]*>(.*?)</a>',
                                     m.group(1), re.S):
             out["picks"].append({"name": clean(txt), "url": href})

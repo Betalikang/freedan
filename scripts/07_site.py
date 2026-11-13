@@ -46,154 +46,6 @@ DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 WEEK = ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"]
 
 # 配色取自 redesign 的封面模板，保证站和成片同一套视觉语言
-CSS = """/* AI 羊毛日报 · 聚合站 */
-:root{
-  --bg:#0A0D13; --bg2:#0F1622; --line:#1C2434; --line2:#26314A;
-  --tx:#E8EDF7; --mut:#9FB0C8; --dim:#65728A;
-  --blue:#4C8DFF; --gold:#FFC53D; --org:#FF8A3D; --teal:#38E1C4;
-  --mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,"Courier New",monospace;
-  --sans:"Inter","HarmonyOS Sans SC","PingFang SC","Hiragino Sans GB",
-         "Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
-}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{
-  margin:0; background:var(--bg); color:var(--tx); font-family:var(--sans);
-  line-height:1.75; font-size:16px;
-  background-image:
-    radial-gradient(900px 480px at 78% -10%, rgba(76,141,255,.13), transparent 60%),
-    radial-gradient(700px 420px at 8% 0%, rgba(255,197,61,.07), transparent 55%);
-  background-repeat:no-repeat;
-}
-a{color:var(--blue); text-decoration:none}
-a:hover{text-decoration:underline}
-.wrap{max-width:940px; margin:0 auto; padding:0 24px 72px}
-
-/* 顶栏 */
-.top{display:flex; align-items:center; justify-content:space-between;
-  gap:16px; padding:22px 0; border-bottom:1px solid var(--line); flex-wrap:wrap}
-.brand{display:flex; align-items:center; gap:10px; font-weight:800;
-  letter-spacing:.02em; font-size:17px}
-.brand .dot{width:9px; height:9px; border-radius:50%; background:var(--gold);
-  box-shadow:0 0 14px rgba(255,197,61,.75)}
-.brand small{color:var(--dim); font-weight:600; font-size:11px;
-  letter-spacing:.16em; text-transform:uppercase; font-family:var(--mono)}
-.nav{display:flex; gap:20px; font-size:14px; color:var(--mut); flex-wrap:wrap}
-.nav a{color:var(--mut)}
-.nav a:hover{color:var(--tx); text-decoration:none}
-
-/* 头部大区 */
-.hero{padding:56px 0 40px; border-bottom:1px solid var(--line)}
-.eyebrow{font-family:var(--mono); font-size:12px; letter-spacing:.22em;
-  text-transform:uppercase; color:var(--gold); margin:0 0 18px}
-h1{margin:0; font-size:clamp(32px,6vw,58px); line-height:1.06;
-  font-weight:800; letter-spacing:-.02em}
-.hero .sub{margin:14px 0 0; color:var(--mut); font-size:17px; max-width:640px}
-.hero .sub b{color:var(--tx); font-weight:700}
-.stats{display:flex; flex-wrap:wrap; gap:14px; margin-top:34px}
-.stat{background:var(--bg2); border:1px solid var(--line); border-radius:12px;
-  padding:14px 20px; min-width:132px}
-.stat b{display:block; font-size:26px; font-weight:800; line-height:1.2;
-  font-variant-numeric:tabular-nums}
-.stat span{font-size:12px; color:var(--dim); letter-spacing:.04em}
-.stat.g b{color:var(--gold)} .stat.b b{color:var(--blue)}
-.stat.t b{color:var(--teal)}
-
-/* 区块标题 */
-.sec{display:flex; align-items:baseline; justify-content:space-between;
-  gap:16px; margin:52px 0 20px; flex-wrap:wrap}
-.sec h2{margin:0; font-size:22px; font-weight:800; letter-spacing:-.01em}
-.sec .en{font-family:var(--mono); font-size:11px; letter-spacing:.2em;
-  color:var(--dim); text-transform:uppercase}
-
-/* 羊毛卡片 */
-.cards{display:grid; gap:14px}
-.card{background:var(--bg2); border:1px solid var(--line); border-radius:14px;
-  padding:20px 22px; transition:border-color .16s, transform .16s}
-.card:hover{border-color:var(--line2); transform:translateY(-1px)}
-.card .row1{display:flex; align-items:center; justify-content:space-between;
-  gap:14px; margin-bottom:6px}
-.card .idx{font-family:var(--mono); font-size:12px; color:var(--dim)}
-.card h3{margin:0; font-size:19px; font-weight:800; letter-spacing:-.01em}
-.card .benefit{margin:8px 0 0; color:var(--tx); font-size:15px}
-.chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
-.chip{font-size:12px; color:var(--mut); background:rgba(255,255,255,.04);
-  border:1px solid var(--line); border-radius:999px; padding:3px 11px}
-.chip.dl{color:var(--org); border-color:rgba(255,138,61,.35);
-  background:rgba(255,138,61,.09)}
-.chip.dl.now{color:#fff; background:var(--org); border-color:var(--org);
-  font-weight:700}
-.card .foot{display:flex; align-items:center; justify-content:space-between;
-  gap:14px; margin-top:16px; padding-top:14px; border-top:1px solid var(--line);
-  font-size:13px}
-.card .foot a{color:var(--blue); word-break:break-all}
-.conf{font-family:var(--mono); font-size:11px; color:var(--dim);
-  letter-spacing:.06em; white-space:nowrap}
-
-/* 性价比刻度 */
-.heat{display:inline-flex; align-items:center; gap:4px}
-.heat i{width:7px; height:7px; border-radius:2px; background:var(--line2);
-  display:block}
-.heat i.on{background:var(--blue)}
-.heat.s5 i.on{background:var(--gold)}
-.heat.s4 i.on{background:var(--blue)}
-.heat.s3 i.on{background:var(--teal)}
-.heat b{font-family:var(--mono); font-size:12px; color:var(--mut);
-  margin-left:5px; font-weight:600}
-
-/* 往期 */
-.archive{display:grid; gap:10px}
-.arow{display:flex; align-items:center; gap:18px; background:var(--bg2);
-  border:1px solid var(--line); border-radius:12px; padding:14px 18px;
-  transition:border-color .16s}
-.arow:hover{border-color:var(--line2); text-decoration:none}
-.arow .d{font-family:var(--mono); font-size:13px; color:var(--blue);
-  min-width:104px}
-.arow .n{flex:1; color:var(--tx); font-size:15px; overflow:hidden;
-  text-overflow:ellipsis; white-space:nowrap}
-.arow .c{font-family:var(--mono); font-size:12px; color:var(--dim);
-  white-space:nowrap}
-
-/* 全库搜索 */
-.search{width:100%; background:var(--bg2); border:1px solid var(--line);
-  border-radius:12px; padding:13px 16px; color:var(--tx); font-size:15px;
-  font-family:var(--sans); margin-bottom:16px}
-.search:focus{outline:none; border-color:var(--blue)}
-.search::placeholder{color:var(--dim)}
-.flat{display:grid; gap:8px}
-.frow{display:grid; grid-template-columns:96px 1fr auto; gap:14px;
-  align-items:baseline; padding:12px 16px; background:var(--bg2);
-  border:1px solid var(--line); border-radius:10px}
-.frow .d{font-family:var(--mono); font-size:12px; color:var(--dim)}
-.frow .t{font-size:15px}
-.frow .t b{font-weight:700}
-.frow .t span{color:var(--mut); font-size:13px}
-.frow .h{white-space:nowrap}
-.empty{color:var(--dim); font-size:14px; padding:18px 2px}
-
-/* 翻页 */
-.pager{display:flex; justify-content:space-between; gap:14px; margin-top:44px;
-  padding-top:22px; border-top:1px solid var(--line); font-size:14px}
-.pager a{color:var(--mut)}
-.pager a:hover{color:var(--tx)}
-.pager .ph{color:var(--line2)}
-
-footer{margin-top:56px; padding-top:22px; border-top:1px solid var(--line);
-  color:var(--dim); font-size:13px; display:flex; justify-content:space-between;
-  gap:16px; flex-wrap:wrap}
-footer code{font-family:var(--mono); font-size:12px; color:var(--mut)}
-
-@media (max-width:640px){
-  .wrap{padding:0 16px 56px}
-  .hero{padding:38px 0 30px}
-  .frow{grid-template-columns:1fr; gap:4px}
-  .frow .h{justify-self:start}
-  .arow .n{white-space:normal}
-  .nav{gap:14px; font-size:13px}
-}
-"""
-
-
 # Cloudflare Pages 的 _headers（纯文本，不是 TOML）。
 # 生成在 site/ 根下，Cloudflare 会把它应用到所有响应上。
 HEADERS = """\
@@ -222,91 +74,266 @@ HEADERS = """\
   Cache-Control: public, max-age=300
 """
 
-# 存量内容（福利库 / 攻略 / 低价 / 往期）用到的样式
-CSS2 = """
-/* ---------- 筛选条 ---------- */
-.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
-.fbtn{font:inherit;font-size:13px;color:var(--mut);background:var(--bg2);
-  border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer;
-  transition:color .15s,border-color .15s,background .15s}
-.fbtn:hover{color:var(--tx);border-color:var(--line2)}
-.fbtn.on{color:#fff;background:var(--blue);border-color:var(--blue);font-weight:600}
-.fcount{font-family:var(--mono);font-size:12px;color:var(--dim);margin-left:auto;
-  align-self:center}
+CSS = """\n/* ============================================================
+   AI 羊毛日报 · 报纸编辑风（paper editorial）
+   底色用纸、正文用宋、强调用朱。不用圆角卡片盒——
+   分隔靠细线和留白，像报纸而不是像 SaaS 后台。
+   ============================================================ */
+:root{
+  --paper:#F4F0E6;
+  --paper2:#FCFAF4;
+  --ink:#1B1815;
+  --ink2:#57514A;
+  --ink3:#A29889;
+  --rule:#DED6C5;
+  --rule2:#C6BBA6;
+  --verm:#B2390E;
+  --verm-d:#8A2A08;
+  --verm-l:#F4E4DA;
+  --gold:#8F7328;
+  --jade:#2C6B52;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",Georgia,"Times New Roman",serif;
+  --sans:"Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,"Courier New",monospace;
+  --measure:37rem;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+  font-size:16px;line-height:1.75;
+  background-image:radial-gradient(1100px 420px at 50% -8%,
+    rgba(178,57,14,.055), transparent 70%);
+  background-repeat:no-repeat;
+}
+a{color:var(--verm);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:920px;margin:0 auto;padding:0 26px 70px}
 
-/* ---------- 福利库卡片 ---------- */
-.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.dcard{display:block;background:var(--bg2);border:1px solid var(--line);
-  border-radius:13px;padding:16px 18px;transition:border-color .16s,transform .16s}
-.dcard:hover{border-color:var(--line2);transform:translateY(-1px);text-decoration:none}
-.dcard .top{display:flex;align-items:flex-start;justify-content:space-between;
-  gap:10px;margin-bottom:4px}
-.dcard h3{margin:0;font-size:16px;font-weight:700;line-height:1.4}
-.dcard .pf{font-size:12px;color:var(--dim);margin:2px 0 8px}
-.dcard .val{font-size:13px;color:var(--mut);margin:0;
+/* ---------- 报头 ---------- */
+.mast{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;
+  padding:30px 0 14px;border-bottom:3px double var(--ink);flex-wrap:wrap}
+.mast .brand{display:flex;align-items:center;gap:13px}
+.mast .mark{width:32px;height:38px;flex:none;
+  background:var(--verm);
+  border-radius:50% 50% 50% 50%/60% 60% 42% 42%;
+  position:relative;box-shadow:inset 0 -5px 0 rgba(0,0,0,.13)}
+.mast .mark::after{content:"";position:absolute;left:8px;top:7px;width:8px;height:11px;
+  background:rgba(255,255,255,.5);border-radius:50%}
+.mast .nm{font-family:var(--serif);font-size:27px;font-weight:900;
+  letter-spacing:.06em;line-height:1}
+.mast .en{font-family:var(--mono);font-size:9.5px;letter-spacing:.3em;
+  color:var(--ink3);text-transform:uppercase;margin-top:5px}
+.mast .rt{text-align:right;font-family:var(--mono);font-size:11.5px;
+  color:var(--ink2);letter-spacing:.05em;line-height:1.7}
+.mast .rt b{display:block;font-family:var(--serif);font-size:15px;color:var(--ink);
+  letter-spacing:.04em}
+
+/* ---------- 导航 ---------- */
+.nav{display:flex;flex-wrap:wrap;border-bottom:1px solid var(--rule)}
+.nav a{font-size:14px;color:var(--ink2);padding:12px 17px;
+  border-bottom:2px solid transparent;margin-bottom:-1px;letter-spacing:.03em}
+.nav a:hover{color:var(--verm);text-decoration:none}
+.nav a.on{color:var(--verm);border-bottom-color:var(--verm);font-weight:600}
+
+/* ---------- 头条区 ---------- */
+.hero{padding:46px 0 32px;border-bottom:1px solid var(--rule)}
+.hero .kick{font-family:var(--mono);font-size:11px;letter-spacing:.22em;
+  color:var(--verm);text-transform:uppercase;margin:0 0 18px}
+.hero h1{font-family:var(--serif);font-size:clamp(29px,5.2vw,52px);
+  line-height:1.24;font-weight:900;margin:0;letter-spacing:.015em;max-width:21em;
+  text-wrap:balance;text-wrap:pretty}
+.hero .sub{margin:20px 0 0;font-size:16px;color:var(--ink2);
+  max-width:var(--measure);line-height:1.85}
+.hero .sub b{color:var(--ink);font-weight:600;
+  border-bottom:2px solid var(--verm-l);padding-bottom:1px}
+
+/* ---------- 数据条（横排，不用盒子） ---------- */
+.stats{display:flex;flex-wrap:wrap;margin:30px 0 0;border-top:1px solid var(--rule)}
+.stat{padding:15px 28px 15px 0;margin-right:28px;border-right:1px solid var(--rule)}
+.stat:last-child{border-right:0;margin-right:0;padding-right:0}
+.stat b{display:block;font-family:var(--serif);font-size:31px;font-weight:900;
+  line-height:1;color:var(--verm);font-variant-numeric:tabular-nums}
+.stat span{font-size:12px;color:var(--ink3);letter-spacing:.05em}
+
+/* ---------- 栏目标题 ---------- */
+.sec{display:flex;align-items:baseline;gap:14px;margin:50px 0 2px;
+  border-bottom:2px solid var(--ink);padding-bottom:9px;flex-wrap:wrap}
+.sec h2{font-family:var(--serif);font-size:20px;font-weight:900;margin:0;
+  letter-spacing:.03em}
+.sec .en{font-family:var(--mono);font-size:10px;letter-spacing:.2em;
+  color:var(--ink3);text-transform:uppercase}
+.sec .rt{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--ink3)}
+
+/* ---------- 列表行（今日福利 / 往期 / 速递共用） ---------- */
+.items{display:grid}
+.item{display:grid;grid-template-columns:46px 1fr auto;gap:0 20px;
+  padding:21px 4px;border-bottom:1px solid var(--rule);align-items:start;
+  transition:background .14s}
+.item:hover{background:linear-gradient(90deg,rgba(178,57,14,.07),transparent 65%)}
+.item .no{font-family:var(--serif);font-size:23px;font-weight:900;
+  color:var(--verm);line-height:1.15;font-variant-numeric:tabular-nums}
+.item h3{font-family:var(--serif);font-size:18px;font-weight:700;margin:0 0 6px;
+  line-height:1.45}
+.item .val{font-size:14.5px;color:var(--ink2);margin:0;line-height:1.75}
+.item .meta{display:flex;flex-wrap:wrap;gap:9px;align-items:center;
+  margin-top:11px;font-size:12px;color:var(--ink3)}
+.item .src{font-size:13px;color:var(--verm);white-space:nowrap;font-weight:500}
+.item .foot{grid-column:2;display:flex;align-items:center;gap:14px;
+  margin-top:12px;padding-top:11px;border-top:1px dotted var(--rule2)}
+.conf{font-family:var(--mono);font-size:10px;letter-spacing:.12em;
+  color:var(--ink3);text-transform:uppercase;white-space:nowrap}
+
+/* ---------- 性价比刻度 ---------- */
+.heat{display:inline-flex;gap:3px;align-items:center}
+.heat i{width:8px;height:8px;background:var(--rule2);display:block}
+.heat i.on{background:var(--verm)}
+.heat b{font-family:var(--mono);font-size:11px;color:var(--ink3);margin-left:6px}
+
+/* ---------- 小标签 ---------- */
+.tag{font-size:11.5px;color:var(--ink2);border:1px solid var(--rule2);
+  padding:1px 8px;letter-spacing:.02em;line-height:1.6}
+.tag.dl{color:var(--verm);border-color:var(--verm);background:var(--verm-l);
+  font-weight:600}
+.tag.end{color:var(--ink3);text-decoration:line-through}
+
+/* ---------- 筛选（下划线页签，不是胶囊） ---------- */
+.fbar{display:flex;flex-wrap:wrap;align-items:flex-end;gap:4px 22px;
+  border-bottom:1px solid var(--rule);padding-top:6px}
+.fgroup{display:flex;flex-wrap:wrap;align-items:center}
+.flabel{font-family:var(--mono);font-size:10px;letter-spacing:.14em;
+  color:var(--ink3);text-transform:uppercase;padding:0 10px 0 2px}
+.fbtn{font:inherit;font-size:13px;color:var(--ink2);background:none;border:0;
+  border-bottom:2px solid transparent;padding:10px 12px;cursor:pointer;
+  letter-spacing:.02em}
+.fbtn:hover{color:var(--verm)}
+.fbtn.on{color:var(--verm);border-bottom-color:var(--verm);font-weight:600}
+.fcount{margin-left:auto;font-family:var(--mono);font-size:11px;
+  color:var(--ink3);padding-bottom:10px;white-space:nowrap}
+
+/* ---------- 福利库（双列密排） ---------- */
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 38px}
+.dcell{padding:13px 4px;border-bottom:1px solid var(--rule);
+  transition:background .14s}
+.dcell:hover{background:linear-gradient(90deg,rgba(178,57,14,.07),transparent 70%)}
+.dcell .top{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.dcell h3{font-family:var(--serif);font-size:16.5px;font-weight:700;margin:0;
+  line-height:1.45}
+.dcell .pf{font-size:12px;color:var(--ink3);margin:5px 0 7px}
+.dcell .val{font-size:13px;color:var(--ink2);margin:0;line-height:1.65;
   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
-.pill{font-family:var(--mono);font-size:11px;letter-spacing:.03em;color:var(--mut);
-  border:1px solid var(--line);border-radius:5px;padding:2px 7px}
-.pill.cn{color:var(--gold);border-color:rgba(255,197,61,.35)}
-.pill.gl{color:var(--teal);border-color:rgba(56,225,196,.3)}
-.pill.end{color:var(--dim);text-decoration:line-through}
-.pill.soon{color:var(--org);border-color:rgba(255,138,61,.4)}
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+/* 地区/类型/状态小标签统一走 .tag， modifiers 见上面 .tag 定义处 */
+.tag.gl{color:var(--jade);border-color:var(--jade)}
 
 /* ---------- 详情页 ---------- */
-.back{display:inline-block;font-size:13px;color:var(--mut);margin-bottom:18px}
-.back:hover{color:var(--tx);text-decoration:none}
-.kv{display:grid;gap:0;margin:22px 0;border:1px solid var(--line);
-  border-radius:13px;overflow:hidden;background:var(--bg2)}
-.kv .r{display:grid;grid-template-columns:132px 1fr;gap:16px;padding:13px 18px;
-  border-bottom:1px solid var(--line)}
-.kv .r:last-child{border-bottom:0}
-.kv .k{font-size:13px;color:var(--dim)}
-.kv .v{font-size:14px;margin:0;word-break:break-word}
+.back{display:inline-block;font-size:13px;color:var(--ink2);margin:22px 0 0}
+.back:hover{color:var(--verm);text-decoration:none}
+.kv{display:grid;margin:26px 0 0;border-top:2px solid var(--ink)}
+.kv .r{display:grid;grid-template-columns:118px 1fr;gap:20px;
+  padding:15px 4px;border-bottom:1px solid var(--rule);align-items:start}
+.kv .k{font-size:13px;color:var(--ink3);letter-spacing:.06em;padding-top:2px}
+.kv .v{font-size:15px;margin:0;line-height:1.85;word-break:break-word}
 .kv .v a{word-break:break-all}
-.cta{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0}
-.btn{display:inline-block;font-size:14px;font-weight:600;border-radius:10px;
-  padding:11px 20px;text-decoration:none}
-.btn.solid{background:var(--blue);color:#fff}
-.btn.solid:hover{filter:brightness(1.1);text-decoration:none}
-.btn.ghost{border:1px solid var(--line2);color:var(--mut)}
-.btn.ghost:hover{color:var(--tx);text-decoration:none}
-blockquote{margin:18px 0;padding:12px 18px;border-left:3px solid var(--gold);
-  background:rgba(255,197,61,.06);border-radius:0 10px 10px 0;color:var(--tx);
-  font-size:14px}
+/* 详情/往期里嵌的列表也要用站内那种朱红小方点，不能用浏览器默认圆点 */
+.kv .v ul{margin:0;padding-left:0;list-style:none}
+.kv .v li{position:relative;padding-left:18px;margin-bottom:8px;
+  font-size:14.5px;line-height:1.8}
+.kv .v li::before{content:"";position:absolute;left:2px;top:.76em;
+  width:5px;height:5px;background:var(--verm)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 0}
+.btn{display:inline-block;font-size:14.5px;font-weight:600;padding:12px 24px;
+  letter-spacing:.04em}
+.btn.solid{background:var(--verm);color:#fff}
+.btn.solid:hover{background:var(--verm-d);text-decoration:none}
+.btn.ghost{border:1px solid var(--rule2);color:var(--ink2)}
+.btn.ghost:hover{border-color:var(--verm);color:var(--verm);text-decoration:none}
+blockquote{margin:0;padding:2px 0 2px 18px;border-left:3px solid var(--verm);
+  font-family:var(--serif);font-size:15.5px;line-height:1.85;color:var(--ink)}
 
-/* ---------- 攻略正文 ---------- */
-.article{max-width:760px}
-.article h2{font-size:20px;font-weight:800;margin:34px 0 12px;
-  padding-bottom:8px;border-bottom:1px solid var(--line)}
-.article h3{font-size:16px;font-weight:700;margin:24px 0 8px;color:var(--gold)}
-.article p{margin:0 0 12px;font-size:15px;line-height:1.85}
-.article ul{margin:0 0 14px;padding-left:22px}
-.article li{margin:0 0 7px;font-size:15px;line-height:1.75}
-.article li::marker{color:var(--blue)}
-.gcard{display:block;background:var(--bg2);border:1px solid var(--line);
-  border-radius:13px;padding:18px 20px;margin-bottom:12px}
-.gcard:hover{border-color:var(--line2);text-decoration:none}
-.gcard .no{font-family:var(--mono);font-size:12px;color:var(--gold)}
-.gcard h3{margin:6px 0 4px;font-size:17px}
-.gcard .lead{color:var(--mut);font-size:14px;margin:0 0 10px}
-.gcard .ch{font-size:12px;color:var(--dim);margin:10px 0 0}
+/* ---------- 攻略正文（终于有行宽和节奏了） ---------- */
+.article{max-width:var(--measure)}
+.article h2{font-family:var(--serif);font-size:20px;font-weight:900;
+  margin:46px 0 15px;padding-left:15px;border-left:4px solid var(--verm);
+  line-height:1.45;letter-spacing:.02em}
+.article h3{font-family:var(--serif);font-size:16.5px;font-weight:700;
+  margin:30px 0 11px;color:var(--verm-d);letter-spacing:.02em}
+.article p{margin:0 0 17px;font-size:15.5px;line-height:1.95;color:var(--ink)}
+.article ul{margin:0 0 20px;padding-left:0;list-style:none}
+.article li{position:relative;padding-left:19px;margin-bottom:10px;
+  font-size:15px;line-height:1.9}
+.article li::before{content:"";position:absolute;left:2px;top:.78em;
+  width:5px;height:5px;background:var(--verm)}
+
+/* ---------- 攻略 / 低价 卡片 ---------- */
+.glist{display:grid;gap:0}
+.gcard{display:block;padding:22px 4px;border-bottom:1px solid var(--rule);
+  transition:background .14s}
+.gcard:hover{background:linear-gradient(90deg,rgba(178,57,14,.07),transparent 70%);
+  text-decoration:none}
+.gcard .top{display:flex;align-items:baseline;gap:14px}
+.gcard .no{font-family:var(--serif);font-size:19px;font-weight:900;color:var(--verm);
+  font-variant-numeric:tabular-nums}
+.gcard .tag{flex:none}
+.gcard h3{font-family:var(--serif);font-size:18px;font-weight:700;margin:8px 0 0}
+.gcard .lead{color:var(--ink2);font-size:14.5px;margin:7px 0 0;line-height:1.75}
+.gcard ul{margin:12px 0 0;padding-left:0;list-style:none}
+.gcard li{position:relative;padding-left:17px;font-size:13.5px;color:var(--ink2);
+  margin-bottom:5px;line-height:1.7}
+.gcard li::before{content:"";position:absolute;left:2px;top:.72em;width:4px;height:4px;
+  background:var(--rule2)}
+.gcard .ch{font-size:12px;color:var(--ink3);margin:12px 0 0}
+.gcard .ch b{color:var(--ink2);font-weight:600}
 
 /* ---------- 往期速递 ---------- */
-.eplist{display:grid;gap:10px}
-.eprow{display:grid;grid-template-columns:104px 1fr auto;gap:16px;
-  align-items:baseline;background:var(--bg2);border:1px solid var(--line);
-  border-radius:12px;padding:14px 18px;transition:border-color .16s}
-.eprow:hover{border-color:var(--line2);text-decoration:none}
-.eprow .d{font-family:var(--mono);font-size:13px;color:var(--blue)}
-.eprow .h{font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.eprow .n{font-family:var(--mono);font-size:12px;color:var(--dim);white-space:nowrap}
+.eplist{display:grid}
+.eprow{display:grid;grid-template-columns:108px 1fr auto;gap:18px;
+  align-items:baseline;padding:16px 4px;border-bottom:1px solid var(--rule);
+  transition:background .14s}
+.eprow:hover{background:linear-gradient(90deg,rgba(178,57,14,.07),transparent 70%);
+  text-decoration:none}
+.eprow .d{font-family:var(--mono);font-size:12.5px;color:var(--verm)}
+.eprow .h{font-size:14.5px;color:var(--ink);overflow:hidden;
+  text-overflow:ellipsis;white-space:nowrap}
+.eprow .n{font-family:var(--mono);font-size:11.5px;color:var(--ink3);white-space:nowrap}
 
-@media (max-width:760px){
+/* ---------- 搜索 ---------- */
+.search{width:100%;background:var(--paper2);border:1px solid var(--rule2);
+  border-radius:0;padding:13px 16px;color:var(--ink);font-size:15px;
+  font-family:var(--sans);margin:4px 0 0}
+.search:focus{outline:none;border-color:var(--verm)}
+.search::placeholder{color:var(--ink3)}
+
+/* ---------- 翻页 ---------- */
+.pager{display:flex;justify-content:space-between;gap:16px;margin-top:48px;
+  padding-top:20px;border-top:1px solid var(--rule);font-size:14px}
+.pager a{color:var(--ink2)}
+.pager a:hover{color:var(--verm)}
+.pager .ph{color:var(--rule2)}
+
+/* ---------- 报尾 ---------- */
+footer{margin-top:60px;padding-top:20px;border-top:3px double var(--ink);
+  color:var(--ink3);font-size:12.5px;display:flex;justify-content:space-between;
+  gap:18px;flex-wrap:wrap;letter-spacing:.02em}
+footer code{font-family:var(--mono);font-size:11.5px;color:var(--ink2)}
+
+.empty{color:var(--ink3);font-size:14px;padding:20px 4px}
+.more{display:block;width:100%;margin:22px 0 0;padding:14px;font:inherit;
+  font-size:14px;color:var(--ink2);background:var(--paper2);
+  border:1px solid var(--rule2);cursor:pointer;letter-spacing:.06em}
+.more:hover{color:var(--verm);border-color:var(--verm)}
+
+@media (max-width:720px){
+  .wrap{padding:0 18px 54px}
+  .hero{padding:32px 0 26px}
   .dgrid{grid-template-columns:1fr}
-  .kv .r{grid-template-columns:1fr;gap:4px}
-  .eprow{grid-template-columns:1fr;gap:4px}
+  .item{grid-template-columns:34px 1fr;gap:0 14px}
+  .item .src{grid-column:2;margin-top:8px}
+  .eprow{grid-template-columns:1fr;gap:3px}
   .eprow .h{white-space:normal}
+  .kv .r{grid-template-columns:1fr;gap:4px}
+  .stat{padding-right:18px;margin-right:18px}
+  .mast .rt{text-align:left}
 }
 """
 
@@ -335,43 +362,46 @@ def esc(s):
 def heat_html(score):
     n = int(score or 0)
     dots = "".join('<i class="%s"></i>' % ("on" if i < n else "") for i in range(5))
-    return ('<span class="heat s%d" title="性价比 %d/5">%s<b>%d</b></span>'
-            % (n, n, dots, n))
+    return ('<span class="heat" title="性价比 %d/5">%s<b>%d</b></span>'
+            % (n, dots, n))
 
 
 def deadline_chip(deadline):
-    """截止时间单独成 chip；今天的截止用实心橙高亮。"""
+    """截止时间单独成标签；今天的截止用朱红高亮。"""
     if not deadline:
         return ""
     today = date.today().isoformat()
     raw = str(deadline)
     urgent = (today in raw) or ("今日" in raw) or ("今天" in raw) or ("24点" in raw)
-    cls = "chip dl now" if urgent else "chip dl"
-    return '<span class="%s">截止 %s</span>' % (cls, esc(raw))
+    return '<span class="tag%s">截止 %s</span>' % (" dl" if urgent else "", esc(raw))
 
 
 def condition_chip(cond):
     if not cond or str(cond).strip() in ("未说明", "无", "-"):
         return ""
-    return '<span class="chip">条件 %s</span>' % esc(cond)
+    return '<span class="tag">条件 %s</span>' % esc(cond)
 
 
-def card_html(item):
+def card_html(item, idx=""):
     name = esc(item.get("name") or "")
     benefit = esc(item.get("benefit") or "")
     src = esc(item.get("source_url") or "")
     conf = esc(item.get("confidence") or "")
+    meta = "".join(x for x in (condition_chip(item.get("condition")),
+                               deadline_chip(item.get("deadline"))) if x)
     foot = ""
     if src:
-        foot += '<a href="%s" target="_blank" rel="noopener">查看来源 ↗</a>' % src
+        foot += ('<a class="src" href="%s" target="_blank" rel="noopener">'
+                 '查看来源 ↗</a>' % src)
     if conf:
         foot += '<span class="conf">%s</span>' % conf
-    return f"""<article class="card">
-  <div class="row1"><h3>{name}</h3>{heat_html(item.get("heat"))}</div>
-  <p class="benefit">{benefit}</p>
-  <div class="chips">{condition_chip(item.get("condition"))}{deadline_chip(item.get("deadline"))}</div>
-  <div class="foot">{foot}</div>
-</article>"""
+    return f"""<div class="item">
+  <div class="no">{idx}</div>
+  <div><h3>{name}</h3><p class="val">{benefit}</p>
+    <div class="meta">{meta}</div>
+    <div class="foot">{foot}</div></div>
+  <div>{heat_html(item.get("heat"))}</div>
+</div>"""
 
 
 def day_key(d):
@@ -477,7 +507,16 @@ def u(path, prefix=""):
     return prefix + path
 
 
-def page(title, body, prefix=""):
+NAV = [("index.html", "今日"), ("deals/index.html", "福利库"),
+       ("guides/index.html", "攻略"), ("paid/index.html", "低价"),
+       ("episodes/index.html", "往期"), ("all.html", "全库"), ("feed.xml", "RSS")]
+
+
+def page(title, body, prefix="", nav=""):
+    links = "".join(
+        '<a href="%s"%s>%s</a>'
+        % (u(p, prefix), ' class="on"' if p == nav else "", lbl)
+        for p, lbl in NAV)
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -491,21 +530,15 @@ def page(title, body, prefix=""):
 </head>
 <body>
 <div class="wrap">
-<header class="top">
-  <div class="brand"><span class="dot"></span>羊毛日报
-    <small>free ai drop</small></div>
-  <nav class="nav">
-    <a href="{u('index.html', prefix)}">今日</a>
-    <a href="{u('deals/index.html', prefix)}">福利库</a>
-    <a href="{u('guides/index.html', prefix)}">攻略</a>
-    <a href="{u('paid/index.html', prefix)}">低价</a>
-    <a href="{u('episodes/index.html', prefix)}">往期</a>
-    <a href="{u('feed.xml', prefix)}">RSS</a>
-  </nav>
+<header class="mast">
+  <div class="brand"><span class="mark"></span>
+    <div><div class="nm">羊毛日报</div><div class="en">free ai drop</div></div></div>
+  <div class="rt"><b>赛博鸡蛋</b>{datetime.now().strftime('%Y.%m.%d')} 刊</div>
 </header>
+<nav class="nav">{links}</nav>
 {body}
 <footer>
-  <span>数据由每日流水线自动采集、筛选、生成。</span>
+  <span>数据由每日流水线自动采集、筛选、生成；存量内容来自 saibodan.com。</span>
   <span>生成于 {datetime.now().strftime('%Y-%m-%d %H:%M')}</span>
 </footer>
 </div>
@@ -530,7 +563,7 @@ def stats_html(days):
 
 def hero(title, eyebrow, sub, days):
     return f"""<section class="hero">
-  <p class="eyebrow">{esc(eyebrow)}</p>
+  <p class="kick">{esc(eyebrow)}</p>
   <h1>{esc(title)}</h1>
   <p class="sub">{sub}</p>
   {stats_html(days)}
@@ -546,9 +579,11 @@ def render_index(days, c):
         sub = (f'今天 <b>{len(t["freebies"])} 条</b>能直接领的 AI 福利，'
                f'按性价比排好序了。')
         body = hero(t["hook"], f'{t["date"]} · {wd}', sub, days)
-        body += '<div class="sec"><h2>今日福利</h2><span class="en">today\'s finds</span></div>'
-        body += '<div class="cards">%s</div>' % "".join(
-            card_html(i) for i in t["freebies"])
+        body += ('<div class="sec"><h2>今日福利</h2><span class="en">today\'s finds</span>'
+                 '<span class="rt">%d items</span></div>' % len(t["freebies"]))
+        body += '<div class="items">%s</div>' % "".join(
+            card_html(i, "%02d" % (n + 1))
+            for n, i in enumerate(t["freebies"]))
 
         # 存量内容入口：新站一上线就有东西可逛，不是只有今天一条
         entries = [("deals/index.html", "福利库",
@@ -563,21 +598,21 @@ def render_index(days, c):
         if entries:
             body += ('<div class="sec"><h2>去逛逛</h2>'
                      '<span class="en">library</span></div>')
-            body += '<div class="archive">%s</div>' % "".join(
-                '<a class="arow" href="%s"><span class="d">%s</span>'
-                '<span class="n">%s</span></a>'
+            body += '<div class="items">%s</div>' % "".join(
+                '<a class="item" href="%s"><div class="no">→</div>'
+                '<div><h3>%s</h3><p class="val">%s</p></div></a>'
                 % (u(p, ""), esc(name), esc(desc)) for p, name, desc in entries)
 
         if len(days) > 1:
             body += ('<div class="sec"><h2>往期</h2>'
                      '<span class="en">archive · %d 天</span></div>' % (len(days) - 1))
-            body += '<div class="archive">%s</div>' % "".join(
-                '<a class="arow" href="%s"><span class="d">%s</span>'
-                '<span class="n">%s</span><span class="c">%d 条</span></a>'
-                % (u("day/%s.html" % d["date"]), esc(d["date"]),
+            body += '<div class="items">%s</div>' % "".join(
+                '<a class="item" href="%s"><div class="no">%s</div>'
+                '<div><h3>%s</h3></div><div><span class="tag">%d 条</span></div></a>'
+                % (u("day/%s.html" % d["date"]), esc(d["date"][5:]),
                    esc(d["hook"]), len(d["freebies"]))
                 for d in days[1:])
-    return page("羊毛日报 · 每日 AI 福利聚合", body, "")
+    return page("羊毛日报 · 每日 AI 福利聚合", body, "", "index.html")
 
 
 def render_day(d, prev_d, next_d):
@@ -590,10 +625,11 @@ def render_day(d, prev_d, next_d):
                  '<p><a href="%s" target="_blank" rel="noopener">看本期视频 ↗</a>'
                  '（约 %s 秒）</p>'
                  % (esc(d["video_url"]), esc(d.get("video_seconds") or "—")))
-    body += '<div class="sec"><h2>本期福利</h2><span class="en">%d items</span></div>' \
-        % len(d["freebies"])
-    body += '<div class="cards">%s</div>' % "".join(
-        card_html(i) for i in d["freebies"])
+    body += ('<div class="sec"><h2>本期福利</h2><span class="en">%d items</span></div>'
+             % len(d["freebies"]))
+    body += '<div class="items">%s</div>' % "".join(
+        card_html(i, "%02d" % (n + 1))
+        for n, i in enumerate(d["freebies"]))
 
     def link(other, label):
         if not other:
@@ -604,7 +640,7 @@ def render_day(d, prev_d, next_d):
     body += ('<div class="pager">%s<a href="%s">返回今日</a>%s</div>'
              % (link(prev_d, "更新一天"), u("index.html", "../"),
                 link(next_d, "更早一天")))
-    return page("羊毛日报 · %s" % d["date"], body, "../")
+    return page("羊毛日报 · %s" % d["date"], body, "../", "index.html")
 
 
 def render_all(days):
@@ -614,23 +650,23 @@ def render_all(days):
             k = " ".join(str(it.get(k) or "") for k in
                          ("name", "benefit", "condition")).lower()
             rows.append(
-                '<div class="frow" data-k="%s"><span class="d">%s</span>'
-                '<span class="t"><b>%s</b> <span>%s</span></span>'
-                '<span class="h">%s</span></div>'
-                % (esc(k), esc(d["date"]), esc(it.get("name") or ""),
+                '<div class="eprow" data-k="%s"><span class="d">%s</span>'
+                '<span class="h"><b>%s</b>　%s</span>'
+                '<span class="n">%s</span></div>'
+                % (esc(k), esc(d["date"][5:]), esc(it.get("name") or ""),
                    esc(it.get("benefit") or ""), heat_html(it.get("heat"))))
     body = f"""<section class="hero">
-  <p class="eyebrow">all freebies</p>
-  <h1>全部福利</h1>
-  <p class="sub">累计 <b>{sum(len(d['freebies']) for d in days)}</b> 条，
+  <p class="kick">all freebies</p>
+  <h1>全库福利</h1>
+  <p class="sub">每日流水线产出的 <b>{sum(len(d['freebies']) for d in days)}</b> 条，
     来自 <b>{len(days)}</b> 天。支持按产品名或福利内容搜索。</p>
 </section>
 <input class="search" id="q" type="search" placeholder="搜索产品名或福利内容…">
-<div class="flat" id="rows">{''.join(rows) or '<p class="empty">暂无数据</p>'}</div>
+<div class="eplist" id="rows">{''.join(rows) or '<p class="empty">暂无数据</p>'}</div>
 <p class="empty" id="none" hidden>没有匹配的福利。</p>
 <script>
 (function(){{
-  var q=document.getElementById('q'),rows=document.querySelectorAll('#rows .frow'),
+  var q=document.getElementById('q'),rows=document.querySelectorAll('#rows .eprow'),
       none=document.getElementById('none');
   q.addEventListener('input',function(){{
     var v=q.value.trim().toLowerCase(),hit=0;
@@ -642,7 +678,7 @@ def render_all(days):
   }});
 }})();
 </script>"""
-    return page("全部福利 · 羊毛日报", body)
+    return page("全库福利 · 羊毛日报", body, "", "all.html")
 
 
 # --------------------------------------- 存量内容页面（content/ 里的）
@@ -650,17 +686,22 @@ def render_all(days):
 FILTER_JS = """
 (function(){
   var sel={region:'all',type:'all',status:'all'};
-  var cards=[].slice.call(document.querySelectorAll('.dcard'));
-  var total=cards.length;
-  function apply(){
-    var hit=0;
-    cards.forEach(function(c){
-      var ok=true;
-      for(var k in sel){ if(sel[k]!=='all' && c.dataset[k]!==sel[k]) ok=false; }
-      c.style.display=ok?'':'none'; if(ok)hit++;
+  var cells=[].slice.call(document.querySelectorAll('.dcell'));
+  var BATCH=60, shown=BATCH;
+  var btn=document.getElementById('more'), cnt=document.getElementById('cnt');
+  function visible(){
+    return cells.filter(function(c){
+      for(var k in sel){ if(sel[k]!=='all' && c.dataset[k]!==sel[k]) return false; }
+      return true;
     });
-    var el=document.getElementById('cnt');
-    if(el) el.textContent=hit+' / '+total+' 条';
+  }
+  function paint(){
+    var v=visible(), i;
+    for(i=0;i<cells.length;i++) cells[i].style.display='none';
+    for(i=0;i<Math.min(shown,v.length);i++) v[i].style.display='';
+    var left=v.length-Math.min(shown,v.length);
+    if(btn){ btn.hidden=left<=0; btn.textContent='显示剩余 '+left+' 条'; }
+    if(cnt) cnt.textContent=Math.min(shown,v.length)+' / '+cells.length+' 条';
   }
   document.querySelectorAll('.fbtn').forEach(function(b){
     b.addEventListener('click',function(){
@@ -668,10 +709,11 @@ FILTER_JS = """
       document.querySelectorAll('.fbtn[data-g="'+g+'"]').forEach(function(x){
         x.classList.remove('on');
       });
-      b.classList.add('on'); sel[g]=b.dataset.v; apply();
+      b.classList.add('on'); sel[g]=b.dataset.v; shown=BATCH; paint();
     });
   });
-  apply();
+  if(btn) btn.addEventListener('click',function(){ shown+=BATCH; paint(); });
+  paint();
 })();
 """
 
@@ -684,22 +726,22 @@ def slug_of(url):
 def region_pill(d):
     r = d.get("region")
     if r == "cn":
-        return '<span class="pill cn">国内</span>'
+        return '<span class="tag cn">国内</span>'
     if r == "global":
-        return '<span class="pill gl">海外</span>'
+        return '<span class="tag gl">海外</span>'
     return ""
 
 
 def deal_pills(d):
     out = [region_pill(d)]
     if d.get("type"):
-        out.append('<span class="pill">%s</span>' % esc(d["type"]))
+        out.append('<span class="tag">%s</span>' % esc(d["type"]))
     if d.get("status") == "ended":
-        out.append('<span class="pill end">已结束</span>')
+        out.append('<span class="tag end">已结束</span>')
     elif d.get("soon"):
-        out.append('<span class="pill soon">即将截止</span>')
+        out.append('<span class="tag soon">即将截止</span>')
     elif d.get("is_new"):
-        out.append('<span class="pill">新上线</span>')
+        out.append('<span class="tag">新上线</span>')
     return '<div class="pills">%s</div>' % "".join(x for x in out if x)
 
 
@@ -714,13 +756,13 @@ def deal_subline(d):
 
 
 def deal_card(d):
-    return ('<a class="dcard" href="%s" data-region="%s" data-type="%s" '
+    return ('<a class="dcell" href="%s" data-region="%s" data-type="%s" '
             'data-status="%s"><div class="top"><h3>%s</h3></div>'
             '<div class="pf">%s</div><p class="val">%s</p>%s</a>'
             % (u("deals/%s.html" % d["id"], "../"), esc(d.get("region") or ""),
                esc(d.get("type") or ""), esc(d.get("status") or ""),
-               esc(d.get("name") or ""), deal_subline(d),
-               esc(d.get("value") or ""), deal_pills(d)))
+               esc(d.get("name") or ""),
+               deal_subline(d), esc(d.get("value") or ""), deal_pills(d)))
 
 
 def render_deals_index(deals):
@@ -730,29 +772,32 @@ def render_deals_index(deals):
         return ('<button class="fbtn%s" data-g="%s" data-v="%s">%s</button>'
                 % (" on" if on else "", group, esc(value), esc(label)))
 
-    bar = ('<div class="filters">'
-           + chip("region", "all", "全部地区", True)
-           + chip("region", "cn", "国内")
-           + chip("region", "global", "海外")
-           + '</div><div class="filters">'
-           + chip("type", "all", "全部类型", True)
-           + "".join(chip("type", t, t) for t in types)
-           + '</div><div class="filters">'
-           + chip("status", "all", "全部状态", True)
-           + chip("status", "active", "还能领")
-           + chip("status", "ended", "已结束")
+    def group(label, items):
+        return ('<div class="fgroup"><span class="flabel">%s</span>%s</div>'
+                % (label, "".join(items)))
+
+    bar = ('<div class="fbar">'
+           + group("地区", [chip("region", "all", "全部", True),
+                           chip("region", "cn", "国内"), chip("region", "global", "海外")])
+           + group("类型", [chip("type", "all", "全部", True)]
+                   + [chip("type", t, t) for t in types])
+           + group("状态", [chip("status", "all", "全部", True),
+                           chip("status", "active", "还能领"),
+                           chip("status", "ended", "已结束")])
            + '<span class="fcount" id="cnt"></span></div>')
 
     body = f"""<section class="hero">
-  <p class="eyebrow">freebie library</p>
+  <p class="kick">freebie library</p>
   <h1>福利库</h1>
   <p class="sub">累计 <b>{len(deals)}</b> 条 AI 免费额度与限时优惠，
-    按地区、类型、是否还能领筛选。</p>
+    按地区、类型、是否还能领筛。指数是源站 1-10 分的价值排序。</p>
 </section>
+<div class="sec"><h2>筛选</h2><span class="en">filter</span></div>
 {bar}
 <div class="dgrid">{''.join(deal_card(d) for d in deals)}</div>
+<button class="more" id="more" hidden></button>
 <script>{FILTER_JS}</script>"""
-    return page("福利库 · 羊毛日报", body, "../")
+    return page("福利库 · 羊毛日报", body, "../", "deals/index.html")
 
 
 def render_deal_detail(d):
@@ -773,7 +818,8 @@ def render_deal_detail(d):
         rows.append(row("是什么", esc(d["what"])))
     if d.get("official"):
         rows.append(row("官方原话", "<blockquote>%s</blockquote>" % esc(d["official"])))
-    if d.get("summary"):
+    # 源站的 summary 常常就是 what 的截断版，重复时别占一行
+    if d.get("summary") and d["summary"].strip() != (d.get("what") or "").strip():
         rows.append(row("摘要", esc(d["summary"])))
     if d.get("verified"):
         rows.append(row("核验日期", esc(d["verified"])))
@@ -790,13 +836,14 @@ def render_deal_detail(d):
              if d.get("status") == "ended" else "")
     body = f"""<a class="back" href="{u('deals/index.html', '../')}">← 福利库</a>
 <section class="hero" style="padding:28px 0 24px">
-  <p class="eyebrow">{esc(d.get('platform') or 'deal')}</p>
+  <p class="kick">{esc(d.get('platform') or 'deal')}</p>
   <h1>{esc(d.get('name') or '')}</h1>
   {ended}
 </section>
 <div class="kv">{''.join(r for r in rows if r)}</div>
 {cta}"""
-    return page("%s · 福利库" % (d.get("name") or d.get("id")), body, "../")
+    return page("%s · 福利库" % (d.get("name") or d.get("id")), body, "../",
+           "deals/index.html")
 
 
 def blocks_html(blocks):
@@ -818,59 +865,66 @@ def blocks_html(blocks):
 def render_guides(guides):
     cards = []
     for g in guides:
-        doc = g.get("doc") or {}
         cards.append(
             '<a class="gcard" href="%s">'
-            '<div class="no">%s</div>'
+            '<div class="top"><span class="no">%s</span>'
+            '<span class="tag">%s</span></div>'
             '<h3>%s</h3>'
             '<p class="lead">%s</p>'
-            '<ul class="ovpts">%s</ul>'
-            '<p class="ch">里面讲了：%s</p></a>'
+            '<ul>%s</ul>'
+            '<p class="ch"><b>里面讲了</b>　%s</p></a>'
             % (u("guides/%s.html" % slug_of(g.get("url")), "../"), esc(g.get("no")),
-               esc(g.get("name")), esc(g.get("lead")),
+               esc(g.get("tag")), esc(g.get("name")), esc(g.get("lead")),
                "".join("<li>%s</li>" % esc(p) for p in g.get("points") or []),
                esc(g.get("chapters"))))
     body = f"""<section class="hero">
-  <p class="eyebrow">guides</p>
+  <p class="kick">guides</p>
   <h1>攻略</h1>
   <p class="sub">不想花钱也能用上的东西：怎么把 AI 接进工作流、怎么白嫖算力、
     新手怎么上手、副业从哪起步。<b>{len(guides)}</b> 篇。</p>
 </section>
-{''.join(cards)}"""
-    return page("攻略 · 羊毛日报", body, "../")
+<div class="sec"><h2>全部攻略</h2><span class="en">{len(guides)} guides</span></div>
+<div class="glist">{''.join(cards)}</div>"""
+    return page("攻略 · 羊毛日报", body, "../", "guides/index.html")
 
 
 def render_guide_detail(g):
     doc = g.get("doc") or {}
     art = blocks_html(doc.get("blocks"))
     body = f"""<a class="back" href="{u('guides/index.html', '../')}">← 攻略</a>
-<section class="hero" style="padding:28px 0 20px">
-  <p class="eyebrow">{esc(g.get('tag') or 'guide')}</p>
+<section class="hero" style="padding:30px 0 22px">
+  <p class="kick">{esc(g.get('tag') or 'guide')}</p>
   <h1>{esc(g.get('name') or '')}</h1>
   <p class="sub">{esc(g.get('lead') or '')}</p>
 </section>
 <div class="article">{art or '<p class="empty">正文还没搬过来。</p>'}</div>"""
-    return page("%s · 攻略" % (g.get("name") or slug_of(g.get("url"))), body, "../")
+    return page("%s · 攻略" % (g.get("name") or slug_of(g.get("url"))), body, "../",
+           "guides/index.html")
 
 
 def render_paid(paid):
     cards = []
     for p in paid:
         cards.append(
-            '<div class="gcard"><div class="no">%s</div><h3>%s</h3>'
-            '<p class="lead">%s</p><ul class="ovpts">%s</ul>'
-            '<p class="ch">里面讲了：%s</p></div>'
-            % (esc(p.get("no")), esc(p.get("name")), esc(p.get("lead")),
+            '<div class="gcard"><div class="top"><span class="no">%s</span>'
+            '<span class="tag">%s</span></div>'
+            '<h3>%s</h3>'
+            '<p class="lead">%s</p>'
+            '<ul>%s</ul>'
+            '<p class="ch"><b>里面讲了</b>　%s</p></div>'
+            % (esc(p.get("no")), esc(p.get("tag")), esc(p.get("name")),
+               esc(p.get("lead")),
                "".join("<li>%s</li>" % esc(x) for x in p.get("points") or []),
                esc(p.get("chapters"))))
     body = f"""<section class="hero">
-  <p class="eyebrow">paid picks</p>
+  <p class="kick">paid picks</p>
   <h1>低价订阅</h1>
   <p class="sub">在售的 AI 会员与低价开通方案。价格是当日实价，
     点开看各自能拿到什么、怎么用。<b>{len(paid)}</b> 条。</p>
 </section>
-{''.join(cards)}"""
-    return page("低价订阅 · 羊毛日报", body, "../")
+<div class="sec"><h2>全部方案</h2><span class="en">{len(paid)} picks</span></div>
+<div class="glist">{''.join(cards)}</div>"""
+    return page("低价订阅 · 羊毛日报", body, "../", "paid/index.html")
 
 
 EP_FIELD_ORDER = ("changelog", "value", "howto", "condition", "deadline")
@@ -905,13 +959,14 @@ def render_episode_detail(e):
                     for p in e.get("picks") or [])
     body = f"""<a class="back" href="{u('episodes/index.html', '../')}">← 往期速递</a>
 <section class="hero" style="padding:28px 0 22px">
-  <p class="eyebrow">{esc(e.get('date') or '')}</p>
+  <p class="kick">{esc(e.get('date') or '')}</p>
   <h1>{esc(e.get('headline') or '')}</h1>
   <p class="sub">{esc(e.get('summary') or '')}</p>
 </section>
 {'<div class="kv"><div class="r"><div class="k">今日精选</div><div class="v"><ul style="margin:0;padding-left:20px">%s</ul></div></div></div>' % picks if picks else ''}
 {''.join(secs)}"""
-    return page("羊毛速递 %s" % (e.get("date") or ""), body, "../")
+    return page("羊毛速递 %s" % (e.get("date") or ""), body, "../",
+           "episodes/index.html")
 
 
 def render_episodes_index(eps):
@@ -922,13 +977,13 @@ def render_episodes_index(eps):
                     % (u("episodes/%s.html" % e["date"], "../"), esc(e.get("date")),
                        esc(e.get("headline") or ""), len(e.get("deals") or [])))
     body = f"""<section class="hero">
-  <p class="eyebrow">archive</p>
+  <p class="kick">archive</p>
   <h1>往期速递</h1>
   <p class="sub">从 <b>{esc(eps[-1]['date']) if eps else '—'}</b> 到
     <b>{esc(eps[0]['date']) if eps else '—'}</b>，共 <b>{len(eps)}</b> 期每日羊毛速递。</p>
 </section>
 <div class="eplist">{''.join(rows)}</div>"""
-    return page("往期速递 · 羊毛日报", body, "../")
+    return page("往期速递 · 羊毛日报", body, "../", "episodes/index.html")
 
 
 def render_feed(days):
@@ -978,7 +1033,7 @@ def main():
 
     SITE.mkdir(parents=True, exist_ok=True)
     (SITE / "assets").mkdir(exist_ok=True)
-    (SITE / "assets" / "style.css").write_text(CSS + CSS2, encoding="utf-8")
+    (SITE / "assets" / "style.css").write_text(CSS, encoding="utf-8")
     (SITE / "_headers").write_text(HEADERS, encoding="utf-8")
 
     c = load_content()
