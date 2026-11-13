@@ -35,9 +35,9 @@ DATA = ROOT / "data"
 SITE = ROOT / "site"
 CONTENT = ROOT / "content"   # 08_import_site.py 从 saibodan.com 搬来的存量内容
 
-# 绑定域名后把这里改成 https://你的域名（RSS 的绝对链接会用到）。
-# 留空则站内链接全部走相对路径，本地 file:// 打开也能正常跳转。
-SITE_URL = ""
+# 正式域名。RSS 的绝对链接、og 分享链接都靠它；
+# 留空则站内链接走相对路径，本地双击打开也能正常跳转。
+SITE_URL = "https://freedan.top"
 
 # 可选：某天成片托管到哪里（B 站/网盘/对象存储），填了当日页面就会出现「看成片」入口。
 VIDEO_URLS = {}
