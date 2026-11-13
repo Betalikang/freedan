@@ -12,6 +12,7 @@ deploy_site.py · 重建站点并推送到 GitHub
 """
 
 import sys
+import time
 import subprocess
 import datetime
 from pathlib import Path
@@ -97,14 +98,21 @@ def main():
         print("✗ commit 失败：\n" + out)
         return 1
 
-    code, out = git("push", "-u", "origin", "HEAD")
-    if code != 0:
-        print("✗ push 失败：\n" + out)
-        print("（首次推送建议先跑 git push -u origin master 看看 GCM 的浏览器授权）")
-        return 1
-
-    print("✓ 已推送，Cloudflare Pages 随后会自动部署")
-    return 0
+    # 本机两条出口（7897 代理 / 直连）都会间歇性抽风，实测同一时刻
+    # 可能一条全通另一条全挂。无人值守必须重试，否则某天推不上去
+    # 站点就静默停更，而视频那边还是好的，很难发现。
+    for attempt in range(1, 4):
+        code, out = git("push", "-u", "origin", "HEAD")
+        if code == 0:
+            print("✓ 已推送")
+            return 0
+        if attempt < 3:
+            wait = 8 * attempt
+            print(f"  push 第 {attempt}/3 次失败，{wait}s 后重试")
+            print("  " + out.strip().split("\n")[0][:120])
+            time.sleep(wait)
+    print("✗ push 三次都失败：\n" + out)
+    return 1
 
 
 if __name__ == "__main__":
