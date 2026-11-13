@@ -30,6 +30,10 @@ ROOT = Path(__file__).resolve().parent.parent
 PROXY = ["-c", "http.proxy=http://127.0.0.1:7897",
          "-c", "https.proxy=http://127.0.0.1:7897"]
 
+# 第二条路：把代理显式清空。**必须显式清**，只传空列表的话 git 会继续用
+# ~/.gitconfig 里那个死的 7890，看着像"直连"其实不是。
+NO_PROXY = ["-c", "http.proxy=", "-c", "https.proxy="]
+
 # 只有这些网络层错误才值得换一条路重试；认证失败、冲突之类重试没意义
 NET_ERRS = ("unable to access", "connection was reset", "timed out",
             "could not resolve host", "failed to connect",
@@ -38,12 +42,12 @@ NET_ERRS = ("unable to access", "connection was reset", "timed out",
 
 
 def git(*args):
-    """跑 git：先走上面的代理，网络层失败才退回直连重试一次。
+    """跑 git：先走代理，网络层失败才清空代理重试一次。
 
-    顺序不能颠倒——直连是默认不通的那条，代理没开的某一天靠它兜底。
+    顺序不能颠倒——两条路都可能通，也可能都不通，所以都要试。
     """
     last = (1, "")
-    for extra in (PROXY, []):
+    for extra in (PROXY, NO_PROXY):
         r = subprocess.run(["git", *extra, *args], cwd=str(ROOT),
                            capture_output=True, text=True,
                            encoding="utf-8", errors="replace")
