@@ -249,8 +249,49 @@ def parse_overview_cards(body):
 
 # -------------------------------------------------------- docs 攻略正文
 
+# docs 文章末尾的固定模板段：从这些标题开始整段砍掉。
+# 后面跟着的是板块表、QQ 群 / B 站 / 微信入口、回主站链接组——
+# 全是源站的私域引流，不是文章内容，搬过来只会把别人的群号塞进我们站里。
+FOOTER_HEADING = re.compile(r"更多精选资源|交流探讨与找到我")
+
+
+# docs 文章末尾偶尔还挂一段引流——没有「更多精选资源」标题，
+# 直接跟在一个 <p> 或 <ul> 里（QQ 群 / 回主站链接）。
+# **只从尾部清，且列表先清条目、整块空了才删块**：
+# qqbot 那篇攻略真的要讲"别人叫它大肥鱼它会傲娇反驳"，按关键词全局删会误伤正文。
+TRAILING_BOILER = re.compile(
+    r"QQ\s*交流群|鱼塘群|搜索群号|点击返回|资料库主目录|"
+    r"space\.bilibili\.com|个人微信|扫码交流|备注：赛博鸡蛋")
+
+
+def _strip_trailing_boiler(blocks):
+    while blocks:
+        last = blocks[-1]
+        if last.get("t") == "list":
+            items = last.get("items") or []
+            kept = [x for x in items if not TRAILING_BOILER.search(x)]
+            if len(kept) == len(items):
+                return                      # 整块都是正文，停
+            last["items"] = kept
+            if not kept:
+                blocks.pop()                # 全是引流，删块后继续往前看
+                continue
+            return                          # 还剩正文，停
+        if TRAILING_BOILER.search(last.get("text") or ""):
+            blocks.pop()
+        else:
+            return
+
+
 def parse_docs_article(page):
     """把 docs.saibodan.com 的正文切成 h2/h3/p/list 块，保住文章结构。
+
+    只取正文本身。docs 页首尾是固定模板：
+      首：面包屑 `<p class="crumb">`、目录 `<nav class="toc">`、QQ 群横幅
+      尾：`<h2>📚 更多精选资源与实用渠道</h2>` 起的整段（板块表 + 群号 /
+          B 站 / 微信 + 回主站链接），外加 `<style>` 和 `.cta` 回链组
+    按结构和标题定位来切，**不按关键词猜正文**——猜关键词容易误伤
+    （比如「QQ 群接 AI」那篇攻略本身就要讲"扫码选群"）。
 
     嵌套列表会被摊平进同一层的条目里——对「搬内容」来说可读性够了，
     不值得为此上一整棵 DOM 树。
@@ -258,6 +299,17 @@ def parse_docs_article(page):
     body = main_of(page)
     m = re.search(r"<h1[^>]*>(.*?)</h1>", body, re.S)
     title = clean(m.group(1)) if m else ""
+    # 1) 砍页脚模板段：按标题定位
+    for m in re.finditer(r"<(h2|h3)[^>]*>(.*?)</\1>", body, re.S):
+        if FOOTER_HEADING.search(clean(m.group(2))):
+            body = body[:m.start()]
+            break
+    # 2) 兜底：没有那个标题的篇目，仍有 <style> 和 .cta 回链组
+    body = re.split(r"<style[\s>]|<div class=\"(?:cta|mp-entry)[\" ]", body)[0]
+    # 3) 正文从第一个 <h2> 起，跳过前面的面包屑 / 目录 / QQ 群横幅
+    m = re.search(r"<h2[\s>]", body)
+    if m:
+        body = body[m.start():]
     blocks, cur = [], None
 
     def flush():
@@ -284,6 +336,7 @@ def parse_docs_article(page):
                 flush()
                 blocks.append({"t": "p", "text": t})
     flush()
+    _strip_trailing_boiler(blocks)
     return {"title": title, "blocks": blocks}
 
 
