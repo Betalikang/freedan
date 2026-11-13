@@ -57,7 +57,7 @@ def git(*args):
 
 
 TRACK = ["data", "site", "scripts", "README.md",
-         "config.json", ".gitignore"]
+         "pipeline.json", ".gitignore"]
 
 
 def main():

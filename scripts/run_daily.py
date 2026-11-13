@@ -26,7 +26,7 @@ for _s in (sys.stdout, sys.stderr):
 
 ROOT = Path(__file__).resolve().parent.parent
 SCRIPTS = ROOT / "scripts"
-CFG = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
+CFG = json.loads((ROOT / "pipeline.json").read_text(encoding="utf-8"))
 
 
 def run(script, date, required=True):

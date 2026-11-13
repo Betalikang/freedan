@@ -1,4 +1,5 @@
 {
+  "_note": "文件名必须是 pipeline.json，不要改回 config.json：Hugo 的配置文件名就叫 config.json，Cloudflare Pages / Netlify / Vercel 的框架检测看到它会把本站误判成 Hugo，跑去执行 npx hugo，部署直接失败。",
   "brand": {
     "name": "每日人工智能精选内参",
     "en": "DISPATCH · 2026"

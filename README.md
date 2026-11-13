@@ -85,7 +85,7 @@ BGM → acrossfade 自环到成片长度（2s 交叉淡化，消循环接缝）
     → amix + alimiter 0.95
 ```
 
-实测配比：人声下 BGM 被压低到 -36.8dB（低于人声 18.4dB），清单段无人声时回到 -29.9dB。峰值 -1.0dBFS，无削波。`sidechaincompress` 的 `threshold`/`ratio`/`attack`/`release` 和音量都在 `config.json` 的 `video.bgm` 里可调。
+实测配比：人声下 BGM 被压低到 -36.8dB（低于人声 18.4dB），清单段无人声时回到 -29.9dB。峰值 -1.0dBFS，无削波。`sidechaincompress` 的 `threshold`/`ratio`/`attack`/`release` 和音量都在 `pipeline.json` 的 `video.bgm` 里可调。
 
 **复用而非复制。** `05_render.py` / `06_cover.py` 直接 import `E:\saibodan\redesign\scripts` 下的 `build_slides`、`render_video`、`render_slides`。改视觉风格请改 `redesign/`，不要改这里。
 
@@ -97,7 +97,7 @@ BGM → acrossfade 自环到成片长度（2s 交叉淡化，消循环接缝）
 
 ## 改配置
 
-`config.json`：
+`pipeline.json`：
 
 - `sources` —— 四个信源开关，任何一个挂掉不影响其他
 - `search_queries` —— AIHOT 搜索词
@@ -125,7 +125,7 @@ python -c "import asyncio,edge_tts;[print(v['ShortName'],v['Gender'],v.get('Voic
 | `zh-CN-YunxiNeural` | 男声，阳光活泼，适合快节奏口播 |
 | `zh-CN-YunyangNeural` | 男声，专业可靠 |
 
-改 `config.json` 的 `video.voice` 后重跑 `python scripts/run_daily.py <日期>`，配音和出片会重新生成。
+改 `pipeline.json` 的 `video.voice` 后重跑 `python scripts/run_daily.py <日期>`，配音和出片会重新生成。
 
 **别用 SSML。** 在这个端点上 `<prosody rate="+21%">` 反而比纯文本 +0% 还慢一倍，`<voice>` 包裹后慢 4 倍，`mstts:express-as` 的风格指令让时长涨 4 倍且不可控。`Communicate` 的 `rate`/`pitch` 参数可靠，SSML markup 不可靠。
 

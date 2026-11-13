@@ -34,7 +34,7 @@ for _s in (sys.stdout, sys.stderr):
         pass
 
 ROOT = Path(__file__).resolve().parent.parent
-CFG = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
+CFG = json.loads((ROOT / "pipeline.json").read_text(encoding="utf-8"))
 SR = 44100
 
 sys.path.insert(0, str(ROOT / "scripts"))

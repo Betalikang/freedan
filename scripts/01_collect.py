@@ -26,7 +26,7 @@ for _s in (sys.stdout, sys.stderr):
         pass
 
 ROOT = Path(__file__).resolve().parent.parent
-CFG = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
+CFG = json.loads((ROOT / "pipeline.json").read_text(encoding="utf-8"))
 
 BROWSER_UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
               "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36")
