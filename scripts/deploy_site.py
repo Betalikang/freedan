@@ -56,7 +56,7 @@ def git(*args):
     return last
 
 
-TRACK = ["data", "site", "scripts", "README.md",
+TRACK = ["data", "content", "site", "scripts", "README.md",
          "pipeline.json", ".gitignore"]
 
 

@@ -3,12 +3,13 @@
 """
 AI 羊毛日报 · 总控
 
-一条命令跑完：采集 → 筛选 → 写稿 → 配音对齐 → 出片 → 封面 → 聚合站
+一条命令跑完：采集 → 筛选 → 写稿 → 配音对齐 → 出片 → 封面 → 导入存量内容 → 聚合站
 
 用法：
     python scripts/run_daily.py                # 今天
     python scripts/run_daily.py 2026-11-12     # 指定日期
     python scripts/run_daily.py --skip-render  # 只到写稿
+    python scripts/run_daily.py --no-import    # 不重新抓 saibodan.com 的存量内容
 """
 
 import sys
@@ -45,6 +46,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("date", nargs="?", default=datetime.date.today().isoformat())
     ap.add_argument("--skip-render", action="store_true")
+    ap.add_argument("--no-import", action="store_true",
+                    help="不重新抓取 saibodan.com 的存量内容，只用现有 content/")
     args = ap.parse_args()
     date = args.date
 
@@ -61,7 +64,7 @@ def main():
     if code == 3:
         print("\n今天合格羊毛不足，不出片。采集数据已保留：")
         print(f"  {ROOT / 'runs' / date / 'freebies.json'}")
-        print("\n[7/7] 聚合站（仅刷新已有数据）")
+        print("\n[7/8] 聚合站（仅刷新已有数据）")
         run("07_site.py", date, required=False)
         return 0
     if code != 0:
@@ -87,7 +90,15 @@ def main():
     if run("06_cover.py", date) != 0:
         return 1
 
-    print("\n[7/7] 聚合站")
+    print("\n[7/8] 导入存量内容")
+    # 依赖 saibodan.com 在线，所以失败只警告不阻断——content/ 里已有上次的数据，
+    # 站点照样能建，只是福利库不会刷新到当天。
+    if "--no-import" not in sys.argv:
+        run("08_import_site.py", date, required=False)
+    else:
+        print("  --no-import：跳过，沿用现有 content/")
+
+    print("\n[8/8] 聚合站")
     if run("07_site.py", date) != 0:
         return 1
 

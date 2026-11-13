@@ -27,19 +27,22 @@ python scripts/run_daily.py --skip-render  # 只到写稿，不出片
 | `cover_4x3.png` | 封面 1600×1200 |
 | `cover_3x4.png` | 封面 1080×1440 |
 
-## 七个阶段
+## 八个阶段
 
 ```
-[1/7] 01_collect.py   多信源采集，按标题去重
-[2/7] 02_select.py    LLM 提取「能拿到什么/条件/截止」+ 硬门槛过滤
-[3/7] 03_compose.py   写文案、拼卡片，产出 content.json（时间轴此时是估值）+ publish.md
-[4/7] 04_narrate.py   整段一次合成配音 + 字级时间戳 → 用真实音频重写时间轴
-[5/7] 05_render.py    按 cues 切片段渲染画面 → 拼接 → 铺音轨
-[6/7] 06_cover.py     套封面模板换数据
-[7/7] 07_site.py      把当日数据并进聚合站（data/ + site/）
+[1/8] 01_collect.py   多信源采集，按标题去重
+[2/8] 02_select.py    LLM 提取「能拿到什么/条件/截止」+ 硬门槛过滤
+[3/8] 03_compose.py   写文案、拼卡片，产出 content.json（时间轴此时是估值）+ publish.md
+[4/8] 04_narrate.py   整段一次合成配音 + 字级时间戳 → 用真实音频重写时间轴
+[5/8] 05_render.py    按 cues 切片段渲染画面 → 拼接 → 铺音轨
+[6/8] 06_cover.py     套封面模板换数据
+[7/8] 08_import_site.py  把 saibodan.com 的存量内容抓进 content/（失败不阻断）
+[8/8] 07_site.py      把当日数据 + 存量内容一起渲染成聚合站
 ```
 
-第 7 步只重建站点、不推送；推送到 GitHub 由 `deploy_site.py` 单独负责。
+第 7 步抓的是线上站已经积累的内容，让新站一上线就有东西可看。它依赖
+saibodan.com 在线，所以**失败只打警告、不阻断流水线**——`content/` 里已有上次的
+数据，站点照样能建，只是福利库不会刷新到当天。想跳过就加 `--no-import`。
 
 ### 阶段2 的两道硬门槛
 
@@ -151,13 +154,32 @@ python scripts/deploy_site.py --dry-run # 只重建
 
 | 文件 | 说明 |
 |---|---|
-| `index.html` | 今日福利 + 统计 + 往期入口 |
+| `index.html` | 今日福利 + 统计 + 「去逛逛」入口 + 往期入口 |
 | `day/<日期>.html` | 单日页面，可前后翻页 |
+| `deals/index.html` | 福利库，156 条，按地区/类型/是否可领前端筛选 |
+| `deals/<id>.html` | 单条福利详情（能拿到什么、条件、截止、领取入口、官方原话） |
+| `guides/index.html` + `guides/<slug>.html` | 8 篇攻略索引与正文 |
+| `paid/index.html` | 7 条低价订阅 |
+| `episodes/index.html` + `episodes/<日期>.html` | 40 期每日速递存档 |
 | `all.html` | 全部历史福利，带前端搜索框 |
 | `feed.xml` | RSS，可直接订阅 |
 | `data/freebies.json` | 机器可读全量数据，已开 CORS |
 | `assets/style.css` | 样式，配色取自 `redesign` 的封面模板 |
 | `_headers` | Cloudflare Pages 响应头（安全头 + 分级缓存），由脚本生成 |
+
+「基础内容」来自 `content/`（`08_import_site.py` 从 saibodan.com 抓的）：
+
+| 文件 | 内容 |
+|---|---|
+| `content/deals.json` | 156 条福利，字段最全的一份（含领取链接） |
+| `content/guides.json` | 8 篇攻略索引 + docs.saibodan.com 的正文 |
+| `content/paid.json` | 7 条低价订阅 |
+| `content/episodes.json` | 40 期每日速递 |
+
+手动重抓：`python scripts/08_import_site.py`（可加 `--deals` / `--pages` 只跑一半）。
+
+**排行榜没有搬。** 线上 `/rank/` 是同一批福利的另一种排法，不是独立内容；
+新站的福利库自带地区/类型/状态筛选和指数排序，再抄一份排名只会两处打架。
 
 站点读的是 `data/<日期>/`（`07_site.py` 从 `runs/<日期>/` 同步过来的小 JSON）；
 `runs/` 整个目录被 `.gitignore` 忽略，视频和音频不进仓库。

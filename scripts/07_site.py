@@ -33,6 +33,7 @@ ROOT = Path(__file__).resolve().parent.parent
 RUNS = ROOT / "runs"
 DATA = ROOT / "data"
 SITE = ROOT / "site"
+CONTENT = ROOT / "content"   # 08_import_site.py 从 saibodan.com 搬来的存量内容
 
 # 绑定域名后把这里改成 https://你的域名（RSS 的绝对链接会用到）。
 # 留空则站内链接全部走相对路径，本地 file:// 打开也能正常跳转。
@@ -77,7 +78,7 @@ a:hover{text-decoration:underline}
   box-shadow:0 0 14px rgba(255,197,61,.75)}
 .brand small{color:var(--dim); font-weight:600; font-size:11px;
   letter-spacing:.16em; text-transform:uppercase; font-family:var(--mono)}
-.nav{display:flex; gap:20px; font-size:14px; color:var(--mut)}
+.nav{display:flex; gap:20px; font-size:14px; color:var(--mut); flex-wrap:wrap}
 .nav a{color:var(--mut)}
 .nav a:hover{color:var(--tx); text-decoration:none}
 
@@ -220,6 +221,111 @@ HEADERS = """\
 /feed.xml
   Cache-Control: public, max-age=300
 """
+
+# 存量内容（福利库 / 攻略 / 低价 / 往期）用到的样式
+CSS2 = """
+/* ---------- 筛选条 ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
+.fbtn{font:inherit;font-size:13px;color:var(--mut);background:var(--bg2);
+  border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer;
+  transition:color .15s,border-color .15s,background .15s}
+.fbtn:hover{color:var(--tx);border-color:var(--line2)}
+.fbtn.on{color:#fff;background:var(--blue);border-color:var(--blue);font-weight:600}
+.fcount{font-family:var(--mono);font-size:12px;color:var(--dim);margin-left:auto;
+  align-self:center}
+
+/* ---------- 福利库卡片 ---------- */
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.dcard{display:block;background:var(--bg2);border:1px solid var(--line);
+  border-radius:13px;padding:16px 18px;transition:border-color .16s,transform .16s}
+.dcard:hover{border-color:var(--line2);transform:translateY(-1px);text-decoration:none}
+.dcard .top{display:flex;align-items:flex-start;justify-content:space-between;
+  gap:10px;margin-bottom:4px}
+.dcard h3{margin:0;font-size:16px;font-weight:700;line-height:1.4}
+.dcard .pf{font-size:12px;color:var(--dim);margin:2px 0 8px}
+.dcard .val{font-size:13px;color:var(--mut);margin:0;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.03em;color:var(--mut);
+  border:1px solid var(--line);border-radius:5px;padding:2px 7px}
+.pill.cn{color:var(--gold);border-color:rgba(255,197,61,.35)}
+.pill.gl{color:var(--teal);border-color:rgba(56,225,196,.3)}
+.pill.end{color:var(--dim);text-decoration:line-through}
+.pill.soon{color:var(--org);border-color:rgba(255,138,61,.4)}
+
+/* ---------- 详情页 ---------- */
+.back{display:inline-block;font-size:13px;color:var(--mut);margin-bottom:18px}
+.back:hover{color:var(--tx);text-decoration:none}
+.kv{display:grid;gap:0;margin:22px 0;border:1px solid var(--line);
+  border-radius:13px;overflow:hidden;background:var(--bg2)}
+.kv .r{display:grid;grid-template-columns:132px 1fr;gap:16px;padding:13px 18px;
+  border-bottom:1px solid var(--line)}
+.kv .r:last-child{border-bottom:0}
+.kv .k{font-size:13px;color:var(--dim)}
+.kv .v{font-size:14px;margin:0;word-break:break-word}
+.kv .v a{word-break:break-all}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0}
+.btn{display:inline-block;font-size:14px;font-weight:600;border-radius:10px;
+  padding:11px 20px;text-decoration:none}
+.btn.solid{background:var(--blue);color:#fff}
+.btn.solid:hover{filter:brightness(1.1);text-decoration:none}
+.btn.ghost{border:1px solid var(--line2);color:var(--mut)}
+.btn.ghost:hover{color:var(--tx);text-decoration:none}
+blockquote{margin:18px 0;padding:12px 18px;border-left:3px solid var(--gold);
+  background:rgba(255,197,61,.06);border-radius:0 10px 10px 0;color:var(--tx);
+  font-size:14px}
+
+/* ---------- 攻略正文 ---------- */
+.article{max-width:760px}
+.article h2{font-size:20px;font-weight:800;margin:34px 0 12px;
+  padding-bottom:8px;border-bottom:1px solid var(--line)}
+.article h3{font-size:16px;font-weight:700;margin:24px 0 8px;color:var(--gold)}
+.article p{margin:0 0 12px;font-size:15px;line-height:1.85}
+.article ul{margin:0 0 14px;padding-left:22px}
+.article li{margin:0 0 7px;font-size:15px;line-height:1.75}
+.article li::marker{color:var(--blue)}
+.gcard{display:block;background:var(--bg2);border:1px solid var(--line);
+  border-radius:13px;padding:18px 20px;margin-bottom:12px}
+.gcard:hover{border-color:var(--line2);text-decoration:none}
+.gcard .no{font-family:var(--mono);font-size:12px;color:var(--gold)}
+.gcard h3{margin:6px 0 4px;font-size:17px}
+.gcard .lead{color:var(--mut);font-size:14px;margin:0 0 10px}
+.gcard .ch{font-size:12px;color:var(--dim);margin:10px 0 0}
+
+/* ---------- 往期速递 ---------- */
+.eplist{display:grid;gap:10px}
+.eprow{display:grid;grid-template-columns:104px 1fr auto;gap:16px;
+  align-items:baseline;background:var(--bg2);border:1px solid var(--line);
+  border-radius:12px;padding:14px 18px;transition:border-color .16s}
+.eprow:hover{border-color:var(--line2);text-decoration:none}
+.eprow .d{font-family:var(--mono);font-size:13px;color:var(--blue)}
+.eprow .h{font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.eprow .n{font-family:var(--mono);font-size:12px;color:var(--dim);white-space:nowrap}
+
+@media (max-width:760px){
+  .dgrid{grid-template-columns:1fr}
+  .kv .r{grid-template-columns:1fr;gap:4px}
+  .eprow{grid-template-columns:1fr;gap:4px}
+  .eprow .h{white-space:normal}
+}
+"""
+
+
+def load_content():
+    """读 content/ 下搬进来的存量内容；缺文件就当空，不阻断建站。"""
+    out = {}
+    for f, k in (("deals.json", "deals"), ("guides.json", "guides"),
+                 ("paid.json", "paid"), ("episodes.json", "episodes")):
+        p = CONTENT / f
+        if not p.exists():
+            out[k] = []
+            continue
+        try:
+            out[k] = json.loads(p.read_text(encoding="utf-8")).get(k) or []
+        except Exception as e:
+            print(f"  ⚠ content/{f} 读失败：{e}")
+            out[k] = []
+    return out
 
 
 def esc(s):
@@ -390,7 +496,10 @@ def page(title, body, prefix=""):
     <small>free ai drop</small></div>
   <nav class="nav">
     <a href="{u('index.html', prefix)}">今日</a>
-    <a href="{u('all.html', prefix)}">全部福利</a>
+    <a href="{u('deals/index.html', prefix)}">福利库</a>
+    <a href="{u('guides/index.html', prefix)}">攻略</a>
+    <a href="{u('paid/index.html', prefix)}">低价</a>
+    <a href="{u('episodes/index.html', prefix)}">往期</a>
     <a href="{u('feed.xml', prefix)}">RSS</a>
   </nav>
 </header>
@@ -428,7 +537,7 @@ def hero(title, eyebrow, sub, days):
 </section>"""
 
 
-def render_index(days):
+def render_index(days, c):
     if not days:
         body = hero("还没有数据", "no data yet", "跑一次流水线就会出现在这里。", [])
     else:
@@ -440,6 +549,25 @@ def render_index(days):
         body += '<div class="sec"><h2>今日福利</h2><span class="en">today\'s finds</span></div>'
         body += '<div class="cards">%s</div>' % "".join(
             card_html(i) for i in t["freebies"])
+
+        # 存量内容入口：新站一上线就有东西可逛，不是只有今天一条
+        entries = [("deals/index.html", "福利库",
+                    "%d 条 AI 免费额度与限时优惠" % len(c["deals"])),
+                   ("guides/index.html", "攻略",
+                    "%d 篇上手与白嫖教程" % len(c["guides"])),
+                   ("paid/index.html", "低价订阅",
+                    "%d 条在售会员方案" % len(c["paid"])),
+                   ("episodes/index.html", "往期速递",
+                    "%d 期每日羊毛存档" % len(c["episodes"]))]
+        entries = [e for e in entries if e[2].split(" ")[0] != "0"]
+        if entries:
+            body += ('<div class="sec"><h2>去逛逛</h2>'
+                     '<span class="en">library</span></div>')
+            body += '<div class="archive">%s</div>' % "".join(
+                '<a class="arow" href="%s"><span class="d">%s</span>'
+                '<span class="n">%s</span></a>'
+                % (u(p, ""), esc(name), esc(desc)) for p, name, desc in entries)
+
         if len(days) > 1:
             body += ('<div class="sec"><h2>往期</h2>'
                      '<span class="en">archive · %d 天</span></div>' % (len(days) - 1))
@@ -517,6 +645,292 @@ def render_all(days):
     return page("全部福利 · 羊毛日报", body)
 
 
+# --------------------------------------- 存量内容页面（content/ 里的）
+
+FILTER_JS = """
+(function(){
+  var sel={region:'all',type:'all',status:'all'};
+  var cards=[].slice.call(document.querySelectorAll('.dcard'));
+  var total=cards.length;
+  function apply(){
+    var hit=0;
+    cards.forEach(function(c){
+      var ok=true;
+      for(var k in sel){ if(sel[k]!=='all' && c.dataset[k]!==sel[k]) ok=false; }
+      c.style.display=ok?'':'none'; if(ok)hit++;
+    });
+    var el=document.getElementById('cnt');
+    if(el) el.textContent=hit+' / '+total+' 条';
+  }
+  document.querySelectorAll('.fbtn').forEach(function(b){
+    b.addEventListener('click',function(){
+      var g=b.dataset.g;
+      document.querySelectorAll('.fbtn[data-g="'+g+'"]').forEach(function(x){
+        x.classList.remove('on');
+      });
+      b.classList.add('on'); sel[g]=b.dataset.v; apply();
+    });
+  });
+  apply();
+})();
+"""
+
+
+def slug_of(url):
+    """从 https://docs.saibodan.com/magpie/ 取 magpie。"""
+    return (url or "").rstrip("/").rsplit("/", 1)[-1]
+
+
+def region_pill(d):
+    r = d.get("region")
+    if r == "cn":
+        return '<span class="pill cn">国内</span>'
+    if r == "global":
+        return '<span class="pill gl">海外</span>'
+    return ""
+
+
+def deal_pills(d):
+    out = [region_pill(d)]
+    if d.get("type"):
+        out.append('<span class="pill">%s</span>' % esc(d["type"]))
+    if d.get("status") == "ended":
+        out.append('<span class="pill end">已结束</span>')
+    elif d.get("soon"):
+        out.append('<span class="pill soon">即将截止</span>')
+    elif d.get("is_new"):
+        out.append('<span class="pill">新上线</span>')
+    return '<div class="pills">%s</div>' % "".join(x for x in out if x)
+
+
+def deal_subline(d):
+    """平台名 + 价值指数。指数是源站的 1-10 分，不是本站的 5 分制。"""
+    pf = esc(d.get("platform") or "")
+    rk = d.get("rank")
+    if rk:
+        tag = "指数 %s" % esc(rk)
+        pf = f"{pf} · {tag}" if pf else tag
+    return pf
+
+
+def deal_card(d):
+    return ('<a class="dcard" href="%s" data-region="%s" data-type="%s" '
+            'data-status="%s"><div class="top"><h3>%s</h3></div>'
+            '<div class="pf">%s</div><p class="val">%s</p>%s</a>'
+            % (u("deals/%s.html" % d["id"], "../"), esc(d.get("region") or ""),
+               esc(d.get("type") or ""), esc(d.get("status") or ""),
+               esc(d.get("name") or ""), deal_subline(d),
+               esc(d.get("value") or ""), deal_pills(d)))
+
+
+def render_deals_index(deals):
+    types = sorted({d.get("type") for d in deals if d.get("type")})
+
+    def chip(group, value, label, on=False):
+        return ('<button class="fbtn%s" data-g="%s" data-v="%s">%s</button>'
+                % (" on" if on else "", group, esc(value), esc(label)))
+
+    bar = ('<div class="filters">'
+           + chip("region", "all", "全部地区", True)
+           + chip("region", "cn", "国内")
+           + chip("region", "global", "海外")
+           + '</div><div class="filters">'
+           + chip("type", "all", "全部类型", True)
+           + "".join(chip("type", t, t) for t in types)
+           + '</div><div class="filters">'
+           + chip("status", "all", "全部状态", True)
+           + chip("status", "active", "还能领")
+           + chip("status", "ended", "已结束")
+           + '<span class="fcount" id="cnt"></span></div>')
+
+    body = f"""<section class="hero">
+  <p class="eyebrow">freebie library</p>
+  <h1>福利库</h1>
+  <p class="sub">累计 <b>{len(deals)}</b> 条 AI 免费额度与限时优惠，
+    按地区、类型、是否还能领筛选。</p>
+</section>
+{bar}
+<div class="dgrid">{''.join(deal_card(d) for d in deals)}</div>
+<script>{FILTER_JS}</script>"""
+    return page("福利库 · 羊毛日报", body, "../")
+
+
+def render_deal_detail(d):
+    def row(k, v):
+        if not v:
+            return ""
+        return ('<div class="r"><div class="k">%s</div>'
+                '<div class="v">%s</div></div>' % (k, v))
+
+    rows = [row("平台", esc(d.get("platform"))),
+            row("能拿到", esc(d.get("value"))),
+            row("条件与限制", esc(d.get("condition"))),
+            row("截止", esc(d.get("deadline")))]
+    if d.get("elig"):
+        rows.append(row("资格要求", esc("、".join(str(x) for x in d["elig"]))))
+    rows.append(row("类型", esc(d.get("type")) + " " + region_pill(d)))
+    if d.get("what"):
+        rows.append(row("是什么", esc(d["what"])))
+    if d.get("official"):
+        rows.append(row("官方原话", "<blockquote>%s</blockquote>" % esc(d["official"])))
+    if d.get("summary"):
+        rows.append(row("摘要", esc(d["summary"])))
+    if d.get("verified"):
+        rows.append(row("核验日期", esc(d["verified"])))
+
+    src = d.get("source_url")
+    cta = ('<div class="cta">'
+           '<a class="btn solid" href="%s" target="_blank" rel="noopener">去领取 ↗</a>'
+           '<a class="btn ghost" href="%s">回福利库</a></div>'
+           % (esc(src), u("deals/index.html", "../"))) if src else \
+          ('<div class="cta"><a class="btn ghost" href="%s">回福利库</a></div>'
+           % u("deals/index.html", "../"))
+
+    ended = ('<p class="sub">这条已经结束了，留着当记录。</p>'
+             if d.get("status") == "ended" else "")
+    body = f"""<a class="back" href="{u('deals/index.html', '../')}">← 福利库</a>
+<section class="hero" style="padding:28px 0 24px">
+  <p class="eyebrow">{esc(d.get('platform') or 'deal')}</p>
+  <h1>{esc(d.get('name') or '')}</h1>
+  {ended}
+</section>
+<div class="kv">{''.join(r for r in rows if r)}</div>
+{cta}"""
+    return page("%s · 福利库" % (d.get("name") or d.get("id")), body, "../")
+
+
+def blocks_html(blocks):
+    out = []
+    for b in blocks or []:
+        t = b.get("t")
+        if t == "h2":
+            out.append("<h2>%s</h2>" % esc(b.get("text")))
+        elif t == "h3":
+            out.append("<h3>%s</h3>" % esc(b.get("text")))
+        elif t == "p":
+            out.append("<p>%s</p>" % esc(b.get("text")))
+        elif t == "list":
+            out.append("<ul>%s</ul>" %
+                       "".join("<li>%s</li>" % esc(x) for x in b.get("items") or []))
+    return "".join(out)
+
+
+def render_guides(guides):
+    cards = []
+    for g in guides:
+        doc = g.get("doc") or {}
+        cards.append(
+            '<a class="gcard" href="%s">'
+            '<div class="no">%s</div>'
+            '<h3>%s</h3>'
+            '<p class="lead">%s</p>'
+            '<ul class="ovpts">%s</ul>'
+            '<p class="ch">里面讲了：%s</p></a>'
+            % (u("guides/%s.html" % slug_of(g.get("url")), "../"), esc(g.get("no")),
+               esc(g.get("name")), esc(g.get("lead")),
+               "".join("<li>%s</li>" % esc(p) for p in g.get("points") or []),
+               esc(g.get("chapters"))))
+    body = f"""<section class="hero">
+  <p class="eyebrow">guides</p>
+  <h1>攻略</h1>
+  <p class="sub">不想花钱也能用上的东西：怎么把 AI 接进工作流、怎么白嫖算力、
+    新手怎么上手、副业从哪起步。<b>{len(guides)}</b> 篇。</p>
+</section>
+{''.join(cards)}"""
+    return page("攻略 · 羊毛日报", body, "../")
+
+
+def render_guide_detail(g):
+    doc = g.get("doc") or {}
+    art = blocks_html(doc.get("blocks"))
+    body = f"""<a class="back" href="{u('guides/index.html', '../')}">← 攻略</a>
+<section class="hero" style="padding:28px 0 20px">
+  <p class="eyebrow">{esc(g.get('tag') or 'guide')}</p>
+  <h1>{esc(g.get('name') or '')}</h1>
+  <p class="sub">{esc(g.get('lead') or '')}</p>
+</section>
+<div class="article">{art or '<p class="empty">正文还没搬过来。</p>'}</div>"""
+    return page("%s · 攻略" % (g.get("name") or slug_of(g.get("url"))), body, "../")
+
+
+def render_paid(paid):
+    cards = []
+    for p in paid:
+        cards.append(
+            '<div class="gcard"><div class="no">%s</div><h3>%s</h3>'
+            '<p class="lead">%s</p><ul class="ovpts">%s</ul>'
+            '<p class="ch">里面讲了：%s</p></div>'
+            % (esc(p.get("no")), esc(p.get("name")), esc(p.get("lead")),
+               "".join("<li>%s</li>" % esc(x) for x in p.get("points") or []),
+               esc(p.get("chapters"))))
+    body = f"""<section class="hero">
+  <p class="eyebrow">paid picks</p>
+  <h1>低价订阅</h1>
+  <p class="sub">在售的 AI 会员与低价开通方案。价格是当日实价，
+    点开看各自能拿到什么、怎么用。<b>{len(paid)}</b> 条。</p>
+</section>
+{''.join(cards)}"""
+    return page("低价订阅 · 羊毛日报", body, "../")
+
+
+EP_FIELD_ORDER = ("changelog", "value", "howto", "condition", "deadline")
+EP_FIELD_LABEL = {"changelog": "更新内容", "value": "权益", "howto": "领取路径",
+                  "condition": "条件", "deadline": "截止"}
+
+
+def render_episode_detail(e):
+    secs = []
+    for d in e.get("deals") or []:
+        f = d.get("fields") or {}
+        rows = []
+        for k in EP_FIELD_ORDER:
+            v = f.get(k)
+            if v:
+                rows.append("<li><b>%s：</b>%s</li>" % (EP_FIELD_LABEL[k], esc(v)))
+        src = f.get("source_url")
+        if src:
+            rows.append('<li><b>入口：</b><a href="%s" target="_blank" '
+                        'rel="noopener">%s ↗</a></li>' % (esc(src), esc(src)))
+        for k, v in f.items():
+            if k in EP_FIELD_ORDER or k == "source_url" or not v:
+                continue
+            rows.append("<li><b>%s：</b>%s</li>" % (esc(k), esc(v)))
+        secs.append('<div class="kv"><div class="r"><div class="k">条目</div>'
+                    '<div class="v"><b>%s</b></div></div>'
+                    '<div class="r"><div class="k">明细</div><div class="v">'
+                    '<ul style="margin:0;padding-left:20px">%s</ul></div></div></div>'
+                    % (esc(d.get("name")), "".join(rows)))
+    picks = "".join('<li><a href="%s" target="_blank" rel="noopener">%s ↗</a></li>'
+                    % (esc(p.get("url")), esc(p.get("name")))
+                    for p in e.get("picks") or [])
+    body = f"""<a class="back" href="{u('episodes/index.html', '../')}">← 往期速递</a>
+<section class="hero" style="padding:28px 0 22px">
+  <p class="eyebrow">{esc(e.get('date') or '')}</p>
+  <h1>{esc(e.get('headline') or '')}</h1>
+  <p class="sub">{esc(e.get('summary') or '')}</p>
+</section>
+{'<div class="kv"><div class="r"><div class="k">今日精选</div><div class="v"><ul style="margin:0;padding-left:20px">%s</ul></div></div></div>' % picks if picks else ''}
+{''.join(secs)}"""
+    return page("羊毛速递 %s" % (e.get("date") or ""), body, "../")
+
+
+def render_episodes_index(eps):
+    rows = []
+    for e in eps:
+        rows.append('<a class="eprow" href="%s"><span class="d">%s</span>'
+                    '<span class="h">%s</span><span class="n">%d 条</span></a>'
+                    % (u("episodes/%s.html" % e["date"], "../"), esc(e.get("date")),
+                       esc(e.get("headline") or ""), len(e.get("deals") or [])))
+    body = f"""<section class="hero">
+  <p class="eyebrow">archive</p>
+  <h1>往期速递</h1>
+  <p class="sub">从 <b>{esc(eps[-1]['date']) if eps else '—'}</b> 到
+    <b>{esc(eps[0]['date']) if eps else '—'}</b>，共 <b>{len(eps)}</b> 期每日羊毛速递。</p>
+</section>
+<div class="eplist">{''.join(rows)}</div>"""
+    return page("往期速递 · 羊毛日报", body, "../")
+
+
 def render_feed(days):
     items = []
     for d in days[:30]:
@@ -564,12 +978,17 @@ def main():
 
     SITE.mkdir(parents=True, exist_ok=True)
     (SITE / "assets").mkdir(exist_ok=True)
-    (SITE / "assets" / "style.css").write_text(CSS, encoding="utf-8")
+    (SITE / "assets" / "style.css").write_text(CSS + CSS2, encoding="utf-8")
     (SITE / "_headers").write_text(HEADERS, encoding="utf-8")
-    (SITE / "index.html").write_text(render_index(days), encoding="utf-8")
+
+    c = load_content()
+    print(f"· 存量内容：福利库 {len(c['deals'])} / 攻略 {len(c['guides'])} / "
+          f"低价 {len(c['paid'])} / 往期 {len(c['episodes'])}")
+
+    (SITE / "index.html").write_text(render_index(days, c), encoding="utf-8")
     (SITE / "all.html").write_text(render_all(days), encoding="utf-8")
     (SITE / "feed.xml").write_text(render_feed(days), encoding="utf-8")
-    (SITE / "data" / "freebies.json").parent.mkdir(exist_ok=True)
+    (SITE / "data").mkdir(exist_ok=True)
     (SITE / "data" / "freebies.json").write_text(render_json(days), encoding="utf-8")
 
     ddir = SITE / "day"
@@ -580,12 +999,43 @@ def main():
         (ddir / ("%s.html" % d["date"])).write_text(
             render_day(d, prev_d, next_d), encoding="utf-8")
 
+    # ---- 存量内容 ----
+    sdir = SITE / "deals"
+    sdir.mkdir(exist_ok=True)
+    (sdir / "index.html").write_text(render_deals_index(c["deals"]), encoding="utf-8")
+    for d in c["deals"]:
+        (sdir / ("%s.html" % d["id"])).write_text(render_deal_detail(d),
+                                                  encoding="utf-8")
+
+    gdir = SITE / "guides"
+    gdir.mkdir(exist_ok=True)
+    (gdir / "index.html").write_text(render_guides(c["guides"]), encoding="utf-8")
+    for g in c["guides"]:
+        (gdir / ("%s.html" % slug_of(g.get("url")))).write_text(
+            render_guide_detail(g), encoding="utf-8")
+
+    (SITE / "paid").mkdir(exist_ok=True)
+    (SITE / "paid" / "index.html").write_text(render_paid(c["paid"]),
+                                              encoding="utf-8")
+
+    edir = SITE / "episodes"
+    edir.mkdir(exist_ok=True)
+    (edir / "index.html").write_text(render_episodes_index(c["episodes"]),
+                                     encoding="utf-8")
+    for e in c["episodes"]:
+        (edir / ("%s.html" % e["date"])).write_text(render_episode_detail(e),
+                                                    encoding="utf-8")
+
     total = sum(len(d["freebies"]) for d in days)
     print(f"✓ 站点已生成：{SITE}")
     for f in ("index.html", "all.html", "feed.xml", "_headers"):
         print(f"  {f:16}{(SITE / f).stat().st_size/1024:.1f} KB")
-    print(f"  day/*.html     {len(days)} 页")
-    print(f"  共 {total} 条福利")
+    print(f"  day/*.html        {len(days)} 页")
+    print(f"  deals/*.html      {len(c['deals']) + 1} 页")
+    print(f"  guides/*.html     {len(c['guides']) + 1} 页")
+    print(f"  episodes/*.html   {len(c['episodes']) + 1} 页")
+    print(f"  paid/index.html   1 页")
+    print(f"  今日 {total} 条福利")
     return 0
 
 

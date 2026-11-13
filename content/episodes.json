@@ -1,0 +1,1491 @@
+{
+ "source": "https://saibodan.com",
+ "imported_at": "2026-11-13 11:28:01",
+ "count": 40,
+ "episodes": [
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. Perplexity Decider v1.3 / Decider Flash v1.3 在 OpenRouter 免费一周",
+     "fields": {
+      "上屏文案": "Perplexity 新发布的 Decider v1.3 与 Decider Flash v1.3 在 OpenRouter 上免费调用一周：直接在 OpenRouter 选 Decider V1.3 (free) 就能用；也可以从 Hugging Face 下权重自己部署，Flash 能本地跑。官方 11 月 12 日发帖写「for a week」，没给到点时间，按发帖日算大约到 11 月 19 日。",
+      "value": "Decider v1.3 与 Decider Flash v1.3 免费调用一周",
+      "condition": "在 OpenRouter 里选 Decider V1.3 (free) 直接调用；或从 Hugging Face 下载权重自托管、本地运行 Flash；免费期为一周，官方帖文发布于 2026-11-12，未写具体到点时间。",
+      "deadline": "约 2026-11-19 结束（官方 2026-11-12 发帖写 for a week 未给具体到点时刻）",
+      "source_url": "https://x.com/AravSrinivas/status/2121020114321703210"
+     }
+    },
+    {
+     "name": "2. Inference.net 开源项目算力资助：最高 1 万美元免费算力",
+     "fields": {
+      "上屏文案": "Inference.net 给开源 AI 项目发算力资助，最高 10,000 美元免费算力，长期有效、随时可领：在资助页提交项目说明与用途，官方按滚动方式评审、没有固定申请截止日，点名优先三类方向——新型应用、推理性能优化、开发者工具。",
+      "value": "最高 10,000 美元免费算力",
+      "condition": "在 https://platform.inference.net/grants/ 提交申请，说明项目内容与资助用途；面向开源 AI 项目，官方点名三类优先方向（新型应用、推理性能优化、开发者工具）；官方按滚动方式评审、没有固定申请截止日；通过后由团队联系对接，不是提交就发额度。",
+      "deadline": "官方写明滚动评审、没有固定申请截止日",
+      "source_url": "https://platform.inference.net/grants/"
+     }
+    },
+    {
+     "name": "3. Devin for Startups：获批送 1.5 万美元额度，充值再 1:1 配捐最高 5 万美元",
+     "fields": {
+      "上屏文案": "Cognition 的 Devin for Startups：在 devin.ai/startups 提交团队与项目介绍，获批当天 15,000 美元 Devin 额度入账；之后在下一次 10 万美元用量内实际充值多少，官方 1:1 配捐多少，配捐上限 50,000 美元。长期有效、随时可领，官方按滚动申请处理，席位不限、团队可协作。",
+      "value": "15,000 美元 Devin 额度 + 最高 50,000 美元配捐",
+      "condition": "在 devin.ai/startups 提交申请，介绍团队与项目；官方按滚动方式评审；获批当天 15,000 美元额度入账；配捐按下一次 10 万美元用量内的实际充值 1:1 匹配，上限 5 万美元；席位不限，团队可协作。",
+      "deadline": "官方未写截止日期，按滚动申请处理",
+      "source_url": "https://devin.ai/startups"
+     }
+    }
+   ],
+   "headline": "Perplexity Decider 两个模型免费一周；开源项目最高 1 万美元算力、初创团队送 1.5 万额度【赛博鸡蛋】",
+   "summary": "11月13日 · 本期可用 133 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-11-13",
+   "url": "https://saibodan.com/episodes/deals-2026-11-13"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. Novita Sandbox 免费档：新账号 5 个并发沙箱 + 完成设置问卷领 100 美元体验金",
+     "fields": {
+      "上屏文案": "Novita Sandbox 新账号默认就是免费档：最多 5 个并发 Agent 沙箱，每个 2 vCPU / 4 GiB 内存、单次最长跑 1 小时；再完成一份账号设置问卷，可领 100 美元促销额度，不用信用卡，额度优先抵扣沙箱的 CPU、内存与计费存储。长期有效、随时可领，额度用尽才按标准价计费。",
+      "value": "100 美元促销额度 + 5 个并发沙箱（每个 2 vCPU / 4 GiB，单次最长 1 小时）",
+      "condition": "免费档是新账号默认档位，注册后即生效；100 美元促销额度要先完成账号设置问卷（account setup survey）才能领；额度用尽或过期后自动转按标准价按量计费，额度不改变单价；官方注明促销额度受可用性、有效期、使用范围与配额上限约束。",
+      "deadline": "免费档未写截止日期；100 美元促销额度的有效期与配额以控制台与账单页为准",
+      "source_url": "https://docs.novita.ai/guides/sandbox-faq-free-tier"
+     }
+    }
+   ],
+   "headline": "Novita Sandbox 新账号白拿 5 个并发沙箱，做份设置问卷再领 100 美元体验金【赛博鸡蛋】",
+   "summary": "11月12日 · 本期可用 130 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-11-12",
+   "url": "https://saibodan.com/episodes/deals-2026-11-12"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. Google 开发者计划标准会员（免费）：每月 35 个 Google Skills 赠金 + 文档内 Gemini",
+     "fields": {
+      "上屏文案": "建一个 Google 开发者计划个人资料就是免费标准会员，长期有效、随时可领：开发者文档、Android Studio 等工具里的 Gemini 对话与代码解释、符合条件的 Codelab 与开发者活动免费赠金、每月 35 个 Google Skills 赠金（要先加入 GEAR 或 Google Cloud Innovators 社区）、社区与活动邀请、非公开预览版优先体验，不用绑支付方式；旧版独立 Premium 的每年 50 美元生成式 AI 赠金不包含在内。",
+      "value": "每月 35 个 Google Skills 赠金 + 开发者文档与 Android Studio 内置 Gemini + Codelab 与活动免费微额赠金",
+      "condition": "用状态正常、带有效 Google 开发者计划个人资料的个人 Gmail 账号登录，免费加入；每月 35 个 Google Skills 点数需加入 GEAR 或 Google Cloud Innovators 社区后才发放；免费赠金只在符合条件的 Codelab/活动申领窗口开放且尚有剩余名额时发放，每个 Codelab/活动限领一次并有周期性上限，可能要求先完成此前申领过积分的 Codelab；旧版独立 Premium 的每年 50 美元生成式 AI 赠金不包含在标准会员内。",
+      "deadline": "官方页未写截止日，按长期有效的免费会员权益处理",
+      "source_url": "https://developers.google.com/profile/help/benefits"
+     }
+    },
+    {
+     "name": "2. 扣子双十一订阅积分加赠：个人版四档每月多拿 300～15,040 积分",
+     "fields": {
+      "上屏文案": "扣子双十一订阅积分加赠：11 月 5 日 00:00 至 11 月 11 日 23:59（北京时间）期间购买或已订阅个人进阶版、高阶版、旗舰版、尊享版，月度积分按档追加成 1,500 / 4,500 / 10,000 / 55,000（加赠 300 / 540 / 2,040 / 15,040），套餐价格不变，持续续订可一直保留加赠额度。需付费订阅。",
+      "value": "每月加赠 300 / 540 / 2,040 / 15,040 积分，加赠后分别拿到 1,500 / 4,500 / 10,000 / 55,000 新积分",
+      "condition": "仅限 2026 年 1 月 18 日订阅套餐升级后推出的个人进阶版、高阶版、旗舰版、尊享版（旧版个人进阶版、专业版及其续费订单不参加）；单月套餐在当期积分发放时加赠，连续包月从下一个订阅周期起加赠，包年套餐从下一次月度积分发放起加赠；活动前已生效的月份不补发；需保持续订才保留加赠；免费版用户活动期间购买上述套餐即可参加；活动结束后新购或变更套餐不再享受本次加赠。",
+      "deadline": "活动时间 2026 年 11 月 5 日 00:00:00 至 2026 年 11 月 11 日 23:59:59（北京时间）；此后符合条件的持续续订用户仍保留加赠额度",
+      "source_url": "https://docs.coze.cn/double-11-credits-bonus"
+     }
+    }
+   ],
+   "headline": "Google 开发者计划免费会员每月 35 个 Skills 赠金；扣子双十一订阅积分加赠今晚 23:59 截止（需付费）【赛博鸡蛋】",
+   "summary": "11月11日 · 本期可用 125 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-11-11",
+   "url": "https://saibodan.com/episodes/deals-2026-11-11"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. 学生 12 个月 Google AI Plus 试用 + AI Pro 学生折扣",
+     "fields": {
+      "上屏文案": "Google 学生 offer 改口径：符合条件的在校学生可领 12 个月 Google AI Plus 试用，Google AI Pro 改为学生折扣价，地区由仅美国扩到 AI Plus / AI Pro 支持的国家（排除港澳、突尼斯）；需个人 Gmail + SheerID 学生验证 + 合格支付方式，官方未写截止日，长期有效",
+      "value": "符合条件的高校学生可领 12 个月 Google AI Plus 试用；Google AI Pro 提供学生折扣价；另有 Google AI Pro + YouTube Premium 学生套装（原「免费 12 个月 AI Pro」已不再提供）",
+      "condition": "高校在校生，所在国家地区支持 Google AI Plus / AI Pro（排除香港、澳门、突尼斯）；年满 18 岁且账号年龄已验证；必须用个人 Gmail 账号（学校/大学邮箱不可）；经 SheerID 验证学生身份；注册时需有合格支付方式；家庭组成员需先退出共享计划；经 Apple、Google Fi、Pixel Pass、运营商等第三方渠道订阅的需先取消；试用到期自动转常规付费，官方写会提前通知",
+      "deadline": "官方页未写领取/兑换截止日；试用到期后自动转为常规付费 Google AI Plus 或 AI Pro 方案",
+      "source_url": "https://one.google.com/ai-student"
+     }
+    },
+    {
+     "name": "2. 阿里云开发者专属 Token Plan（低至 5 折，首月 19.5 元）",
+     "fields": {
+      "上屏文案": "阿里云 Token Plan 双 11 改版：个人版月付档由 11,500 / 25,500 Credits 提到 20,000 / 45,000 / 80,000，团队版 25,000 / 100,000 / 250,000，官方称额度提升 70% 起、页面标低至 5 折；需付费订阅，页面只写「双 11」没给起止日",
+      "value": "个人版月付 20,000 / 45,000 / 80,000 月 Credits，团队版月付 25,000 / 100,000 / 250,000；页面标「限时 5折」，另挂 Token Plan + Qoder 39.4 元起",
+      "condition": "需付费订阅；个人版分 TP_Lite 与 TP_Essential 两档，额度不同；官方页把额度与「新购可享」并列展示，价格位显示「询价中」，未写地区限制、新用户专享细节或截止日。",
+      "deadline": "权益中心页面未写起止日期，只标「限时特惠」「限时好价」",
+      "source_url": "https://www.aliyun.com/benefit"
+     }
+    }
+   ],
+   "headline": "学生 12 个月 Google AI Plus 免费试用；阿里云 Token Plan 双 11 低至 5 折（需付费）【赛博鸡蛋】",
+   "summary": "11月10日 · 本期可用 123 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-11-10",
+   "url": "https://saibodan.com/episodes/deals-2026-11-10"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. Simular Box 免费云电脑给 AI 用",
+     "fields": {
+      "上屏文案": "Simular Box 免费档给一台云端 Linux 桌面（Ubuntu，自带 Chrome 与常驻 shell，能实时围观并接管），AI 模型调用走账号每日免费额度、电脑本体不收费；免费档长期有效、随时可领，额度每日刷新，闲置自动休眠、约 1 秒唤醒并保留文件与状态",
+      "value": "免费一台云端 Linux 桌面（Ubuntu，自带 Chrome 与常驻 shell，可实时围观并接管）；AI 模型调用用每日免费额度，电脑本体不收费；付费档 $50/月给 5 万 credits、$500/月不限量（Simular 账号通用）。",
+      "condition": "用 Google 或 GitHub 账号登录 box.simular.ai 即建一台云电脑；把一句话「Set up box from https://box.simular.ai/install」发给 AI 编程助手，或跑 npx @simular-ai/box connect 自动接入，浏览器里授权一次即可；一个账号限一台；AI 调用模型烧每日额度，用尽次日恢复。",
+      "deadline": "官方未设截止日，免费档长期有效、每日额度刷新；每日免费额度具体数值官方未公布，只在账号后台显示。",
+      "source_url": "https://box.simular.ai/"
+     }
+    },
+    {
+     "name": "2. Pika H3 Flex 订阅用户每天 15 次免费生成（至 11-15）",
+     "fields": {
+      "上屏文案": "Pika H3 Flex 上线：Creator / Fancy 两档订阅用户每天可免费生成 15 次，持续到 2026-11-15；官方称它「faster-than-realtime」、为创意迭代而做",
+      "value": "Creator / Fancy 订阅用户每天 15 次免费 Pika H3 Flex 生成，持续至 2026-11-15",
+      "condition": "需为 Pika 的 Creator 或 Fancy 付费订阅用户（官方原文「Creator and Fancy plan subscribers」）；订阅后在 Pika 创作平台选 Pika H3 Flex 使用；每天 15 次免费生成，活动到 11 月 15 日；免费档 / 未订阅用户不在该帖说明范围内；官方帖未写免费生成的单条时长、分辨率与地区限制。",
+      "deadline": "2026-11-15（官方帖原文「through Nov 15」）",
+      "source_url": "https://pika.art/pika-h3-flex"
+     }
+    }
+   ],
+   "headline": "Simular Box 免费领一台云电脑；Pika 订阅用户每天 15 次免费生成【赛博鸡蛋】",
+   "summary": "11月9日 · 本期可用 122 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-11-09",
+   "url": "https://saibodan.com/episodes/deals-2026-11-09"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. 秒哒免费版：每日登录送 100 秒点（每月最多 700）",
+     "fields": {
+      "上屏文案": "百度秒哒免费版 0 元、不用绑卡：每天登录送 100 秒点，一个月最多领 700 秒点；秒点按平台动作扣（对话、发布应用、启用后端、下载源码都算），能直接做出可上线的网页 / H5 / 小程序原型",
+      "value": "免费版 0 元，每日 100 秒点、每月最多 700 秒点；秒点用于对话、发布应用、启用后端、下载源码等平台动作",
+      "condition": "注册秒哒账号即为免费版（0 元）；每天登录后领 100 秒点，每月最多领 7 天；秒点按动作消耗（对话、发布应用、启用后端服务、调用技能、复制他人应用、下载源码等）；免费版另有素材库 100MB 等限制；官方文档未写新用户注册一次性赠送的具体数额，也未写活动起止日。",
+      "deadline": "官方页未写截止日；口径为每日登录赠 100 秒点、每月最多可领 7 天（每月上限 700 秒点）",
+      "source_url": "https://www.miaoda.cn/"
+     }
+    },
+    {
+     "name": "2. 新用户注册送 2,500 积分，每月再送 500 积分",
+     "fields": {
+      "上屏文案": "Trae 国内版注册即送 2,500 积分，免费档每月还有 500 积分、所有功能可用、含 2 个云端任务；会员档每月 2,000 起到 40,000 积分，签到另得 3,000",
+      "value": "免费档每月 500 积分、所有功能免费；付费档 Lite 2,000 / Pro 4,000 / Pro+ 12,000 / Ultra 40,000 积分每月，会员签到另得 3,000；Seed 2.1 模型 2.5 折、GLM-5.3 与 DeepSeek-V4.1-Flash 7.5 折",
+      "condition": "注册 TRAE 账号即可用免费档（每月 500 积分、所有功能、2 个云端任务）；付费档为订阅制；模型折扣仅对会员开放。",
+      "deadline": "官方页未写截止日；2,500 注册积分为一次性发放，每月首次登录的 500 积分按月自动到账，免费 Free 档每月 500 积分持续有效。",
+      "source_url": "https://www.trae.cn/sem/"
+     }
+    },
+    {
+     "name": "3. JetBrains Student Pack 学生免费",
+     "fields": {
+      "上屏文案": "JetBrains 学生包：10 个 IDE 正式版、Academy 课程，外加含 Codex、Claude Agent、Junie 的 AI 订阅与 AI Pro 试用；凭大学邮箱、ISIC 卡或 GitHub 学生包任一即可验证",
+      "value": "免费用 10 个 JetBrains IDE 正式版 + JetBrains Academy 课程 + 含 Codex、Claude Agent、Junie 的 AI 订阅与 JetBrains AI Pro 限时试用",
+      "condition": "需学生验证：大学邮箱、ISIC/ITIC 卡或 GitHub Student Developer Pack 账号三选一，无需办卡；仅限就读一年制以上项目的全日制学生；许可证严格限非商业教育用途（含学术研究），用于工作、实习或自由职业需另买商业许可；每个学年需在 JetBrains 账号内续期；AI 部分为限时试用，官方页未写试用时长",
+      "deadline": "在校期间有效、每年续期；Student Pack 到期后两年内 JetBrains 产品 40% 折扣（登录自动生效）；AI 试用时长官方未写",
+      "source_url": "https://www.jetbrains.com/academy/student-pack/"
+     }
+    }
+   ],
+   "headline": "百度秒哒免费版每天领 100 秒点；Trae 注册送 2,500 积分【赛博鸡蛋】",
+   "summary": "11月8日 · 本期可用 119 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-11-08",
+   "url": "https://saibodan.com/episodes/deals-2026-11-08"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. FLUX 3 Max 免费生成周末：每天 3-5 条 15 秒 720p 视频（至 11-9）",
+     "fields": {
+      "上屏文案": "fal 的 FLUX 3 Max 从 11 月 6 日免费到 11 月 9 日中午（美西），每天免费出 3 条 15 秒 720p 带声音的视频；登录并绑卡后额度升到 4 条、5 条，活动后按每秒 0.0425 美元计费",
+      "value": "活动期内每天免费 3-5 条 FLUX 3 Max 视频（15 秒 720p 带声音）；活动后按 $0.0425/秒计费",
+      "condition": "直接在 fal 的 FLUX 3 Max playground 或 fal sandbox 里生成即可，不需要账号；登录 fal 账号、绑定支付方式只是把每日额度从 3 条提到 4 条、5 条，三档额度不叠加（登出时生成的条数也计入登录后的每日上限）；文生视频、图生视频、关键帧生视频共用同一份额度；单条最长 15 秒、720p。",
+      "deadline": "2026-11-09 12:00 PM PST（官方页原文「Free until Monday, November 9 at 12 PM PST」，即北京时间 11-10 04:00）",
+      "source_url": "https://fal.ai/flux-3-max"
+     }
+    },
+    {
+     "name": "2. AWS 新账号 Free 计划：最高 $200 credits，6 个月",
+     "fields": {
+      "上屏文案": "AWS 新账号选 Free 计划：开通即得 $100 credits，探索服务最多再得 $100，合计最高 $200，覆盖 90 多项服务；不转付费计划不计费",
+      "value": "最高 $200 credits（$100 立得 + 最多 $100 探索奖励），覆盖 90+ 项服务",
+      "condition": "需新注册 AWS 账号并选择 Free 计划；$200 分两段——开通即得 $100、探索服务最多再得 $100；账号在开通满 6 个月或 credits 用尽时自动关闭，二者以先到为准；不转 Paid 计划不计费。",
+      "deadline": "账号开通后 6 个月（官方原文「The account closes on its own 6 months after you open it or when your credits run out, whichever comes first.」）",
+      "source_url": "https://aws.amazon.com/free/"
+     }
+    },
+    {
+     "name": "3. Token Plan 公测期免费（¥0/月，最多 20 个 API Key）",
+     "fields": {
+      "上屏文案": "商汤日日新 Token Plan 公测期 ¥0/月：通用积分池每 5 小时 12 万、每周 120 万，Flash-Lite 另有每 5 小时 6 万、每周 60 万的专属池，一个账号最多 20 个 API Key",
+      "value": "Free 档 ¥0/月：通用积分池每 5 小时 12 万积分、每周 120 万积分；Flash-Lite 专属池每 5 小时 6 万积分、每周 60 万积分；最多 20 个 API Key",
+      "condition": "注册商汤日日新账号即可使用，无需付费；通用池按 5 小时滚动窗口和 7 天两个周期计，同一账号下所有 API Key 共用一份额度；Flash-Lite 先扣专属池、不足再扣通用池；免费档最多创建 20 个 API Key。",
+      "deadline": "官方标「公测期」「限时放量」，未写具体截止日期",
+      "source_url": "https://www.sensenova.cn/token-plan"
+     }
+    }
+   ],
+   "headline": "fal FLUX 3 Max 限时免费出片；AWS 新账号最高 $200 credits【赛博鸡蛋】",
+   "summary": "11月7日 · 本期可用 120 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-11-07",
+   "url": "https://saibodan.com/episodes/deals-2026-11-07"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. 星火 X2.6 新用户 10 亿 Tokens 体验额度",
+     "fields": {
+      "上屏文案": "讯飞星辰 MaaS 首页写「Spark-X2.6 赋能开发者 零门槛领取 10 亿 tokens 免费额度」，293B-A30B 架构、1M 上下文，额度用于调 Spark-X2.6，用完转按量付费（当前 6 折价：输入 0.9 元/百万 tokens、输出 3.6 元/百万 tokens）",
+      "value": "10 亿 Tokens 体验额度；额度用完后按量付费，当前限时 6 折：输入 0.9 元/百万tokens、输出 3.6 元/百万tokens",
+      "condition": "需注册并登录讯飞星辰 MaaS 账号领取；模型详情页另标有「开通后31天内有效、每个用户仅限领取一次、需完成实名认证」，该页需登录才能读到，本轮未取得官方原文，按页面提示为准",
+      "deadline": "领取截止日与额度有效期官方公开页面未标注；模型广场仅标「限时6折」",
+      "source_url": "https://maas.xfyun.cn/modelSquare/base/2628905721051136"
+     }
+    },
+    {
+     "name": "2. 个人免费版每日登录领 1,500 积分",
+     "fields": {
+      "上屏文案": "扣子个人免费版改成每日登录领 1,500 积分，积分当日有效，用来抵扣视频生成、云设备这类高成本资源，个人免费版本身仍标 0 元",
+      "value": "每日登录领 1,500 积分（有效期 1 天）；个人免费版 0 元",
+      "condition": "注册扣子账号并登录即可领取；积分当日发放、有效期 1 天；插件、实时音视频、智能语音的免费额度已取消。",
+      "deadline": "长期有效（每日登录发放）",
+      "source_url": "https://docs.coze.cn/guides_20260119_coze_premium_upgraded"
+     }
+    },
+    {
+     "name": "3. VideoGen Model 1 免费额度计划：100 万美元 credits 池（申请制，2026 年底前发放）",
+     "fields": {
+      "上屏文案": "VideoGen 在 Model 1 页面开了 100 万美元的免费 AI credits 池，登录后选 Request access、写清要拍或报道的内容即可申请，配额按项目规模分配，官方计划 2026 年底前发完",
+      "value": "100 万美元额度的免费 AI credits 池，按项目规模与分发计划分配（原文「$1 million in free AI credits.」）",
+      "condition": "在 videogen.io/model-1 登录后点 Request access，说明要创作或报道的内容；配额按项目规模与分发计划分配，并非申请即得；官方写明主要面向拍片并对外发布的 filmmakers、创作者与工作室，学生与业余创作者也可申请，另有部分额度留给报道 Model 1 的记者与软件评测者；Model 1 本身自 2026-10-20 起为限量私邀（limited private-partner）开放，官方称随后转一般可用。",
+      "deadline": "2026-12-31（官方原文「We plan to distribute credits through the end of 2026.」，即 2026 年底前发完；申请自 2026-10-20 开放）",
+      "source_url": "https://videogen.io/model-1"
+     }
+    }
+   ],
+   "headline": "星火 X2.6 白领 10 亿 Tokens；扣子每天登录领 1,500 积分【赛博鸡蛋】",
+   "summary": "11月6日 · 本期可用 116 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-11-06",
+   "url": "https://saibodan.com/episodes/deals-2026-11-06"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. Deepgram Free 档 $200 免费额度，用完后按量付费",
+     "fields": {
+      "上屏文案": "Deepgram 免费档直接给 $200 额度，官方写明免信用卡、无最低消费、不过期，约合 700 小时 Nova-3 语音转写，用完才转按量付费",
+      "value": "$200 免费额度，用完后按量付费",
+      "condition": "注册 Deepgram 账号即可；官方写明 No credit card required、No minimums、No expiration；额度消费完后按量付费",
+      "deadline": "无到期日（No expiration），用完为止",
+      "source_url": "https://deepgram.com/pricing"
+     }
+    },
+    {
+     "name": "2. Hy4 Challenge：报名即得 200 credits（Round 1 至 11-12）",
+     "fields": {
+      "上屏文案": "WorkBuddy 官方 Hy4 Challenge：用 WorkBuddy 加新模型 Hy4 做作品参赛，报名即得 200 credits，前三名最高 20,000 credits，Round 1 到 11 月 12 日 23:59（美西时间）截止",
+      "value": "报名即得 200 credits，前三名最高 20,000 credits（原文「Everyone who enters gets 200 credits. Top 3 win up to 20,000.」）",
+      "condition": "参与方式官方帖以「How to enter (pick one):」列出，帖子正文在页面上被折叠，可见的第一种为在 X 引用该帖（→ X: quote this post with…），其余方式未显示；报名即得 200 credits，前三名最高 20,000 credits；Round 1 截止 2026-11-12 23:59 PT；官方帖未写地区限制、评分标准与奖励发放时间。",
+      "deadline": "2026-11-12 23:59 PT（官方帖原文「Round 1 ends Nov 12, 11:59 PM PT」）",
+      "source_url": "https://x.com/WorkBuddy_AI"
+     }
+    },
+    {
+     "name": "3. Gemini 4 Argon 首发五折：输入 $2、输出 $10 每百万 token（至 11-30）",
+     "fields": {
+      "上屏文案": "Gemini 4 Argon 首发优惠：输入每百万 token 2 美元、输出 10 美元，是标准价的一半，11 月 30 日后恢复原价",
+      "value": "输入 $2 / 输出 $10 每百万 token（原价 $4 / $20），约为标准价五折",
+      "condition": "需用付费档（Paid Tier）API key 调用 gemini-4-argon，模型不对免费层开放；优惠期至 2026-11-30，之后按标准价计费；Batch 档同期为输入 1 美元、输出 5 美元。",
+      "deadline": "优惠价截至 2026-11-30，2026-12-01 起恢复为输入 $4.00、输出 $20.00 每百万 token",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing"
+     }
+    }
+   ],
+   "headline": "Deepgram 送 $200 语音额度；WorkBuddy Hy4 报名得 200 credits【赛博鸡蛋】",
+   "summary": "11月5日 · 本期可用 115 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-11-05",
+   "url": "https://saibodan.com/episodes/deals-2026-11-05"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. HeyGen Voice Turbo 限时免费（至 11-30）",
+     "fields": {
+      "上屏文案": "HeyGen Voice Turbo 语音合成在 OpenRouter 免费开放到 11 月 30 日：$0、不消耗 credits，39 种语言，内置 10 个默认音色，单次最多 5,000 字符",
+      "value": "零成本调用 HeyGen Voice Turbo 语音合成：39 种语言、单次最多 5,000 字符、44.1 kHz 流式 PCM；内置 10 个默认音色，官方帖另标 2,900+ 音色可选",
+      "condition": "注册 OpenRouter 账号并生成 API key，调用模型 ID heygen/heygen-voice-1-turbo:free；免费期到 2026 年 11 月 30 日；内置 10 个默认音色，用自己的克隆音色需另配自己的 HeyGen key；单次最多 5,000 字符；免费端点按 OpenRouter 免费档限速（官方帖写 $0、不消耗 credits）。",
+      "deadline": "2026-11-30（模型页横幅「Going away November 30, 2026」，官方帖写 until November 30）",
+      "source_url": "https://openrouter.ai/heygen/heygen-voice-1-turbo:free"
+     }
+    },
+    {
+     "name": "2. Shakti Studio 新用户 ₹10,000 免费额度（30 天）",
+     "fields": {
+      "上屏文案": "Yotta Shakti Studio 新用户送 ₹10,000 额度，账号激活起 30 天有效；公司邮箱注册 + 一次性 KYC，覆盖 H100/L40S 与 OpenAI 兼容接口",
+      "value": "₹10,000 免费额度，按量抵扣（官方等价口径：2.5B tokens 或 7 天 1×H100 / 15 天 1×L40S）",
+      "condition": "用公司邮箱到 shaktistudio.ai 注册，再填活动页的领取表单、在账号内完成一次性 KYC，Yotta 电话确认后额度入账；不需要信用卡（额度用完后是否继续由自己决定）；额度自账号激活（验证邮箱）起 30 天有效；官方写明只适用于「net new acquisitions or new orders」，即新客户/新订单；数据驻留印度，适合对境内托管有要求的团队。",
+      "deadline": "额度自账号激活起 30 天有效（官方「Credits are valid for 30 days from activation.」）；活动只写「Limited-period launch offer」，未给整体截止日",
+      "source_url": "https://shakticloud.ai/shakti-studio-free-ai-cloud-credits/"
+     }
+    }
+   ],
+   "headline": "OpenRouter 限免 HeyGen 语音合成；Yotta 新用户送 ₹10,000 算力额度【赛博鸡蛋】",
+   "summary": "11月4日 · 本期可用 114 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-11-04",
+   "url": "https://saibodan.com/episodes/deals-2026-11-04"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. 华为云码道邀请有礼：邀请人与新人各得积分（至 11-15）",
+     "fields": {
+      "上屏文案": "华为云码道邀请与注册限时活动（进行至 11-15），新人注册首日可得积分兑换算力与插件",
+      "value": "邀请新用户双方各得 1,000 积分（至 11-15）；新用户注册 4,000 积分（30 天）、学生认证 4,000 积分（90 天）、Token 套餐升级积分套餐再得 10,000 积分（30 天）",
+      "condition": "通过专属邀请链接邀请新用户注册并登录码道即各得 1,000 积分；新用户注册、学生认证与套餐升级的积分在各自有效期内到账。",
+      "deadline": "2026-11-15 23:59",
+      "source_url": "https://support.huaweicloud.com/price-codeartsagent/codeartsagent_billing_0029.html"
+     }
+    },
+    {
+     "name": "2. 千问办公 新注册积分与每日登录积分",
+     "fields": {
+      "上屏文案": "阿里云千问办公新用户注册送 2000 积分，每日登录再领 100 积分",
+      "value": "新注册 2,000 积分 + 每日登录 100 积分",
+      "condition": "从阿里云权益中心「千问办公」卡片免费体验入口进入（新注册阿里云账号）；官方卡片只写「2,000 新注册积分」「每日登录送 100 积分」，未写有效期、单次上限与使用范围；产品页 aliyun.com/product/qwenwork 当日展示的是企业标准版 ¥198/月/席、企业旗舰版 ¥298/月/席（50席起购）等付费档，未见个人版免费额度细则，个人版权益以登录后为准",
+      "deadline": "官方卡片未写截止日",
+      "source_url": "https://www.aliyun.com/benefit"
+     }
+    }
+   ],
+   "headline": "华为云码道限时赠积分；阿里千问办公新注册送 2000 积分【赛博鸡蛋】",
+   "summary": "11月3日 · 本期可用 109 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-11-03",
+   "url": "https://saibodan.com/episodes/deals-2026-11-03"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. AI Coding Plan 限时 30 天免费体验（每日限量 100 名）",
+     "fields": {
+      "上屏文案": "摩尔线程 AI Coding Plan 开放 30 天免费体验：用量与 Lite Plan 相当，基于 MTT S5000 国产算力，提供 GLM-4.7，可接 Claude Code / Cursor / OpenCode / Cline；每日限量 100 名、抢完为止，领取成功之日起 30 天内有效。",
+      "value": "30 天免费额度（用量与 Lite Plan 相当），支持 GLM-4.7，可接 Claude Code / Cursor / OpenCode / Cline",
+      "condition": "在 code.mthreads.com 领取免费体验名额；每日限量 100 名开发者，名额满即止；领取成功之日起 30 天内有效；用量与 Lite Plan 相当；官方页未写是否需要实名认证或绑定支付方式。",
+      "deadline": "官方页只写「限时 30 天免费体验」「领取成功之日起 30 天内有效」，未写活动截止日",
+      "source_url": "https://code.mthreads.com/"
+     }
+    },
+    {
+     "name": "2. 免费版每日 300 积分（¥0 永久）",
+     "fields": {
+      "上屏文案": "商汤小浣熊免费版长期有效、随时可领：¥0 永久，每天送 300 积分（每日 0 点重置、不累计、仅标准模型），含 PPT 标准模式全部模板、每次对话 5 个文件（80 MB）和 500 MB 存储；升级版 ¥29.9/月起。",
+      "value": "每日 300 积分（仅标准模型）+ PPT 标准模式全部模板 + 500 MB 存储；个人升级版 ¥29.9/月起",
+      "condition": "注册账号即可使用免费版，无需付费；日积分每日 0 点重置且不累计，仅限标准模型；升级模型、PPT 创意模式、10 GB 存储与知识库需个人升级版（¥29.9/月起）。",
+      "deadline": "官方定价页标「¥ 0 /永久」，未写截止日期",
+      "source_url": "https://xiaohuanxiong.com/pricing"
+     }
+    },
+    {
+     "name": "3. 每日免费领 3 亿 GLM-5.3-Flash Tokens",
+     "fields": {
+      "上屏文案": "ZCode 长期有效、每天可领 3 亿 GLM-5.3-Flash tokens：11:00 UTC（北京时间 19:00）起在应用内领取，15:00–01:00 UTC（北京时间 23:00–次日 09:00）使用；更新到最新版 ZCode 后切到 Global Building 选 GLM-5.3-Flash。",
+      "value": "每日 3 亿 GLM-5.3-Flash tokens",
+      "condition": "更新到最新版 ZCode；每天 11:00 UTC 起在应用内领取；使用窗口 15:00 – 01:00 UTC；领取后切到 Global Building 选 GLM-5.3-Flash；官方帖未写活动结束日、单账号领取次数与地区限制。",
+      "deadline": "官方帖未写结束日期，口径为「Every day」每日发放",
+      "source_url": "https://x.com/zcode_ai"
+     }
+    }
+   ],
+   "headline": "摩尔线程 30 天免费 Coding Plan，每日 100 名；商汤小浣熊每天 300 积分【赛博鸡蛋】",
+   "summary": "11月2日 · 本期可用 106 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-11-02",
+   "url": "https://saibodan.com/episodes/deals-2026-11-02"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. 音频与音乐生成模型限时免费",
+     "fields": {
+      "上屏文案": "阶跃 StepAudio 3 系列今天挂出了截止时间：11-08 23:59:59 前，实时语音、语音合成、音频生成、音乐生成、语音识别 5 个型号调用不收费；11-09 00:00 起正式计费——语音合成与音频生成 95 元/百万计费字符、音乐生成 16 元/输出音频小时、实时语音 0.65 元/会话分钟、语音识别 7.5 元/音频小时，限免型号也从 -preview 换成了正式 ID",
+      "value": "限免期内 StepAudio 3 系列调用不收费；2026-11-09 起音频生成/语音合成 95 元/百万计费字符、音乐生成 16 元/输出音频小时起",
+      "condition": "注册开放平台账号，个人账户需先完成实名认证；个人账户限速按累计充值金额划分（V0 不足 ¥100：并发 5 / RPM 100 / TPM 500,000），累计充值只统计现金充值，代金券不计入",
+      "deadline": "限免至北京时间 2026-11-08 23:59:59，2026-11-09 00:00:00 起正式计费",
+      "source_url": "https://platform.stepfun.com/"
+     }
+    },
+    {
+     "name": "2. 双十一 Wan 3.0 / Kling 4.0 / Minimax H3 0 积分畅用",
+     "fields": {
+      "上屏文案": "LibTV 双十一活动 11-01 上午还在：Wan 3.0、Kling 4.0、Minimax H3 三个视频模型 0 积分畅用，Seedance 2.5 视频生成每秒低至 ¥0.16；首页活动倒计时只剩一天多",
+      "value": "Wan 3.0、Kling 4.0、Minimax H3 三款模型 0 积分畅用；Seedance 2.5 ¥0.16/秒；年会员最高赠 3 个月会员 + 超 20 万积分",
+      "condition": "活动期内登录 LibTV，在创作区选择 Wan 3.0 / Kling 4.0 / Minimax H3 模型即可 0 积分畅用；会员赠送需购买年会员；官方页未写活动起止日期，只挂倒计时。",
+      "deadline": "官方页未写明确截止日；首页活动倒计时显示约 2 天 15 时（抓取于 2026-10-31），双十一活动结束后以官方页为准。",
+      "source_url": "https://libtv.cgref.cn/aibot"
+     }
+    }
+   ],
+   "headline": "【11月1日今日推荐】赛博鸡蛋：阶跃音频模型免费只剩 7 天，LibTV 三个视频模型 0 积分畅用不到两天",
+   "summary": "11月1日 · 本期可用 96 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-11-01",
+   "url": "https://saibodan.com/episodes/deals-2026-11-01"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. ChatGPT Pro/Business 每月附赠 API 额度（最高 $500）",
+     "fields": {
+      "上屏文案": "ChatGPT Pro 100/200/500 档每月可领等额 API 额度，分别是 $100/$200/$500；Business 按席位给，标准席位 $20、高级席位 $100，工作区每月封顶 $500；订阅要满 7 天，额度只抵绑定的 API 组织，当月不用完就清零",
+      "value": "Pro 100/200/500 档每月分别 $100/$200/$500 API 额度；Business 每标准席位 $20、每高级席位 $100，工作区每月封顶 $500（年付封顶 $6,000）",
+      "condition": "需为 Pro 100/200/500 或符合资格的 Business 付费工作区（有付费 Standard 或 Premium 席位）；订阅需已生效至少 7 天；Plus、免费试用、Enterprise、Edu、旧 Codex 席位不参与；领取时需同一邮箱，且本人同时是 ChatGPT 订阅所有者和接收额度的 API 组织所有者；一个订阅/工作区只能绑定一个 API 组织；额度只抵绑定的 API 组织用量，不增加 ChatGPT 或已登录 Codex 的用量，也不覆盖 Codex API key 用量；当月额度在账期结束时失效，不结转；能否看到入口还取决于官方开放的国家/批次。",
+      "deadline": "官方未写截止日；权益可能调整或取消；按月发放，当期有效，不用完不结转",
+      "source_url": "https://chatgpt.com/settings/billing"
+     }
+    },
+    {
+     "name": "2. Command Code GOAT 套餐（$10/月含 $100 额度）",
+     "fields": {
+      "上屏文案": "Command Code 的 GOAT 档今天把 DeepSeek V4.1 Flash 和 GLM-5.3 Flash 的可用额度各从 $80 提到 $100，Ling 3.1 Flash 仍是 $100；套餐价没变，还是 $10/月（另加处理费）、含最高 $100 额度",
+      "value": "GOAT 10 美元/月含 100 美元额度（官方标称最高约 100 美元等效用量，含优惠）；Go 1 美元/月含 10 美元额度",
+      "condition": "价格另加处理费，官方页未写处理费金额；官方页写按月订阅、可随时切换/升级或取消、绝不使用用户代码训练、Taste 仅存本地；Go 档不含 API 访问（对比表把 API 访问标为「除 Go 外所有套餐均可使用」，兼容 OpenAI 与 Anthropic 端点）；额度按模型分配，GOAT 卡今日为 $100 Ling 3.1 Flash、$100 DeepSeek V4.1 Flash、$100 GLM-5.3 Flash、$70 Tencent Hy3、$70 Qwen 3.8 27B，另加 33 个模型；标为免费的模型注明请求不消耗额度并受容量或预览期约束（Laguna S 2.1、Beam 1.0 为 while capacity lasts，Glyph Cluster 为 while the stealth preview lasts）；未注册、未实测",
+      "deadline": "官方定价页未写套餐促销截止日，也未写免费模型的结束日期",
+      "source_url": "https://commandcode.ai/"
+     }
+    }
+   ],
+   "headline": "【10月31日今日推荐】赛博鸡蛋：ChatGPT Pro最高每月500美元API额度！Command Code额度涨到100美元，精选AI福利清单",
+   "summary": "10月31日 · 本期可用 95 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-31",
+   "url": "https://saibodan.com/episodes/deals-2026-10-31"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. ChatGPT Plus 军人/退伍军人免费一年（美国，ID.me 验证）",
+     "fields": {
+      "上屏文案": "OpenAI 官方条款页写明：经 ID.me 验证的美国现役军人、过去 12 个月内退役的退伍/退休人员、以及 12 个月内将退役的现役军人，可在个人账号免费领取一年 ChatGPT Plus；自领取日起一年不扣费，到期按标准月费自动续订，每人限领一次、不能转赠",
+      "value": "一年 ChatGPT Plus 完全免费（领取后一年内不扣费），到期按标准月费续订",
+      "condition": "仅限美国：现役军人、过去 12 个月内退出现役的退伍/退休人员，或未来 12 个月内将退出现役的现役军人；必须通过 ID.me 完成军人身份验证并授权把结果分享给 OpenAI；只能在符合条件的个人 ChatGPT 账号与个人工作区领取，Enterprise 工作区账号不可领取；当前 Plus 若由移动应用商店计费，需等商店订阅失效后再在网页端领取；每人限领一次，不可转赠、出售或与其他促销叠加；官方要求已有网页端 Plus 的用户在领取前不要取消订阅。",
+      "deadline": "官方未写固定截止日，原文为「expires after 1 year from the date claimed」，即自领取日起一年有效；到期后按 ChatGPT Plus 标准月费自动续订，除非取消",
+      "source_url": "https://chatgpt.com/veterans-claim"
+     }
+    },
+    {
+     "name": "2. ChatGPT for Teachers 教师版免费（美国 K–12，至 2028 年 6 月）",
+     "fields": {
+      "上屏文案": "ChatGPT for Teachers 官方帮助中心写明免费至 2028 年 6 月：美国 K–12 的教师、学校职员、校长和学区管理员用学校邮箱在 chatgpt.com/k12-verification 完成教育者验证，即可在带教育级保护与管理员控制的工作区使用旗舰模型、文件检索、深度研究、语音、生图、记忆与共享项目；官方明确「不面向学生」",
+      "value": "免费使用 ChatGPT for Teachers 至 2028 年 6 月，含旗舰模型、文件上传与检索、联网搜索与深度研究、语音与生图、记忆、共享项目、ChatGPT Work 等",
+      "condition": "任职于获认可的美国 K–12 学校或学区，且身份为教师、职员、学校领导或学区管理人员；用学校/学区邮箱在 chatgpt.com/k12-verification 完成教育者验证后，创建新的工作区或加入绑定该学区域名的既有工作区；每个工作区仅限同一学区内已认证的教育者；官方明确「The plan is not for students」，不面向学生；不在资格范围内的用户（含中国用户）无法领取。",
+      "deadline": "官方原文「free through June 2028」，即免费至 2028 年 6 月，未写更细的截止时刻；免费期结束后可能推出或调整价格，如调价会按条款提前通知",
+      "source_url": "https://chatgpt.com/k12-verification"
+     }
+    },
+    {
+     "name": "3. 微信小程序成长计划 AI 资源包",
+     "fields": {
+      "上屏文案": "微信「小程序成长计划」送的 AI 资源包今天扩大覆盖：官方原文从「调用 hy3」改成「当前覆盖 hy4-preview、hy3、deepseek-v4.1-flash」，同一个免费包现在多了 deepseek-v4.1-flash 可用；资源包 6 个月有效、二期额度 10 亿 Token / 10 万张图不变",
+      "value": "混元文生文与文生图的免费额度（二期额度表口径 10 亿 Token / 10 万张图片）+ 6 个月个人版环境或 120 元云开发代金券",
+      "condition": "面向小程序开发者，报名入口「微信公众平台 -> 行业能力 -> 小程序成长计划」；一个小程序帐号只能参与一次，不支持切换腾讯云账号或云开发环境；报名仅支持选择微信云开发环境（腾讯云环境需先转成微信云开发环境）；AI 资源包仅限微信小程序与云开发服务端（云函数、云托管、云开发控制台）使用，在 AI 工具、Web 端 SDK、第三方 API、直接 HTTP 调用等非允许来源消耗属违规；官方当日口径为在 AI 工具等场景中调用 hy4-preview、hy3、deepseek-v4.1-flash 将从套餐中正常扣除（官方另有《关于“小程序成长计划”新增 hy4-preview、deepseek-v4.1-flash 模型的通知》），套餐充足即可正常使用，非资源点套餐可升级为资源点套餐；代金券自发放之日起 6 个月内有效，仅限云开发产品使用",
+      "deadline": "AI 资源包自申请成功之日起 6 个月有效；二期（2026-07-01 ~ 2026-12-31）额度表为 Token 10 亿 / 图片 10 万张，但二期两个生图模型 HY-Image-3.0-Plus-4090-Tob-v1.0、HY-Image-v3.0-I2I-ToB-v1.0.1 将于 2026-12-01 0 点下线，接替的 hy-image-v3.5-preview 调用方式与混元生图 3.0 不同、需提前预留适配时间；一期存量报名用户自动补发 9 亿 Token + 9 万张图片额度（自补发之日起 6 个月有效，预计 7 月 1 日分批到账，环境已删除不补）；官方写「如有调整将提前 15 日更新公告」",
+      "source_url": "https://tcb.cloud.tencent.com/"
+     }
+    }
+   ],
+   "headline": "美国军人免费一年 ChatGPT Plus，教师版免到 2028 年【赛博鸡蛋】",
+   "summary": "10月30日 · 本期可用 90 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-30",
+   "url": "https://saibodan.com/episodes/deals-2026-10-30"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. Go 低价订阅",
+     "fields": {
+      "上屏文案": "OpenCode Go（$10/月，Go Plus $40/月）今天在模型清单里新增 Iceman Contributor Free：免费、两档都不限量，官方只标「limited time」没写截止日；同页隐私表写明该模型会用你的 prompt 和输出改进模型（Not ZDR）",
+      "value": "Go $10/月、Go Plus $40/月；Gemini 4 Argon 五折后每百万 Token 输入 $2.00、输出 $10.00、缓存读 $0.10，Go 月额度 $30、Go Plus $120，优惠至 2026-11-30；另含 DeepSeek V4.1 Flash 月度额度 $80、Kimi K3 $15、Claude Haiku 5.5 $15",
+      "condition": "需登录 OpenCode Console 订阅 Go 或 Go Plus、填账单信息并复制 API key；Go/Go Plus 仅限单成员 workspace，订阅后不能邀请成员；主要面向国际用户；默认屏蔽对请求数据用于训练的付费端点，可用区域限欧洲与美国，未保存隐私设置的 workspace 对中国请求额外允许 Global；owner/admin 可在隐私设置里为 DeepSeek V4.1 Flash/V4 Pro 选 Global 区域、为 Muse Spark 1.3/1.2 Contributor 开启允许训练端点；入口页 https://opencode.ai/go 写明「Cancel any time.」，可随时取消；Beam Free 标注 limited regions，官方列明在包括中国大陆、香港、澳门、俄罗斯、伊朗在内的部分国家/地区不可用；Iceman Contributor Free 同为限时免费，官方隐私表标注 Yes（prompt 与 completion 用于改进模型）、Not ZDR",
+      "deadline": "Beam Free 与 Iceman Contributor Free 均标注 limited time 限时免费但未给具体日期；Gemini 4 Argon 的 50% 折扣有效至 2026 年 11 月 30 日；DeepSeek 零数据保留协议当前有效至 2026 年 10 月 31 日，官方注明按月续签",
+      "source_url": "https://opencode.ai/go"
+     }
+    }
+   ],
+   "headline": "OpenCode Go 多了一个免费用还不限量的新模型，代价是对话会被拿去训练【赛博鸡蛋】",
+   "summary": "10月29日 · 本期可用 86 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-29",
+   "url": "https://saibodan.com/episodes/deals-2026-10-29"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. Command Code GOAT 套餐（$10/月含 $100 额度）",
+     "fields": {
+      "上屏文案": "Command Code GOAT 档还是 10 美元/月，官方今天把含的额度从 80 美元提到 100 美元（标称最高约 100 美元等效用量），Go 档 1 美元/月含 10 美元额度不变，官方没写截止日",
+      "value": "GOAT 10 美元/月含 100 美元额度（官方标称最高约 100 美元等效用量，含优惠）；Go 1 美元/月含 10 美元额度",
+      "condition": "价格另加处理费，官方页未写处理费金额；官方页写按月订阅、可随时切换/升级或取消、绝不使用用户代码训练、Taste 仅存本地；Go 档不含 API 访问（对比表把 API 访问标为「除 Go 外所有套餐均可使用」，兼容 OpenAI 与 Anthropic 端点）；额度按模型分配，不同模型可用额度不同；标为免费的模型注明「请求不消耗额度」并受容量或预览期约束（Laguna S 2.1、Beam 1.0 为 while capacity lasts，Glyph Cluster 为 while the stealth preview lasts）；未注册、未实测",
+      "deadline": "官方定价页未写套餐促销截止日，也未写免费模型的结束日期",
+      "source_url": "https://commandcode.ai/"
+     }
+    },
+    {
+     "name": "2. Base44 for Startups 免费年度许可 + 最高 $1,000 额度",
+     "fields": {
+      "上屏文案": "早期创业公司可免费拿 Base44 年度许可（Pro 版价值 960 美元/年）外加最高 1,000 美元 credits，需合作基金/加速器验证或提交申请审核，credits 自激活起 6 个月有效",
+      "value": "免费年度许可（Pro 价值 $960/年 或 Builder 价值 $480/年）+ 最高 $1,000 Base44 credits",
+      "condition": "仅限早期创业公司创始人：基金/加速器需在 Select Partners 名单内并验证资格；独立创始人需提交申请，由 Base44 团队审核资格后批准；Select Partner credits 自激活起 6 个月有效",
+      "deadline": "官方未给申请截止日；Select Partner credits 自激活起 6 个月有效",
+      "source_url": "https://base44.com/solutions/startups"
+     }
+    }
+   ],
+   "headline": "Command Code 额度涨到 100 美元，创业公司免费领 Base44 年度许可【赛博鸡蛋】",
+   "summary": "10月28日 · 本期可用 86 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-28",
+   "url": "https://saibodan.com/episodes/deals-2026-10-28"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. Databricks Free Edition 永久免费版",
+     "fields": {
+      "上屏文案": "Databricks 上线永久免费版：注册就能用完整 Data + AI 平台（AI 应用与智能体、数据科学与 ML、仪表盘与 Genie），官方写明永久免费，限个人学习、不做商用",
+      "value": "免费使用 Databricks Data + AI 平台（AI 应用与智能体、数据科学与 ML、仪表盘与 Genie）；算力按公平使用额度",
+      "condition": "注册 Databricks 账号即可使用；官方明确仅限个人使用，条款不允许商业或生产用途；算力与 SQL 仓库规格较小，并受公平使用额度约束",
+      "deadline": "官方写明永久免费（perpetually free），未标注截止日",
+      "source_url": "https://www.databricks.com/learn/free-edition"
+     }
+    },
+    {
+     "name": "2. AutoClaw 升级 2.2.0 领 5000 积分",
+     "fields": {
+      "上屏文案": "AutoClaw 升到 2.2.0 并登录新版，自动到账 5000 积分（约 5000 万 Tokens），积分到账后 7 天内用完",
+      "value": "5000 积分，约合 5000 万 tokens",
+      "condition": "下载安装 2.2.0 最新版并登录新版；积分自动发放，迁移数据非必须（新旧版可共存）；积分发放后 7 天内有效",
+      "deadline": "官方未给活动截止日；积分发放后 7 天内有效",
+      "source_url": "https://autoclaw.zhipuai.cn/blog/news/autoclaw-2-2-0-upgrade-data-migration"
+     }
+    },
+    {
+     "name": "3. Powerdrill Bloom 限时 8 折（至 10-31）",
+     "fields": {
+      "上屏文案": "Powerdrill Bloom 年付价 8 折，Pro 折后 $13.27/月、首年 $159.20，官方横幅写到 2026-10-31 截止",
+      "value": "付费档年付 20% off：Pro $13.27/月（首年 $159.20）、Plus $26.60/月（$319.20）、Premium $132.67/月（$1,592.00）",
+      "condition": "需注册并购买付费档（Pro / Plus / Premium 或 Team Pro）；页面展示的是年付折后价，首年分别为 $159.20 / $319.20 / $1,592.00；免费档不涉及",
+      "deadline": "2026-10-31 截止（页面横幅 ends 10/31/2026）",
+      "source_url": "https://powerdrill.ai/pricing"
+     }
+    }
+   ],
+   "headline": "Databricks 平台永久免费，AutoClaw 升版领 5000 万 Tokens【赛博鸡蛋】",
+   "summary": "10月27日 · 本期可用 93 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-27",
+   "url": "https://saibodan.com/episodes/deals-2026-10-27"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. Antigravity 最高档免费 6 个月（1 万名科学家）",
+     "fields": {
+      "上屏文案": "谷歌今天宣布：1 万名科学家可免费使用 Antigravity 最高使用档 6 个月，需申请，分批开通",
+      "value": "免费使用 Google Antigravity 最高使用档 6 个月",
+      "condition": "科学家/科研用途；需提交申请；受资格、容量与遴选限制，不是申请即得；官方未写地区限制",
+      "deadline": "免费期 6 个月，名额 1 万；官方未公布申请截止日",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon"
+     }
+    },
+    {
+     "name": "2. Token Factory 共享模型 API 免费（不消耗 credits）",
+     "fields": {
+      "上屏文案": "AMD 官方文档改写 Token Factory 口径：限速改为按账号与 key 双重限制，每日用量按点数（pts）计且 0 点重置，明确仅限中国站试用；核心模型清单与免费端点未变",
+      "value": "共享模型 API 免费、不扣 credits，含 100 万上下文的 DeepSeek-V4.x-Flash 与 MiMo-V2.6-Flash",
+      "condition": "登录 AMD Radeon Cloud 控制台的 Token Factory，复制 API Key（rc- 开头，一把 key 覆盖列表内全部模型）即可调用，无需启动实例、不消耗 credits，任何 OpenAI 兼容客户端改 base URL 即可；限速按账号与 key 计每分钟请求数与并发数，另有按点数（pts）计的每日用量上限、每日北京时间 0 点（UTC+8）重置；官方 Terms 写明 Token Factory 是免费试用与开发用途服务、不适用于生产、不得转售；平台会不时调整模型清单，以 Token Factory 模型列表为准；Token Factory 仅在中国站提供",
+      "deadline": "官方未写截止；以 GET /v1/models 实时清单为准",
+      "source_url": "https://developer.amd.com.cn/radeon/tokenfactory"
+     }
+    }
+   ],
+   "headline": "1 万名科学家免费领 Antigravity 最高档 6 个月【赛博鸡蛋】",
+   "summary": "10月26日 · 本期可用 86 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-26",
+   "url": "https://saibodan.com/episodes/deals-2026-10-26"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. 智谱 AutoClaw — AutoClaw 登录领 1 亿 Tokens（10-26 起，至 11-01）",
+     "fields": {
+      "是什么": "AutoClaw 官方博客 10-23 发布的新一周福利：10-26 00:00 至 11-01 23:59（北京时间）登录 AutoClaw 即可领取 1 亿 Tokens（相当于 10,000 积分），每个账号限领一次；奖励在 11-01 23:59 失效。活动 10-26 才开始，之前登录领不到。",
+      "value": "1 亿 Tokens（相当于 10,000 积分），每账号限领一次",
+      "condition": "活动期 10-26（周一）00:00 至 11-01（周日）23:59（北京时间）；登录 AutoClaw 领取，每个账号限领一次；活动开始前登录不发放，奖励自领取后在 11-01 23:59 失效。",
+      "deadline": "2026-11-01 23:59（北京时间），10-26 00:00 开始",
+      "核验日期": "2026-10-25",
+      "source_url": "https://autoclaw.zhipuai.cn/blog/news/M10W4/",
+      "上屏文案": "明天起登录 AutoClaw 领 1 亿 Tokens，账号限一次（值表：1 亿 Tokens）"
+     }
+    },
+    {
+     "name": "2. OpenCode — Go 低价订阅",
+     "fields": {
+      "是什么": "Go $10/月、Go Plus $40/月；官方文档页当前模型清单为 30 个（Grok 4.7 至 Hy3，含 Gemini 4 Argon），清单含 Kimi K3.1 Pro（每百万 Token 输入 $2.00、输出 $10.00、缓存读 $0.20、缓存写 $2.00，月额度 $15（Go）/$60（Go Plus）、Go 5 小时估算 147 次）；Gemini 4 Argon 已不再标 Contributor，改为标注 50% off（折后输入 $2.00、输出 $10.00、缓存读 $0.10，官方注明折扣至 2026 年 11 月 30 日），月额度 $30（Go）/$120（Go Plus）、Go 5 小时估算 440 次；DeepSeek V4.1 Flash 月度使用额度 $80（5 小时窗口 34,670 次请求）、Kimi K3 $15、Claude Haiku 5.5 $15；Step 5 Preview 按量计费（输入$1.00/输出$2.70），月限额 $15（Go）/$60（Go Plus），估算请求 Go 5 小时 430 次、Go Plus 1,720 次；MiniMax M3.1 Flash 已结束限时免费，改为按量计费（输入$0.15/输出$0.60、缓存读$0.015），月额度 $20（Go）/$80（Go Plus）、5 小时估算 3,880 次；限时免费模型只剩 LongCat 2.5 Preview Free 与 Beam Free，其中 Beam Free 另标 limited regions；Muse Spark 1.3/1.2 Contributor 仍注明 limited regions。DeepSeek 零数据保留协议当前有效至 2026 年 10 月 31 日（按月续签），到期前需重验。",
+      "value": "Go $10/月、Go Plus $40/月；Gemini 4 Argon 五折后每百万 Token 输入 $2.00、输出 $10.00、缓存读 $0.10，Go 月额度 $30、Go Plus $120，优惠至 2026-11-30；另含 DeepSeek V4.1 Flash 月度额度 $80、Kimi K3 $15、Claude Haiku 5.5 $15",
+      "condition": "需登录 OpenCode Console 订阅 Go 或 Go Plus、填账单信息并复制 API key；Go/Go Plus 仅限单成员 workspace，订阅后不能邀请成员；主要面向国际用户；默认屏蔽对请求数据用于训练的付费端点，可用区域限欧洲与美国，未保存隐私设置的 workspace 对中国请求额外允许 Global；owner/admin 可在隐私设置里为 DeepSeek V4.1 Flash/V4 Pro 选 Global 区域、为 Muse Spark 1.3/1.2 Contributor 开启允许训练端点；入口页 https://opencode.ai/go 写明「Cancel any time.」，可随时取消；Beam Free 标注 limited regions，官方列明在包括中国大陆、香港、澳门、俄罗斯、伊朗在内的部分国家/地区不可用",
+      "deadline": "LongCat 2.5 Preview Free 与 Beam Free 均标注 limited time 限时免费但未给具体日期；Gemini 4 Argon 的 50% 折扣有效至 2026 年 11 月 30 日；DeepSeek 零数据保留协议当前有效至 2026 年 10 月 31 日，官方注明按月续签",
+      "核验日期": "2026-10-25",
+      "source_url": "https://opencode.ai/go",
+      "上屏文案": "Go 订阅里的 Gemini 4 Argon 改成普通模型，按五折计费（值表：5 折）"
+     }
+    }
+   ],
+   "headline": "1亿Tokens明天领，Gemini五折【赛博鸡蛋】",
+   "summary": "10月25日 · 本期可用 86 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-25",
+   "url": "https://saibodan.com/episodes/deals-2026-10-25"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. 七牛云 — 七牛云 Conatus Free：每日 1 亿 Token 免费模型（10-24 至 11-30）",
+     "fields": {
+      "是什么": "1024 程序员节限时活动：10-24 00:00 至 11-30 23:59，登录并完成实名认证的用户每日可领 1 亿 Token，任意一笔大于 100 元且已到账的充值后可升到每日 10 亿；模型 qiniu/conatus-free 是多个模型组成的融合模型，1000K 上下文、128K 最大输出，支持工具调用、图像理解、结构化输出；额度用完直接拒绝，本期不提供按量付费。",
+      "value": "实名用户每日 1 亿 Token；单笔充值大于 100 元且到账后每日 10 亿",
+      "condition": "需登录七牛云并完成实名认证，未认证不发放额度也不可调用，受风控限制的账号同样不行；无需额外申请活动资格；已认证每日 1 亿 Token，任意一笔大于 100 元且已到账的充值（历史充值同样计入，多笔不累计）后提升到每日 10 亿；额度按输入与输出 Token 计量、缓存输入也计入，同一账号下所有 API Key 共享，每日 00:00（北京时间）重置、未使用不结转；模型 ID qiniu/conatus-free，只消耗活动免费额度，额度不足直接拒绝，不扣余额、资源包、订阅或积分，也不自动切换模型；兼容 Completions 与 Messages 协议，可接 OpenAI SDK、Codex、Claude Code；活动结束后停止调用，不转为付费模型。",
+      "deadline": "2026-11-30 23:59（北京时间）",
+      "核验日期": "2026-10-24",
+      "source_url": "https://www.qiniu.com/ai/free-models/conatus-2026",
+      "上屏文案": "Conatus 融合模型每日免费 1 亿 Token，实名登录即可用（值表：1 亿 Token/天）"
+     }
+    },
+    {
+     "name": "2. 科大讯飞星火 — 星火 X2.6-4B 端侧模型限时免费",
+     "fields": {
+      "是什么": "Spark-X2.6-4B 是 4B 级端侧通用语言 Dense 模型，原生 1M 上下文、支持 200+ 语言，已开源；模型广场标价「限时免费」0 元/百万tokens，可在本地部署离线运行，不占用云端 Spark-X2.6 的 10 亿 Tokens 体验额度。",
+      "value": "端侧模型推理 0 元/百万tokens，可离线部署，不占云端额度",
+      "condition": "模型广场直接标「限时免费」，未列领取门槛；可在模型广场在线体验或调用 API，也可下载开源权重在本地运行",
+      "deadline": "限时免费，官方页面未公布截止日",
+      "核验日期": "2026-10-23",
+      "source_url": "https://maas.xfyun.cn/modelSquare",
+      "上屏文案": "4B 端侧模型限时免费，可在线调 API 或下载权重本地跑（值表：0 元/百万 tokens）"
+     }
+    },
+    {
+     "name": "3. AWS — SageMaker Studio 社交登录免注册送免费额度",
+     "fields": {
+      "是什么": "AWS 官方 2026-10 公告：新客户可用 Google、GitHub 或 Apple 账号注册 Amazon SageMaker Studio，跳过传统的 AWS 账户创建与控制台配置；官方写明在大多数情况下无需提供信用卡即可获得 AWS 免费套餐中的免费服务抵扣金，注册后直接进入已配置好的 Studio 环境微调、评测与部署模型",
+      "value": "多数情况下不用信用卡、免传统 AWS 账号创建即可进入 SageMaker Studio，并按 AWS Free Tier 获免费额度（官方未写金额）",
+      "condition": "面向新客户（new customers）；官方写明在大多数情况下（并非所有情况）无需提供信用卡即可获得 AWS Free Tier 中的免费服务抵扣金，官方未写额度金额与有效期；免费额度用尽后客户可升级至付费套餐并设置支出限额；可用范围是所有支持 SageMaker Studio 的 AWS 商业区域（AWS Commercial Regions）；已完成身份验证的客户在端点部署、训练作业和 Notebook 中默认可用 G5、G6、G6e、G4dn GPU 实例且无需申请配额；可用邮箱邀请团队成员以各自社交账号登录共享环境；未注册、未实测",
+      "deadline": "官方公告未写领取截止日与免费额度有效期",
+      "核验日期": "2026-10-24",
+      "source_url": "https://aws.amazon.com/free/",
+      "上屏文案": "社交账号直接开 Studio；免信用卡官方限定「大多数情况下」（值表：免绑卡 限大多数情况）"
+     }
+    }
+   ],
+   "headline": "每天1亿Token免费，星火4B限免【赛博鸡蛋 10.24】",
+   "summary": "10月24日 · 本期可用 89 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-24",
+   "url": "https://saibodan.com/episodes/deals-2026-10-24"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. ElevenLabs — ElevenLabs Starter 首月 1 美元（至 11-01）",
+     "fields": {
+      "是什么": "官方定价页 Starter 档今日标注「Until Nov 1 $6 First month 83% off $1 per month」：订阅 Starter 首月 1 美元（对照标价 6 美元/月，页面标称 83% off），含每月 3 万 credits、商用许可、即时声音克隆、20 个 Studio 项目、Music 商用与 Dubbing Studio；同页 Free 档 0 美元、每月 1 万 credits，长期可用。",
+      "value": "Starter 首月 1 美元（标价 6 美元/月，页面标称 83% off）；Starter 档 3 万 credits/月；Free 档 1 万 credits/月长期免费",
+      "condition": "1 美元只是首月价，次月起按标价 $6/月续订（页面 FAQ 原文「Starter $6 (30,000 credits)」）；年付折算等效月价为 $5（官方口径「annual price = monthly price × 10」，即付 10 个月用 12 个月）；Starter 档为 20 个 Studio 项目、3 万 credits/月；credits 按订阅当日起的计费周期重置，未用完最多 rollover 两个月（余额上限 3 倍月度额度），但降级或取消会在周期末作废，且 rollover 不适用于 Free 档；接受 Credit Card、Apple Pay、Google Pay，可按月或按年订阅；官方页未写地区或账户资格限制，也未写该促销是否只对首次订阅生效",
+      "deadline": "首月促销截止 2026-11-01（页面原文「Until Nov 1」）",
+      "核验日期": "2026-10-23",
+      "source_url": "https://elevenlabs.io/sign-up",
+      "上屏文案": "Starter 首月 1 美元（原价 6 美元/月），含 3 万 credits/月与商用许可（值表：1 美元/首月）"
+     }
+    },
+    {
+     "name": "2. Vercel AI Gateway — Vercel AI Gateway：Baseten Mammoth-1 / Elephant-1 免费至 10-27",
+     "fields": {
+      "是什么": "Vercel 官方 changelog（19–21 Oct 2026）：Baseten 的两个决策模型 Mammoth-1（27B）与 Elephant-1（9B）在 Vercel AI Gateway 上免费一周，官方写明免费访问开放至 October 27；两者都是 16k token 上下文，用来做文本分类、请求路由、按自定标准给内容打分，返回选项、概率和分数，不生成文本；同一批模型在 Baseten 自家 Model APIs 也有免费试用一周（台账另一条），这里是第二条接入通道。",
+      "value": "零成本调用两个决策模型（Mammoth-1 27B、Elephant-1 9B，16k 上下文）做分类、路由与打分，不用自己部署",
+      "condition": "需有 Vercel 账号并通过 AI Gateway 调用，模型名写作 baseten/mammoth-1 或 baseten/elephant-1，可用 AI SDK、Chat Completions、Responses、Anthropic Messages API 等接入；官方只写免费访问至 10-27，未写地区限制与调用量上限（未实测）；同页写明 AI Gateway 统一记录用量与成本，决策调用会进日志并与其他模型请求一起计入预算统计。",
+      "deadline": "免费访问截止 2026-10-27（页面原文「Free access is available through October 27」）",
+      "核验日期": "2026-10-23",
+      "source_url": "https://vercel.com/changelog/basetens-mammoth-1-and-elephant-1-now-available-on-ai-gateway-for-free",
+      "上屏文案": "Baseten Mammoth-1 / Elephant-1 在 Vercel AI Gateway 0 扣费调用（值表：0 元）"
+     }
+    }
+   ],
+   "headline": "10月23日赛博鸡蛋：语音首月折扣与免费决策模型",
+   "summary": "10月23日 · 本期可用 84 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-23",
+   "url": "https://saibodan.com/episodes/deals-2026-10-23"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. OpenRouter / OpenCode — Recursive Flint 40B：OpenRouter 与 OpenCode 限时免费",
+     "fields": {
+      "是什么": "Recursive 第一个开源权重编码模型 Flint（40B MoE、约 2.5B 激活、262,144 token 上下文）在 OpenRouter 以 recursive/flint-v1.0:free 免费开放，模型页标价 Free、API 目录 prompt/completion 均为 0；同一模型也在 OpenCode Console 免费表内（Flint 40B Free，输入/输出/缓存读全标 Free）。两边官方都只写限时、未给截止日。",
+      "value": "零成本调用 40B MoE 编码模型（约 2.5B 激活、262,144 token 上下文、支持推理与工具调用）；OpenRouter 与 OpenCode Console 两个入口都能免费用同一模型",
+      "condition": "需注册 OpenRouter 账号并生成 API key，调用模型名 recursive/flint-v1.0:free；免费端点受限速（OpenRouter 官方限速页：免费档 20 次/分、50 次/天，历史累计购买满 10 credits 后 1,000 次/天，官方写明从低于阈值一个 credit、当前 9 credits 起生效）。OpenCode 侧需登录 Console 生成 API key，模型 ID 为 flint-40b-free。两边都只写限时（OpenRouter 帖「Free to use at launch」、OpenCode「limited time」），未公布截止日；OpenRouter 模型页写明当前不提供 EU 区域内路由。",
+      "deadline": "两边官方都只写限时，未公布截止日（OpenRouter 帖写 Free to use at launch，OpenCode 写 free on OpenCode for a limited time）",
+      "核验日期": "2026-10-22",
+      "source_url": "https://openrouter.ai/recursive/flint-v1.0:free",
+      "上屏文案": "开源编码模型 Flint 40B，OpenRouter 与 OpenCode 都能 0 扣费调用（值表：0 元）"
+     }
+    },
+    {
+     "name": "2. Fireworks AI — Fireworks：Muse Glimmer 30B 的 SFT 训练免费至 11-30",
+     "fields": {
+      "是什么": "Fireworks 官方博客（2026-10-20 发布）Free Weights Club 首期：Muse Glimmer 30B 用监督微调（SFT）训练免费至 2026-11-30，无需信用卡；免费的只有训练，推理（含评测调用）另行计费；官方称它适合做个人智能体起步模型。",
+      "value": "30B 模型 SFT 训练零成本至 11-30，无需信用卡；推理另计费",
+      "condition": "需注册 Fireworks 账号，用 Managed Training 或 Serverless Training API 跑 SFT；免费范围只含 SFT 训练，推理与评测调用另行计费；官方未写并发、时长或训练量限额，也未写地区限制（未实测）；属 Free Weights Club 的 limited time 项目。",
+      "deadline": "2026-11-30（官方原文 through November 30，未给时区）",
+      "核验日期": "2026-10-22",
+      "source_url": "https://fireworks.ai/blog/train-muse-glimmer-for-free",
+      "上屏文案": "Muse Glimmer 30B 的 SFT 训练 0 扣费至 11-30，不用绑卡（值表：0 元训练）"
+     }
+    },
+    {
+     "name": "3. Runway — Runway：Kling 4.0 生成 25% 折扣（至 11-30）",
+     "fields": {
+      "是什么": "Runway 官方活动条款：2026-10-21 11:00 ET 至 2026-11-30 23:59 ET，所有 Runway 用户按 credit 成本 25% 折扣生成 Kling 4.0；折扣只在 Runway App 内生成生效，Runway API、开发者平台、MCP/Agent 直连不适用。另有三天不限量 Kling 4.0（10-21 11:00 ET 至 10-24 11:00 ET），只给活动期内新开或升级到 Max/Team 的 workspace。",
+      "value": "Kling 4.0 生成按 credit 成本 25% 折扣（至 11-30）；活动期内新开或升级 Max/Team 另有三天 Explore Mode 不限量生成",
+      "condition": "25% 折扣面向所有 Runway 用户，需在 Runway App 内生成 Kling 4.0；只作用在 Kling 4.0，Kling 3.0、Kling O3、Kling 4.0 Flash 仍按标准 credit 价；不适用于 Runway API 与开发者平台，也不适用于通过 Runway MCP/Agent 产品直连发起的生成（经 Runway Workflows 调用的生成仍算）；折扣后 credit 成本向上取整到整数 credit；只在 runwayml.com 有效，第三方转售渠道不适用。三天不限量档需在 2026-10-21 11:00 ET 至 2026-10-24 11:00 ET 内新开或升级到 Max/Team（此前已在 Max/Team 的 workspace 不适用），只限 Explore Mode 的 Tool Mode 与 Workflows，不含 Enterprise。",
+      "deadline": "折扣期 2026-10-21 11:00 ET 至 2026-11-30 23:59 ET；三天不限量档到 2026-10-24 11:00 ET",
+      "核验日期": "2026-10-22",
+      "source_url": "https://runway.com/kling-4-terms",
+      "上屏文案": "Kling 4.0 生成的 credit 成本减 25% 至 11-30（值表：25 % 折扣）"
+     }
+    }
+   ],
+   "headline": "10月22日赛博鸡蛋：免费编码模型与训练额度",
+   "summary": "10月22日 · 本期可用 83 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-22",
+   "url": "https://saibodan.com/episodes/deals-2026-10-22"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. 智谱 AutoClaw — AutoClaw 登录领 2 亿 Tokens 与每日积分",
+     "fields": {
+      "是什么": "AutoClaw 官方博客（10-14）活动：10.15–10.21 任意一天登录 AutoClaw 可领 2 亿 Tokens（20,000 积分），每个账号限领一次，领取后 7 天内有效；10.15–10.25 活动期内每日登录可再领 500 积分，付费会员每日 800 积分。",
+      "value": "2 亿 Tokens（20,000 积分）每账号限领一次，领取后 7 天有效；活动期内每日再领 500 积分（付费会员 800）",
+      "condition": "登录 AutoClaw 即可领取，每个账号限领一次；2 亿 Tokens 档只在 10.15–10.21 活动期内发放，领取成功后 7 天内有效、逾期自动失效；每日积分档 10.15–10.25，普通用户每日可领 500 积分、付费会员每日可领 800 积分，每日限领一次；付费会员指连续包月订阅、AutoClaw 团购订阅及 GLM Coding Plan 个人套餐用户",
+      "deadline": "2026-10-25 截止（活动期 10.15–10.25；2 亿 Tokens 档 10.21 截止）",
+      "核验日期": "2026-10-21",
+      "source_url": "https://autoclaw.zhipuai.cn/blog/news/Weekly-Perks-M10W3/",
+      "上屏文案": "登录 AutoClaw 领 2 亿 Tokens（20,000 积分），7 天内有效（值表：2 亿 Tokens）"
+     }
+    },
+    {
+     "name": "2. 华为云码道 — 华为云码道：每日 1,000 万免费 Token",
+     "fields": {
+      "是什么": "华为云活动页写每日 1,000 万免费 Token：登录华为云码道即可使用，额度当日有效、0 点清零不累计，仅限华为云码道内使用、先到先得；领取后可自由切换 GLM-5.3-flash、DeepSeek V4 Pro、DeepSeek V4 Flash 等限时福利模型。",
+      "value": "每日 1,000 万免费 Token，当日 0 点清零",
+      "condition": "手机号或邮箱注册并登录华为云码道，一键免费开通华为云码道 CodeArts 代码智能体体验版，再下载安装码道 IDE 或 JetBrains / VS Code 系列插件；额度当日有效、0 点清零不累计；仅限华为云码道内使用，先到先得，权益不可转让、不得兑换现金或优惠券；福利模型会持续调整，具体以华为云码道 IDE 与插件内可选为准",
+      "deadline": "官方未公布起止日，只写「本次限时福利活动设有明确起止时间」",
+      "核验日期": "2026-10-21",
+      "source_url": "https://activity.huaweicloud.com/codearts_agent.html",
+      "上屏文案": "每日 1,000 万 Token，登录即用、当日 0 点清零（值表：1000 万 Token/天）"
+     }
+    },
+    {
+     "name": "3. 火山引擎方舟 — 方舟 Coding Plan 限时低价",
+     "fields": {
+      "是什么": "限时 9.9 元起；邀请好友下单返订单金额 5% 代金券，好友首订 9.5 折；10-20 起新增 deepseek-v4.1-flash-economy，抵扣系数 5 折、可用配额为原用量 200%，个人版自动生效至 2026-12-30",
+      "value": "低价档可切换 DeepSeek、GLM、Seed、Kimi 等模型；deepseek-v4.1-flash-economy 抵扣系数 5 折、可用配额 200%（至 2026-12-30）",
+      "condition": "登录后下单；官方只写「限时 9.9 元起 Coding Plan 限时特惠，名额有限，先到先得」，未给统一截止日；当前支持 Deepseek-V4.1-Flash、GLM-5.3 系列、Doubao-Seed-Evolving、Kimi-K3 等模型自由切换或用 Auto 模式调度，适配 Claude Code、Codex CLI、TRAE、OpenCode、OpenClaw、Hermes Agent 等工具；邀请需对方完成首次订阅；deepseek-v4.1-flash-economy 的新模型折扣只对 Agent/Coding Plan 个人版用户、活动到点自动生效无需申请，活动期 2026-10-20 00:00:00 至 2026-12-30 23:59:59",
+      "deadline": "限时低价无统一截止日；deepseek-v4.1-flash-economy 新模型折扣至 2026-12-30 23:59:59",
+      "核验日期": "2026-10-21",
+      "source_url": "https://www.volcengine.com/activity/codingplan",
+      "上屏文案": "deepseek-v4.1-flash-economy 抵扣 5 折、可用配额 200%（值表：5 折）"
+     }
+    }
+   ],
+   "headline": "10月21日赛博鸡蛋：2 亿 Tokens 与每日免费额度",
+   "summary": "10月21日 · 本期可用 79 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-21",
+   "url": "https://saibodan.com/episodes/deals-2026-10-21"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. 超算互联网 SCNet MaaS — 新用户免费1000万Tokens及0.1元首单模型包",
+     "fields": {
+      "是什么": "活动期间首次注册的新用户可免费领取1000万Tokens；当前页面标注模型为GLM-5.3-Flash（1024K上下文），但官方注明实际发放模型可能随供应调整。新客首单特惠当前展示6款量包：DeepSeek-V4.1-Flash-1017 5000万Tokens、GLM-5.3-Flash 5000万Tokens、DeepSeek-V4.1-Flash 2000万Tokens与Qwen3.8-Flash 1000万Tokens均为0.10元；Kimi-K3 1000万Tokens为39.00元（7折）、Qwen3.8-Max 1000万Tokens为20.00元（6折）。",
+      "value": "免费1000万Tokens；新客首单4款0.10元量包：DeepSeek-V4.1-Flash-1017 5000万Tokens、GLM-5.3-Flash 5000万Tokens、DeepSeek-V4.1-Flash 2000万Tokens、Qwen3.8-Flash 1000万Tokens；另Kimi-K3 1000万Tokens 39元、Qwen3.8-Max 1000万Tokens 20元",
+      "condition": "仅限活动期间首次在超算互联网平台注册的新用户；免费1000万Token每账号限领一次，到账后30天有效，赠送Token用尽后继续调用会自动扣现金余额；领取资源总量有限、先到先得。0.1元首单包仅限新用户，六款活动商品每账号合计限购一次，每日10:00开放且库存有限、售完即止，商品生效后30天有效；购买后不支持无理由退款。实际商品和库存以活动页显示为准。",
+      "deadline": "2026-11-10",
+      "核验日期": "2026-10-20",
+      "source_url": "https://www.scnet.cn/home/subject/maas/index.html",
+      "上屏文案": "新用户注册领 1000 万 Token；新客 0.1 元买 5000 万 Token 量包（值表：0.1 元）"
+     }
+    },
+    {
+     "name": "2. OpenRouter — 免费模型与免费档限速",
+     "fields": {
+      "是什么": "当天实测 17 个 :free 免费模型（官方限速文档把免费模型定义为 ID 以 :free 结尾的变体；零价但不带 :free 后缀的条目另有 3 个，零价条目共 20 个），名单含 2026-10-19 上线的 MiniMax M3.1 Flash（1,000,000 token 上下文、最大输出 524,288 token，支持文本/图片/视频输入），名单仍须当天现查；免费档每分钟 20 次、每天 50 次，充值累计达 10 美元后提高到每天 1,000 次",
+      "value": "零成本调用 17 个 :free 变体，含 MiniMax M3.1 Flash（1M 上下文、文本/图片/视频输入）",
+      "condition": "注册账号；提额需要历史充值：表格阈值为累计购买 10 credits（FREE_MODEL_CREDITS_THRESHOLD），达到后每天 1000 次免费模型请求，低于阈值每天 50 次；官方文档另写明为吸收充值取整与手续费，更高额度从低于阈值一个 credit 起即生效，当前为 9 credits",
+      "deadline": "免费模型名单动态变化",
+      "核验日期": "2026-10-20",
+      "source_url": "https://openrouter.ai/models?max_price=0",
+      "上屏文案": "17 个限免模型，新增 MiniMax M3.1 Flash 1M 上下文（值表：17 个限免模型）"
+     }
+    },
+    {
+     "name": "3. fal — FLUX 3 Max 视频生成 75% 折扣（至 11 月 7 日）",
+     "fields": {
+      "是什么": "fal 官方落地页写 FLUX 3 Max 75% off until November 7：720p 按输出秒计费，折后 $0.0425/秒，原价 $0.17/秒；官方写明按输出秒计费、无最低消费、无订阅；10 秒视频约 12 秒生成，支持文生视频和图生视频。",
+      "value": "720p 视频生成 $0.0425/秒（原价 $0.17/秒，75% off），10 秒视频约 12 秒生成",
+      "condition": "按输出视频秒数计费；720p 折后 $0.0425/秒、原价 $0.17/秒；无最低消费、无订阅；官方页未写地区限制；折扣截至 2026-11-07",
+      "deadline": "截止 2026-11-07（官方原文「until November 7」）",
+      "核验日期": "2026-10-20",
+      "source_url": "https://fal.ai/flux-3-max",
+      "上屏文案": "FLUX 3 Max 视频生成，720p 按输出秒计费（值表：0.0425 美元/秒）"
+     }
+    }
+   ],
+   "headline": "10月20日赛博鸡蛋：新客额度、免费模型与视频折扣",
+   "summary": "10月20日 · 本期可用 75 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-20",
+   "url": "https://saibodan.com/episodes/deals-2026-10-20"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. TinyFish — TinyFish Search / Fetch 免费额度（每小时 500 次、每天 1,000 URL）",
+     "fields": {
+      "是什么": "TinyFish 官方定价页写明：Search 免费限额为每分钟 30 次、每小时 500 次，每次请求 $0.00；Fetch 免费限额为每分钟 150 个 URL、每天 1,000 个 URL，每个 URL $0.00。Search 和 Fetch 不消耗钱包余额，余额为 $0 时仍可用；钱包只用于 Agent 和 Browser 计费。",
+      "value": "Search 每小时 500 次、Fetch 每天 1,000 个 URL，均 $0",
+      "condition": "注册 TinyFish 账号即可使用，官方写明无需信用卡（No card required）；Search 与 Fetch 在任何钱包余额下免费，并受上述频率限制；Agent 与 Browser 按钱包余额计费；新账号钱包起始有 $8，可在加卡前用于 Agent 与 Browser",
+      "deadline": "官方未写截止日；价格与限额以定价页为准",
+      "核验日期": "2026-10-19",
+      "source_url": "https://www.tinyfish.ai/",
+      "上屏文案": "Search 每小时 500 次、Fetch 每天 1,000 个 URL，均按 0 美元计费（值表：）"
+     }
+    },
+    {
+     "name": "2. 阿里 Qoder CN — Qoder CN 个人用户每日领 100 通用 Credits",
+     "fields": {
+      "是什么": "2026 年 9 月 18 日 10:00 起，Qoder CN 个人用户每天可在桌面端主动领取 100 通用 Credits；免费用户、试用期用户、个人付费订阅和会员卡用户都能参与，企业订阅用户不适用。每笔奖励自领取起 30 天内有效，未到期部分可跨天保留；可在 Qoder CN、IDE、JetBrains 插件、CLI、QoderWake CN、Cloud Agents CN、移动端和网页版使用。",
+      "value": "每天 100 通用 Credits，每笔 30 天有效、可跨天保留",
+      "condition": "仅限 Qoder CN 个人用户（含免费、试用、体验版、专业版、高级版、旗舰版及会员卡用户），企业订阅用户不适用；每天 10:00 至次日 10:00 前在 Qoder CN 桌面端「用量面板 → 礼物图标」主动领取，每账号每轮限领一次，错过不可补领；每笔 30 天有效",
+      "deadline": "活动结束时间另行公告；每笔 Credits 领取后 30 天内有效",
+      "核验日期": "2026-10-19",
+      "source_url": "https://docs.qoder.cn/events/100credits",
+      "上屏文案": "个人用户每天领 100 通用 Credits，30 天内有效（值表：）"
+     }
+    }
+   ],
+   "headline": "10月19日赛博鸡蛋：网页抓取接口与每日编程积分",
+   "summary": "10月19日 · 本期可用 12 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-19",
+   "url": "https://saibodan.com/episodes/deals-2026-10-19"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. Bolt — Builders Week 免费周末：GLM 5.3 Flash 全账号免费",
+     "fields": {
+      "是什么": "10 月 17 日 00:00 至 10 月 18 日 23:59（太平洋时间）期间，Bolt 所有账号都能在模型选择器里免费用 GLM 5.3 Flash；免费、个人付费和 Teams 账号都包含，无需换套餐或兑换码。额度按 6 小时一块发放，打开 Bolt 开始计时，付费档每块的免费额度是免费档的 5 倍；GLM 5.3 Flash 是活动期间唯一的免费模型。",
+      "value": "GLM 5.3 Flash 全账号免费，额度每 6 小时一块；付费档每块 5 倍",
+      "condition": "有 Bolt 账号即可，免费、个人付费与 Teams 账号都能用（Teams 每位成员各有一份额度）；无需换套餐、无需兑换码；额度按 6 小时一块，打开 Bolt 开始计时，错过的块不结转；有速率限制",
+      "deadline": "截止 2026-10-18 23:59 PT（太平洋时间）",
+      "核验日期": "2026-10-18",
+      "source_url": "https://bolt.new/builders-week",
+      "上屏文案": "Builders Week 免费周末：全账号可用 GLM 5.3 Flash（值表：）"
+     }
+    },
+    {
+     "name": "2. AMD Radeon Cloud — Token Factory 共享模型 API 免费（不消耗 credits）",
+     "fields": {
+      "是什么": "AMD Radeon Cloud 的 Public Free Model APIs 提供共享端点，常开、不消耗 credits，OpenAI 兼容；一把 API Key 覆盖全部共享模型。官方模型目录列出 DeepSeek-V4-Flash、DeepSeek-V4.1-Flash（上下文 1,048,576）、Qwen3.8-Flash-Next（262,144）、GLM-5.3-Flash（262,144）、MiMo-V2.6-Flash（1,048,576）等。",
+      "value": "共享模型 API 免费、不扣 credits，含 100 万上下文的 DeepSeek-V4.x-Flash 与 MiMo-V2.6-Flash",
+      "condition": "登录 AMD Radeon Cloud 的 Token Factory，在 Public Free Model APIs 里选模型并取 API Key；共享端点按 key 和 IP 限速，并有每日花费上限；实际可用模型以 GET /v1/models 为准",
+      "deadline": "官方未写截止；以 GET /v1/models 实时清单为准",
+      "核验日期": "2026-10-18",
+      "source_url": "https://developer.amd.com.cn/radeon/tokenfactory",
+      "上屏文案": "Token Factory 共享模型 API 免费，不扣 credits（值表：）"
+     }
+    },
+    {
+     "name": "3. Kiro — Kiro 学生计划：每月 1,000 credits 免费一年",
+     "fields": {
+      "是什么": "Kiro 官方学生页写明：符合资格大学的学生每月免费 1,000 credits，连续一年；Kiro 付费 Pro 档（$20/月）同样是每月 1,000 credits。",
+      "value": "每月 1,000 credits，免费一年",
+      "condition": "仅限页面 Eligible Schools 名单内的大学；需用学校邮箱关联 Kiro 账号，并通过 SheerID 学生验证（可能要上传学生证或在读证明）；不在名单内无法领取",
+      "deadline": "免费一年；活动总截止日官方未写",
+      "核验日期": "2026-10-18",
+      "source_url": "https://kiro.dev/students/",
+      "上屏文案": "学生计划：指定大学每月 1,000 credits，免费一年（值表：）"
+     }
+    }
+   ],
+   "headline": "10月18日赛博鸡蛋：免费模型接口与全年学生额度",
+   "summary": "10月18日 · 本期可用 53 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-18",
+   "url": "https://saibodan.com/episodes/deals-2026-10-18"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. ElevenLabs — ElevenLabs Starter 首月 1 美元（至 10-18）",
+     "fields": {
+      "是什么": "官方定价页 Starter 档标注「Until Oct 18 $6 First month 83% off $1 per month」：10 月 18 日前订阅 Starter，首月 1 美元（对照标价 6 美元/月，页面标称 83% off），含每月 3 万 credits、商用许可、即时声音克隆、Dubbing Studio 等；同页 Free 档 0 美元、每月 1 万 credits，长期可用，无需付费即可试语音合成与音色设计",
+      "value": "Starter 首月 1 美元（标价 6 美元/月，页面标称 83% off）；Starter 档 3 万 credits/月；Free 档 1 万 credits/月长期免费",
+      "condition": "1 美元只是首月价，次月起按标价 $6/月续订（页面 FAQ 原文「Starter $6 (30,000 credits)」）；年付折算等效月价为 $5（官方口径「annual price = monthly price × 10」，即付 10 个月用 12 个月）；Starter 档为 20 个 Studio 项目、3 万 credits/月；credits 按订阅当日起的计费周期重置，未用完最多 rollover 两个月（余额上限 3 倍月度额度），但降级或取消会在周期末作废，且 rollover 不适用于 Free 档；接受 Credit Card、Apple Pay、Google Pay，可按月或按年订阅；官方页未写地区或账户资格限制，也未写该促销是否只对首次订阅生效",
+      "deadline": "首月促销标注截止 2026-10-18（页面原文「Until Oct 18」），官方未写具体时区与截止时刻",
+      "核验日期": "2026-10-17",
+      "source_url": "https://elevenlabs.io/sign-up",
+      "上屏文案": "首月 1 美元享 3 万字符额度，支持商用与声音克隆，10 月 18 日截止（值表：约 1 美元/月）"
+     }
+    }
+   ],
+   "headline": "10月17日赛博鸡蛋：国内 22 条 + 国外 34 条 AI 福利",
+   "summary": "10月17日 · 本期可用 57 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-17",
+   "url": "https://saibodan.com/episodes/deals-2026-10-17"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. OpenCode — Zen 按量付费与限时免费模型",
+     "fields": {
+      "是什么": "OpenCode Console 按成本价转售，信用卡手续费实转 4.4% + $0.30/笔；包含 DeepSeek V4.1 Flash Free、Space Bunny Free、Cat Jam Free、MiMo-V2.6-Flash Free、Exo Free、Nemotron 3.5 Super VL Free 等 12 款限时免费模型；Mistral Large 4 与 Gemini 4 Argon 享 5 折优惠（Gemini 4 Argon 五折持续至 2026 年 11 月 30 日）",
+      "value": "按量零加价转售，12 款高价值/新锐模型 $0 免费调用，旗舰模型享 50% 折扣",
+      "condition": "绑定支付方式（银行卡 / 信用卡）；需有足够余额发起请求；免费模型虽标 $0，部分仍需账户有活跃额度或通过防滥用校验；限时免费随时可能变动或下线",
+      "deadline": "按量长期有效；Gemini 4 Argon 5 折至 2026 年 11 月 30 日；各免费模型为 limited-time",
+      "核验日期": "2026-10-16",
+      "source_url": "https://opencode.ai/zen",
+      "上屏文案": "GLM-5.3-Flash 今日免费上架，DeepSeek V4.1 Flash 昨日上架，限时零成本调用（值表：GLM+DeepSeek）"
+     }
+    },
+    {
+     "name": "2. Mistral — 学生价 Education Plan（$5.99/月，含每月 $15 额度）",
+     "fields": {
+      "是什么": "认证高校学生可享 Education Plan 学生价 $5.99/月（原价 $14.99），折扣最长 12 个月，每月赠送 $15 API 额度，支持 CLI/IDE/Web 全天编程与更多复杂推理",
+      "value": "学生价 $5.99/月订阅 Education Plan（原价 $14.99），每月含 $15 API 额度，折扣最长 12 个月",
+      "condition": "经认证的受认可高等教育机构学生，且此前未使用过 Vibe（或 Le Chat）；不含税费",
+      "deadline": "最长 12 个月有效期，政策以官方定价页为准",
+      "核验日期": "2026-10-17（更正）",
+      "source_url": "https://chat.mistral.ai/upgrade/student",
+      "上屏文案": "认证学生可享 Education Plan 学生价 $5.99/月（原价 $14.99），每月送 15 美元 API 额度（值表：$5.99/月+$15/月）"
+     }
+    },
+    {
+     "name": "3. ElevenLabs — ElevenLabs Starter 首月 1 美元（至 10-18）",
+     "fields": {
+      "是什么": "官方定价页 Starter 档标注「Until Oct 18 $6 First month 83% off $1 per month」：10 月 18 日前订阅 Starter，首月 1 美元（对照标价 6 美元/月，页面标称 83% off），含每月 3 万 credits、商用许可、即时声音克隆、Dubbing Studio 等；同页 Free 档 0 美元、每月 1 万 credits，长期可用，无需付费即可试语音合成与音色设计",
+      "value": "Starter 首月 1 美元（标价 6 美元/月，页面标称 83% off）；Starter 档 3 万 credits/月；Free 档 1 万 credits/月长期免费",
+      "condition": "1 美元只是首月价，次月起按标价 $6/月续订（页面 FAQ 原文「Starter $6 (30,000 credits)」）；年付折算等效月价为 $5（官方口径「annual price = monthly price × 10」，即付 10 个月用 12 个月）；Starter 档为 20 个 Studio 项目、3 万 credits/月；credits 按订阅当日起的计费周期重置，未用完最多 rollover 两个月（余额上限 3 倍月度额度），但降级或取消会在周期末作废，且 rollover 不适用于 Free 档；接受 Credit Card、Apple Pay、Google Pay，可按月或按年订阅；官方页未写地区或账户资格限制，也未写该促销是否只对首次订阅生效",
+      "deadline": "首月促销标注截止 2026-10-18（页面原文「Until Oct 18」），官方未写具体时区与截止时刻",
+      "核验日期": "2026-10-16",
+      "source_url": "https://elevenlabs.io/sign-up",
+      "上屏文案": "Starter 首月 1 美元 10-18 截止，次月按 6 美元续订（值表：首月 1 美元）"
+     }
+    }
+   ],
+   "headline": "10月16日赛博鸡蛋：两款免费模型与学生临期提醒",
+   "summary": "10月16日 · 本期可用 60 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-16",
+   "url": "https://saibodan.com/episodes/deals-2026-10-16"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. Command Code — Command Code GOAT 套餐（$10/月含 $80 额度）",
+     "fields": {
+      "是什么": "Command Code 面向个人开发者的编程智能体订阅：GOAT 档每月 10 美元（另加处理费）含 80 美元额度、官方标称最高约 100 美元等效用量（含优惠）；Go 档每月 1 美元（另加处理费）含 10 美元额度、上限约 15 美元等效用量；两档均含 taste-1 模型访问权限，Laguna S 2.1、Ling 3.0 Flash 等模型标为免费（请求不消耗额度）",
+      "value": "GOAT 10 美元/月含 80 美元额度（官方标称最高约 100 美元等效用量，含优惠）；Go 1 美元/月含 10 美元额度",
+      "condition": "价格另加处理费，官方页未写处理费金额；官方页写按月订阅、可随时切换/升级或取消、绝不使用用户代码训练、Taste 仅存本地；Go 档不含 API 访问（对比表把 API 访问标为「除 Go 外所有套餐均可使用」，兼容 OpenAI 与 Anthropic 端点）；额度按模型分配，不同模型可用额度不同；免费模型注明「请求不消耗额度」但受容量与时限约束（while capacity lasts / while it lasts）；未注册、未实测",
+      "deadline": "官方定价页未写套餐促销截止日，也未写免费模型的结束日期",
+      "核验日期": "2026-10-15",
+      "source_url": "https://commandcode.ai/",
+      "上屏文案": "GOAT 10 美元/月含 80 美元额度（另加处理费），Go 档不含 API 访问（值表：80 美元）"
+     }
+    },
+    {
+     "name": "2. 腾讯云 TokenHub — TokenHub 新用户免费 100 万 tokens",
+     "fields": {
+      "是什么": "腾讯云大模型服务平台 TokenHub 官方产品页在「最新活动」位写明「免费领取，可享100万 tokens」「新用户零门槛领取百万免费 tokens，随心体验大模型」，入口按钮为「立即前往」",
+      "value": "新用户 100 万 tokens 免费调用额度",
+      "condition": "官方产品页只写「新用户零门槛领取百万免费 tokens」，未写实名认证要求、覆盖哪些模型、是否一次性领取、额度有效期与截止日；正文快照不含「立即前往」按钮的实际链接地址，落地页未核；额度用尽后按官方模型定价页所列单价计费（页面同时列有在线推理与批量推理两档单价，以官方定价页为准）",
+      "deadline": "官方产品页未写截止日，也未写额度有效期",
+      "核验日期": "2026-10-15",
+      "source_url": "https://cloud.tencent.com/product/tokenhub",
+      "上屏文案": "新用户在产品页零门槛领 100 万 tokens 试用大模型；模型与有效期未写（值表：100 万）"
+     }
+    },
+    {
+     "name": "3. AWS — SageMaker Studio 社交登录免注册送免费额度",
+     "fields": {
+      "是什么": "AWS 官方 2026-10-14 公告：新客户可用 Google、GitHub 或 Apple 账号直接注册 Amazon SageMaker Studio，不必完成多步 AWS 账号创建、也不用信用卡，注册后按 AWS Free Tier 获得免费额度，并直接进入已配置好的 Studio 环境开始微调、评测与部署模型",
+      "value": "免信用卡、免传统 AWS 账号创建即可进入 SageMaker Studio，并按 AWS Free Tier 获免费额度（官方未写金额）",
+      "condition": "面向新客户（new customers）；免费额度属 AWS Free Tier 一部分、无需信用卡，官方未写额度金额与有效期；额度用尽后需升级付费计划并设置支出上限；可用范围是所有支持 SageMaker Studio 的 AWS Commercial Regions；已核验客户默认可用 G5、G6、G6e、G4dn GPU 实例且无需申请配额；可用邮箱邀请团队成员以各自社交账号登录共享环境；未注册、未实测",
+      "deadline": "官方公告未写领取截止日与免费额度有效期",
+      "核验日期": "2026-10-15",
+      "source_url": "https://aws.amazon.com/free/",
+      "上屏文案": "新客户用社交账号免注册开 Studio，免绑卡按 Free Tier 得额度（值表：免绑卡）"
+     }
+    }
+   ],
+   "headline": "10月15日赛博鸡蛋：编码订阅额度与两处免费额度",
+   "summary": "10月15日 · 本期可用 59 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-15",
+   "url": "https://saibodan.com/episodes/deals-2026-10-15"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. 智谱 BigModel — Flash 系列免费模型与 Batch 折扣",
+     "fields": {
+      "是什么": "GLM-4.7-Flash、GLM-4.6V-Flash、GLM-4V-Flash、CogView-3-Flash、CogVideoX-Flash 等免费；Batch API 五折；上下文缓存存储限时免费",
+      "value": "文本、视觉、图像、视频类都有免费模型",
+      "condition": "注册开放平台账号",
+      "deadline": "免费模型清单随官方调整",
+      "核验日期": "2026-10-14",
+      "source_url": "https://bigmodel.cn/console/modelcenter/square",
+      "上屏文案": "注册即可调用多款免费模型，涵盖文本、视觉、图像与视频；Batch API调用享五折，免费档有并发限制（值表：多款免费）"
+     }
+    },
+    {
+     "name": "2. 阿里 Qoder CN — Qwen3.8-Flash 限时免费使用",
+     "fields": {
+      "是什么": "Qoder CN 个人用户在免费期内选用 Qwen3.8-Flash，计费系数由 0.1× 降至 0.0×，调用不消耗 Credits，也不扣每日领的 100 通用 Credits；活动期已由 9 月 30 日延长至 10 月 1 日之后，结束时间另行公告",
+      "value": "活动期内该模型调用不消耗 Credits（原计费系数 0.1×）；官方未给额度上限，也未标市场等价金额",
+      "condition": "Qoder CN 新老个人用户（体验版、专业版、高级版、旗舰版及会员卡），免费用户和试用期用户可参与，Credits 余额为 0 也能用；自动生效、无需领取，延期后不需重新领取或做任何设置，登录个人账号选用该模型即可；仅 Qwen3.8-Flash 免费，其他模型按各自规则；企业订阅（团队版、企业标准版、企业专属版）不适用；高峰时段可能响应较慢",
+      "deadline": "原定 2026-09-30 23:59:59 结束，现已延长，2026-10-01 起继续免费；官方未公布新的结束日，结束时间将提前在官方活动页公告",
+      "核验日期": "2026-10-14",
+      "source_url": "https://qoder.cn/",
+      "上屏文案": "个人版选用Qwen3.8-Flash计费系数为零，不扣积分；活动已延期，企业版与团队版不适用（值表：不扣积分）"
+     }
+    },
+    {
+     "name": "3. 腾讯混元大模型 — 混元生文首次开通免费 100 万 tokens（1 年有效）",
+     "fields": {
+      "是什么": "首次开通腾讯混元大模型服务后，混元生文以一次性免费资源包形式发放免费额度：Hunyuan-a13b 共 100 万 tokens 共享消耗，Hunyuan-role-latest、Hunyuan-translation、Tencent HY Vision 等其余混元生文模型各 100 万 tokens；结算时按免费资源包 > 付费资源包 > 按量后付费的顺序扣减",
+      "value": "混元生文模型 100 万 tokens 免费额度，1 年有效",
+      "condition": "腾讯官方公告：混元大模型相关功能将逐步迁移至 TokenHub，迁移后原平台不再新增模型能力、并停止支持新购模型服务，已购买的模型服务可继续使用、暂不受影响；如需开通新的模型服务或使用更多模型能力须前往 TokenHub。需先通过腾讯云个人或企业实名认证；首次在混元大模型单击「立即使用」才发放，且是一次性免费资源包；欠费或因违规停服期间不能继续享受免费额度，服务重新开启后才可继续；免费资源包耗尽或到期不会自动转入后付费，未主动在控制台开通后付费会出现计费异常提示",
+      "deadline": "免费资源包有效期 1 年，自开通服务之日起算，1 年内未使用完过期作废；官方未写领取截止日",
+      "核验日期": "2026-10-14",
+      "source_url": "https://cloud.tencent.com/product/hunyuan",
+      "上屏文案": "首次开通混元生文赠送100万Token资源包，1年有效；需个人实名认证，耗尽后不自动转后付费（值表：100万）"
+     }
+    }
+   ],
+   "headline": "10月14日赛博鸡蛋：多模态免费模型、编程助手限免与百万额度",
+   "summary": "10月14日 · 本期可用 55 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-14",
+   "url": "https://saibodan.com/episodes/deals-2026-10-14"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. 超算互联网 SCNet MaaS — 新用户免费1000万Tokens及0.1元首单模型包",
+     "fields": {
+      "是什么": "活动期间首次注册的新用户可免费领取1000万Tokens；当前页面标注模型为GLM-5.3-Flash，但官方注明实际发放模型可能随供应调整。页面另列新客首单特惠包，当前展示GLM-5.3-Flash 3000万Tokens和Qwen3.8-Flash 1000万Tokens均为0.10元。",
+      "value": "免费1000万Tokens；活动页当前展示的GLM-5.3-Flash 3000万Tokens包与Qwen3.8-Flash 1000万Tokens包均为0.10元/份",
+      "condition": "仅限活动期间首次在超算互联网平台注册的新用户；免费1000万Token每账号限领一次，到账后30天有效，赠送Token用尽后继续调用会自动扣现金余额；领取资源总量有限、先到先得。0.1元首单包仅限新用户，六款活动商品每账号合计限购一次，每日10:00开放且库存有限、售完即止，商品生效后30天有效；购买后不支持无理由退款。实际商品和库存以活动页显示为准。",
+      "deadline": "2026-11-10",
+      "核验日期": "2026-10-13",
+      "source_url": "https://www.scnet.cn/home/subject/maas/index.html",
+      "上屏文案": "首次注册用户：免费1000万Token，指定模型首单0.1元；限量、30天有效，免费额度耗尽后继续调用扣现金余额（值表：1000万）"
+     }
+    },
+    {
+     "name": "2. Affinity by Canva — Affinity 免费专业设计工具",
+     "fields": {
+      "是什么": "Affinity by Canva 将修图、矢量设计和页面排版合在一款 Windows/macOS 桌面应用中；免费 Canva 账号可下载并使用完整 Pixel、Vector、Layout 工具，适合自己做视频封面、缩略图、海报和图文版式。",
+      "value": "$0 使用完整 Pixel、Vector、Layout 设计和导出工具；个人创作者可在一个应用内完成中文封面、缩略图、海报的图片处理、矢量图形与文字排版，不需另买 Canva Pro。Canva AI Studio 不在免费工具范围内。",
+      "condition": "需要 Canva 账号；普通免费账号即可使用核心 Pixel/Vector/Layout 工具，不需要 Canva Pro。首次下载和激活需联网，之后核心应用可离线使用。官方列出的系统为 Windows 和 macOS，界面语言包括中文；新版 iPad 应用尚未推出。Canva AI Studio 生成式 AI 功能需 Canva 高级方案，未计入免费权益。官网未列出国家/地区排除名单；中国账号注册、下载及激活本次未实测。",
+      "deadline": "官方称完整 Affinity 体验永久免费；官网未标促销截止日期。",
+      "核验日期": "2026-10-13",
+      "source_url": "https://www.affinity.studio/get-affinity",
+      "上屏文案": "免费Canva账号可用完整修图、矢量与排版工具；支持中文，适合封面和海报，生成式AI需高级方案（值表：免费）"
+     }
+    }
+   ],
+   "headline": "10月13日赛博鸡蛋：新客1000万Token、免费设计工具",
+   "summary": "10月13日 · 本期可用 55 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-13",
+   "url": "https://saibodan.com/episodes/deals-2026-10-13"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. Runway — Runway 免费档一次性 125 credits，不过期",
+     "fields": {
+      "是什么": "官方帮助页写明 Free 档含一次性发放的 125 credits 且不过期，可用于生成图片、视频和音频；同页举例 Gen-4.5 按 12 credits/秒计（5 秒 60、10 秒 120），扣减顺序为先扣当月套餐额度、再扣 rollover、最后扣另购额度",
+      "value": "Free 档一次性 125 credits，不过期",
+      "condition": "免费档用户不能购买 credits——官方原文「Credit purchases are not available to Free plan users」，最低购买量 1000 credits 只有 Standard、Pro、Unlimited、Max、Team 档可购；Free 档是一次性发放、不过期，但没有任何每月额度（页面月度额度表只列 Standard 625、Pro/Unlimited 2250、Max 9500、Team 每座席 6900 且全 workspace 共享）；credits 只在 Runway 平台内可用，与 Runway API credits 完全隔离、互不通用；workspace 内所有成员共用同一余额",
+      "deadline": "一次性发放的 125 credits 官方明确写 does not expire；官方未写领取截止日",
+      "核验日期": "2026-10-12",
+      "source_url": "https://app.runwayml.com/",
+      "上屏文案": "免费档送一次性 125 credits 永不过期，免绑信用卡（值表：一次性125点不过期）"
+     }
+    },
+    {
+     "name": "2. Zed — 个人版长期免费",
+     "fields": {
+      "是什么": "个人版免费，含 2000 次 edit predictions，也可以填自己的 API key",
+      "value": "编辑器本身免费，自带额度还能自带 key",
+      "condition": "注册账号",
+      "deadline": "长期",
+      "核验日期": "2026-10-12",
+      "source_url": "https://zed.dev/download",
+      "上屏文案": "个人版长期免费，每月含 2000 次代码预测，支持自带各家 API Key（值表：长期免费含2000次预测）"
+     }
+    },
+    {
+     "name": "3. Cohere — 免费 evaluation/trial API key",
+     "fields": {
+      "是什么": "Cohere 官方限速文档写明提供两类 API key：evaluation key 免费但用量受限，production key 付费且限制宽松得多；试用（trial）key 每月限 1,000 次 API 调用，Command A / A+ / A Reasoning / A Translate / A Vision、Command R / R+ / R7B、North Mini Code 等模型试用限速均为 20 req/min",
+      "value": "免费试用 key：每月 1,000 次 API 调用，多数对话模型 20 req/min",
+      "condition": "在 dashboard.cohere.com/api-keys 创建 trial 或 evaluation key，仅供开发评估，生产用途需换 production key；Command A+、Command A Reasoning、Command A Translate、Command A Vision 的生产限速需联系 [email protected]；其他端点试用限速另算（Embed 2,000 inputs/min、Audio Transcriptions 5 req/min、EmbedJob 5 req/min、Rerank 10 req/min、Parse 500 req/min）",
+      "deadline": "官方未写活动截止日；1,000 次调用是按月计算的上限，不是限期活动",
+      "核验日期": "2026-10-12",
+      "source_url": "https://dashboard.cohere.com/api-keys",
+      "上屏文案": "每月免信用卡赠 1,000 次 API 调用，覆盖 Command R 与 Rerank（值表：每月千次试用API）"
+     }
+    }
+   ],
+   "headline": "10月12日赛博鸡蛋：Runway免卡送点、Zed免费预测",
+   "summary": "10月12日 · 本期可用 53 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-12",
+   "url": "https://saibodan.com/episodes/deals-2026-10-12"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. Supermaven — Supermaven Free Tier 永久免费代码补全",
+     "fields": {
+      "是什么": "Supermaven 官方提供永久免费档（Free Tier $0/month），主打亚秒级超低延迟代码内联补全，支持大型代码库与 7 天数据保留限制，全面兼容 VS Code、JetBrains IDEs 与 Neovim，无需绑定信用卡即可使用。",
+      "value": "零成本获得亚秒级高速度代码补全",
+      "condition": "注册 Supermaven 账号，安装对应 IDE 插件即可使用，无需绑定信用卡；免费档包含 7 天数据保留限制",
+      "deadline": "永久有效（官方 Free Tier 长期免费）",
+      "核验日期": "2026-10-11",
+      "source_url": "https://supermaven.com/",
+      "上屏文案": "注册即用免信用卡，亚秒级低延迟代码补全，兼容主流IDE（值表：永久免费代码补全）"
+     }
+    },
+    {
+     "name": "2. Tavily AI — Tavily AI Researcher 免费计划每月 1,000 API Credits",
+     "fields": {
+      "是什么": "Tavily 官方提供专为个人创作者设计的 Researcher Free 计划，每月免信用卡赠送 1,000 次 API credits，支持搜索、内容提取与 Agent 网页研究；每月 1 日额度重置；另设面向高校学生的全额免费申请通道。",
+      "value": "每月 1,000 次高质量 AI Agent 搜索与网页抓取 API",
+      "condition": "注册 Tavily 账号即可在控制台获取 API Key，无需绑定信用卡；每月 1 日重置 1,000 credits；学生通道需提交在校证明申请",
+      "deadline": "长期有效，每月 1 日重置额度",
+      "核验日期": "2026-10-11",
+      "source_url": "https://app.tavily.com/",
+      "上屏文案": "每月免信用卡赠 1,000 次搜索 API，设高校学生免费通道（值表：每月千次搜索API）"
+     }
+    },
+    {
+     "name": "3. Orshot — Orshot Free Plan 每月 100 免费多媒体渲染 Credits",
+     "fields": {
+      "是什么": "Orshot 官方提供免绑卡永久 Free Plan，每月发放 100 render credits（约折合 100 张图片或 PDF 页面），并一次性赠送 50 AI credits；支持通过 REST API 与无代码集成批量自动化生成图片、PDF 及视频，适合个人自媒体轻量自动化。",
+      "value": "每月 100 次免费模版图片/PDF渲染及 50 次 AI 生成额度",
+      "condition": "注册 Orshot 账号即可使用，无需绑定信用卡；每月赠送 100 render credits，包含 1 个工作区，不支持团队多席位",
+      "deadline": "永久有效（$0 forever）",
+      "核验日期": "2026-10-11",
+      "source_url": "https://app.orshot.com/",
+      "上屏文案": "每月 100 次渲染 credits 免信用卡，送 50 AI credits（值表：每月百次渲染额度）"
+     }
+    }
+   ],
+   "headline": "10月11日赛博鸡蛋：Supermaven代码补全、Tavily千次API",
+   "summary": "10月11日 · 本期可用 53 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-11",
+   "url": "https://saibodan.com/episodes/deals-2026-10-11"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. OpenRouter — 免费模型与免费档限速",
+     "fields": {
+      "是什么": "当天实测 15 个 :free 免费模型（官方限速文档把免费模型定义为 ID 以 :free 结尾的变体；零价但不带 :free 后缀的条目另有 4 个，零价条目共 19 个），较 10-06 少了 inclusionai/ling-3.0-flash-sante:free，名单仍须当天现查；免费档每分钟 20 次、每天 50 次，充值累计达 10 美元后提高到每天 1,000 次",
+      "value": "零成本调用 15 个主流与开源变体",
+      "condition": "注册账号；提额需要历史充值：表格阈值为累计购买 10 credits（FREE_MODEL_CREDITS_THRESHOLD），达到后每天 1000 次免费模型请求，低于阈值每天 50 次；官方文档另写明为吸收充值取整与手续费，更高额度从低于阈值一个 credit 起即生效，当前为 9 credits",
+      "deadline": "免费模型名单动态变化",
+      "核验日期": "2026-10-10",
+      "source_url": "https://openrouter.ai/models?max_price=0",
+      "上屏文案": "15 个 :free 免费端点，免信用卡直调，每日 50 次免费（值表：15款免费模型）"
+     }
+    },
+    {
+     "name": "2. Microsoft — Azure for Students 额度",
+     "fields": {
+      "是什么": "在校学生 100 美元额度，12 个月内使用，含 Azure OpenAI 等服务",
+      "value": "不用信用卡就能拿到的云额度",
+      "condition": "仅限全日制在校大学生（官方英文页写 full-time university students）；无需信用卡；用学校邮箱注册并按年续订；100 美元额度 12 个月有效，且 12 个月免费额度的 20+ 项热门服务仅限新 Azure 客户，与 65 项「始终免费」服务不是一回事",
+      "deadline": "激活后 12 个月",
+      "核验日期": "2026-10-10",
+      "source_url": "https://azure.microsoft.com/zh-cn/free/students/",
+      "上屏文案": "高校在读免信用卡，100 美元云额度 12 个月有效（值表：100美元云额度）"
+     }
+    },
+    {
+     "name": "3. 阿里云云工开物 — 高校学生 300 元云工开物专属优惠券",
+     "fields": {
+      "是什么": "通过阿里云学生认证的中国高校在校学生可领 300 元云工开物学生专属优惠券，每人每 12 个月一张、券有效期 1 年（自领取之日起算）",
+      "value": "300 元云工开物学生专属优惠券（每 12 个月一张）",
+      "condition": "通过阿里云官网学生认证的中国高校学生（中国大陆及港澳台地区专科、本科、硕士、博士、在职研究生等高等教育学籍在内的在校学生人群），持有学生认证期间每人每 12 个月可领取一张 300 元优惠券，同人账号视为同一用户、不可重复领取；官方券卡另标「每日数量有限，先到先得」；券只能用于购买阿里云部分公共云产品（适用商品见云工开物学生权益专区，抵扣范围动态调整、以下单时为准）；不可与产品折扣叠加、同一订单不能与其他优惠券同用、不能作为提现时账户预留金额；禁止买卖、外借、出让优惠券或学生认证账号",
+      "deadline": "官方写「即日起开始，结束时间以活动官网通知为准」；优惠券有效期 1 年，自领取之日起算，到期未使用金额作废",
+      "核验日期": "2026-10-10",
+      "source_url": "https://university.aliyun.com/",
+      "上屏文案": "中国高校在读认证，每 12 个月一张 300 元券（值表：300元学生券）"
+     }
+    }
+   ],
+   "headline": "10月10日赛博鸡蛋：OpenRouter免卡、Azure学生100刀",
+   "summary": "10月10日 · 本期可用 50 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-10",
+   "url": "https://saibodan.com/episodes/deals-2026-10-10"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. OpenCode — Go 低价订阅",
+     "fields": {
+      "是什么": "Go $10/月、Go Plus $40/月；官方文档页当前模型清单为 32 个（新增 Step 5 Preview Free 限时免费，Grok 4.7 至 Space Bunny），DeepSeek V4.1 Flash 月度使用额度 $60（5 小时窗口 26,000 次请求）、Kimi K3 $15、Claude Haiku 5.5 $15；LongCat 2.5 Preview Free 与 Step 5 Preview Free 标注 limited time 且额度 Unlimited；Muse Spark 1.3/1.2 Contributor 仅限 Meta 地理使用政策允许的地区；DeepSeek 零数据保留协议按月续签，当前协议有效至 2026 年 10 月 31 日",
+      "value": "Go 档可调用 32 个精选模型，含 DeepSeek V4.1 Flash 每月 $60 额度、Claude Haiku 5.5 $15，及 LongCat 2.5 Preview Free、Step 5 Preview Free 限时无限额度",
+      "condition": "需登录 OpenCode Console 订阅 Go 或 Go Plus 并复制 API key；每个 workspace 仅一名成员可订阅；主要面向国际用户；官方文档页未写取消订阅方式（台账原「可随时取消」来自 https://opencode.ai/go 营销页，该页本次返回地区不可用，未取到当日正文，故不作为当日已核字段）",
+      "deadline": "LongCat 2.5 Preview Free 与 Step 5 Preview Free 均标注 limited time 但未给具体日期；DeepSeek 零数据保留协议当前有效至 2026 年 10 月 31 日，官方注明按月续签",
+      "核验日期": "2026-10-09",
+      "source_url": "https://opencode.ai/go",
+      "上屏文案": "新增 Step 5 Preview Free 限免，总共 32 个免费模型端点；免绑卡（值表：32个免费端点）"
+     }
+    },
+    {
+     "name": "2. GitHub — Copilot 免费档",
+     "fields": {
+      "是什么": "免费档每月 2000 次代码补全，模型由系统自动选择",
+      "value": "个人开发者零成本可用",
+      "condition": "需 GitHub 个人账号；官方写明 Copilot Free 仅提供给无法通过组织或企业获得 Copilot 的个人开发者；模型仅通过 auto model selection only 自动选择，额度按每月 2,000 次代码补全计；官方本页未写绑卡或支付方式要求",
+      "deadline": "官方本页未写截止日",
+      "核验日期": "2026-10-09",
+      "source_url": "https://github.com/settings/copilot",
+      "上屏文案": "每月 2,000 次补全 + 50 次对话，免信用卡（值表：每月2000次补全）"
+     }
+    },
+    {
+     "name": "3. Comfy Cloud — Comfy Cloud 免费层 5 次真实 GPU 运行",
+     "fields": {
+      "是什么": "Comfy Cloud 免费层可免信用卡先跑 5 次真实 GPU 工作流，官方定价页原文「5 free runs on real GPUs — no credit card required.」；跑在 Blackwell RTX PRO 6000（96GB VRAM）上，单个工作流最长 30 分钟，只按实际运行时间计费",
+      "value": "5 次免费 GPU 运行；单次最长 30 分钟；只按实际运行计费，搭工作流的空闲时间不消耗 GPU 时间",
+      "condition": "注册 Comfy Cloud 账号即可开始，无需信用卡；官方只写明 5 次免费运行，未写明免费层的 credits 额度，也未写这 5 次是否按周期重置；付费档 Standard 及以上才列具体额度，免费层官方未列数字",
+      "deadline": "官方未写截止日",
+      "核验日期": "2026-10-09",
+      "source_url": "https://cloud.comfy.org/",
+      "上屏文案": "免信用卡送 5 次真实 GPU 运行，最长 30 分钟（值表：免费跑 5 次 GPU）"
+     }
+    }
+   ],
+   "headline": "10月9日赛博鸡蛋：OpenCode限免32模型、Copilot免卡",
+   "summary": "10月9日 · 本期可用 50 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-09",
+   "url": "https://saibodan.com/episodes/deals-2026-10-09"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. 硅基流动 — 免费模型与分时段价格",
+     "fields": {
+      "是什么": "Hunyuan-MT、PaddleOCR、bge 系列、Kolors 等模型免费；部分模型分时段降价",
+      "value": "嵌入、语音、OCR、图像类都有免费可选",
+      "condition": "注册账号即可调用免费模型",
+      "deadline": "免费名单随上架变化",
+      "核验日期": "2026-10-08",
+      "source_url": "https://cloud.siliconflow.cn/models",
+      "上屏文案": "Embedding、OCR、语音与图像免费；注册即用（值表：多类模型免费）"
+     }
+    },
+    {
+     "name": "2. Cloudflare — Workers AI 每日免费额度",
+     "fields": {
+      "是什么": "免费与付费 Workers 计划都含每天 10,000 Neurons，按 UTC 零点重置",
+      "value": "每天都有的免费推理额度",
+      "condition": "Cloudflare 账号",
+      "deadline": "长期政策",
+      "核验日期": "2026-10-08",
+      "source_url": "https://dash.cloudflare.com/?to=/:account/workers-ai",
+      "上屏文案": "每天免费 10,000 Neurons，UTC 零点重置；免信用卡（值表：每天免费推理）"
+     }
+    },
+    {
+     "name": "3. Cursor — Cursor Hobby 免费档",
+     "fields": {
+      "是什么": "Cursor 定价页常设 Hobby 免费档：无需信用卡，含有限的智能体请求与 Composer 访问权限；个人付费档 Pro 20 美元/月起",
+      "value": "零成本用 Cursor 的智能体与 Composer，不用绑卡",
+      "condition": "注册 Cursor 账号即可，无需信用卡；官方只写「有限的智能体请求」，未写具体请求次数、可用模型范围与重置周期；定价页无学生折扣档",
+      "deadline": "常设免费档，官方未写截止日",
+      "核验日期": "2026-10-08",
+      "source_url": "https://www.cursor.com/",
+      "上屏文案": "免信用卡，含有限智能体请求与 Composer 访问（值表：Hobby 免费档）"
+     }
+    }
+   ],
+   "headline": "10月8日赛博鸡蛋：硅基多模态免绑卡、CF每日推理",
+   "summary": "10月8日 · 本期可用 50 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-08",
+   "url": "https://saibodan.com/episodes/deals-2026-10-08"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. 智谱 BigModel — Flash 系列免费模型与 Batch 折扣",
+     "fields": {
+      "是什么": "GLM-4.7-Flash、GLM-4.6V-Flash、GLM-4V-Flash、CogView-3-Flash、CogVideoX-Flash 等免费；Batch API 五折；上下文缓存存储限时免费",
+      "value": "文本、视觉、图像、视频类都有免费模型",
+      "condition": "注册开放平台账号",
+      "deadline": "免费模型清单随官方调整",
+      "核验日期": "2026-10-07",
+      "source_url": "https://bigmodel.cn/console/modelcenter/square",
+      "上屏文案": "GLM-4.7-Flash、4.6V-Flash 等免费；Batch 5折（值表：四类模型免费）"
+     }
+    },
+    {
+     "name": "2. ElevenLabs — ElevenLabs Starter 首月 1 美元（至 10-18）",
+     "fields": {
+      "是什么": "官方定价页 Starter 档标注「Until Oct 18 $6 First month 83% off $1 per month」：10 月 18 日前订阅 Starter，首月 1 美元（对照标价 6 美元/月，页面标称 83% off），含每月 3 万 credits、商用许可、即时声音克隆、Dubbing Studio 等；同页 Free 档 0 美元、每月 1 万 credits，长期可用，无需付费即可试语音合成与音色设计",
+      "value": "Starter 首月 1 美元（标价 6 美元/月，页面标称 83% off）；Starter 档 3 万 credits/月；Free 档 1 万 credits/月长期免费",
+      "condition": "1 美元只是首月价，次月起按标价 $6/月续订（页面 FAQ 原文「Starter $6 (30,000 credits)」）；年付折算等效月价为 $5（官方口径「annual price = monthly price × 10」，即付 10 个月用 12 个月）；Starter 档为 20 个 Studio 项目、3 万 credits/月；credits 按订阅当日起的计费周期重置，未用完最多 rollover 两个月（余额上限 3 倍月度额度），但降级或取消会在周期末作废，且 rollover 不适用于 Free 档；接受 Credit Card、Apple Pay、Google Pay，可按月或按年订阅；官方页未写地区或账户资格限制，也未写该促销是否只对首次订阅生效",
+      "deadline": "首月促销标注截止 2026-10-18（页面原文「Until Oct 18」），官方未写具体时区与截止时刻",
+      "核验日期": "2026-10-07",
+      "source_url": "https://elevenlabs.io/sign-up",
+      "上屏文案": "首月 1 美元（至 10-18）；3万 credits 含声音克隆（值表：首月 1 美元）"
+     }
+    },
+    {
+     "name": "3. OpenCode — Go 低价订阅",
+     "fields": {
+      "是什么": "Go $10/月、Go Plus $40/月；官方文档页当前模型清单为 30 个（Grok 4.7 至 Space Bunny），DeepSeek V4.1 Flash 月度使用额度 $60（5 小时窗口 26,000 次请求）、Kimi K3 $15；LongCat 2.5 Preview Free 标注 limited time 且额度 Unlimited；Muse Spark 1.3/1.2 Contributor 仅限 Meta 地理使用政策允许的地区；DeepSeek 零数据保留协议按月续签，当前协议有效至 2026 年 10 月 31 日",
+      "value": "10 美元/月（Go）；DeepSeek V4.1 Flash 月度使用额度 60 美元、5 小时窗口 26,000 次请求；Kimi K3 月度 15 美元",
+      "condition": "需登录 OpenCode Console 订阅 Go 或 Go Plus 并复制 API key；每个 workspace 仅一名成员可订阅；主要面向国际用户；官方文档页未写取消订阅方式（台账原「可随时取消」来自 https://opencode.ai/go 营销页，该页本次返回地区不可用，未取到当日正文，故不作为当日已核字段）",
+      "deadline": "订阅本身官方未写截止日；LongCat 2.5 Preview Free 标注 limited time 但未给具体日期；DeepSeek 零数据保留协议当前有效至 2026 年 10 月 31 日，官方注明按月续签",
+      "核验日期": "2026-10-07",
+      "source_url": "https://opencode.ai/go",
+      "上屏文案": "Space Bunny 结束限免转常规计费；仅剩 LongCat 限免（值表：规则变更避坑）"
+     }
+    }
+   ],
+   "headline": "10月7日赛博鸡蛋：智谱免费、ElevenLabs首月1美元",
+   "summary": "10月7日 · 本期可用 51 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-07",
+   "url": "https://saibodan.com/episodes/deals-2026-10-07"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. 智谱 BigModel — GLM Coding Plan",
+     "fields": {
+      "是什么": "三档每 5 小时积分 2,000 / 12,000 / 28,000，每周积分 1 万 / 6 万 / 14 万；夜间畅用活动期间每日 23:00–次日 09:00 用 GLM-5.3-Flash：ZCode、AutoClaw 端额度消耗为 0、其他套餐支持的 Agent 额度 ×2；非高峰时段按基础积分 50% 抵扣（高峰为周一至周五 14:00–18:00，UTC+8）",
+      "value": "夜间畅用在 ZCode、AutoClaw 端等于额度全免，其他 Agent 额度翻倍；非高峰五折",
+      "condition": "套餐同时设有每 5 小时和每周额度上限（Lite 2,000/10,000、Pro 12,000/60,000、Max 28,000/140,000）；订阅对应档位；夜间畅用活动（2026-09-03 至 2026-10-07）每日 23:00–次日 09:00 仅限 GLM-5.3-Flash：经 ZCode、AutoClaw 使用额度消耗全部为 0，经其他套餐支持的 Agent 使用额度 ×2；需 ZCode 3.10 以上版本；错峰时段内选用 GLM-5.3 仍按标准规则扣积分；若错峰时段使用已达 5 小时/周限额上限，将暂时无法参与本活动，限额刷新重置后可继续",
+      "deadline": "夜间畅用活动至 2026-10-07（官方注明截止日已从 2026-09-20 延期至 10-07）；庆双节活动 2026-09-25 至 2026-10-07 全天按非高峰规则；套餐本身长期在售",
+      "核验日期": "2026-10-06",
+      "source_url": "https://bigmodel.cn/product/codingplan",
+      "上屏文案": "夜间 23:00–09:00 用 GLM-5.3-Flash，ZCode/AutoClaw 端不扣额度（值表：夜间不扣额度）"
+     }
+    },
+    {
+     "name": "2. 阶跃星辰 — 音频与音乐生成模型限时免费",
+     "fields": {
+      "是什么": "音频类模型限时免费共四个：stepaudio-3-gen-preview（综合音频生成）、stepaudio-3-music-preview（音乐生成）、stepaudio-3-realtime-preview（实时语音）、stepaudio-3-chat-preview（对话语音）",
+      "value": "音频生成按次免费",
+      "condition": "注册开放平台账号，个人账户需先完成实名认证；个人账户限速按累计充值金额划分（V0 不足 ¥100：并发 5 / RPM 100 / TPM 500,000），累计充值只统计现金充值，代金券不计入",
+      "deadline": "限免清单页面未写统一截止日；同页另公告 step-2x-large、step-image-edit-2 将于 2026 年 10 月 10 日下线（图像接口，与本条音频免费无关，但影响同页图像用户）",
+      "核验日期": "2026-10-06",
+      "source_url": "https://platform.stepfun.com/",
+      "上屏文案": "综合音频生成、音乐生成、实时语音、对话语音四款限免（值表：四款限时免费）"
+     }
+    },
+    {
+     "name": "3. GitHub — Student Developer Pack",
+     "fields": {
+      "是什么": "在校学生免费领取：Copilot 免费使用其全部高级功能，Codespaces 个人账号每月免费 180 core hours",
+      "value": "学生身份一次验证，Copilot 全功能加 Codespaces 每月 180 core hours",
+      "condition": "需就读学位或文凭类项目（含高中、大学与 homeschool），须提供在读证明——多数学校要求先在 GitHub 账号上验证学校 academic email，学校不发放学术邮箱的需提交学校网页或抬头信函等官方材料；须有 GitHub 个人账号且年满 13 岁；Codespaces 免费额度按个人账号每月 180 core hours 计，与 GitHub Pro 账号包含的存储与核心时长相当；官方未写领取截止日",
+      "deadline": "学生身份验证有效期 2 年，到期后需重新验证学生身份",
+      "核验日期": "2026-10-06",
+      "source_url": "https://github.com/education",
+      "上屏文案": "验证学生身份后 Copilot 高阶功能全开（值表：180 core hours）"
+     }
+    }
+   ],
+   "headline": "10月6日赛博鸡蛋：智谱今晚截止、学生包每月 180 小时",
+   "summary": "10月6日 · 本期可用 51 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-06",
+   "url": "https://saibodan.com/episodes/deals-2026-10-06"
+  },
+  {
+   "picks": [],
+   "deals": [
+    {
+     "name": "1. DeepSeek — 低峰时段五折",
+     "fields": {
+      "是什么": "低峰时段价格约为高峰的 50%，周末与中国法定节假日全天算低峰",
+      "value": "同样的 token 花费直接减半",
+      "condition": "无需申请，按时段计费",
+      "deadline": "长期政策",
+      "核验日期": "2026-10-05",
+      "source_url": "https://platform.deepseek.com/",
+      "上屏文案": "低峰时段全线半价，周末与法定节假日全天算低峰（值表：5 折）"
+     }
+    },
+    {
+     "name": "2. 智谱 BigModel — Flash 系列免费模型与 Batch 折扣",
+     "fields": {
+      "是什么": "GLM-4.7-Flash、GLM-4.6V-Flash、GLM-4V-Flash、CogView-3-Flash、CogVideoX-Flash 等免费；Batch API 五折；上下文缓存存储限时免费",
+      "value": "文本、视觉、图像、视频类都有免费模型",
+      "condition": "注册开放平台账号",
+      "deadline": "免费模型清单随官方调整",
+      "核验日期": "2026-10-05",
+      "source_url": "https://bigmodel.cn/console/modelcenter/square",
+      "上屏文案": "GLM-4.7-Flash 等一批模型输入输出免费，批量任务再五折（值表：0 元）"
+     }
+    },
+    {
+     "name": "3. GitHub — Copilot 免费档",
+     "fields": {
+      "是什么": "免费档每月 2000 次代码补全，模型由系统自动选择",
+      "value": "个人开发者零成本可用",
+      "condition": "需 GitHub 个人账号；官方写明 Copilot Free 仅提供给无法通过组织或企业获得 Copilot 的个人开发者；模型仅通过 auto model selection only 自动选择，额度按每月 2,000 次代码补全计；官方本页未写绑卡或支付方式要求",
+      "deadline": "长期",
+      "核验日期": "2026-10-05",
+      "source_url": "https://github.com/settings/copilot",
+      "上屏文案": "个人开发者零成本用，模型由系统自动选择（值表：2000 次/月）"
+     }
+    }
+   ],
+   "headline": "10月5日赛博鸡蛋：智谱双节最后48h、Qoder延期免费",
+   "summary": "10月5日 · 本期可用 49 条 · 内容为该期存档，以当期核验为准",
+   "date": "2026-10-05",
+   "url": "https://saibodan.com/episodes/deals-2026-10-05"
+  }
+ ]
+}
