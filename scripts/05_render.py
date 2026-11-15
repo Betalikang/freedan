@@ -14,6 +14,7 @@ content.json 的时间轴已由 04_narrate 按真实音频定好，本阶段只�
 
 import sys
 import json
+import time
 import shutil
 import subprocess
 import datetime
@@ -44,6 +45,28 @@ def probe_duration(path):
         return float(o.stdout.strip())
     except ValueError:
         return 0.0
+
+
+def render_in_batches(htmls, png_dir, batch=6, attempts=4):
+    """分批渲染：每批只开一个浏览器，批与批之间释放显存/内存。
+
+    整批 37 张塞进同一个 Chromium 页面反复 goto，渲染进程的内存会一路累积，
+    在内存吃紧的机器上后半段开始报 Page.screenshot: Unable to capture screenshot。
+    切批 + 失败重试后，同样的输入能在同样的机器上跑完。
+    """
+    done = []
+    for start in range(0, len(htmls), batch):
+        group = htmls[start:start + batch]
+        for i in range(1, attempts + 1):
+            try:
+                done += render(group, png_dir)
+                break
+            except Exception as e:
+                print(f"    ⚠ 第 {start // batch + 1} 批第 {i} 次截图失败：{e}")
+                if i == attempts:
+                    return []
+                time.sleep(3 * i)
+    return done
 
 
 def build_track(narration, audio_offset, total, out_wav):
@@ -177,7 +200,9 @@ def main():
 
     segs = build_segments(data)
     htmls = [write_seg_html(data, s, seg_dir, i) for i, s in enumerate(segs)]
-    render(htmls, png_dir)
+    if not render_in_batches(htmls, png_dir):
+        print("✗ 画面渲染失败（Chromium 截图多次失败，通常是内存不足）")
+        return 1
     print(f"    {len(segs)} 个片段")
 
     # 3) 拼接
@@ -193,10 +218,18 @@ def main():
     concat.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
     silent = work / "silent.mp4"
+    # medium 的 rc_lookahead=40 叠加 x264 默认的「每逻辑核一线程」，在 16 核机器上
+    # 要占几百 MB 的待编码帧缓冲；本机常驻内存吃紧时会 malloc 失败（x264: malloc of
+    # size 7332416 failed）。封顶线程数与 lookahead 后画质不变，只是编码略慢。
+    enc = CFG["video"].get("x264", {})
+    threads = str(enc.get("threads", 4))
+    lookahead = str(enc.get("rc_lookahead", 10))
     r = subprocess.run([
         "ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(concat),
         "-fps_mode", "cfr", "-pix_fmt", "yuv420p", "-c:v", "libx264",
-        "-crf", "20", "-preset", "medium", "-r", str(CFG["video"]["fps"]),
+        "-crf", "20", "-preset", "medium", "-threads", threads,
+        "-x264-params", f"rc_lookahead={lookahead}",
+        "-r", str(CFG["video"]["fps"]),
         str(silent)], capture_output=True, text=True)
     if r.returncode != 0:
         print(r.stderr[-1200:])

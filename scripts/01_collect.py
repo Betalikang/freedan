@@ -13,6 +13,7 @@
 
 import sys
 import json
+import re
 import time
 import datetime
 import urllib.parse
@@ -100,8 +101,12 @@ def collect_github():
     if not CFG["sources"].get("github"):
         return []
     print("  · GitHub 免费额度仓库")
+    # 必须卡 stars：不卡的话这个查询会被 make.fun 的 bounty 农场占满——
+    # 十几个不同账号提交一模一样的 free-model-aggregator，★0，把真实仓库全挤出去。
+    min_stars = int(CFG.get("github_min_stars", 50))
+    q = f"free ai credits OR free tier ai stars:>{min_stars}"
     url = ("https://api.github.com/search/repositories"
-           "?q=free+ai+credits+OR+free+tier+ai&sort=updated&per_page=15")
+           "?q=" + urllib.parse.quote(q) + "&sort=updated&per_page=15")
     raw = fetch(url, "application/vnd.github+json")
     if not raw:
         return []
@@ -127,7 +132,14 @@ def collect_hn():
         return []
     print("  · Hacker News 免费额度帖")
     q = urllib.parse.quote("free credits AI")
-    raw = fetch(f"https://hn.algolia.com/api/v1/search?query={q}&tags=story&hitsPerPage=15")
+    # 必须按时间取 + 卡时间窗。原来用 Algolia 默认的相关度排序，返回的是一两年前的
+    # 老帖（Reuters 2024 的 Amazon credits、几年前的老 Show HN），日报天天搬旧闻。
+    days = int(CFG.get("hn_days", 30))
+    cutoff = int((datetime.datetime.now()
+                  - datetime.timedelta(days=days)).timestamp())
+    url = (f"https://hn.algolia.com/api/v1/search_by_date?query={q}"
+           f"&tags=story&hitsPerPage=15&numericFilters=created_at_i>{cutoff}")
+    raw = fetch(url)
     if not raw:
         return []
     try:
@@ -159,6 +171,88 @@ def dedupe(items):
     return out
 
 
+def _clip(text, limit=76):
+    """按标点收尾，别把话切成半句"""
+    t = (text or "").strip()
+    if len(t) <= limit:
+        return t
+    cut = t[:limit]
+    for sep in "。！？；，、":
+        i = cut.rfind(sep)
+        if i >= limit * 0.5:
+            return cut[:i]
+    return cut
+
+
+def collect_saibodan():
+    """saibodan.com 的已核验福利库。
+
+    和另外三个源完全不同：这是自己维护的数据集，每条都带 official 核验日期、
+    isNew / changedToday 标记、status。它才是"今天有什么新羊毛"的权威答案——
+    AIHOT/HN/GitHub 那三个源翻来去是同一批促销加农场号。
+    """
+    cfg = CFG.get("saibodan") or {}
+    if not CFG["sources"].get("saibodan") or not cfg.get("url"):
+        return []
+    print("  · saibodan.com 已核验福利库")
+    raw = fetch(cfg["url"])
+    if not raw:
+        return []
+    try:
+        deals = json.loads(raw)
+    except Exception:
+        print("    ⚠ JSON 解析失败")
+        return []
+    if isinstance(deals, dict):
+        deals = deals.get("deals") or deals.get("items") or []
+
+    min_fresh = int(cfg.get("min_fresh", 3))
+    max_items = int(cfg.get("max_items", 20))
+
+    active = [d for d in deals if isinstance(d, dict) and d.get("status") == "active"]
+    picked = [d for d in active if d.get("isNew") or d.get("changedToday")]
+    note = "isNew/changedToday"
+    if len(picked) < min_fresh:
+        # 安静日没有新标记时，退回"最近有变动"的一批，仍由 02_select 的历史去重把关
+        rest = [d for d in active if d not in picked]
+        rest.sort(key=lambda d: str(d.get("lastChange") or ""), reverse=True)
+        picked = picked + rest[:max(0, max_items - len(picked))]
+        note = f"新标记不足 {min_fresh} 条，回退最近变动"
+
+    out = []
+    for d in picked:
+        url = f"{cfg.get('origin', 'https://saibodan.com').rstrip('/')}/deals/{d.get('id','')}"
+        elig = d.get("elig") or []
+        cond = "、".join(elig) if isinstance(elig, list) else str(elig)
+        # value 有时不带数字（如"每日免费 credits"），会被 has_concrete 拦掉；
+        # 补上站点自己的 summary 片段，不编内容，只是把已有信息带全。
+        value = d.get("value") or ""
+        benefit = value
+        if not re.search(r"\d", value):
+            tail = _clip(d.get("summary"))
+            benefit = f"{value}：{tail}" if tail else value
+        out.append({
+            "source": "saibodan",
+            "title": d.get("name") or "",
+            "url": url,
+            "meta": (f"核验 {d.get('verified','')} · {d.get('type','')} · "
+                     f"{d.get('region','')}"),
+            "body": (d.get("summary") or value)[:600],
+            # 结构化字段，02_select 直接采用，不再过一遍 LLM
+            "sb": {
+                "name": d.get("name") or "",
+                "benefit": benefit,
+                "condition": cond or "未说明",
+                "deadline": d.get("expires") or None,
+                "heat": 5 if (d.get("isNew") or d.get("changedToday")) else 3,
+                "confidence": "high",
+                "source_url": url,
+            },
+        })
+    print(f"    {len(out)} 条（{note}）")
+    return out
+
+
 def main():
     date = sys.argv[1] if len(sys.argv) > 1 else datetime.date.today().isoformat()
     run_dir = ROOT / "runs" / date
@@ -166,6 +260,7 @@ def main():
 
     print(f"采集 {date}")
     items = []
+    items.extend(collect_saibodan())
     items.extend(collect_aihot())
     items.extend(collect_github())
     items.extend(collect_hn())

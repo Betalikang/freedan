@@ -12,13 +12,23 @@
     "aihot_latest": true,
     "aihot_search": true,
     "github": true,
-    "hackernews": true
+    "hackernews": true,
+    "saibodan": true
   },
+  "saibodan": {
+    "url": "https://saibodan.com/data/deals.json",
+    "origin": "https://saibodan.com",
+    "min_fresh": 3,
+    "max_items": 20
+  },
+  "github_min_stars": 50,
+  "hn_days": 30,
   "search_queries": ["免费", "免费额度", "限时免费", "优惠", "赠送", "试用", "开源"],
   "thresholds": {
     "min_items_for_video": 2,
     "max_detail_cards": 3,
-    "min_heat": 2
+    "min_heat": 2,
+    "history_dedup": true
   },
   "publish": {
     "hashtags": ["AI工具", "人工智能", "白嫖", "羊毛", "AI教程", "效率工具",

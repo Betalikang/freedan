@@ -9,6 +9,7 @@
 
 import sys
 import json
+import re
 import datetime
 from pathlib import Path
 
@@ -142,15 +143,129 @@ def dedupe(items):
     return out
 
 
+# ---------------------------------------------------------------- 历史去重
+# 之前 dedupe() 只在当天这一批里去重，完全不看往期。结果是同一个促销天天复发：
+# Higgsfield 的折扣连报 4 天、Voloshow 连报 4 天，观众看到的是同一批东西。
+# 这里把往期 runs/<date>/freebies.json 读进来，按 URL 和归一化名称比对，
+# 把报过的剔掉，只留今天第一次出现的。
+
+_NAME_JUNK = re.compile(
+    r"[\s\-_—–()（）\[\]【】{}:：·.,，。!！?？/\\|+＋&＆\"'`~￥$]+")
+
+
+def norm_name(s):
+    return _NAME_JUNK.sub("", (s or "").lower())
+
+
+def load_history(today):
+    """往期已报过的羊毛 → (URL→日期列表, 归一化名称→日期列表)"""
+    seen_url, seen_name = {}, {}
+    runs = ROOT / "runs"
+    if not runs.is_dir():
+        return seen_url, seen_name
+    for d in sorted(runs.iterdir()):
+        if not d.is_dir() or d.name == today:
+            continue
+        f = d / "freebies.json"
+        if not f.exists():
+            continue
+        try:
+            items = json.loads(f.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if not isinstance(items, list):
+            continue
+        for it in items:
+            u = (it.get("source_url") or "").strip()
+            if u:
+                seen_url.setdefault(u, []).append(d.name)
+            n = norm_name(it.get("name"))
+            if n:
+                seen_name.setdefault(n, []).append(d.name)
+    return seen_url, seen_name
+
+
+def history_hits(name, url, seen_url, seen_name):
+    """这条羊毛往期报过吗？返回出现过的日期列表（空列表=全新的）"""
+    hits = set(seen_url.get(url, ())) if url else set()
+    n = norm_name(name)
+    if n:
+        if n in seen_name:
+            hits |= set(seen_name[n])
+        else:
+            # 名称会变形："Higgsfield（Claude Fable 5.2）" vs "Higgsfield 订阅"
+            # vs "Higgsfield AI年度最大折扣"。取前缀包含关系判同一个主体。
+            for hn, dates in seen_name.items():
+                if len(hn) < 3 or len(n) < 3:
+                    continue
+                short, long = (n, hn) if len(n) <= len(hn) else (hn, n)
+                if long.startswith(short):
+                    hits |= set(dates)
+    return sorted(hits)
+
+
+_DEADLINE_PATTERNS = (
+    re.compile(r"(20\d{2})[-/年](\d{1,2})[-/月](\d{1,2})"),
+    re.compile(r"(\d{1,2})\s*月\s*(\d{1,2})\s*[日号]"),
+)
+
+
+def parse_deadline(text):
+    """『2026-12-01』『1月7日』『11月13日24点』→ date；解析不出返回 None"""
+    if not text:
+        return None
+    t = str(text)
+    for pat in _DEADLINE_PATTERNS:
+        m = pat.search(t)
+        if not m:
+            continue
+        g = m.groups()
+        if len(g) == 3:
+            year, month, day = int(g[0]), int(g[1]), int(g[2])
+        else:
+            year, month, day = datetime.date.today().year, int(g[0]), int(g[1])
+        try:
+            return datetime.date(year, month, day)
+        except ValueError:
+            return None
+    return None
+
+
+# 只认「最近刚过期」的。像「1月7日」这种没写年份的，默认填当前年份会算成去年 1 月，
+# 差三百多天——那更可能是跨年的活动（赛事周期横跨 11 月到次年 1 月），不是真过期，
+# 交给人工判断，不要自动剔除。
+# 下界是 1 不是 0：今天截止的促销今天仍然能领，日报就是当天发的，不能自己枪掉。
+EXPIRE_WINDOW_DAYS = 90
+
+
+def is_expired(dl, today):
+    if not dl:
+        return False
+    delta = (today - dl).days
+    return 1 <= delta <= EXPIRE_WINDOW_DAYS
+
+
 def main():
     date = sys.argv[1] if len(sys.argv) > 1 else datetime.date.today().isoformat()
     run_dir = ROOT / "runs" / date
     raw = json.loads((run_dir / "raw.json").read_text(encoding="utf-8"))
     print(f"筛选 {len(raw)} 条原始资讯")
 
+    # saibodan.com 带来的条目已经是结构化、已核验的，直接采用，不过 LLM
+    structured = []
+    loose = []
+    for it in raw:
+        sb = it.get("sb") if isinstance(it, dict) else None
+        if it.get("source") == "saibodan" and isinstance(sb, dict) and sb.get("name"):
+            structured.append(sb)
+        else:
+            loose.append(it)
+    if structured:
+        print(f"  · saibodan.com 结构化条目 {len(structured)} 条，直接采用")
+
     drop = CFG["thresholds"]["min_heat"]
-    all_items = []
-    batches = list(chunk(raw, 25))
+    all_items = list(structured)
+    batches = list(chunk(loose, 25))
     for i, b in enumerate(batches, 1):
         try:
             all_items.extend(extract_batch(b, i, len(batches)))
@@ -161,12 +276,41 @@ def main():
     items = [x for x in items if x["heat"] >= drop]
     items.sort(key=lambda x: (-x["heat"], x["name"]))
 
+    # 往期报过的、以及已经过期的，都不算"今天能领的羊毛"
+    use_history = CFG["thresholds"].get("history_dedup", True)
+    seen_url, seen_name = load_history(date) if use_history else ({}, {})
+    today_date = datetime.date.fromisoformat(date)
+
+    fresh, repeats, expired = [], [], []
+    for it in items:
+        if use_history:
+            hits = history_hits(it["name"], it["source_url"], seen_url, seen_name)
+            if hits:
+                repeats.append((it, hits))
+                continue
+        dl = parse_deadline(it.get("deadline"))
+        if is_expired(dl, today_date):
+            expired.append((it, dl))
+            continue
+        fresh.append(it)
+
+    items = fresh
     path = run_dir / "freebies.json"
     path.write_text(json.dumps(items, ensure_ascii=False, indent=1), encoding="utf-8")
 
     print(f"\n合格羊毛 {len(items)} 条（门槛 heat≥{drop}）")
     for it in items:
         print(f"  [{it['heat']}] {it['name']}: {it['benefit'][:44]}")
+    if repeats:
+        print(f"\n  ↩ {len(repeats)} 条往期已报过，已跳过：")
+        for it, hits in repeats:
+            print(f"    - {it['name'][:26]}（{hits[0]} 起已报 {len(hits)} 次）")
+    if expired:
+        print(f"\n  ⏰ {len(expired)} 条已过期，已跳过：")
+        for it, dl in expired:
+            print(f"    - {it['name'][:26]}（截止 {dl.isoformat()}）")
+    if not items and (repeats or expired):
+        print("\n今天没有新的合格羊毛——上面的都是复发或过期的。不出片。")
     return 0 if len(items) >= CFG["thresholds"]["min_items_for_video"] else 3
 
 
