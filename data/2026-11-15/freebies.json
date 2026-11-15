@@ -1,0 +1,47 @@
+[
+ {
+  "name": "Aion Labs 免费档：每日赠送 credits（免绑卡）",
+  "benefit": "每日免费 credits：Aion Labs 官方定价页列 Free Tier：$0，每天给一份 credit 额度，可用来跑 agent 任务、API 调用和网页聊天",
+  "condition": "全球可用",
+  "deadline": "免费档按日发放，官方未写截止日",
+  "heat": 5,
+  "confidence": "high",
+  "source_url": "https://saibodan.com/deals/aion-labs-free-tier-daily-credits"
+ },
+ {
+  "name": "Gonka Broker 每月免费 100 万 Tokens（免绑卡，按月重置）",
+  "benefit": "每月 100 万 Tokens",
+  "condition": "全球可用",
+  "deadline": "每月 1 日重置，长期有效",
+  "heat": 5,
+  "confidence": "high",
+  "source_url": "https://saibodan.com/deals/gonka-broker-monthly-free-1m-tokens"
+ },
+ {
+  "name": "OVHcloud 首建 Public Cloud 项目领 US$200 体验金",
+  "benefit": "US$200 体验金",
+  "condition": "全球可用",
+  "deadline": "官方未写截止日（自 2022-06-30 23:00 BST 起开放）",
+  "heat": 5,
+  "confidence": "high",
+  "source_url": "https://saibodan.com/deals/ovhcloud-public-cloud-200-credit"
+ },
+ {
+  "name": "Pika H3 Flex 订阅用户每天 15 次免费生成（至 11-15）",
+  "benefit": "每天15次免费生成",
+  "condition": "全球可用",
+  "deadline": "2026-11-15（官方帖原文「through Nov 15」）",
+  "heat": 5,
+  "confidence": "high",
+  "source_url": "https://saibodan.com/deals/pika-h3-flex-creator-daily-free"
+ },
+ {
+  "name": "Rizamo 免费档：2 个社媒账号永久免费",
+  "benefit": "2 个账号免费",
+  "condition": "全球可用",
+  "deadline": "免费档长期有效，官方未写截止日",
+  "heat": 5,
+  "confidence": "high",
+  "source_url": "https://saibodan.com/deals/rizamo-free-2-accounts"
+ }
+]

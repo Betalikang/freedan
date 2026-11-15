@@ -1,0 +1,268 @@
+{
+ "meta": {
+  "brand": "每日人工智能精选内参",
+  "brand_en": "DISPATCH · 2026",
+  "volume": "2026 · 11月15日",
+  "badge": "5 条可用福利 · 今日核验",
+  "date": "2026.11.15",
+  "title": "今日硬羊毛",
+  "title_en": "DAILY FREE HAUL",
+  "edition": "11月15日 速递",
+  "domestic": 5,
+  "foreign": null,
+  "total": 5
+ },
+ "timeline": {
+  "total_duration": 49.82,
+  "cover": {
+   "start": 0.0,
+   "end": 1.0
+  },
+  "overview": {
+   "start": 1.0,
+   "end": 4.0
+  },
+  "detail": {
+   "start": 4.0,
+   "end": 44.819
+  },
+  "list_start": 44.819,
+  "list_page_dur": 5.0,
+  "audio_offset": 0.5,
+  "speech": {
+   "start": 0.098,
+   "end": 43.619
+  }
+ },
+ "cover": {
+  "eyebrow": "今日羊毛",
+  "picks": [
+   {
+    "tag": "本期重点",
+    "name": "OVHcloud",
+    "note": "首建项目领 200 美元体验金",
+    "accent": "gold"
+   },
+   {
+    "tag": "本期重点",
+    "name": "Gonka Broker",
+    "note": "每月白拿 100 万 Tokens",
+    "accent": "blue"
+   }
+  ]
+ },
+ "overview": {
+  "title_prefix": "今天值得拿的",
+  "count": 3,
+  "title_suffix": "条",
+  "big_stat": {
+   "label": "OVHcloud 白送 200 美元体验金"
+  },
+  "count_line": {
+   "label": "本期清单",
+   "value": 5,
+   "note": "条 · 5 条全球可用，重点讲 3 条"
+  },
+  "verified": "数据核验 2026-11-15",
+  "right_list": [
+   {
+    "idx": "01",
+    "name": "OVHcloud",
+    "sub": "首建项目领 200 美元体验金",
+    "note": "首建项目领 200 美元体验"
+   },
+   {
+    "idx": "02",
+    "name": "Gonka Broker",
+    "sub": "每月白拿 100 万 Tokens",
+    "note": "每月白拿 100 万 Tok"
+   },
+   {
+    "idx": "03",
+    "name": "Aion Labs",
+    "sub": "每天一份免费 credit 额度",
+    "note": "每天一份免费 credit "
+   }
+  ]
+ },
+ "detail": {
+  "section": {
+   "prefix": "今天值得拿的",
+   "count": 3,
+   "suffix": "条",
+   "en": "TODAY'S FINDS"
+  },
+  "cards": [
+   {
+    "idx": "01",
+    "accent": "gold",
+    "title": "OVHcloud",
+    "body": "**首建项目领 200 美元体验金**，OVHcloud 第一次创建 Public Cloud 项目，直接送 US$200 体验金，全球可用。官方没写截止日，从 2022-06-30 起一直开放。开机器、跑测试、搭小站都能抵扣，属于今天金额最大的一笔。",
+    "tags": [
+     {
+      "text": "首建项目",
+      "style": "on"
+     },
+     {
+      "text": "全球可用",
+      "style": ""
+     },
+     {
+      "text": "长期有效",
+      "style": ""
+     }
+    ],
+    "side": {
+     "label": "美元体验金",
+     "num": "200",
+     "unit": "",
+     "note": "首建项目领 200 美元体验金",
+     "num_style": ""
+    }
+   },
+   {
+    "idx": "02",
+    "accent": "blue",
+    "title": "Gonka Broker",
+    "body": "**每月白拿 100 万 Tokens**，Gonka Broker 免费档每月给 100 万 Tokens，免绑卡，全球可用。每月 1 日自动重置，长期有效，跑 API 调用和小规模实验完全够用，用超了再考虑付费。",
+    "tags": [
+     {
+      "text": "免绑卡",
+      "style": "on"
+     },
+     {
+      "text": "按月重置",
+      "style": ""
+     },
+     {
+      "text": "长期有效",
+      "style": ""
+     }
+    ],
+    "side": {
+     "label": "Tokens 每月重置",
+     "num": "100万",
+     "unit": "",
+     "note": "每月白拿 100 万 Tokens",
+     "num_style": "blue"
+    }
+   },
+   {
+    "idx": "03",
+    "accent": "gold",
+    "title": "Aion Labs",
+    "body": "**每天一份免费 credit 额度**，Aion Labs 免费档定价 $0，免绑卡，每天发一份 credit 额度，能跑 agent 任务、API 调用和网页聊天。全球可用，官方没写截止日，按天发，当天不用就作废。",
+    "tags": [
+     {
+      "text": "免绑卡",
+      "style": "on"
+     },
+     {
+      "text": "每日发放",
+      "style": ""
+     },
+     {
+      "text": "全球可用",
+      "style": ""
+     }
+    ],
+    "side": {
+     "label": "免费额度重置",
+     "num": "每日",
+     "unit": "",
+     "note": "每天一份免费 credit 额度",
+     "num_style": ""
+    }
+   }
+  ],
+  "cues": [
+   {
+    "start": 0.5,
+    "end": 2.916,
+    "text": "200 美元体验金，不领就白亏。"
+   },
+   {
+    "start": 3.45,
+    "end": 5.985,
+    "text": "OVHcloud 第一次建 Public Cloud"
+   },
+   {
+    "start": 5.997,
+    "end": 8.414,
+    "text": "项目，直接送 200 美元体验金。"
+   },
+   {
+    "start": 8.95,
+    "end": 13.819,
+    "text": "全球可用，官方没写截止日，开机器、跑测试都能抵。"
+   },
+   {
+    "start": 14.354,
+    "end": 17.473,
+    "text": "第二个更稳，Gonka Broker 每月给 100 万"
+   },
+   {
+    "start": 17.557,
+    "end": 18.973,
+    "text": "Tokens，免绑卡。"
+   },
+   {
+    "start": 19.521,
+    "end": 24.461,
+    "text": "每月 1 日自动重置，长期有效，跑 API 和小实验够用。"
+   },
+   {
+    "start": 25.009,
+    "end": 27.961,
+    "text": "第三个是 Aion Labs，免费档 0 元"
+   },
+   {
+    "start": 28.14,
+    "end": 28.997,
+    "text": "也不用绑卡。"
+   },
+   {
+    "start": 29.545,
+    "end": 32.331,
+    "text": "每天发一份 credit，agent 任务"
+   },
+   {
+    "start": 32.533,
+    "end": 35.021,
+    "text": "API 调用、网页聊天都能花。"
+   },
+   {
+    "start": 35.569,
+    "end": 38.616,
+    "text": "按天发，当天不用就作废，别攒着。"
+   },
+   {
+    "start": 39.152,
+    "end": 42.2,
+    "text": "链接都在下面，先把 200 美元拿到手"
+   },
+   {
+    "start": 42.485,
+    "end": 44.021,
+    "text": "再慢慢薅日常额度。"
+   }
+  ]
+ },
+ "lists": [
+  {
+   "section": "还能领的",
+   "total": 2,
+   "page": "1/1",
+   "items": [
+    {
+     "name": "Pika H3 Flex 订阅用户每天 15 次免费生成（至 11-15）",
+     "desc": "每天15次免费生成"
+    },
+    {
+     "name": "Rizamo 免费档：2 个社媒账号永久免费",
+     "desc": "2 个账号免费"
+    }
+   ]
+  }
+ ]
+}
