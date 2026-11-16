@@ -1,0 +1,304 @@
+{
+ "meta": {
+  "brand": "每日人工智能精选内参",
+  "brand_en": "DISPATCH · 2026",
+  "volume": "2026 · 11月16日",
+  "badge": "9 条可用福利 · 今日核验",
+  "date": "2026.11.16",
+  "title": "白嫖速递",
+  "title_en": "FREE AI HAUL",
+  "edition": "11月16日 速递",
+  "domestic": 9,
+  "foreign": null,
+  "total": 9
+ },
+ "timeline": {
+  "total_duration": 65.81,
+  "cover": {
+   "start": 0.0,
+   "end": 1.0
+  },
+  "overview": {
+   "start": 1.0,
+   "end": 4.0
+  },
+  "detail": {
+   "start": 4.0,
+   "end": 60.807
+  },
+  "list_start": 60.807,
+  "list_page_dur": 5.0,
+  "audio_offset": 0.5,
+  "speech": {
+   "start": 0.098,
+   "end": 59.607
+  }
+ },
+ "cover": {
+  "eyebrow": "今日羊毛",
+  "picks": [
+   {
+    "tag": "本期重点",
+    "name": "Kilo Enterprise × ",
+    "note": "企业版订阅最长免费12个月",
+    "accent": "gold"
+   },
+   {
+    "tag": "本期重点",
+    "name": "智谱 AutoClaw",
+    "note": "注册就领2亿Tokens，每周再领1亿",
+    "accent": "blue"
+   }
+  ]
+ },
+ "overview": {
+  "title_prefix": "今天值得拿的",
+  "count": 3,
+  "title_suffix": "条",
+  "big_stat": {
+   "label": "Cursor企业版用户可白拿Kilo最长12个月"
+  },
+  "count_line": {
+   "label": "本期清单",
+   "value": 9,
+   "note": "条 · 本期共9条福利，精选3条性价比最高"
+  },
+  "verified": "数据核验 2026-11-16",
+  "right_list": [
+   {
+    "idx": "01",
+    "name": "Kilo Enterprise × ",
+    "sub": "企业版订阅最长免费12个月",
+    "note": "企业版订阅最长免费12个月"
+   },
+   {
+    "idx": "02",
+    "name": "智谱 AutoClaw",
+    "sub": "注册就领2亿Tokens，每周再领1",
+    "note": "注册就领2亿Tokens，每"
+   },
+   {
+    "idx": "03",
+    "name": "Google Cloud",
+    "sub": "新客户白拿$300额度，可跑AI A",
+    "note": "新客户白拿$300额度，可跑"
+   }
+  ]
+ },
+ "detail": {
+  "section": {
+   "prefix": "今天值得拿的",
+   "count": 3,
+   "suffix": "条",
+   "en": "TODAY'S FINDS"
+  },
+  "cards": [
+   {
+    "idx": "01",
+    "accent": "gold",
+    "title": "Kilo Enterprise × Cursor",
+    "body": "**企业版订阅最长免费12个月**，已订阅 Cursor 企业版的客户，可以免费获得 Kilo Enterprise，免费期为剩余合约期，最长12个月，全球可用，截止到2026年11月30日。",
+    "tags": [
+     {
+      "text": "企业版",
+      "style": "on"
+     },
+     {
+      "text": "全球可用",
+      "style": ""
+     },
+     {
+      "text": "最长12个月",
+      "style": ""
+     }
+    ],
+    "side": {
+     "label": "企业版免费",
+     "num": "12个月",
+     "unit": "",
+     "note": "企业版订阅最长免费12个月",
+     "num_style": ""
+    }
+   },
+   {
+    "idx": "02",
+    "accent": "blue",
+    "title": "智谱 AutoClaw",
+    "body": "**注册就领2亿Tokens，每周再领1亿**，新用户注册直接领2亿 Tokens，11月16日到22日期间每周登录还能领1亿 Tokens，Coding Plan 每月登录领积分，需中国账号，11月22日23:59截止。",
+    "tags": [
+     {
+      "text": "2亿Tokens",
+      "style": "on"
+     },
+     {
+      "text": "需中国账号",
+      "style": ""
+     },
+     {
+      "text": "11-22截止",
+      "style": ""
+     }
+    ],
+    "side": {
+     "label": "注册即领Tokens",
+     "num": "2亿",
+     "unit": "",
+     "note": "注册就领2亿Tokens，每周再领1亿",
+     "num_style": "blue"
+    }
+   },
+   {
+    "idx": "03",
+    "accent": "gold",
+    "title": "Google Cloud",
+    "body": "**新客户白拿$300额度，可跑AI API**，Google Cloud 新客户可领300美元免费额度，可用于试用 AI API 和其他20多款产品，全球可用，官方未写截止日，属于新客长期政策，各产品试用天数另算。",
+    "tags": [
+     {
+      "text": "$300",
+      "style": "on"
+     },
+     {
+      "text": "全球可用",
+      "style": ""
+     },
+     {
+      "text": "AI API",
+      "style": ""
+     }
+    ],
+    "side": {
+     "label": "新客免费额度",
+     "num": "$300",
+     "unit": "",
+     "note": "新客户白拿$300额度，可跑AI API",
+     "num_style": ""
+    }
+   }
+  ],
+  "cues": [
+   {
+    "start": 0.5,
+    "end": 3.75,
+    "text": "Cursor企业版用户不领，白亏一年企业版。"
+   },
+   {
+    "start": 4.283,
+    "end": 8.378,
+    "text": "今天有9条AI羊毛，我挑了3条最值得动手的。"
+   },
+   {
+    "start": 8.914,
+    "end": 13.081,
+    "text": "第一条最值钱：Cursor企业版客户可免费拿Kil"
+   },
+   {
+    "start": 13.081,
+    "end": 16.104,
+    "text": "o Enterprise，免费期覆盖剩余合约期"
+   },
+   {
+    "start": 16.331,
+    "end": 21.247,
+    "text": "最长12个月，全球可用，截止2026年11月30日。"
+   },
+   {
+    "start": 21.795,
+    "end": 25.771,
+    "text": "第二条是智谱AutoClaw，新用户注册直接领2亿"
+   },
+   {
+    "start": 25.866,
+    "end": 26.45,
+    "text": "Tokens。"
+   },
+   {
+    "start": 26.997,
+    "end": 30.45,
+    "text": "11月16日到22日每周登录再领1亿"
+   },
+   {
+    "start": 30.747,
+    "end": 33.009,
+    "text": "Coding Plan每月登录还送积分。"
+   },
+   {
+    "start": 33.557,
+    "end": 38.235,
+    "text": "这条需要中国账号，11月22日23:59截止"
+   },
+   {
+    "start": 38.462,
+    "end": 38.938,
+    "text": "别拖。"
+   },
+   {
+    "start": 39.473,
+    "end": 43.307,
+    "text": "第三条是Google Cloud，新客户直接领300"
+   },
+   {
+    "start": 43.307,
+    "end": 43.735,
+    "text": "美元额度。"
+   },
+   {
+    "start": 44.283,
+    "end": 48.438,
+    "text": "这笔钱可以拿去试用AI API和20多款产品"
+   },
+   {
+    "start": 48.652,
+    "end": 51.104,
+    "text": "全球可用，官方没写截止日。"
+   },
+   {
+    "start": 51.652,
+    "end": 55.319,
+    "text": "剩下的LibTV、腾讯混元、OpenRouter免费"
+   },
+   {
+    "start": 55.331,
+    "end": 57.092,
+    "text": "端点都在今天这批里。"
+   },
+   {
+    "start": 57.628,
+    "end": 60.009,
+    "text": "先领额度再研究，过期不补。"
+   }
+  ]
+ },
+ "lists": [
+  {
+   "section": "还能领的",
+   "total": 6,
+   "page": "1/1",
+   "items": [
+    {
+     "name": "Parallel Decisions Fast 在 OpenRouter 免费开放（:free 端点，限速）",
+     "desc": "免费（限速）：OpenRouter 官方 X 账号 @openrouter 帖文"
+    },
+    {
+     "name": "pkgscan.dev 免费档：每月 5 次多引擎扫描（含 AI agent 技能检测）",
+     "desc": "每月 5 次免费扫描"
+    },
+    {
+     "name": "智谱 AutoClaw 新用户注册领 2 亿 Tokens",
+     "desc": "新用户注册领 2 亿 Tokens；另有每周登录领 1 亿 Tokens（11-"
+    },
+    {
+     "name": "腾讯混元生文首次开通免费 100 万 tokens（1 年有效）",
+     "desc": "混元生文 100 万 tokens / 1 年"
+    },
+    {
+     "name": "fal × OpenGame Game Jam",
+     "desc": "每位参与者获 50 美元 fal 免费额度，最佳使用可赢 5000 美元额度"
+    },
+    {
+     "name": "PixVerse 模型限时优惠",
+     "desc": "Pro/Elite及以上无限 Nano Banana（含 Pro）；Premiu"
+    }
+   ]
+  }
+ ]
+}
