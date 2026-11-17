@@ -30,15 +30,34 @@ python scripts/run_daily.py --skip-render  # 只到写稿，不出片
 ## 八个阶段
 
 ```
-[1/8] 01_collect.py   多信源采集，按标题去重
-[2/8] 02_select.py    LLM 提取「能拿到什么/条件/截止」+ 硬门槛过滤
+[1/8] 01_collect.py   采集（主源 saibodan.com/data/deals.json，不够才跑 AIHOT/GitHub/HN 兜底）
+[2/8] 02_select.py    结构化条目直接采用 + LLM 提取外部条目 + 硬门槛/历史去重/过期过滤
 [3/8] 03_compose.py   写文案、拼卡片，产出 content.json（时间轴此时是估值）+ publish.md
 [4/8] 04_narrate.py   整段一次合成配音 + 字级时间戳 → 用真实音频重写时间轴
-[5/8] 05_render.py    按 cues 切片段渲染画面 → 拼接 → 铺音轨
+[5/8] 05_render.py    按 cues 切片段渲染画面 → 拼接 → 铺音轨+BGM
 [6/8] 06_cover.py     套封面模板换数据
 [7/8] 08_import_site.py  把 saibodan.com 的存量内容抓进 content/（失败不阻断）
 [8/8] 07_site.py      把当日数据 + 存量内容一起渲染成聚合站
 ```
+
+### 主信源：saibodan.com
+
+`https://saibodan.com/data/deals.json` 是自维护的已核验福利库（约 171 条，146 条 active），
+每条带 `_rank`（编辑排序，1 最好）、`_tag`、`type`、`region`、`status`、`isNew`/`changedToday`、
+`elig`、`expires`。它比外部源可靠得多——AIHOT/GitHub/HN 翻来去是同一批促销加农场号。
+
+所以 `01_collect.py` 先取它；**条数够（默认 ≥6）就完全不跑另外三个源**，省掉四轮 LLM 调用，
+也避免外部噪音把好条目挤下去。不够时才启用兜底（`saibodan.skip_fallback_if_at_least` 可调）。
+
+**性价比分用站点的 `_rank` 算，不自己打 5 分。** `_heat()` 按 `_rank` 分位映射
+（≤4→5、≤9→4、≤16→3、≤41→2、其余→1），`type` 是折扣/会员或 `_tag` 含
+"需付费/订阅/API折扣"再降 2——观众点进来看的是白嫖，不是省钱。
+
+**同名主体按 `platform` 合并。** 同一天 WorkBuddy 挂了三条（"Hy4 免费试用"/"Hy4 Flash 限免"/
+"Hy4 Challenge"），只按名字前缀合不到一起，视频里会连放三张同一个产品的卡。
+
+> 配置文件是 `pipeline.json`，不是 `config.json`。Hugo 的配置文件名就叫 config.json，
+> Cloudflare Pages / Netlify 检测到它会把本站误判成 Hugo、跑去执行 `npx hugo`，部署直接失败。
 
 第 7 步抓的是线上站已经积累的内容，让新站一上线就有东西可看。它依赖
 saibodan.com 在线，所以**失败只打警告、不阻断流水线**——`content/` 里已有上次的
@@ -103,7 +122,9 @@ BGM → acrossfade 自环到成片长度（2s 交叉淡化，消循环接缝）
 `pipeline.json`：
 
 - `sources` —— 四个信源开关，任何一个挂掉不影响其他
-- `search_queries` —— AIHOT 搜索词
+- `saibodan.skip_fallback_if_at_least` —— saibodan 到手多少条就不跑外部源（默认 6）
+- `saibodan.min_fresh` / `max_items` —— 新标记不足时的回退阈值与条数上限
+- `search_queries` —— 外部兜底时用的 AIHOT 搜索词
 - `thresholds.min_items_for_video` —— 低于这个数不出片（默认 2）
 - `thresholds.max_detail_cards` —— 详情卡上限（默认 3）
 - `thresholds.min_heat` —— 性价比评分下限（默认 2）

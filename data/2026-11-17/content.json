@@ -1,0 +1,301 @@
+{
+ "meta": {
+  "brand": "每日人工智能精选内参",
+  "brand_en": "DISPATCH · 2026",
+  "volume": "2026 · 11月17日",
+  "badge": "7 条可用福利 · 今日核验",
+  "date": "2026.11.17",
+  "title": "今日羊毛",
+  "title_en": "FREE AI DROPS",
+  "edition": "11月17日 速递",
+  "domestic": 7,
+  "foreign": null,
+  "total": 7
+ },
+ "timeline": {
+  "total_duration": 63.74,
+  "cover": {
+   "start": 0.0,
+   "end": 1.0
+  },
+  "overview": {
+   "start": 1.0,
+   "end": 4.0
+  },
+  "detail": {
+   "start": 4.0,
+   "end": 58.736
+  },
+  "list_start": 58.736,
+  "list_page_dur": 5.0,
+  "audio_offset": 0.5,
+  "speech": {
+   "start": 0.098,
+   "end": 57.536
+  }
+ },
+ "cover": {
+  "eyebrow": "今日羊毛",
+  "picks": [
+   {
+    "tag": "本期重点",
+    "name": "TRAE",
+    "note": "注册送 2000 积分，每月再送 500",
+    "accent": "gold"
+   },
+   {
+    "tag": "本期重点",
+    "name": "Simular Box",
+    "note": "免费领一台云 Linux 桌面给 AI",
+    "accent": "blue"
+   }
+  ]
+ },
+ "overview": {
+  "title_prefix": "今天值得拿的",
+  "count": 3,
+  "title_suffix": "条",
+  "big_stat": {
+   "label": "TRAE 注册送 2000 积分，有学生身份就能领"
+  },
+  "count_line": {
+   "label": "本期清单",
+   "value": 7,
+   "note": "条 · 优先领这 3 条"
+  },
+  "verified": "数据核验 2026-11-17",
+  "right_list": [
+   {
+    "idx": "01",
+    "name": "TRAE",
+    "sub": "注册送 2000 积分",
+    "note": "注册送 2000 积分"
+   },
+   {
+    "idx": "02",
+    "name": "Simular Box",
+    "sub": "免费领一台云 Linux 桌面给",
+    "note": "免费领一台云 Linux"
+   },
+   {
+    "idx": "03",
+    "name": "WorkBuddy",
+    "sub": "报名送 200 credits",
+    "note": "报名送 200 credits，Hy4 Flash 限免"
+   }
+  ]
+ },
+ "detail": {
+  "section": {
+   "prefix": "今天值得拿的",
+   "count": 3,
+   "suffix": "条",
+   "en": "TODAY'S FINDS"
+  },
+  "cards": [
+   {
+    "idx": "01",
+    "accent": "gold",
+    "title": "TRAE",
+    "body": "**注册送 2000 积分，每月再送 500**，TRAE 新用户注册直接送 2000 积分，之后每月再送 500 积分，学生身份验证后即可领取。官方页面没写截止日期，2000 注册积分是一次性发放，早注册早到账。",
+    "tags": [
+     {
+      "text": "学生验证",
+      "style": "on"
+     },
+     {
+      "text": "2000积分",
+      "style": ""
+     },
+     {
+      "text": "每月500",
+      "style": ""
+     }
+    ],
+    "side": {
+     "label": "注册即送积分",
+     "num": "2000",
+     "unit": "",
+     "note": "注册送 2000 积分，每月再送 500",
+     "num_style": ""
+    }
+   },
+   {
+    "idx": "02",
+    "accent": "blue",
+    "title": "Simular Box",
+    "body": "**免费领一台云 Linux 桌面给 AI 用**，注册就送一台云端 Linux 桌面，一个账号一台，通过远程 MCP 接给 Claude、ChatGPT、Claude Code，让 AI 自己开浏览器、跑命令。免费档 5000 credits 一次性发放，领取后 90 天有效。",
+    "tags": [
+     {
+      "text": "云端Linux",
+      "style": "on"
+     },
+     {
+      "text": "接MCP",
+      "style": ""
+     },
+     {
+      "text": "90天有效",
+      "style": ""
+     }
+    ],
+    "side": {
+     "label": "免费 credits",
+     "num": "5000",
+     "unit": "",
+     "note": "免费领一台云 Linux 桌面给 AI 用",
+     "num_style": "blue"
+    }
+   },
+   {
+    "idx": "03",
+    "accent": "gold",
+    "title": "WorkBuddy",
+    "body": "**报名送 200 credits，Hy4 Flash 限免**，WorkBuddy 上线 Hy4 Flash，限时免费试用，报名就送 200 credits，全球可用。官方帖只写「限时免费」，没写具体截止日，这种没日期的通常说停就停，趁现在领。",
+    "tags": [
+     {
+      "text": "全球可用",
+      "style": "on"
+     },
+     {
+      "text": "200积分",
+      "style": ""
+     },
+     {
+      "text": "Hy4 Flash",
+      "style": ""
+     }
+    ],
+    "side": {
+     "label": "报名即得 credits",
+     "num": "200",
+     "unit": "",
+     "note": "报名送 200 credits，Hy4 Flash 限免",
+     "num_style": ""
+    }
+   }
+  ],
+  "cues": [
+   {
+    "start": 0.5,
+    "end": 3.047,
+    "text": "2000 积分白送，不领就是你亏。"
+   },
+   {
+    "start": 3.569,
+    "end": 6.092,
+    "text": "TRAE 新用户注册就送 2000 积分"
+   },
+   {
+    "start": 6.426,
+    "end": 8.997,
+    "text": "学生验证后每月还继续送 500。"
+   },
+   {
+    "start": 9.533,
+    "end": 13.081,
+    "text": "官方没写截止日，但积分是一次性发放"
+   },
+   {
+    "start": 13.295,
+    "end": 14.485,
+    "text": "早注册早到账。"
+   },
+   {
+    "start": 15.021,
+    "end": 18.152,
+    "text": "Simular Box 更实在，直接送你一台云端"
+   },
+   {
+    "start": 18.247,
+    "end": 19.176,
+    "text": "Linux 桌面。"
+   },
+   {
+    "start": 19.723,
+    "end": 23.759,
+    "text": "一个账号一台，通过远程 MCP 接给 Claude 或"
+   },
+   {
+    "start": 23.771,
+    "end": 27.735,
+    "text": "ChatGPT，让 AI 自己开浏览器跑命令。"
+   },
+   {
+    "start": 28.283,
+    "end": 30.985,
+    "text": "免费档 5000 credits 一次性发放"
+   },
+   {
+    "start": 31.283,
+    "end": 33.045,
+    "text": "领取后 90 天内有效。"
+   },
+   {
+    "start": 33.592,
+    "end": 35.747,
+    "text": "WorkBuddy 上线 Hy4 Flash"
+   },
+   {
+    "start": 35.985,
+    "end": 39.14,
+    "text": "限时免费试用，报名再送 200 credits。"
+   },
+   {
+    "start": 39.676,
+    "end": 43.616,
+    "text": "全球可用，官方只写「限时」，没说截止到哪天"
+   },
+   {
+    "start": 43.866,
+    "end": 45.354,
+    "text": "这种往往说停就停。"
+   },
+   {
+    "start": 45.89,
+    "end": 48.259,
+    "text": "另外 OpenRouter 上 Hy4 Flash"
+   },
+   {
+    "start": 48.271,
+    "end": 51.842,
+    "text": "五折到 11 月 30 号，Powerdrill 八折 11"
+   },
+   {
+    "start": 51.842,
+    "end": 52.926,
+    "text": "月 21 号截止。"
+   },
+   {
+    "start": 53.473,
+    "end": 57.938,
+    "text": "链接都在简介，先领再研究，别等额度没了才想起来。"
+   }
+  ]
+ },
+ "lists": [
+  {
+   "section": "还能领的",
+   "total": 4,
+   "page": "1/1",
+   "items": [
+    {
+     "name": "ChatGPT for Academic Researchers：5 万个免费 ChatGPT Plus 名额（11-23 开放申请）",
+     "desc": "免费Plus名额：OpenAI 官方页 2026-11-16 原文"
+    },
+    {
+     "name": "OpenRouter",
+     "desc": "五折至11-30"
+    },
+    {
+     "name": "Powerdrill Bloom 限时 8 折（至 11-21）",
+     "desc": "Powerdrill Bloom 限时 8 折"
+    },
+    {
+     "name": "千问会员教育计划",
+     "desc": "学生教师半价6个月"
+    }
+   ]
+  }
+ ]
+}

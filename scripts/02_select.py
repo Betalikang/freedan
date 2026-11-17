@@ -121,6 +121,7 @@ def normalize(items):
             heat = 3
         out.append({
             "name": name,
+            "platform": (it.get("platform") or "").strip(),
             "benefit": benefit,
             "condition": (it.get("condition") or "未说明").strip(),
             "deadline": it.get("deadline"),

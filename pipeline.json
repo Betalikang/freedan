@@ -19,7 +19,8 @@
     "url": "https://saibodan.com/data/deals.json",
     "origin": "https://saibodan.com",
     "min_fresh": 3,
-    "max_items": 20
+    "max_items": 20,
+    "skip_fallback_if_at_least": 6
   },
   "github_min_stars": 50,
   "hn_days": 30,

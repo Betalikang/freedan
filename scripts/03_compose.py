@@ -11,6 +11,7 @@
 
 import sys
 import os
+import re
 import json
 import datetime
 from pathlib import Path
@@ -71,15 +72,22 @@ def call(prompt, tokens=20000):
 
 
 def merge_same_subject(items):
-    """同一产品的多条合并，保留 heat 最高的表述"""
+    """同一主体的多条合并，保留 heat 最高的表述。
+
+    优先按 platform 合（saibodan 自带，最可靠）——同一个产品同一天挂三条
+    （"Hy4 免费试用" / "Hy4 Flash 限免" / "Hy4 Challenge"）时，
+    按名字前缀是合不到一起的，视频里就会连放三张同一个产品的卡。
+    没有 platform 的退回名字前缀。
+    """
     groups = {}
     for it in items:
-        key = it["name"].split("（")[0].strip().lower()
+        key = (it.get("platform") or it["name"].split("（")[0]).strip().lower()
+        if not key:
+            key = it["name"].split("（")[0].strip().lower()
         if key in groups:
             cur = groups[key]
             cur["benefit"] = cur["benefit"] + "；" + it["benefit"]
-            if it["heat"] > cur["heat"]:
-                cur["heat"] = it["heat"]
+            cur["heat"] = max(cur["heat"], it["heat"])
         else:
             groups[key] = dict(it)
     return sorted(groups.values(), key=lambda x: -x["heat"])
@@ -160,7 +168,8 @@ def to_video_content(data, items, date):
             lists.append({
                 "section": "还能领的", "total": len(rest),
                 "page": f"{p//per_page+1}/{max(1,(len(rest)+per_page-1)//per_page)}",
-                "items": [{"name": it["name"], "desc": it["benefit"][:40]} for it in chunk],
+                "items": [{"name": _clip_at(it["name"], 16),
+                           "desc": _clip_at(it["benefit"], 34)} for it in chunk],
             })
 
     # 时间轴：封面 1s → 概览 4s → 详情（承载口播）→ 清单
@@ -194,18 +203,20 @@ def to_video_content(data, items, date):
         },
         "cover": {
             "eyebrow": "今日羊毛",
-            "picks": [{"tag": "本期重点", "name": c["name"][:18],
-                       "note": c["headline"][:20], "accent": "gold" if i == 0 else "blue"}
+            "picks": [{"tag": "本期重点", "name": _clip_at(c["name"], 18),
+                       "note": _clip_at(c["headline"], 20),
+                       "accent": "gold" if i == 0 else "blue"}
                       for i, c in enumerate(cards[:2])],
         },
         "overview": {
             "title_prefix": "今天值得拿的", "count": n, "title_suffix": "条",
             "big_stat": {"label": data.get("tagline", "")},
             "count_line": {"label": "本期清单", "value": len(items),
-                           "note": "条 · " + data.get("coverage", "")},
+                           "note": "条 · " + _dedup_count(data.get("coverage", ""), len(items))},
             "verified": f"数据核验 {d.isoformat()}",
-            "right_list": [{"idx": f"{i+1:02d}", "name": c["name"][:18],
-                            "sub": c["headline"][:18], "note": c["headline"][:14]}
+            "right_list": [{"idx": f"{i+1:02d}", "name": _clip_at(c["name"], 18),
+                            "sub": _clip_at(c["headline"], 18),
+                            "note": _clip_at(c["headline"], 14)}
                            for i, c in enumerate(cards)],
         },
         "detail": {
@@ -230,6 +241,61 @@ def _brief(text, n=58):
             return cut[:i].rstrip(" ，。；")
     i = cut.rfind(" ")
     return cut[:i].rstrip() if i >= 12 else cut
+
+
+def _clip_at(text, n):
+    """截到 n 字做版面用，但绝不切出半个名字。
+
+    "ChatGPT for Academic Researchers" 在 18 字处既没有标点、空格断点又会留下
+    "ChatGPT for" 这种无意义残片，所以宁可整串保留让 CSS 兜（版式里这些位置
+    都允许换行/收缩），也不能把产品名切坏——观众扫一眼认不出是什么就没信息了。
+    """
+    t = " ".join(str(text or "").split())
+    if len(t) <= n:
+        return t
+    cut = t[:n]
+    for sep in "，；;、：:）)":
+        i = cut.rfind(sep)
+        if i >= n * 0.45:
+            return cut[:i].rstrip("，；;、：: （(")
+    # 半角逗号只有不在数字中间时才当断点——"2,000" 的千分位逗号不是标点，
+    # 在它上面断会得到 "TRAE 新用户注册送 2"
+    for m in re.finditer(r",", cut):
+        i = m.start()
+        if i < n * 0.45:
+            continue
+        left = cut[i - 1] if i else ""
+        right = cut[i + 1] if i + 1 < len(cut) else ""
+        if left.isdigit() and right.isdigit():
+            continue
+        return cut[:i].rstrip()
+    # 尾部落在拉丁词中间：退到词边界，退完要还剩大半内容，否则整串保留
+    if re.search(r"[A-Za-z0-9]$", cut) and " " in cut:
+        j = cut.rfind(" ")
+        if j >= n * 0.72:
+            return cut[:j]
+        return t
+    # 尾部是半个中文字/词（"限时 8 折" 的 "折" 被切掉）：退到最近空格
+    if re.search(r"[一-鿿]$", cut) and cut.count(" ") >= 1:
+        head = cut.rsplit(" ", 1)[0]
+        if len(head) >= n * 0.5 and not re.search(r"[一-鿿]$", head[-1:]):
+            return head
+    # 尾部是空白：直接在空白处收
+    if cut[-1].isspace():
+        return cut.rstrip()
+
+    # 尾部是个被切断的裸数字（"送 2" 其实要写 2,000）：空格断掉
+    m_space_num = re.search(r"(\s+)(\d+)$", cut)
+    if m_space_num and m_space_num.start() >= n * 0.5:
+        return cut[:m_space_num.start()].rstrip()
+    return cut
+
+
+def _dedup_count(text, count):
+    """coverage 里常重复总数（"本期筛了 7 条"），而左边已经印了大大的 7"""
+    t = str(text or "").strip()
+    t = re.sub(rf"^[^，,。]{{0,10}}{count}\s*条[，,。]?\s*", "", t)
+    return t or text
 
 
 def _match_item(card_name, items):

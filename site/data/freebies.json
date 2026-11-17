@@ -1,9 +1,108 @@
 {
  "site": "AI 羊毛日报",
- "generated_at": "2026-11-16T11:07:08",
- "days": 5,
- "total": 36,
+ "generated_at": "2026-11-17T13:58:54",
+ "days": 6,
+ "total": 45,
  "freebies": [
+  {
+   "name": "WorkBuddy 上线 Hy4：免费试用（用量限制）",
+   "platform": "WorkBuddy",
+   "benefit": "Hy4 Flash 限时免费试用",
+   "condition": "全球可用",
+   "deadline": "官方帖未写具体截止日，只写「Free to try for a limited …",
+   "heat": 5,
+   "confidence": "high",
+   "source_url": "https://saibodan.com/deals/workbuddy-hy4-free-trial",
+   "date": "2026-11-17"
+  },
+  {
+   "name": "TRAE 新用户注册送 2,000 积分，每月再送 500 积分",
+   "platform": "TRAE",
+   "benefit": "注册送2000积分",
+   "condition": "需学生验证",
+   "deadline": "官方页未写截止日；2,000 注册积分为一次性发放…",
+   "heat": 4,
+   "confidence": "high",
+   "source_url": "https://saibodan.com/deals/trae-cn-new-user-credits",
+   "date": "2026-11-17"
+  },
+  {
+   "name": "Simular Box 免费云电脑给 AI 用",
+   "platform": "Simular Box",
+   "benefit": "注册送一台云端 Linux 桌面，接给 AI 助手开浏览器、跑命令，每日免费额度刷新，长期有效随时可领：Simular 的 box 是云端 Linux 桌面，一个账号一台，通过远程 MCP 接给 Claude、ChatGPT、Claude Code",
+   "condition": "全球可用",
+   "deadline": "免费档 5,000 credits 为一次性发放、自领取起 90 天有效…",
+   "heat": 3,
+   "confidence": "high",
+   "source_url": "https://saibodan.com/deals/simular-box",
+   "date": "2026-11-17"
+  },
+  {
+   "name": "WorkBuddy Hy4 Challenge：报名即得 200 credits（Round 2 至 11-20）",
+   "platform": "WorkBuddy",
+   "benefit": "报名得200 credits",
+   "condition": "全球可用",
+   "deadline": "2026-11-20 23:59 PT…",
+   "heat": 3,
+   "confidence": "high",
+   "source_url": "https://saibodan.com/deals/workbuddy-hy4-challenge",
+   "date": "2026-11-17"
+  },
+  {
+   "name": "ChatGPT for Academic Researchers：5 万个免费 ChatGPT Plus 名额（11-23 开放申请）",
+   "platform": "OpenAI",
+   "benefit": "免费Plus名额：OpenAI 官方页 2026-11-16 原文：将 ChatGPT for Academic Researchers 计划扩大到最多 20 万名研究者",
+   "condition": "全球可用",
+   "deadline": "申请 2026-11-23 开放，5 万个名额先到先得，官方未写申请截止日",
+   "heat": 2,
+   "confidence": "high",
+   "source_url": "https://saibodan.com/deals/openai-academic-researchers-2026",
+   "date": "2026-11-17"
+  },
+  {
+   "name": "OpenRouter：混元 Hy4 Flash 上线限时五折（至 11-30）",
+   "platform": "OpenRouter",
+   "benefit": "五折至11-30",
+   "condition": "全球可用",
+   "deadline": "2026-11-30…",
+   "heat": 2,
+   "confidence": "high",
+   "source_url": "https://saibodan.com/deals/hy4-flash-openrouter-50off",
+   "date": "2026-11-17"
+  },
+  {
+   "name": "Powerdrill Bloom 限时 8 折（至 11-21）",
+   "platform": "Powerdrill",
+   "benefit": "Powerdrill Bloom 限时 8 折，11/21 截止（Pro 年付首年 $159.20）",
+   "condition": "全球可用",
+   "deadline": "2026-11-21 截止…",
+   "heat": 2,
+   "confidence": "high",
+   "source_url": "https://saibodan.com/deals/powerdrill-super-sale-20off",
+   "date": "2026-11-17"
+  },
+  {
+   "name": "WorkBuddy 上线 Hy4 Flash：限时免费试用（每日免费额度）",
+   "platform": "WorkBuddy",
+   "benefit": "Hy4 Flash限免",
+   "condition": "全球可用",
+   "deadline": "官方帖只写「Free to try for a limited time」…",
+   "heat": 2,
+   "confidence": "high",
+   "source_url": "https://saibodan.com/deals/workbuddy-hy4-flash-free-trial",
+   "date": "2026-11-17"
+  },
+  {
+   "name": "千问会员教育计划：学生 / 教师连续 6 个月半价",
+   "platform": "千问",
+   "benefit": "学生教师半价6个月",
+   "condition": "需教师验证",
+   "deadline": "官方文章未写截止日，优惠为认证后连续 6 个月",
+   "heat": 2,
+   "confidence": "high",
+   "source_url": "https://saibodan.com/deals/qianwen-edu-member-halfprice",
+   "date": "2026-11-17"
+  },
   {
    "name": "Cursor 企业版客户免费拿 Kilo Enterprise（剩余合约期，最长 12 个月）",
    "benefit": "企业版订阅最长免费 1 年",
