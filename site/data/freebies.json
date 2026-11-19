@@ -1,31 +1,9 @@
 {
  "site": "AI 羊毛日报",
- "generated_at": "2026-11-19T22:41:07",
+ "generated_at": "2026-11-19T22:48:29",
  "days": 8,
  "total": 63,
  "freebies": [
-  {
-   "name": "Qoder：每天领 100 通用 Credits + 新用户 300 积分与 2 周体验",
-   "platform": "阿里 Qoder CN",
-   "benefit": "每天领 100 通用 Credits（30 天有效可跨天保留）、新用户 300 积分＋2 周体验；体验版（免费）用户自 2026-11-19 10:00 起不再开放领取；改为错峰时段按量计费",
-   "condition": "需中国实名",
-   "deadline": "活动结束时间另行公告；每笔 Credits 领取后 30 天内有效",
-   "heat": 4,
-   "confidence": "high",
-   "source_url": "https://saibodan.com/deals/qoder",
-   "date": "2026-11-19"
-  },
-  {
-   "name": "阿里 Token Plan / Qwen4",
-   "platform": "",
-   "benefit": "限时最低 1 折体验 Qwen4 模型",
-   "condition": "阿里 Token Plan 用户（付费条件未说明）",
-   "deadline": null,
-   "heat": 4,
-   "confidence": "medium",
-   "source_url": "https://www.ithome.com/1/029/676.htm",
-   "date": "2026-11-19"
-  },
   {
    "name": "OpenRouter 免费档：Ling 3.2 Flash、ERNIE-5.5-Flash-Preview、LFM3-1.7B等 5 款",
    "platform": "OpenRouter",
@@ -35,6 +13,17 @@
    "heat": 3,
    "confidence": "high",
    "source_url": "https://openrouter.ai/inclusionai/ling-3.2-flash:free",
+   "date": "2026-11-19"
+  },
+  {
+   "name": "Qwen4-Max 预览版",
+   "platform": "",
+   "benefit": "限时最低 1 折体验 Qwen4 模型",
+   "condition": "通过阿里 Token Plan 体验，具体开通/领取方式未说明",
+   "deadline": null,
+   "heat": 3,
+   "confidence": "medium",
+   "source_url": "https://www.ithome.com/1/029/676.htm",
    "date": "2026-11-19"
   },
   {
@@ -79,6 +68,17 @@
    "heat": 2,
    "confidence": "high",
    "source_url": "https://saibodan.com/deals/openai-background-mode-discount",
+   "date": "2026-11-19"
+  },
+  {
+   "name": "Qoder：每天领 100 通用 Credits + 新用户 300 积分与 2 周体验",
+   "platform": "阿里 Qoder CN",
+   "benefit": "每天领 100 通用 Credits（30 天有效可跨天保留）、新用户 300 积分＋2 周体验；；改为错峰时段按量计费",
+   "condition": "⚠ 体验版（免费）用户自 2026-11-19 10:00 起不再开放领取；需中国实名",
+   "deadline": "活动结束时间另行公告；每笔 Credits 领取后 30 天内有效",
+   "heat": 2,
+   "confidence": "high",
+   "source_url": "https://saibodan.com/deals/qoder",
    "date": "2026-11-19"
   },
   {

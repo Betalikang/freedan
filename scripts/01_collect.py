@@ -411,6 +411,33 @@ def _heat(d):
     return base
 
 
+# 资格收紧/退场的信号。这类条目 status 仍是 active（活动没停），但对普通观众
+# 已经领不到了——源站把它写进 value 里，我们原来当福利描述整段塞进卡片，
+# 结果"免费用户不再开放领取"这句被埋在正文第三句，钩子还在喊"不领等于白扔"。
+NARROW_PATTERNS = (
+    r"不再开放领取", r"不再开放", r"仅限.{0,12}(?:用户|订阅)", r"仅限试用期",
+    r"改为.{0,8}计费", r"取消免费", r"停止免费", r"结束免费", r"改为按量",
+)
+
+
+def _narrowed(d):
+    """这条福利的领取资格今天被收紧了吗？返回命中那句话，否则 None"""
+    for field in ("value", "summary", "expires"):
+        text = str(d.get(field) or "")
+        for pat in NARROW_PATTERNS:
+            m = re.search(pat, text)
+            if not m:
+                continue
+            # 取命中处所在的整句，作为条件提示
+            start = max(text.rfind(sep, 0, m.start())
+                        for sep in ("。", "；", ";")) + 1
+            ends = [text.find(sep, m.end()) for sep in ("。", "；", ";")
+                    if text.find(sep, m.end()) >= 0]
+            end = min(ends) if ends else len(text)
+            return text[start:end].strip(" 。；;")
+    return None
+
+
 def collect_saibodan():
     """saibodan.com 的已核验福利库。
 
@@ -456,17 +483,28 @@ def collect_saibodan():
         cond = "、".join(elig) if isinstance(elig, list) else str(elig)
         # value 有时不带数字（如"每日免费 credits"），会被 has_concrete 拦掉；
         # 补上站点自己的 summary 片段，不编内容，只是把已有信息带全。
-        value = _clip(d.get("value"), 120)
+        value = d.get("value") or ""
+        narrow = _narrowed(d)
+        if narrow:
+            # 资格已收紧：把这句话从"能拿到什么"里摘出来放进条件，
+            # 并在条件开头标红——否则观众以为还能白嫖
+            value = re.sub(r"[；;。]{2,}", "；", value.replace(narrow, "")).strip(" ；;。")
+            cond = f"⚠ {narrow}" + (f"；{cond}" if cond else "")
+        value = _clip(value, 120)
         benefit = value
         if not re.search(r"\d", value):
             tail = _clip(d.get("summary"))
             benefit = f"{value}：{tail}" if tail else value
+        heat = _heat(d)
+        if narrow:
+            heat = max(1, heat - 2)
         out.append({
             "source": "saibodan",
             "title": d.get("name") or "",
             "url": url,
             "meta": (f"核验 {d.get('verified','')} · {d.get('type','')} · "
-                     f"{d.get('region','')} · rank {d.get('_rank','-')}"),
+                     f"{d.get('region','')} · rank {d.get('_rank','-')}"
+                     + (" · 资格收紧" if narrow else "")),
             "body": (d.get("summary") or value)[:600],
             # 结构化字段，02_select 直接采用，不再过一遍 LLM
             "sb": {
@@ -475,12 +513,14 @@ def collect_saibodan():
                 "benefit": benefit,
                 "condition": cond or "未说明",
                 "deadline": d.get("expires") or None,
-                "heat": _heat(d),
+                "heat": heat,
                 "confidence": "high",
                 "source_url": url,
             },
         })
-    print(f"    {len(out)} 条（{note}）")
+    narrowed = sum(1 for o in out if o["meta"].endswith("资格收紧"))
+    print(f"    {len(out)} 条（{note}"
+          + (f"，其中 {narrowed} 条资格收紧已降权" if narrowed else "") + "）")
     return out
 
 
