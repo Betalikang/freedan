@@ -1,9 +1,108 @@
 {
  "site": "AI 羊毛日报",
- "generated_at": "2026-11-18T17:17:22",
- "days": 7,
- "total": 54,
+ "generated_at": "2026-11-19T22:41:07",
+ "days": 8,
+ "total": 63,
  "freebies": [
+  {
+   "name": "Qoder：每天领 100 通用 Credits + 新用户 300 积分与 2 周体验",
+   "platform": "阿里 Qoder CN",
+   "benefit": "每天领 100 通用 Credits（30 天有效可跨天保留）、新用户 300 积分＋2 周体验；体验版（免费）用户自 2026-11-19 10:00 起不再开放领取；改为错峰时段按量计费",
+   "condition": "需中国实名",
+   "deadline": "活动结束时间另行公告；每笔 Credits 领取后 30 天内有效",
+   "heat": 4,
+   "confidence": "high",
+   "source_url": "https://saibodan.com/deals/qoder",
+   "date": "2026-11-19"
+  },
+  {
+   "name": "阿里 Token Plan / Qwen4",
+   "platform": "",
+   "benefit": "限时最低 1 折体验 Qwen4 模型",
+   "condition": "阿里 Token Plan 用户（付费条件未说明）",
+   "deadline": null,
+   "heat": 4,
+   "confidence": "medium",
+   "source_url": "https://www.ithome.com/1/029/676.htm",
+   "date": "2026-11-19"
+  },
+  {
+   "name": "OpenRouter 免费档：Ling 3.2 Flash、ERNIE-5.5-Flash-Preview、LFM3-1.7B等 5 款",
+   "platform": "OpenRouter",
+   "benefit": "5 款模型 API 免费调用（输入输出均 $0），最高 1048K 上下文",
+   "condition": "注册 OpenRouter 即可，有每日请求次数限速",
+   "deadline": null,
+   "heat": 3,
+   "confidence": "high",
+   "source_url": "https://openrouter.ai/inclusionai/ling-3.2-flash:free",
+   "date": "2026-11-19"
+  },
+  {
+   "name": "Claude 符合条件计划的免费额度重置",
+   "platform": "Anthropic",
+   "benefit": "合格计划可获免费额度重置：Duet 预览批次 Pro 三次、Max/Ultra 一次，2026-12-15 前用完",
+   "condition": "全球可用",
+   "deadline": "最新一批（Claude Duet 研究预览）未用掉的重置在 2026-12-15…",
+   "heat": 2,
+   "confidence": "high",
+   "source_url": "https://saibodan.com/deals/claude-free-limit-reset",
+   "date": "2026-11-19"
+  },
+  {
+   "name": "Krea 黑色星期五生成式 AI 模型价格优惠（至 11-30）",
+   "platform": "Krea",
+   "benefit": "模型价最高省75%",
+   "condition": "全球可用",
+   "deadline": "2026-11-30（官方帖原文「get it before Nov 30」）",
+   "heat": 2,
+   "confidence": "high",
+   "source_url": "https://saibodan.com/deals/krea-black-friday-sale",
+   "date": "2026-11-19"
+  },
+  {
+   "name": "Notion Business Plan 试用（含 Notion AI）",
+   "platform": "Notion",
+   "benefit": "Notion Business 试用含 Notion AI：需专业域名、网页或桌面端启动，试用 14 或 30 天视优惠而定，填过支付方式到期自动续订",
+   "condition": "全球可用",
+   "deadline": "官方帮助页写「大多数试用期为 14 或 30 天，视具体优惠而定」…",
+   "heat": 2,
+   "confidence": "high",
+   "source_url": "https://saibodan.com/deals/notion-business-plan-trial",
+   "date": "2026-11-19"
+  },
+  {
+   "name": "OpenAI Responses API background 模式：2 小时窗口省 30%、8 小时省 40%",
+   "platform": "OpenAI",
+   "benefit": "background省30-40%",
+   "condition": "全球可用",
+   "deadline": "官方页未写截止日期，为现行计价档位",
+   "heat": 2,
+   "confidence": "high",
+   "source_url": "https://saibodan.com/deals/openai-background-mode-discount",
+   "date": "2026-11-19"
+  },
+  {
+   "name": "Zed 学生计划：Zed Pro 免费 12 个月，每月 $10 AI 额度",
+   "platform": "Zed",
+   "benefit": "Zed 学生：在读学生 Zed Pro 免费 12 个月，每月 $10 AI 额度（需高校邮箱、GitHub 账号满 30 天）",
+   "condition": "需学生验证",
+   "deadline": "权益自申请起 12 个月，到期自动降回 Free；申请总截止日官方未写",
+   "heat": 2,
+   "confidence": "high",
+   "source_url": "https://saibodan.com/deals/zed-student-plan",
+   "date": "2026-11-19"
+  },
+  {
+   "name": "星火 X2.6-4B 端侧模型限时免费",
+   "platform": "科大讯飞星火",
+   "benefit": "星火 X2.6-4B 端侧模型：限时免费，可本地跑",
+   "condition": "需中国账号",
+   "deadline": "限时免费至北京时间 2026-12-31 10:00:00…",
+   "heat": 2,
+   "confidence": "high",
+   "source_url": "https://saibodan.com/deals/xfyun-spark-x26-4b-free",
+   "date": "2026-11-19"
+  },
   {
    "name": "学生 12 个月 Google AI Plus 试用 + AI Pro 学生折扣",
    "platform": "Google",

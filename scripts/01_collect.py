@@ -33,14 +33,22 @@ BROWSER_UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
               "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36")
 
 
-def fetch(url, ua=None, timeout=25, retries=2):
+def fetch(url, ua=None, timeout=25, retries=2, proxy=None):
+    """proxy: 给被墙的源用，如 http://127.0.0.1:7897"""
     last = None
+    opener = None
+    if proxy:
+        opener = urllib.request.build_opener(
+            urllib.request.ProxyHandler({"http": proxy, "https": proxy}))
     for attempt in range(1, retries + 1):
         req = urllib.request.Request(url, headers={
             "User-Agent": ua or BROWSER_UA,
             "Accept": "*/*",
         })
         try:
+            if opener:
+                with opener.open(req, timeout=timeout) as r:
+                    return r.read().decode("utf-8", errors="replace")
             with urllib.request.urlopen(req, timeout=timeout) as r:
                 return r.read().decode("utf-8", errors="replace")
         except Exception as e:
@@ -49,6 +57,10 @@ def fetch(url, ua=None, timeout=25, retries=2):
                 time.sleep(2 * attempt)
     print(f"    ⚠ 失败 {url[:70]}: {type(last).__name__}")
     return None
+
+
+def proxy_url():
+    return (CFG.get("network") or {}).get("proxy") or None
 
 
 def split_aihot_items(md):
@@ -157,6 +169,192 @@ def collect_hn():
         })
     print(f"    {len(items)} 条")
     return items
+
+
+def collect_rss():
+    """通用 RSS/Atom 信源。只留「AI 相关」且「带免费/额度/折扣字眼」的条目——
+    综合科技媒体的 RSS 每天几十条，不过滤的话 LLM 批次全被无关新闻占满。"""
+    if not CFG["sources"].get("rss"):
+        return []
+    feeds = CFG.get("rss_feeds") or []
+    if not feeds:
+        return []
+    AI_RE = re.compile(
+        r"(?<![a-z])(ai|gpt|claude|gemini|llm|token|api|deepseek|kimi|chatgpt|copilot"
+        r"|agent|midjourney|sora|qwen|llama)(?![a-z])"
+        r"|人工智能|大模型|模型|智能体|开源|豆包|通义|文心|千问", re.I)
+    FREE_RE = re.compile(
+        r"免费|白嫖|额度|赠送|试用|薅|羊毛|限时|优惠|折扣|免费版|免费开放|降价"
+        r"|credits|free tier|for free|trial|promo|discount|open[- ]source", re.I)
+    cap = int(CFG.get("rss_max_per_feed", 8))
+    out = []
+    for f in feeds:
+        name, url = f.get("name") or url_short(f.get("url", "")), f.get("url")
+        if not url:
+            continue
+        print(f"  · RSS {name}")
+        raw = fetch(url, timeout=20)
+        if not raw:
+            continue
+        entries = re.findall(r"<(?:item|entry)\b.*?</(?:item|entry)>", raw, re.S)
+        kept = 0
+        for e in entries:
+            t = re.search(r"<title[^>]*>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</title>", e, re.S)
+            title = re.sub(r"\s+", " ", (t.group(1) if t else "")).strip()
+            link = re.search(r"<link[^>]*href=\"([^\"]+)\"", e) or \
+                re.search(r"<link>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</link>", e, re.S)
+            url_item = (link.group(1) if link else "").strip()
+            date = re.search(r"<(?:pubDate|updated|published)>([^<]+)<", e)
+            desc = extract_desc(e)
+            if not title or not AI_RE.search(title + " " + desc[:800]):
+                continue
+            if not FREE_RE.search(title + " " + desc[:1500]):
+                continue
+            out.append({
+                "source": "rss",
+                "title": title,
+                "url": url_item or url,
+                "meta": f"{name} · {(date.group(1) if date else '')[:16]}",
+                "body": desc[:900],
+            })
+            kept += 1
+            if kept >= cap:
+                break
+        print(f"    {len(entries)} 条 → 命中 {kept} 条")
+    return out
+
+
+def extract_desc(entry_xml):
+    """取条目的正文摘要。
+
+    不能对整个 <item> 直接去标签——多数 feed 的 description 包在
+    <![CDATA[...]]> 里，`re.sub(r"<[^>]+>", " ", e)` 会把 CDATA 连同里面的
+    正文一起当标签吃掉，结果是 body 全空：标题能过关键词、条目能入榜，
+    但阶段2 的 LLM 看不到任何内容，只能瞎判。
+    """
+    for tag in ("content:encoded", "description", "summary", "content"):
+        m = re.search(rf"<{tag}[^>]*>(.*?)</{tag}>", entry_xml, re.S)
+        if not m:
+            continue
+        txt = m.group(1)
+        m2 = re.match(r"\s*<!\[CDATA\[(.*?)\]\]>\s*$", txt, re.S)
+        if m2:
+            txt = m2.group(1)
+        txt = re.sub(r"<[^>]+>", " ", txt)
+        txt = (txt.replace("&lt;", "<").replace("&gt;", ">")
+                  .replace("&quot;", '"').replace("&amp;", "&")
+                  .replace("&#124;", "|").replace("&nbsp;", " "))
+        txt = re.sub(r"<[^>]+>", " ", txt)
+        txt = re.sub(r"\s+", " ", txt).strip()
+        if len(txt) > 40:
+            return txt
+    return ""
+
+
+def url_short(u):
+    m = re.match(r"https?://([^/]+)", u or "")
+    return m.group(1) if m else (u or "")
+
+
+def collect_openrouter():
+    """OpenRouter 的免费模型目录。哪些模型刚上免费档，这里最权威；
+    '上下文 1M tokens 全程 0 元'对做 AI 内容的人来说就是实打实的羊毛。"""
+    if not CFG["sources"].get("openrouter"):
+        return []
+    cfg = CFG.get("openrouter") or {}
+    days = int(cfg.get("days", 30))
+    print(f"  · OpenRouter 免费模型（近 {days} 天上架）")
+    raw = fetch(cfg.get("url") or "https://openrouter.ai/api/v1/models", timeout=25)
+    if not raw:
+        return []
+    try:
+        models = json.loads(raw).get("data") or []
+    except Exception:
+        print("    ⚠ JSON 解析失败")
+        return []
+    cutoff = time.time() - days * 86400
+    out = []
+    for m in models:
+        if not str(m.get("id", "")).endswith(":free"):
+            continue
+        created = m.get("created") or 0
+        if created < cutoff:
+            continue
+        ctx = int(m.get("context_length") or 0)
+        ctx_txt = f"{ctx // 1000}K tokens" if ctx else "免费额度"
+        name = re.sub(r"\s*\(free\)\s*$", "", m.get("name") or m.get("id", ""))
+        desc = re.sub(r"<[^>]+>", " ", m.get("description") or "")
+        desc = re.sub(r"\s+", " ", desc).strip()
+        out.append({
+            "source": "openrouter",
+            "title": f"OpenRouter 免费模型：{name}",
+            "url": f"https://openrouter.ai/{m.get('id','')}",
+            "meta": f"上架 {datetime.date.fromtimestamp(created).isoformat()} · 上下文 {ctx_txt} · $0",
+            "body": (desc or "免费档模型，输入输出均 0 美元")[:600],
+            "sb": {
+                "name": f"{name}（OpenRouter 免费档）",
+                "platform": "OpenRouter",
+                "benefit": f"API 免费调用，上下文 {ctx_txt}，输入输出均 $0",
+                "condition": "注册 OpenRouter 即可，有每日请求次数限速",
+                "deadline": None,
+                "heat": 3 if ctx >= 200000 else 2,
+                "confidence": "high",
+                "source_url": f"https://openrouter.ai/{m.get('id','')}",
+            },
+        })
+    print(f"    {len(out)} 条")
+    return out
+
+
+def collect_v2ex():
+    """V2EX 的 deals / share 节点。国内羊毛（话费、会员、免费主机）比外网源更及时。
+    直连被墙，走本机代理；代理没配或不通时静默跳过，不影响其他源。"""
+    if not CFG["sources"].get("v2ex"):
+        return []
+    proxy = proxy_url()
+    if not proxy:
+        print("  · V2EX 跳过（pipeline.json 未配置 network.proxy）")
+        return []
+    AI_RE = re.compile(
+        r"(?<![a-z])(ai|gpt|claude|gemini|llm|token|api|deepseek|kimi|chatgpt|copilot"
+        r"|agent|midjourney|sora|qwen|llama|glm)(?![a-z])"
+        r"|人工智能|大模型|智能体|豆包|通义|文心|千问", re.I)
+    FREE_RE = re.compile(
+        r"免费|白嫖|额度|赠送|试用|薅|羊毛|领取|限时|优惠|折扣|会员|话费|积分|credits"
+        r"|free|trial|promo|discount|coupon", re.I)
+    out = []
+    for node in CFG.get("v2ex_nodes") or ["deals", "share"]:
+        print(f"  · V2EX /{node}")
+        raw = fetch(f"https://www.v2ex.com/api/topics/show.json?node_name={node}",
+                    proxy=proxy, timeout=20, retries=1)
+        if not raw:
+            continue
+        try:
+            topics = json.loads(raw)
+        except Exception:
+            continue
+        kept = 0
+        for t in topics:
+            title = t.get("title") or ""
+            body = t.get("content") or ""
+            # 标题就得写明是什么羊毛。只看正文会把「我在某站省了 20%」
+            # 这种闲聊帖也算进来，正文提到优惠的讨论帖远多于真羊毛。
+            if not FREE_RE.search(title):
+                continue
+            if not AI_RE.search(title + " " + body[:400]):
+                continue
+            ts = t.get("created") or 0
+            out.append({
+                "source": "v2ex",
+                "title": title,
+                "url": t.get("url") or "",
+                "meta": (f"V2EX /{node} · "
+                         f"{datetime.date.fromtimestamp(ts).isoformat() if ts else ''}"),
+                "body": re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", body))[:600],
+            })
+            kept += 1
+        print(f"    {len(topics)} 帖 → 命中 {kept} 条")
+    return out
 
 
 def dedupe(items):
@@ -294,17 +492,25 @@ def main():
     print(f"采集 {date}")
     items = collect_saibodan()
 
-    # saibodan 是已核验的结构化源，条数够就不必再跑另外三个：
+    # saibodan 是已核验的结构化源，条数够就不必再跑 AIHOT/GitHub/HN 三个兜底源：
     # AIHOT 翻来去是同一批促销，GitHub/HN 产出大量项目主页（本来就会被门槛筛掉），
-    # 白过四轮 LLM、拖慢速度还把好条目挤下去。不够才启用兜底。
+    # 白过四轮 LLM、拖慢速度还把好条目挤下去。
+    #
+    # RSS / OpenRouter / V2EX 和它们不同：RSS 只放行「AI + 羊毛」双命中条目，
+    # OpenRouter 直接读免费模型目录，V2EX 是纯国内羊毛帖子——产出即候选，
+    # 所以不放进兜底，每天都跑。
     enough = int((CFG.get("saibodan") or {}).get("skip_fallback_if_at_least", 6))
     if len(items) >= enough:
-        print(f"  saibodan 已得 {len(items)} 条（≥{enough}），跳过外部信源兜底")
+        print(f"  saibodan 已得 {len(items)} 条（≥{enough}），跳过 AIHOT/GitHub/HN 兜底")
     else:
-        print(f"  saibodan 仅 {len(items)} 条，启用外部信源兜底")
+        print(f"  saibodan 仅 {len(items)} 条，启用 AIHOT/GitHub/HN 兜底")
         items.extend(collect_aihot())
         items.extend(collect_github())
         items.extend(collect_hn())
+
+    items.extend(collect_rss())
+    items.extend(collect_openrouter())
+    items.extend(collect_v2ex())
 
     items = dedupe(items)
 

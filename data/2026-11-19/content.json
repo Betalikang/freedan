@@ -1,0 +1,294 @@
+{
+ "meta": {
+  "brand": "每日人工智能精选内参",
+  "brand_en": "DISPATCH · 2026",
+  "volume": "2026 · 11月19日",
+  "badge": "9 条可用福利 · 今日核验",
+  "date": "2026.11.19",
+  "title": "白嫖窗口",
+  "title_en": "FREE WINDOW",
+  "edition": "11月19日 速递",
+  "domestic": 9,
+  "foreign": null,
+  "total": 9
+ },
+ "timeline": {
+  "total_duration": 61.22,
+  "cover": {
+   "start": 0.0,
+   "end": 1.0
+  },
+  "overview": {
+   "start": 1.0,
+   "end": 4.0
+  },
+  "detail": {
+   "start": 4.0,
+   "end": 56.224
+  },
+  "list_start": 56.224,
+  "list_page_dur": 5.0,
+  "audio_offset": 0.5,
+  "speech": {
+   "start": 0.098,
+   "end": 55.024
+  }
+ },
+ "cover": {
+  "eyebrow": "今日羊毛",
+  "picks": [
+   {
+    "tag": "本期重点",
+    "name": "Qoder CN",
+    "note": "每天领 100 通用 Credits",
+    "accent": "gold"
+   },
+   {
+    "tag": "本期重点",
+    "name": "Zed 学生计划",
+    "note": "学生免费 12 个月 Pro",
+    "accent": "blue"
+   }
+  ]
+ },
+ "overview": {
+  "title_prefix": "今天值得拿的",
+  "count": 3,
+  "title_suffix": "条",
+  "big_stat": {
+   "label": "Qoder 每天领 100 通用 Credits"
+  },
+  "count_line": {
+   "label": "本期清单",
+   "value": 9,
+   "note": "条 · 羊毛，3 条最值得先领"
+  },
+  "verified": "数据核验 2026-11-19",
+  "right_list": [
+   {
+    "idx": "01",
+    "name": "Qoder CN",
+    "sub": "每天领 100 通用 Credits，30 天有效",
+    "note": "每天领 100 通用 Credits，30 天有效"
+   },
+   {
+    "idx": "02",
+    "name": "Zed 学生计划",
+    "sub": "学生免费 12 个月 Pro",
+    "note": "学生免费 12 个月 Pro，每月 $10 额度"
+   },
+   {
+    "idx": "03",
+    "name": "OpenRouter 免费档",
+    "sub": "5 款模型 API 免费调用",
+    "note": "5 款模型 API"
+   }
+  ]
+ },
+ "detail": {
+  "section": {
+   "prefix": "今天值得拿的",
+   "count": 3,
+   "suffix": "条",
+   "en": "TODAY'S FINDS"
+  },
+  "cards": [
+   {
+    "idx": "01",
+    "accent": "gold",
+    "title": "Qoder CN",
+    "body": "**每天领 100 通用 Credits，30 天有效**，阿里 Qoder CN 每天可领 100 通用 Credits，领取后 30 天内有效，可跨天攒着用；新用户再送 300 积分和 2 周体验。需中国实名。体验版免费用户自 2026-11-19 10:00 起不再开放领取，改为错峰时段按量计费。",
+    "tags": [
+     {
+      "text": "中国实名",
+      "style": "on"
+     },
+     {
+      "text": "每日可领",
+      "style": ""
+     },
+     {
+      "text": "30天有效",
+      "style": ""
+     }
+    ],
+    "side": {
+     "label": "每天通用 Credits",
+     "num": "100",
+     "unit": "",
+     "note": "每天领 100 通用 Credits，30 天有效",
+     "num_style": ""
+    }
+   },
+   {
+    "idx": "02",
+    "accent": "blue",
+    "title": "Zed 学生计划",
+    "body": "**学生免费 12 个月 Pro，每月 $10 额度**，Zed 学生计划给在读学生 12 个月 Zed Pro 免费，每月还带 10 美元 AI 额度。需要高校邮箱验证，GitHub 账号要满 30 天。权益从申请起算 12 个月，到期自动降回 Free，官方没写申请总截止日。",
+    "tags": [
+     {
+      "text": "学生验证",
+      "style": "on"
+     },
+     {
+      "text": "12个月",
+      "style": ""
+     },
+     {
+      "text": "每月$10",
+      "style": ""
+     }
+    ],
+    "side": {
+     "label": "个月 Pro 免费",
+     "num": "12",
+     "unit": "",
+     "note": "学生免费 12 个月 Pro，每月 $10 额度",
+     "num_style": "blue"
+    }
+   },
+   {
+    "idx": "03",
+    "accent": "gold",
+    "title": "OpenRouter 免费档",
+    "body": "**5 款模型 API 免费调用，最高 1048K**，OpenRouter 免费档上了 5 款模型，包括 Ling 3.2 Flash、ERNIE-5.5-Flash-Preview、LFM3-1.7B，输入输出都按 0 美元计费，最高 1048K 上下文。注册即可用，有每日请求次数限速，没写截止日期。",
+    "tags": [
+     {
+      "text": "API",
+      "style": "on"
+     },
+     {
+      "text": "每日限速",
+      "style": ""
+     },
+     {
+      "text": "1048K上下文",
+      "style": ""
+     }
+    ],
+    "side": {
+     "label": "款模型 0 元调用",
+     "num": "5",
+     "unit": "",
+     "note": "5 款模型 API 免费调用，最高 1048K",
+     "num_style": ""
+    }
+   }
+  ],
+  "cues": [
+   {
+    "start": 0.5,
+    "end": 3.142,
+    "text": "每天 100 Credits，不领等于白扔。"
+   },
+   {
+    "start": 3.676,
+    "end": 6.592,
+    "text": "阿里 Qoder CN 每天能领 100 通用"
+   },
+   {
+    "start": 6.688,
+    "end": 9.95,
+    "text": "Credits，30 天有效，还能跨天攒着用。"
+   },
+   {
+    "start": 10.497,
+    "end": 14.938,
+    "text": "新用户再送 300 积分加 2 周体验，只要中国实名。"
+   },
+   {
+    "start": 15.485,
+    "end": 19.295,
+    "text": "但免费体验版从 2026 年 11 月 19 日 10"
+   },
+   {
+    "start": 19.295,
+    "end": 20.819,
+    "text": "点起不再开放领取。"
+   },
+   {
+    "start": 21.366,
+    "end": 23.843,
+    "text": "在读学生去 Zed 领 12 个月 Pro"
+   },
+   {
+    "start": 24.152,
+    "end": 26.354,
+    "text": "每月还带 10 美元 AI 额度。"
+   },
+   {
+    "start": 26.902,
+    "end": 30.378,
+    "text": "高校邮箱验证，GitHub 账号要满 30 天"
+   },
+   {
+    "start": 30.664,
+    "end": 32.497,
+    "text": "到期自动降回免费版。"
+   },
+   {
+    "start": 33.033,
+    "end": 35.902,
+    "text": "OpenRouter 免费档 5 款模型可以白调"
+   },
+   {
+    "start": 36.164,
+    "end": 37.89,
+    "text": "输入输出都是 0 美元。"
+   },
+   {
+    "start": 38.426,
+    "end": 43.426,
+    "text": "最高 1048K 上下文，注册就能用，只限每日请求次数。"
+   },
+   {
+    "start": 44.009,
+    "end": 47.878,
+    "text": "星火 X2.6-4B 端侧模型也限时免费"
+   },
+   {
+    "start": 48.116,
+    "end": 50.926,
+    "text": "能本地跑，到 12 月 31 日 10 点。"
+   },
+   {
+    "start": 51.462,
+    "end": 55.426,
+    "text": "链接都在简介，先把能领的领了，别等官方公告。"
+   }
+  ]
+ },
+ "lists": [
+  {
+   "section": "还能领的",
+   "total": 6,
+   "page": "1/1",
+   "items": [
+    {
+     "name": "Claude 符合条件计划的免费",
+     "desc": "合格计划可获免费额度重置：Duet 预览批次 Pro 三次"
+    },
+    {
+     "name": "Krea 黑色星期五生成式",
+     "desc": "模型价最高省75%"
+    },
+    {
+     "name": "Notion Business",
+     "desc": "Notion Business 试用含 Notion AI"
+    },
+    {
+     "name": "OpenAI Responses API background 模式：2 小时窗口省 30%、8 小时省 40%",
+     "desc": "background省30-40%"
+    },
+    {
+     "name": "Zed 学生计划",
+     "desc": "Zed 学生：在读学生 Zed Pro 免费 12 个月"
+    },
+    {
+     "name": "星火 X2.6-4B",
+     "desc": "星火 X2.6-4B 端侧模型：限时免费，可本地跑"
+    }
+   ]
+  }
+ ]
+}

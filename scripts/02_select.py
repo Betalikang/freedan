@@ -246,23 +246,66 @@ def is_expired(dl, today):
     return 1 <= delta <= EXPIRE_WINDOW_DAYS
 
 
+def collapse_free_models(items):
+    """同一平台的一批免费模型折成一条。
+
+    OpenRouter 的目录里通常一次能捞出五六款免费模型，逐条列出来会把视频
+    撑成"免费模型 / 免费模型 / 免费模型"三张同质卡片。折成一条并列出型号，
+    既保住信息量，也让卡片继续讲不同的事。
+    名称里带型号清单，所以第二天有新模型上架时算新条目，不会被历史去重误杀。
+    """
+    groups = {}
+    rest = []
+    for it in items:
+        # 只折 OpenRouter 目录里单独拉出来的模型条目。saibodan 源里那条
+        # 「OpenRouter 免费模型与免费档限速」是概述页，折进来会被新名字
+        # 带走、绕过历史去重，等于把昨天报过的再报一遍。
+        if (it.get("platform") or "") == "OpenRouter" \
+                and (it.get("source_url") or "").startswith("https://openrouter.ai/"):
+            groups.setdefault(it["platform"], []).append(it)
+        else:
+            rest.append(it)
+    for platform, grp in groups.items():
+        if len(grp) == 1:
+            rest.append(grp[0])
+            continue
+        names = [g["name"].replace(f"（{platform} 免费档）", "") for g in grp]
+        best = max(grp, key=lambda g: g["heat"])
+        short = "、".join(n.split(":")[-1].strip() for n in names[:3])
+        more = f"等 {len(names)} 款" if len(names) > 3 else ""
+        ctxs = [int(m.group(1)) for g in grp
+                if (m := re.search(r"(\d+)K", g["benefit"]))]
+        ctx_txt = f"，最高 {max(ctxs)}K 上下文" if ctxs else ""
+        rest.append({
+            "name": f"{platform} 免费档：{short}{more}",
+            "platform": platform,
+            "benefit": f"{len(names)} 款模型 API 免费调用（输入输出均 $0）{ctx_txt}",
+            "condition": best["condition"],
+            "deadline": best["deadline"],
+            "heat": best["heat"],
+            "confidence": "high",
+            "source_url": best["source_url"],
+        })
+    return rest
+
+
 def main():
     date = sys.argv[1] if len(sys.argv) > 1 else datetime.date.today().isoformat()
     run_dir = ROOT / "runs" / date
     raw = json.loads((run_dir / "raw.json").read_text(encoding="utf-8"))
     print(f"筛选 {len(raw)} 条原始资讯")
 
-    # saibodan.com 带来的条目已经是结构化、已核验的，直接采用，不过 LLM
+    # 已结构化的条目（saibodan.com 福利库、OpenRouter 免费模型目录）直接采用，不过 LLM
     structured = []
     loose = []
     for it in raw:
         sb = it.get("sb") if isinstance(it, dict) else None
-        if it.get("source") == "saibodan" and isinstance(sb, dict) and sb.get("name"):
+        if isinstance(sb, dict) and sb.get("name"):
             structured.append(sb)
         else:
             loose.append(it)
     if structured:
-        print(f"  · saibodan.com 结构化条目 {len(structured)} 条，直接采用")
+        print(f"  · 结构化条目 {len(structured)} 条，直接采用")
 
     drop = CFG["thresholds"]["min_heat"]
     all_items = list(structured)
@@ -274,6 +317,7 @@ def main():
             print(f"    ⚠ 批次 {i} 失败: {e}")
 
     items = dedupe(normalize(all_items))
+    items = collapse_free_models(items)
     items = [x for x in items if x["heat"] >= drop]
     items.sort(key=lambda x: (-x["heat"], x["name"]))
 

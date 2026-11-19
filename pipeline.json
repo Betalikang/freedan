@@ -13,8 +13,31 @@
     "aihot_search": true,
     "github": true,
     "hackernews": true,
-    "saibodan": true
+    "saibodan": true,
+    "rss": true,
+    "openrouter": true,
+    "v2ex": true
   },
+  "network": {
+    "proxy": "http://127.0.0.1:7897"
+  },
+  "rss_feeds": [
+    {"name": "IT之家", "url": "https://www.ithome.com/rss/"},
+    {"name": "开源中国", "url": "https://www.oschina.net/news/rss"},
+    {"name": "Solidot", "url": "https://www.solidot.org/index.rss"},
+    {"name": "小众软件", "url": "https://www.appinn.com/feed/"},
+    {"name": "少数派", "url": "https://sspai.com/feed"},
+    {"name": "蓝点网", "url": "https://www.landiannews.com/feed"},
+    {"name": "爱范儿", "url": "https://www.ifanr.com/feed"},
+    {"name": "TechCrunch", "url": "https://techcrunch.com/feed/"},
+    {"name": "The Verge", "url": "https://www.theverge.com/rss/index.xml"}
+  ],
+  "rss_max_per_feed": 8,
+  "openrouter": {
+    "url": "https://openrouter.ai/api/v1/models",
+    "days": 30
+  },
+  "v2ex_nodes": ["deals", "share"],
   "saibodan": {
     "url": "https://saibodan.com/data/deals.json",
     "origin": "https://saibodan.com",

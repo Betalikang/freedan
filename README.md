@@ -14,7 +14,7 @@ python scripts/run_daily.py --skip-render  # 只到写稿，不出片
 
 | 文件 | 说明 |
 |---|---|
-| `raw.json` | 阶段1 采集的原始资讯（AIHOT + GitHub + HN） |
+| `raw.json` | 阶段1 采集的原始资讯（saibodan + RSS + OpenRouter + V2EX，不够时再跑 AIHOT/GitHub/HN） |
 | `freebies.json` | 阶段2 筛出的合格羊毛 |
 | `content.json` | 阶段3 生成，时间轴由阶段4 按真实音频重写（含 `detail.cues`） |
 | `sentences.json` | 口播稿（完整句子，非字幕碎片） |
@@ -30,7 +30,7 @@ python scripts/run_daily.py --skip-render  # 只到写稿，不出片
 ## 八个阶段
 
 ```
-[1/8] 01_collect.py   采集（主源 saibodan.com/data/deals.json，不够才跑 AIHOT/GitHub/HN 兜底）
+[1/8] 01_collect.py   采集（主源 saibodan.com/data/deals.json + RSS/OpenRouter/V2EX；不够才跑 AIHOT/GitHub/HN 兜底）
 [2/8] 02_select.py    结构化条目直接采用 + LLM 提取外部条目 + 硬门槛/历史去重/过期过滤
 [3/8] 03_compose.py   写文案、拼卡片，产出 content.json（时间轴此时是估值）+ publish.md
 [4/8] 04_narrate.py   整段一次合成配音 + 字级时间戳 → 用真实音频重写时间轴
@@ -46,8 +46,22 @@ python scripts/run_daily.py --skip-render  # 只到写稿，不出片
 每条带 `_rank`（编辑排序，1 最好）、`_tag`、`type`、`region`、`status`、`isNew`/`changedToday`、
 `elig`、`expires`。它比外部源可靠得多——AIHOT/GitHub/HN 翻来去是同一批促销加农场号。
 
-所以 `01_collect.py` 先取它；**条数够（默认 ≥6）就完全不跑另外三个源**，省掉四轮 LLM 调用，
-也避免外部噪音把好条目挤下去。不够时才启用兜底（`saibodan.skip_fallback_if_at_least` 可调）。
+所以 `01_collect.py` 先取它；**条数够（默认 ≥6）就完全不跑 AIHOT/GitHub/HN 三个兜底源**，
+省掉四轮 LLM 调用，也避免外部噪音把好条目挤下去。不够时才启用兜底
+（`saibodan.skip_fallback_if_at_least` 可调）。
+
+### 常驻补充信源
+
+下面三个源每天都在跑，不进兜底——它们自带预筛，产出即候选：
+
+| 源 | 抓什么 | 预筛 |
+|---|---|---|
+| RSS（`rss_feeds`，9 个站） | IT之家、开源中国、Solidot、小众软件、少数派、蓝点网、爱范儿、TechCrunch、The Verge | 标题/摘要必须同时命中「AI 词」和「免费·额度·折扣」词，每个站最多留 `rss_max_per_feed` 条 |
+| OpenRouter（`openrouter`） | `api/v1/models` 里 `:free` 结尾、近 `days` 天上架的免费模型，直接产出结构化条目 | 免费模型本身就是羊毛，上下文大小定 heat（≥200K 记 3，否则 2） |
+| V2EX（`v2ex_nodes`） | `deals` / `share` 节点的国内羊毛 | **标题**必须含免费类词，且标题+正文前 400 字含 AI 词 |
+
+V2EX 直连被墙，走 `network.proxy`（默认 `http://127.0.0.1:7897`）；代理不通时静默跳过，
+不影响其他源。Reddit、HuggingFace 在这台机器上即使走代理也会 403/404，没有接入。
 
 **性价比分用站点的 `_rank` 算，不自己打 5 分。** `_heat()` 按 `_rank` 分位映射
 （≤4→5、≤9→4、≤16→3、≤41→2、其余→1），`type` 是折扣/会员或 `_tag` 含
@@ -121,7 +135,11 @@ BGM → acrossfade 自环到成片长度（2s 交叉淡化，消循环接缝）
 
 `pipeline.json`：
 
-- `sources` —— 四个信源开关，任何一个挂掉不影响其他
+- `sources` —— 各信源开关（saibodan / rss / openrouter / v2ex 常驻，aihot / github / hackernews 兜底），任何一个挂掉不影响其他
+- `network.proxy` —— 需要代理的源（V2EX）走这里，留空则跳过
+- `rss_feeds` / `rss_max_per_feed` —— RSS 站点列表与每站保留上限
+- `openrouter.days` —— 只保留这段时间内上架的免费模型
+- `v2ex_nodes` —— V2EX 要扫的节点
 - `saibodan.skip_fallback_if_at_least` —— saibodan 到手多少条就不跑外部源（默认 6）
 - `saibodan.min_fresh` / `max_items` —— 新标记不足时的回退阈值与条数上限
 - `search_queries` —— 外部兜底时用的 AIHOT 搜索词
@@ -242,7 +260,8 @@ RSS 的绝对链接才会指向正式地址。留空则站内链接走相对路�
 
 ## 已知边界
 
-- AIHOT 的"羊毛"内容本身很稀薄（实测今天 13 条里 0 条纯羊毛），主要靠 GitHub/HN 兜底
+- AIHOT 的"羊毛"内容本身很稀薄（实测某天 13 条里 0 条纯羊毛），主要靠 GitHub/HN 兜底
 - GitHub/HN 抓到的多是项目主页，会被可核验门槛筛掉，所以最终入选条数波动大
+- RSS 的「AI + 免费」双命中仍会带入降价/额度收紧类新闻（如"DeepSeek 收紧免费额度"），由阶段2 的 LLM 判定剔除；V2EX 的 AI 羊毛依赖有人发帖，安静日可能 0 条
 - LLM 生成失败时会退到 `fallback_content()` 结构化兜底模板，画面不会空，但文案会比较干
 - 取不到 WordBoundary 时（edge-tts 版本或服务变动）会按字数比例兜底：字幕条数和时间会变粗，但文字不会错
