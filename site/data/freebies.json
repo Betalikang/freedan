@@ -1,9 +1,64 @@
 {
  "site": "AI 羊毛日报",
- "generated_at": "2026-11-19T22:48:29",
- "days": 8,
- "total": 63,
+ "generated_at": "2026-11-20T22:26:15",
+ "days": 9,
+ "total": 68,
  "freebies": [
+  {
+   "name": "扣子 Coze 个人免费版每日登录领 1,500 积分",
+   "platform": "扣子 Coze",
+   "benefit": "每天 60 积分（原 1500）",
+   "condition": "需中国账号",
+   "deadline": "长期有效（每日登录发放）",
+   "heat": 4,
+   "confidence": "high",
+   "source_url": "https://saibodan.com/deals/coze-free-daily-credits",
+   "date": "2026-11-20"
+  },
+  {
+   "name": "Meta Muse Charm",
+   "platform": "",
+   "benefit": "购买设备可能附赠Verizon 12个月免费5G数据套餐；设备售价300美元",
+   "condition": "购买Muse Charm设备",
+   "deadline": null,
+   "heat": 3,
+   "confidence": "medium",
+   "source_url": "https://www.cnbeta.com.tw/articles/tech/1587190.htm",
+   "date": "2026-11-20"
+  },
+  {
+   "name": "OpenCode Go 低价订阅",
+   "platform": "OpenCode",
+   "benefit": "OpenCode Go：$10/月含 32 款模型配额，含限时免费开放模型",
+   "condition": "全球可用",
+   "deadline": "Beam Free 与 Iceman Contributor Free 均标注 …",
+   "heat": 3,
+   "confidence": "high",
+   "source_url": "https://saibodan.com/deals/opencode-go",
+   "date": "2026-11-20"
+  },
+  {
+   "name": "Together AI 云服务：Ternary Bonsai 27B 输入输出均免费",
+   "platform": "Together AI",
+   "benefit": "27B 模型免费用",
+   "condition": "全球可用",
+   "deadline": "官方未写截止日期，按定价页常设价格执行",
+   "heat": 2,
+   "confidence": "high",
+   "source_url": "https://saibodan.com/deals/together-free-ternary-bonsai-27b",
+   "date": "2026-11-20"
+  },
+  {
+   "name": "移动云 MoMA 新用户 2500 万 Tokens 免费试用（限时 30 天）",
+   "platform": "移动云 MoMA",
+   "benefit": "2500万tokens免费",
+   "condition": "需中国账号",
+   "deadline": "2026-12-31…",
+   "heat": 2,
+   "confidence": "high",
+   "source_url": "https://saibodan.com/deals/yidong-moma-25m-free-tokens",
+   "date": "2026-11-20"
+  },
   {
    "name": "OpenRouter 免费档：Ling 3.2 Flash、ERNIE-5.5-Flash-Preview、LFM3-1.7B等 5 款",
    "platform": "OpenRouter",

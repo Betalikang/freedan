@@ -30,9 +30,21 @@
     {"name": "蓝点网", "url": "https://www.landiannews.com/feed"},
     {"name": "爱范儿", "url": "https://www.ifanr.com/feed"},
     {"name": "TechCrunch", "url": "https://techcrunch.com/feed/"},
-    {"name": "The Verge", "url": "https://www.theverge.com/rss/index.xml"}
+    {"name": "The Verge", "url": "https://www.theverge.com/rss/index.xml"},
+    {"name": "快科技", "url": "https://rss.mydrivers.com/rss.aspx?Tid=1"},
+    {"name": "cnBeta", "url": "https://www.cnbeta.com.tw/backend.php"},
+    {"name": "钛媒体", "url": "https://www.tmtpost.com/rss"},
+    {"name": "掘金", "url": "https://juejin.cn/rss"},
+    {"name": "HuggingFace", "url": "https://huggingface.co/blog/feed.xml"},
+    {"name": "OpenAI Blog", "url": "https://openai.com/blog/rss.xml"},
+    {"name": "VentureBeat AI", "url": "https://venturebeat.com/category/ai/feed/"},
+    {"name": "The Decoder", "url": "https://the-decoder.com/feed/"},
+    {"name": "Tech Review AI", "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed"},
+    {"name": "AI Business", "url": "https://aibusiness.com/rss.xml"},
+    {"name": "Product Hunt", "url": "https://www.producthunt.com/feed"}
   ],
   "rss_max_per_feed": 8,
+  "rss_days": 7,
   "openrouter": {
     "url": "https://openrouter.ai/api/v1/models",
     "days": 30
@@ -48,6 +60,10 @@
   "github_min_stars": 50,
   "hn_days": 30,
   "search_queries": ["免费", "免费额度", "限时免费", "优惠", "赠送", "试用", "开源"],
+  "exclude_patterns": [
+    "华为\\s*OSTA", "OSTA\\s*星芒", "星芒\\s*O1",
+    "荣威", "家越\\s*07"
+  ],
   "thresholds": {
     "min_items_for_video": 2,
     "max_detail_cards": 3,

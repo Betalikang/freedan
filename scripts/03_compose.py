@@ -163,10 +163,19 @@ def to_video_content(data, items, date):
             },
         })
 
-    # 清单页：剩余条目 + 全部条目做索引
-    lists = []
+    # 清单页：卡片里没讲到的条目。
+    # 不能按 items[n:] 切片——cards 是 LLM 挑的，和按性价比排序的前 n 条不是同一批，
+    # 切片会把刚讲过的条目当成"还能领的"再列一遍，真正没讲到的反而全片不出现。
+    rest = []
     if len(items) > n:
-        rest = items[n:]
+        used = set()
+        for c in cards:
+            it = _match_item(c.get("name", ""), items)
+            if it is not None:
+                used.add(id(it))
+        rest = [it for it in items if id(it) not in used]
+    lists = []
+    if rest:
         per_page = 16
         for p in range(0, len(rest), per_page):
             chunk = rest[p:p + per_page]

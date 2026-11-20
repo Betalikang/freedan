@@ -171,6 +171,24 @@ def collect_hn():
     return items
 
 
+def parse_feed_date(s):
+    """feed 里 <pubDate>/<updated> 的常见格式 → datetime，解析不了返回 None"""
+    if not s:
+        return None
+    s = s.strip()
+    for fmt in ("%a, %d %b %Y %H:%M:%S %z", "%a, %d %b %Y %H:%M:%S %Z",
+                "%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%dT%H:%M:%SZ",
+                "%Y-%m-%dT%H:%M:%S", "%Y-%m-%d"):
+        try:
+            dt = datetime.datetime.strptime(s, fmt)
+            if dt.tzinfo:
+                dt = dt.astimezone(datetime.timezone.utc).replace(tzinfo=None)
+            return dt
+        except ValueError:
+            continue
+    return None
+
+
 def collect_rss():
     """通用 RSS/Atom 信源。只留「AI 相关」且「带免费/额度/折扣字眼」的条目——
     综合科技媒体的 RSS 每天几十条，不过滤的话 LLM 批次全被无关新闻占满。"""
@@ -187,6 +205,10 @@ def collect_rss():
         r"免费|白嫖|额度|赠送|试用|薅|羊毛|限时|优惠|折扣|免费版|免费开放|降价"
         r"|credits|free tier|for free|trial|promo|discount|open[- ]source", re.I)
     cap = int(CFG.get("rss_max_per_feed", 8))
+    # 归档型 feed（HuggingFace 900+ 条的全文归档）不卡时间窗会把几年前的旧文捞上来，
+    # 日报变成搬旧闻。日期解析不出来的条目一律放行，避免误杀没有 pubDate 的源。
+    days = int(CFG.get("rss_days", 7))
+    cutoff = datetime.datetime.now() - datetime.timedelta(days=days)
     out = []
     for f in feeds:
         name, url = f.get("name") or url_short(f.get("url", "")), f.get("url")
@@ -198,6 +220,7 @@ def collect_rss():
             continue
         entries = re.findall(r"<(?:item|entry)\b.*?</(?:item|entry)>", raw, re.S)
         kept = 0
+        stale = 0
         for e in entries:
             t = re.search(r"<title[^>]*>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</title>", e, re.S)
             title = re.sub(r"\s+", " ", (t.group(1) if t else "")).strip()
@@ -205,6 +228,10 @@ def collect_rss():
                 re.search(r"<link>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</link>", e, re.S)
             url_item = (link.group(1) if link else "").strip()
             date = re.search(r"<(?:pubDate|updated|published)>([^<]+)<", e)
+            dt = parse_feed_date(date.group(1) if date else "")
+            if dt and dt < cutoff:
+                stale += 1
+                continue
             desc = extract_desc(e)
             if not title or not AI_RE.search(title + " " + desc[:800]):
                 continue
@@ -220,7 +247,8 @@ def collect_rss():
             kept += 1
             if kept >= cap:
                 break
-        print(f"    {len(entries)} 条 → 命中 {kept} 条")
+        extra = f"（{stale} 条超 {days} 天已跳过）" if stale else ""
+        print(f"    {len(entries)} 条 → 命中 {kept} 条{extra}")
     return out
 
 

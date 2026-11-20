@@ -144,6 +144,32 @@ def dedupe(items):
     return out
 
 
+def apply_exclusions(items, patterns):
+    """按 pipeline.json 的 exclude_patterns 剔除条目。
+
+    有些条目技术上算福利（有数字、有折扣），但实质是硬件带货，放进日报
+    像广告，会拉低整期的可信度。这类主观判断不该写死在脚本里，
+    放在配置里，随时能加能撤。
+    """
+    if not patterns:
+        return items
+    regs = []
+    for p in patterns:
+        try:
+            regs.append(re.compile(p, re.I))
+        except re.error as e:
+            print(f"    ⚠ 排除规则无效「{p}」: {e}")
+    kept = []
+    for it in items:
+        hay = f"{it.get('name','')} {it.get('platform','')} {it.get('benefit','')}"
+        hit = next((r.pattern for r in regs if r.search(hay)), None)
+        if hit:
+            print(f"    ✗ 排除（命中「{hit}」）: {it['name'][:28]}")
+            continue
+        kept.append(it)
+    return kept
+
+
 # ---------------------------------------------------------------- 历史去重
 # 之前 dedupe() 只在当天这一批里去重，完全不看往期。结果是同一个促销天天复发：
 # Higgsfield 的折扣连报 4 天、Voloshow 连报 4 天，观众看到的是同一批东西。
@@ -340,6 +366,7 @@ def main():
         fresh.append(it)
 
     items = fresh
+    items = apply_exclusions(items, CFG.get("exclude_patterns"))
     path = run_dir / "freebies.json"
     path.write_text(json.dumps(items, ensure_ascii=False, indent=1), encoding="utf-8")
 
